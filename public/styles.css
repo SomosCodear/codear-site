@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100&display=swap');
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+}
+
+html, body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url(assets/images/background.png) no-repeat top left fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 2.5rem 0 0;
+  font-weight: 100;
+  color: white;
+  font-size: 2.25rem;
+}
+
+@media screen and (min-device-width: 37.5rem) {
+  body {
+    background-position: center center;
+  }
+
+  main {
+    width: 37.5rem;
+    background-color: rgba(39, 45, 91, 0.5);
+  }
+}
+
+@media screen and (min-device-width: 125rem) {
+  body {
+    background: url(assets/images/background-4k.png) no-repeat top left fixed;
+  }
+}
