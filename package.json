@@ -1,0 +1,32 @@
+{
+  "name": "codear-site",
+  "version": "0.0.1",
+  "description": "Sitio Institucional de CoDeAr ",
+  "main": "index.js",
+  "repository": "git@github.com:WebConfTech/codear-site.git",
+  "author": "Agustin Carrasco <asermax@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@codear/lilac": "^0.0.6",
+    "@zeit/next-css": "^1.0.1",
+    "next": "^9.1.1",
+    "next-fonts": "^0.19.0",
+    "next-ga": "^2.3.4",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "styled-components": "^4.4.0",
+    "typeface-roboto": "^0.0.75",
+    "typeface-source-sans-pro": "^0.0.75"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.6",
+    "projext": "^7.1.1",
+    "projext-plugin-webpack": "^9.2.0",
+    "rimraf": "^3.0.0"
+  }
+}
