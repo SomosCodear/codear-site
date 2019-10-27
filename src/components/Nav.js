@@ -8,7 +8,7 @@ const NavContainer = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1.75rem 1.25rem;
-  background-image: url(/images/nav-background.png);
+  background-image: url(/images/backgrounds/nav.png);
   background-repeat: no-repeat;
   background-position: left center;
   background-size: cover;
