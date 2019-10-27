@@ -32,6 +32,7 @@ class CodearDocument extends Document {
       <html>
         <Head>
           <meta name="description" content="Sitio institucional de CoDeAr" />
+          <title>CoDeAr</title>
           <link rel="manifest" href="manifest.json" />
           <link rel="shortcut icon" sizes="16x16" href="/icons/favicon-16x16.png" />
           <link rel="shortcut icon" sizes="32x32" href="/icons/favicon-32x32.png" />
