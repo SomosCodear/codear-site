@@ -25,8 +25,7 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.6",
-    "projext": "^7.1.1",
-    "projext-plugin-webpack": "^9.2.0",
-    "rimraf": "^3.0.0"
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1"
   }
 }
