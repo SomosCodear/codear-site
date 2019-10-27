@@ -2,14 +2,29 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 class CodearDocument extends Document {
-  static getInitialProps({ renderPage }) {
-    const sheet = new ServerStyleSheet();
-    const page = renderPage((App) => (props) =>
-      sheet.collectStyles(<App {...props} />),
-    );
-    const styleTags = sheet.getStyleElement();
+  static async getInitialProps (ctx) {
+    const sheet = new ServerStyleSheet()
+    const originalRenderPage = ctx.renderPage
 
-    return { ...page, styleTags };
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
+        })
+
+      const initialProps = await Document.getInitialProps(ctx)
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        )
+      }
+    } finally {
+      sheet.seal()
+    }
   }
 
   render() {
@@ -30,7 +45,6 @@ class CodearDocument extends Document {
           <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png" />
           <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png" />
           <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png" />
-          {this.props.styleTags}
         </Head>
         <body>
           <Main />
