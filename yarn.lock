@@ -796,10 +796,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@codear/lilac@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@codear/lilac/-/lilac-0.0.6.tgz#639c00d0a0a192eea48100244950aa462d619e64"
-  integrity sha512-QM07ZtVsfJ564gzzlQquramUuGOcV0ldy5OGjzQaeDoTYg8Jmd/haWDW6RVWvzjy9WNCvGLla+KvGNS19tP0HQ==
+"@codear/lilac@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@codear/lilac/-/lilac-0.0.7.tgz#bb46c105b219947310680f6e5458913e2d9ff79a"
+  integrity sha512-6RNjDlt2D5as9EdaMAf00YTCFiKCfQuoyexfYx77G2A8HPoTyMX75WxlIMxSI24EG92VYYcV/Z5Q5Xvfk578hA==
 
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
