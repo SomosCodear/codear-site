@@ -52,6 +52,20 @@ const CommunitiesBanner = styled.div`
   }
 `
 
+const ProjectContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2.5rem 4.5rem;
+
+  p {
+    margin: 2rem 0;
+    font-family: Source Sans Pro;
+    color: var(--color-primary);
+    text-align: center;
+  }
+`;
+
 const Index = () => {
   useEffect(() => {
     if(typeof window !== 'undefined') {
@@ -75,15 +89,34 @@ const Index = () => {
             comunidades
           </h1>
           <CommunitiesBanner>
-            <img src="/images/community-logos/beer-js.png" alt="BeerJS" />
-            <img src="/images/community-logos/met-cba.png" alt="MeT Cba" />
-            <img src="/images/community-logos/facebook-dev-circle.png" alt="Facebook Dev Circle" />
+            <img src="/images/community-logos/beer-js.png" alt="logo de beerjs" />
+            <img src="/images/community-logos/met-cba.png" alt="logo de met cba" />
+            <img
+              src="/images/community-logos/facebook-dev-circle.png"
+              alt="logo de facebook dev circle"
+            />
           </CommunitiesBanner>
         </CommunitiesSection>
         <section>
           <h1>
             proyectos
           </h1>
+          <ProjectContainer>
+            <img src="/images/brand/webconf-logo.png" alt="logo de webconf" />
+            <p>
+              <b>WebConf</b> es la primera conferencia de tecnologías Web del interior del país,
+              nacida en la ciudad de Córdoba. En la última edición, 270 personas de distintas
+              provincias se sumaron a este espacio para compartir conocimiento.
+            </p>
+            <lilac-button
+              href="https://webconf.tech"
+              alt="sitio de la webconf"
+              target="_blank"
+              secundario
+            >
+              DESCUBRÍ WebConf
+            </lilac-button>
+          </ProjectContainer>
         </section>
         <section>
           <h1>
