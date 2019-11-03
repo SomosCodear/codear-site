@@ -23,9 +23,7 @@ const MenuButton = styled.button`
 
 export const Nav = () => (
   <NavContainer>
-    <div>
-      Codear
-    </div>
+    <img src="/images/brand/codear-logo-mobile.svg" alt="logo de codear" />
     <MenuButton >
       <img
         src="/icons/hamburger-menu.svg"
