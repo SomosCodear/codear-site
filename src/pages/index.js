@@ -4,6 +4,7 @@ import events from '../events.json';
 import Head from 'next/head';
 import { Container } from '../components/Container';
 import { Nav } from '../components/Nav';
+import { Footer } from '../components/Footer';
 import { Calendar } from '../components/Calendar';
 
 const MainContainer = styled.main`
@@ -66,6 +67,30 @@ const ProjectContainer = styled.div`
   }
 `;
 
+const UsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2.5rem 0;
+
+  p {
+    margin: 2.5rem 2.5rem 0;
+    font-family: Source Sans Pro;
+    color: var(--color-primary);
+    text-align: center;
+  }
+`;
+
+const PhotosContainer = styled.div`
+  align-self: stretch;
+  margin: 0 0.5rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 6.5rem);
+  grid-auto-rows: 6.5rem;
+  grid-gap: 0.5rem;
+`;
+
 const Index = () => {
   useEffect(() => {
     if(typeof window !== 'undefined') {
@@ -89,11 +114,11 @@ const Index = () => {
             comunidades
           </h1>
           <CommunitiesBanner>
-            <img src="/images/community-logos/beer-js.png" alt="logo de beerjs" />
-            <img src="/images/community-logos/met-cba.png" alt="logo de met cba" />
+            <img src="/images/community-logos/beer-js.png" alt="Logo de BeerJs" />
+            <img src="/images/community-logos/met-cba.png" alt="Logo de MeT CBA" />
             <img
               src="/images/community-logos/facebook-dev-circle.png"
-              alt="logo de facebook dev circle"
+              alt="Logo de Facebook Dev Circle"
             />
           </CommunitiesBanner>
         </CommunitiesSection>
@@ -102,7 +127,7 @@ const Index = () => {
             proyectos
           </h1>
           <ProjectContainer>
-            <img src="/images/brand/webconf-logo.png" alt="logo de webconf" />
+            <img src="/images/brand/webconf-logo.png" alt="Logo de Webconf" />
             <p>
               <b>WebConf</b> es la primera conferencia de tecnologías Web del interior del país,
               nacida en la ciudad de Córdoba. En la última edición, 270 personas de distintas
@@ -110,7 +135,6 @@ const Index = () => {
             </p>
             <lilac-button
               href="https://webconf.tech"
-              alt="sitio de la webconf"
               target="_blank"
               secundario
             >
@@ -122,7 +146,25 @@ const Index = () => {
           <h1>
             nosotros
           </h1>
+          <UsContainer>
+            <PhotosContainer>
+              <img src="/images/photos/santi.png" alt="Santiago Persico" />
+              <img src="/images/photos/agus.png" alt="Agustin Carrasco" />
+              <img src="/images/photos/ata.png" alt="Atahualpa Sánchez" />
+              <img src="/images/photos/flor.png" alt="Florencia Carillo" />
+              <img src="/images/photos/homer0.png" alt="Leo Apiwan" />
+              <img src="/images/photos/joey.png" alt="Joel Villarreal Bertoldi" />
+              <img src="/images/photos/migue.png" alt="Migue Moyano" />
+              <img src="/images/photos/nabi.png" alt="Nabi Gudiño" />
+            </PhotosContainer>
+            <p>
+              Somos una comunidad dedicada a la formación y difusión de conocimientos de
+              tecnología, aplicando la disciplina como un instrumento transformador y potenciador
+              para la sociedad.
+            </p>
+          </UsContainer>
         </section>
+        <Footer />
       </MainContainer>
     </Container>
   );
