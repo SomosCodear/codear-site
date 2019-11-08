@@ -27,6 +27,12 @@
     "babel-plugin-styled-components": "^1.10.6",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
-    "typescript-styled-plugin": "^0.15.0"
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.2.0",
+    "prop-types": "^15.7.2",
+    "typescript-styled-plugin": "^0.15.0",
+    "webpack": "^4.41.2"
   }
 }
