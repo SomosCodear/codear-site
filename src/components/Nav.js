@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
+import { MENU } from '../data/constants';
 
 const Logo = styled.img``;
 
@@ -97,56 +98,15 @@ const NavContainer = styled.nav`
   }
 `;
 
-const MenuContainer = styled.div`
-  position: fixed;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  background-image: url(/images/backgrounds/menu.png);
-  background-repeat: no-repeat;
-  background-position: -1px -1px;
-  &:target {
-    display: flex;
-  }
-`;
-
-const MENU_OPTIONS = [
-  {
-    page: 'about',
-    path: 'conocenos',
-    label: 'conocenos',
-  },
-  {
-    page: 'schedule',
-    path: 'agenda',
-    label: 'agenda',
-  },
-  {
-    page: 'projects',
-    path: 'proyectos',
-    label: 'proyectos',
-  },
-  {
-    page: 'coc',
-    path: 'codigo-de-conducta',
-    label: 'código de conducta',
-  },
-];
-
 export const Nav = () => (
   <NavContainer id="menu">
     <Logo src="/images/brand/codear-logo-mobile.svg" alt="logo de codear" />
     <Menu>
-      {MENU_OPTIONS.map((option) => (
+      {MENU.map((option) => (
         <MenuItem key={option.path}>
-          <Link href={`/${option.page}`} as={`/${option.path}`}>
+          <Link href={option.page} as={option.path}>
             <MenuLink
-              href={`/${option.path}`}
+              href={option.path}
               title={option.label}
             >{option.label}</MenuLink>
           </Link>
