@@ -19,7 +19,7 @@ const MenuItem = styled.li`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
   &:last-child {
     margin-bottom: 0;
   }
@@ -27,16 +27,16 @@ const MenuItem = styled.li`
 
 const MenuLink = styled.a`
   display: block;
-  width: 240px;
-  border: 1px solid white;
-  border-radius: 10px;
+  width: 15rem;
+  border: 0.0625rem solid white;
+  border-radius: 0.625rem;
   font-family: Source Sans Pro;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5rem;
   text-align: center;
   text-decoration: none;
   color: white;
-  line-height: 40px;
+  line-height: 2.5rem;
 `;
 
 const MenuOpenButton = styled.a`
@@ -48,8 +48,8 @@ const MenuCloseButton = styled.a`
   display: inline-block;
   padding: 0.25rem;
   position: absolute;
-  top: 30px;
-  right: 20px;
+  top: 1.875rem;
+  right: 1.25rem;
 `;
 
 const NavContainer = styled.nav`
@@ -79,7 +79,7 @@ const NavContainer = styled.nav`
     top: 0;
     background-image: url(/images/backgrounds/menu.png);
     background-repeat: no-repeat;
-    background-position: -1px -1px;
+    background-position: -0.0625rem -0.0625rem;
     background-size: auto;
     ${Logo} {
       position: absolute;
