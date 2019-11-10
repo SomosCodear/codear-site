@@ -21,7 +21,7 @@ const FooterContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-`
+`;
 
 const SocialMediaContainer = styled.div`
   display: flex;
@@ -38,13 +38,13 @@ export const Footer = () => (
     <FooterContent>
       © 2019 | Comunidad de Desarrolladores de Argentina
       <SocialMediaContainer>
-        <a href="https://www.facebook.com/SomosCodear" target="_blank">
+        <a href="https://www.facebook.com/SomosCodear" target="_blank" rel="noopener noreferrer">
           <img src="/images/social-media-logos/logo-facebook.svg" alt="facebook" />
         </a>
-        <a href="https://www.instagram.com/somoscodear/" target="_blank">
+        <a href="https://www.instagram.com/somoscodear/" target="_blank" rel="noopener noreferrer">
           <img src="/images/social-media-logos/logo-instagram.svg" alt="instagram" />
         </a>
-        <a href="https://twitter.com/SomosCodear" target="_blank">
+        <a href="https://twitter.com/SomosCodear" target="_blank" rel="noopener noreferrer">
           <img src="/images/social-media-logos/logo-twitter.svg" alt="twitter" />
         </a>
       </SocialMediaContainer>

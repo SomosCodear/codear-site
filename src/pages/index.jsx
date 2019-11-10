@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import events from '../events.json';
 import Head from 'next/head';
+import events from '../events.json';
 import { Container } from '../components/Container';
 import { Nav } from '../components/Nav';
 import { Footer } from '../components/Footer';
@@ -51,7 +51,7 @@ const CommunitiesBanner = styled.div`
   img + img {
     margin-left: 0.5rem;
   }
-`
+`;
 
 const ProjectContainer = styled.div`
   display: flex;
@@ -93,7 +93,8 @@ const PhotosContainer = styled.div`
 
 const Index = () => {
   useEffect(() => {
-    if(typeof window !== 'undefined') {
+    if (typeof window !== 'undefined') {
+      // eslint-disable-next-line global-require
       require('@codear/lilac');
     }
   }, []);
@@ -129,7 +130,8 @@ const Index = () => {
           <ProjectContainer>
             <img src="/images/brand/webconf-logo.png" alt="Logo de Webconf" />
             <p>
-              <b>WebConf</b> es la primera conferencia de tecnologías Web del interior del país,
+              <b>WebConf</b>
+              &nbsp;es la primera conferencia de tecnologías Web del interior del país,
               nacida en la ciudad de Córdoba. En la última edición, 270 personas de distintas
               provincias se sumaron a este espacio para compartir conocimiento.
             </p>
@@ -168,6 +170,6 @@ const Index = () => {
       </MainContainer>
     </Container>
   );
-}
+};
 
 export default Index;
