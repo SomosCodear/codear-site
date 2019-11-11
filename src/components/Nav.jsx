@@ -3,7 +3,21 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import { MENU } from '../data/constants';
 
-const Logo = styled.img``;
+const LogoMobile = styled.img`
+  display: block;
+
+  @media (min-width: 80rem) {
+    display: none;
+  }
+`;
+
+const LogoDesktop = styled.img`
+  display: none;
+
+  @media (min-width: 80rem) {
+    display: block;
+  }
+`;
 
 const Menu = styled.ul`
   display: none;
@@ -13,6 +27,13 @@ const Menu = styled.ul`
   padding: 0;
   height: 100%;
   width: 100%;
+
+  @media (min-width: 80rem) {
+    display: flex;
+    height: auto;
+    width: auto;
+    margin-left: 5rem;
+  }
 `;
 
 const MenuItem = styled.li`
@@ -20,32 +41,51 @@ const MenuItem = styled.li`
   flex-direction: row;
   justify-content: center;
   margin-bottom: 0.9375rem;
+
+  a {
+    display: block;
+    width: 15rem;
+    border: 0.0625rem solid var(--color-text);
+    border-radius: 0.625rem;
+    font-family: Source Sans Pro;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-text);
+    line-height: 2.5rem;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
-`;
 
-const MenuLink = styled.a`
-  display: block;
-  width: 15rem;
-  border: 0.0625rem solid white;
-  border-radius: 0.625rem;
-  font-family: Source Sans Pro;
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  line-height: 2.5rem;
+  @media (min-width: 80rem) {
+    margin: 0;
+
+    a {
+      width: auto;
+      border: none;
+      color: var(--color-primary);
+    }
+
+    & + & {
+      margin-left: 3rem;
+    }
+  }
 `;
 
 const MenuOpenButton = styled.a`
   display: inline-block;
   padding: 0.25rem;
+
+  @media (min-width: 80rem) {
+    display: none;
+  }
 `;
 
 const MenuCloseButton = styled.a`
-  display: inline-block;
+  display: none;
   padding: 0.25rem;
   position: absolute;
   top: 1.875rem;
@@ -60,13 +100,11 @@ const NavContainer = styled.nav`
   align-items: center;
   box-sizing: border-box;
   padding: 1.75rem 1.25rem;
-  background-image: url(/images/backgrounds/nav.png);
+  background-image: url(/images/backgrounds/nav-mobile.png);
   background-repeat: no-repeat;
   background-position: left center;
   background-size: cover;
-  ${MenuCloseButton} {
-    display: none;
-  }
+
   &:target {
     flex-direction: column;
     justify-content: flex-start;
@@ -81,34 +119,52 @@ const NavContainer = styled.nav`
     background-repeat: no-repeat;
     background-position: -0.0625rem -0.0625rem;
     background-size: auto;
-    ${Logo} {
+
+    ${LogoMobile} {
       position: absolute;
     }
+
     ${Menu} {
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
+
     ${MenuCloseButton} {
       display: inline-block;
     }
+
     ${MenuOpenButton} {
       display: none;
     }
+  }
+
+  @media (min-width: 80rem) {
+    align-self: center;
+    width: 80rem;
+    padding: 3rem 0;
+    justify-content: flex-start;
+    background: none;
   }
 `;
 
 export const Nav = () => (
   <NavContainer id="menu">
-    <Logo src="/images/brand/codear-logo-mobile.svg" alt="logo de codear" />
+    <Link href="/" as="/">
+      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+      <a>
+        <LogoMobile src="/images/brand/codear-logo-mobile.svg" alt="logo de codear" />
+        <LogoDesktop src="/images/brand/codear-logo-desktop.svg" alt="logo de codear" />
+      </a>
+    </Link>
     <Menu>
       {MENU.map((option) => (
         <MenuItem key={option.path}>
           <Link href={option.page} as={option.path}>
-            <MenuLink
-              href={option.path}
-              title={option.label}
-            >{option.label}</MenuLink>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a>
+              {option.label}
+            </a>
           </Link>
         </MenuItem>
       ))}

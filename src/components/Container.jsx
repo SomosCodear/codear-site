@@ -11,6 +11,14 @@ export const Wrapper = styled.div`
   align-items: stretch;
   height: 100vh;
   overflow: hidden;
+
+  @media (min-width: 80rem) {
+    overflow: auto;
+    background-image: url(/images/backgrounds/nav-desktop.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -19,6 +27,10 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   align-items: stretch;
   overflow: auto;
+
+  @media (min-width: 80rem) {
+    overflow: visible;
+  }
 `;
 
 export const Content = styled.main`
