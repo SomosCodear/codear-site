@@ -14,6 +14,12 @@ export const Wrapper = styled.div`
 
   @media (min-width: 80rem) {
     overflow: auto;
+  }
+`;
+
+export const HeaderLine = styled.div`
+  @media (min-width: 80rem) {
+    min-height: 0.75rem;
     background-image: url(/images/backgrounds/nav-desktop.png);
     background-position: left top;
     background-repeat: no-repeat;
@@ -51,6 +57,7 @@ export const Container = ({ children, className }) => (
     <Head>
       <title>CoDeAr</title>
     </Head>
+    <HeaderLine />
     <Nav />
     <ContentWrapper>
       <Content>
