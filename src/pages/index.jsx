@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
 import events from '../events.json';
+import { MENU } from '../data/constants';
 import { Container, Content } from '../components/Container';
 import { Calendar } from '../components/Calendar';
 
@@ -81,14 +83,6 @@ const ProjectContainer = styled.div`
   }
 `;
 
-const PhotoStrut = styled.div`
-  display: none;
-
-  @media (min-width: 80rem) {
-    display: block;
-  }
-`;
-
 const PhotosContainer = styled.div`
   align-self: stretch;
   margin: 2.5rem 0.5rem 0;
@@ -98,11 +92,36 @@ const PhotosContainer = styled.div`
   grid-auto-rows: 6.5rem;
   grid-gap: 0.5rem;
 
+  a {
+    text-decoration: none;
+    color: var(--color-secondary);
+  }
+
   @media (min-width: 80rem) {
     grid-template-columns: repeat(5, 6.5rem);
     justify-content: flex-start;
     margin: 0;
   }
+`;
+
+const PhotoStrut = styled.div`
+  display: none;
+
+  @media (min-width: 80rem) {
+    display: block;
+  }
+`;
+
+const MeetTheTeam = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border: 0.0625rem solid var(--color-secondary);
+  border-radius: 0.625rem;
+  font-family: Source Sans Pro;
+  font-size: 0.875rem;
+  text-align: center;
 `;
 
 const UsSection = styled.section`
@@ -250,7 +269,16 @@ const Index = () => {
           <PhotoStrut />
           <img src="/images/photos/migue.png" alt="Migue Moyano" />
           <img src="/images/photos/nabi.png" alt="Nabi Gudiño" />
-          <PhotoStrut />
+          <Link href="/conocenos">
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a>
+              <MeetTheTeam>
+                CONOCÉ
+                <br />
+                AL EQUIPO
+              </MeetTheTeam>
+            </a>
+          </Link>
         </PhotosContainer>
         <p>
           Somos una comunidad dedicada a la formación y difusión de conocimientos de
