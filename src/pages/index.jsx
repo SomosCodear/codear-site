@@ -213,7 +213,7 @@ const Index = () => {
   return (
     <LandingContainer>
       <Calendar
-        name="calendario"
+        name="eventos"
         events={events}
       />
       <CommunitiesSection>
