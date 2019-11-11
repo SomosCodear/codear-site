@@ -5,11 +5,29 @@ import { Container, Content } from '../components/Container';
 import { Calendar } from '../components/Calendar';
 
 const CommunitiesSection = styled.section`
-  grid-area: community;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 3rem;
 
   h1 {
     font-size: 3.25rem;
+  }
+
+  @media (min-width: 80rem) {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0;
+    padding: 1.5rem 0;
+    background-image: url(/images/backgrounds/community-desktop.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+
+    h1:first-child {
+      width: 55rem;
+      color: var(--color-text);
+    }
   }
 `;
 
@@ -20,7 +38,7 @@ const CommunitiesBanner = styled.div`
   justify-content: center;
   margin-top: 1.25rem;
   padding: 1.875rem;
-  background-image: url(/images/backgrounds/community.png);
+  background-image: url(/images/backgrounds/community-mobile.png);
   background-repeat: no-repeat;
   background-position: left center;
   background-size: cover;
@@ -28,10 +46,19 @@ const CommunitiesBanner = styled.div`
   img + img {
     margin-left: 0.5rem;
   }
+
+  @media (min-width: 80rem) {
+    box-sizing: border-box;
+    width: 25rem;
+    margin-top: 0;
+    background: none;
+  }
 `;
 
 const ProjectsSection = styled.section`
-  grid-area: projects;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const ProjectContainer = styled.div`
@@ -48,15 +75,35 @@ const ProjectContainer = styled.div`
   }
 `;
 
-const UsSection = styled.section`
-  grid-area: us;
+const PhotoStrut = styled.div`
+  display: none;
+
+  @media (min-width: 80rem) {
+    display: block;
+  }
 `;
 
-const UsContainer = styled.div`
+const PhotosContainer = styled.div`
+  align-self: stretch;
+  margin: 2.5rem 0.5rem 0;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 6.5rem);
+  grid-auto-rows: 6.5rem;
+  grid-gap: 0.5rem;
+
+  @media (min-width: 80rem) {
+    grid-template-columns: repeat(5, 6.5rem);
+    justify-content: flex-start;
+    margin: 0;
+  }
+`;
+
+const UsSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2.5rem 0;
+  margin-bottom: 2.5rem;
 
   p {
     margin: 2.5rem 2.5rem 0;
@@ -64,30 +111,60 @@ const UsContainer = styled.div`
     color: var(--color-primary);
     text-align: center;
   }
-`;
 
-const PhotosContainer = styled.div`
-  align-self: stretch;
-  margin: 0 0.5rem;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fill, 6.5rem);
-  grid-auto-rows: 6.5rem;
-  grid-gap: 0.5rem;
+  @media (min-width: 80rem) {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 0.4fr 0.6fr;
+    grid-template-rows: min-content 1fr;
+    grid-gap: 0 7rem;
+    grid-template-areas:
+      "   title    photos"
+      "description photos";
+    margin: 4rem 0;
+
+    h1 {
+      grid-area: title;
+    }
+
+    p {
+      grid-area: description;
+      margin: 2rem 0 0;
+      text-align: left;
+      font-size: 1.5rem;
+    }
+
+    ${PhotosContainer} {
+      grid-area: photos;
+    }
+  }
 `;
 
 const LandingContainer = styled(Container)`
   ${Content} {
-    lilac-calendar {
-      grid-area: calendar;
-    }
-
     @media (min-width: 80rem) {
       display: grid;
+      grid-template-columns: 1fr 55rem 25rem 1fr;
       grid-template-areas:
-        "calendar  projects "
-        "community community"
-        "   us        us    ";
+        "     .       calendar    projects        .     "
+        "communities communities communities communities"
+        "     .          us          us           .     ";
+
+      lilac-calendar {
+        grid-area: calendar;
+      }
+
+      ${ProjectsSection} {
+        grid-area: projects;
+      }
+
+      ${CommunitiesSection} {
+        grid-area: communities;
+      }
+
+      ${UsSection} {
+        grid-area: us;
+      }
     }
   }
 `;
@@ -144,23 +221,28 @@ const Index = () => {
         <h1>
           nosotros
         </h1>
-        <UsContainer>
-          <PhotosContainer>
-            <img src="/images/photos/santi.png" alt="Santiago Persico" />
-            <img src="/images/photos/agus.png" alt="Agustin Carrasco" />
-            <img src="/images/photos/ata.png" alt="Atahualpa Sánchez" />
-            <img src="/images/photos/flor.png" alt="Florencia Carillo" />
-            <img src="/images/photos/homer0.png" alt="Leo Apiwan" />
-            <img src="/images/photos/joey.png" alt="Joel Villarreal Bertoldi" />
-            <img src="/images/photos/migue.png" alt="Migue Moyano" />
-            <img src="/images/photos/nabi.png" alt="Nabi Gudiño" />
-          </PhotosContainer>
-          <p>
-            Somos una comunidad dedicada a la formación y difusión de conocimientos de
-            tecnología, aplicando la disciplina como un instrumento transformador y potenciador
-            para la sociedad.
-          </p>
-        </UsContainer>
+        <PhotosContainer>
+          <img src="/images/photos/santi.png" alt="Santiago Persico" />
+          <img src="/images/photos/agus.png" alt="Agustin Carrasco" />
+          <img src="/images/photos/ata.png" alt="Atahualpa Sánchez" />
+          <PhotoStrut />
+          <PhotoStrut />
+          <PhotoStrut />
+          <img src="/images/photos/flor.png" alt="Florencia Carillo" />
+          <img src="/images/photos/homer0.png" alt="Leo Apiwan" />
+          <img src="/images/photos/joey.png" alt="Joel Villarreal Bertoldi" />
+          <PhotoStrut />
+          <PhotoStrut />
+          <PhotoStrut />
+          <img src="/images/photos/migue.png" alt="Migue Moyano" />
+          <img src="/images/photos/nabi.png" alt="Nabi Gudiño" />
+          <PhotoStrut />
+        </PhotosContainer>
+        <p>
+          Somos una comunidad dedicada a la formación y difusión de conocimientos de
+          tecnología, aplicando la disciplina como un instrumento transformador y potenciador
+          para la sociedad.
+        </p>
       </UsSection>
     </LandingContainer>
   );

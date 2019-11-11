@@ -32,12 +32,6 @@ export const Content = styled.main`
     font-weight: 100;
     color: var(--color-primary-light);
   }
-
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 `;
 
 export const Container = ({ children, className }) => (

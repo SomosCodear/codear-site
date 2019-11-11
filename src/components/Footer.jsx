@@ -4,23 +4,38 @@ import styled from 'styled-components';
 const FooterContainer = styled.footer`
   flex: 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 2.5rem 1.5rem;
-  background-image: url(/images/backgrounds/community.png);
+  background-image: url(/images/backgrounds/community-mobile.png);
   background-repeat: no-repeat;
   background-position: left 25%;
   background-size: 300%;
   color: var(--color-text);
   font-size: 0.875rem;
   font-family: Source Sans Pro;
+
+  @media (min-width: 80rem) {
+    padding: 0;
+    background-image: url(/images/backgrounds/footer-desktop.png);
+    background-position: left top;
+    background-size: cover;
+  }
 `;
 
 const FooterContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @media (min-width: 80rem) {
+    width: 80rem;
+    padding: 1.75rem 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
 
 const SocialMediaContainer = styled.div`
@@ -30,6 +45,10 @@ const SocialMediaContainer = styled.div`
 
   * + * {
     margin-left: 1.5rem;
+  }
+
+  @media (min-width: 80rem) {
+    margin-top: 0;
   }
 `;
 
