@@ -25,7 +25,9 @@ const CommunitiesSection = styled.section`
     background-size: cover;
 
     h1:first-child {
+      box-sizing: border-box;
       width: 55rem;
+      padding: 0 3rem;
       color: var(--color-text);
     }
   }
@@ -59,6 +61,10 @@ const ProjectsSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: 80rem) {
+    padding-right: 3rem;
+  }
 `;
 
 const ProjectContainer = styled.div`
@@ -113,6 +119,7 @@ const UsSection = styled.section`
   }
 
   @media (min-width: 80rem) {
+    padding: 0 3rem;
     display: grid;
     align-items: flex-start;
     grid-template-columns: 0.4fr 0.6fr;
@@ -142,6 +149,12 @@ const UsSection = styled.section`
 
 const LandingContainer = styled(Container)`
   ${Content} {
+    @media (min-width: 45rem) {
+      lilac-calendar {
+        align-self: center;
+      }
+    }
+
     @media (min-width: 80rem) {
       display: grid;
       grid-template-columns: 1fr 55rem 25rem 1fr;
@@ -152,6 +165,7 @@ const LandingContainer = styled(Container)`
 
       lilac-calendar {
         grid-area: calendar;
+        padding-left: 3rem;
       }
 
       ${ProjectsSection} {

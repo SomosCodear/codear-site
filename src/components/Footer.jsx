@@ -30,8 +30,9 @@ const FooterContent = styled.div`
   align-items: flex-end;
 
   @media (min-width: 80rem) {
+    box-sizing: border-box;
     width: 80rem;
-    padding: 1.75rem 0;
+    padding: 1.75rem 3rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

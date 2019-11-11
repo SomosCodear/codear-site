@@ -142,7 +142,7 @@ const NavContainer = styled.nav`
   @media (min-width: 80rem) {
     align-self: center;
     width: 80rem;
-    padding: 3rem 0;
+    padding: 3rem;
     justify-content: flex-start;
     background: none;
   }
