@@ -157,7 +157,7 @@ const LandingContainer = styled(Container)`
 
     @media (min-width: 80rem) {
       display: grid;
-      grid-template-columns: 1fr 55rem 25rem 1fr;
+      grid-template-columns: 1fr 53rem 27rem 1fr;
       grid-template-areas:
         "     .       calendar    projects        .     "
         "communities communities communities communities"
