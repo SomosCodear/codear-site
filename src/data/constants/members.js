@@ -10,8 +10,8 @@ export const MEMBERS = [
     role: 'Secretario',
   },
   {
-    photo: '/images/photos/ata.png',
-    name: 'Atahualpa Sánchez',
+    photo: '/images/photos/nabi.png',
+    name: 'Nabi Gudiño',
     role: 'Tesorera',
   },
   {
@@ -26,7 +26,7 @@ export const MEMBERS = [
   },
   {
     photo: '/images/photos/joey.png',
-    name: 'Joel Villarreal Bertoldi',
+    name: 'Joel Bertoldi',
     role: 'Vocal',
   },
   {
@@ -35,8 +35,8 @@ export const MEMBERS = [
     role: 'Vocal',
   },
   {
-    photo: '/images/photos/nabi.png',
-    name: 'Nabi Gudiño',
+    photo: '/images/photos/ata.png',
+    name: 'Atahualpa Sánchez',
     role: 'Vocal',
   },
 ];

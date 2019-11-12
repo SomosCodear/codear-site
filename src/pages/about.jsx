@@ -1,10 +1,45 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { MEMBERS } from '../data/constants';
 import { Container } from '../components/Container';
+import { Separator } from '../components/Separator';
 
-const PhotoCommission = styled.img`
-  width: 100vw;
+const PhotoCommissionContainer = styled.div`
+  width: 100%;
+  overflow: hidden;
+  img {
+    width: 100vw;
+  }
+  @media (min-width: 80rem) {
+    height: 45.625rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    img {
+      display: block;
+      width: auto;
+    }
+  }
+`;
+
+const Content = styled.div`
+  @media (min-width: 80rem) {
+    display: flex;
+    flex-direction: row;
+    max-width: 73.75rem;
+    width: 100%;
+  }
+`;
+
+const Texts = styled.div`
+  text-align: center;
+  @media (min-width: 80rem) {
+    text-align: left;
+    max-width: 17.5rem;
+    margin: 0 3.125rem;
+    box-sizing: border-box;
+  }
 `;
 
 const UsSection = styled.section`
@@ -20,7 +55,14 @@ const UsSection = styled.section`
     margin: 1.5rem 3rem 0;
     text-align: center;
     font-family: Source Sans Pro;
+    line-height: 1.5rem;
     color: var(--color-primary);
+  }
+  @media (min-width: 80rem) {
+    p {
+      margin: 0;
+      text-align: left;
+    }
   }
 `;
 
@@ -29,6 +71,10 @@ const Members = styled.div`
   grid-template-columns: min-content 1fr;
   grid-gap: 1rem;
   margin: 3rem 1.5rem;
+  @media (min-width: 80rem) {
+    flex-grow: 1;
+    grid-template-columns: min-content 1fr min-content 1fr;
+  }
 `;
 
 const Member = styled.div`
@@ -61,32 +107,46 @@ const Member = styled.div`
     font-size: 1.5rem;
     color: var(--color-primary);
   }
+
+  @media (min-width: 80rem) {
+    h2, p {
+      grid-column-end: span 3;
+    }
+  }
 `;
 
 const About = () => (
   <Container>
     <UsSection>
-      <PhotoCommission src="/images/photos/us.jpg" alt="comisión directiva" />
-      <h1>
-        nosotros
-      </h1>
-      <p>
-        Somos una comunidad dedicada a la formación y difusión de conocimientos de tecnología,
-        aplicando la disciplina como un instrumento transformador y potenciador para la sociedad.
-      </p>
-      <Members>
-        {MEMBERS.map(({ name, photo, role }) => (
-          <Member key={name}>
-            <img src={photo} alt={name} />
-            <h2>
-              {name}
-            </h2>
-            <p>
-              {role}
-            </p>
-          </Member>
-        ))}
-      </Members>
+      <PhotoCommissionContainer>
+        <img src="/images/photos/us.jpg" alt="Foto de la comisión directiva" />
+      </PhotoCommissionContainer>
+      <Separator />
+      <Content>
+        <Texts>
+          <h1>
+            nosotros
+          </h1>
+          <p>
+            Somos una comunidad dedicada a la formación y difusión de conocimientos de tecnología,
+            aplicando la disciplina como un instrumento transformador y potenciador para la
+            sociedad.
+          </p>
+        </Texts>
+        <Members>
+          {MEMBERS.map(({ name, photo, role }) => (
+            <Member key={name}>
+              <img src={photo} alt={name} />
+              <h2>
+                {name}
+              </h2>
+              <p>
+                {role}
+              </p>
+            </Member>
+          ))}
+        </Members>
+      </Content>
     </UsSection>
   </Container>
 );

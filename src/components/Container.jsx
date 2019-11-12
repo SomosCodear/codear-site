@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Head from 'next/head';
 import { Nav } from './Nav';
 import { Footer } from './Footer';
+import { Separator } from './Separator';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -58,7 +59,7 @@ export const Container = ({ children, className }) => (
     <Head>
       <title>CoDeAr</title>
     </Head>
-    <HeaderLine />
+    <Separator />
     <Nav />
     <ContentWrapper>
       <Content>
