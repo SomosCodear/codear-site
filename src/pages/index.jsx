@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import events from '../events.json';
-import { MENU } from '../data/constants';
 import { Container, Content } from '../components/Container';
 import { Calendar } from '../components/Calendar';
 
@@ -19,7 +18,6 @@ const CommunitiesSection = styled.section`
   @media (min-width: 80rem) {
     flex-direction: row;
     justify-content: center;
-    margin-top: 0;
     padding: 1.5rem 0;
     background-image: url(/images/backgrounds/community-desktop.png);
     background-repeat: no-repeat;
@@ -30,6 +28,7 @@ const CommunitiesSection = styled.section`
       box-sizing: border-box;
       width: 55rem;
       padding: 0 3rem;
+      font-size: 4.5rem;
       color: var(--color-text);
     }
   }
