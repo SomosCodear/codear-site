@@ -1,24 +1,17 @@
-export const LANDING = {
-  page: '/',
-  path: '/',
-};
-
-export const ABOUT = {
-  page: '/about',
-  path: '/conocenos',
-};
-
-export const SCHEDULE = {
-  page: '/schedule',
-  path: '/agenda',
-};
-
-export const PROJECTS = {
-  page: '/projects',
-  path: '/proyectos',
-};
-
-export const COC = {
-  page: '/coc',
-  path: '/codigo-de-conducta',
+export const ROUTES = {
+  LANDING: {
+    path: '/',
+  },
+  ABOUT: {
+    path: '/conocenos',
+  },
+  SCHEDULE: {
+    path: '/agenda',
+  },
+  PROJECTS: {
+    path: '/proyectos',
+  },
+  COC: {
+    path: '/codigo-de-conducta',
+  },
 };

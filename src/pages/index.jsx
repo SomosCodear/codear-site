@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import events from '../events.json';
-import { ABOUT } from '../data/constants';
+import { ROUTES } from '../data/constants';
 import { Container, Content } from '../components/Container';
 import { Calendar } from '../components/Calendar';
 
@@ -269,7 +269,7 @@ const Index = () => {
           <PhotoStrut />
           <img src="/images/photos/migue.png" alt="Migue Moyano" />
           <img src="/images/photos/nabi.png" alt="Nabi Gudiño" />
-          <Link href={ABOUT.path}>
+          <Link href={ROUTES.ABOUT.path}>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>
               <MeetTheTeam>

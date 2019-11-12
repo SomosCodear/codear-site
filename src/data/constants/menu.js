@@ -1,8 +1,8 @@
-import { ABOUT } from './routes';
+import { ROUTES } from './routes';
 
 export const MENU = [
   {
-    ...ABOUT,
+    ...ROUTES.ABOUT,
     label: 'conocenos',
   },
 ];
