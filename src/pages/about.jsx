@@ -10,19 +10,16 @@ const PhotoCommissionContainer = styled.div`
 
   img {
     width: 100vw;
+    max-height: 46rem;
+    object-fit: cover;
+    object-position: top center;
   }
 
   @media (min-width: 80rem) {
-    height: 45.625rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
-    img {
-      display: block;
-      width: auto;
-    }
   }
 `;
 
