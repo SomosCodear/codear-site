@@ -150,9 +150,8 @@ const NavContainer = styled.nav`
 
 export const Nav = () => (
   <NavContainer id="menu">
-    <Link href="/" as="/">
-      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-      <a>
+    <Link href="/">
+      <a href="/" title="inicio">
         <LogoMobile src="/images/brand/codear-logo-mobile.svg" alt="logo de codear" />
         <LogoDesktop src="/images/brand/codear-logo-desktop.svg" alt="logo de codear" />
       </a>
@@ -161,8 +160,7 @@ export const Nav = () => (
       {MENU.map((option) => (
         <MenuItem key={option.path}>
           <Link href={option.path}>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
+            <a href={option.path} title={option.label}>
               {option.label}
             </a>
           </Link>

@@ -268,8 +268,7 @@ const Index = () => {
             </Fragment>
           ))}
           <Link href={ROUTES.ABOUT.path}>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
+            <a href={ROUTES.ABOUT.path} title="Conocé al equipo">
               <MeetTheTeam>
                 CONOCÉ
                 <br />
