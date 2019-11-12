@@ -7,15 +7,18 @@ import { Separator } from '../components/Separator';
 const PhotoCommissionContainer = styled.div`
   width: 100%;
   overflow: hidden;
+
   img {
     width: 100vw;
   }
+
   @media (min-width: 80rem) {
     height: 45.625rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
     img {
       display: block;
       width: auto;
@@ -24,9 +27,13 @@ const PhotoCommissionContainer = styled.div`
 `;
 
 const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @media (min-width: 80rem) {
-    display: flex;
     flex-direction: row;
+    align-items: flex-start;
     max-width: 73.75rem;
     width: 100%;
   }
@@ -58,6 +65,7 @@ const UsSection = styled.section`
     line-height: 1.5rem;
     color: var(--color-primary);
   }
+
   @media (min-width: 80rem) {
     p {
       margin: 0;
@@ -68,22 +76,20 @@ const UsSection = styled.section`
 
 const Members = styled.div`
   display: grid;
-  grid-template-columns: min-content 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 1rem;
   margin: 3rem 1.5rem;
+
   @media (min-width: 80rem) {
     flex-grow: 1;
-    grid-template-columns: min-content 1fr min-content 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 `;
 
 const Member = styled.div`
   display: grid;
-  grid-column: span 2;
-  grid-row: span 2;
-  grid-template-columns: inherit;
-  grid-template-columns: subgrid;
-  grid-gap: 0 1rem;
+  grid-template-columns: min-content 1fr;
+  grid-column-gap: 1rem;
 
   img {
     grid-row-end: span 2;
@@ -106,12 +112,6 @@ const Member = styled.div`
     font-family: Source Sans Pro;
     font-size: 1.5rem;
     color: var(--color-primary);
-  }
-
-  @media (min-width: 80rem) {
-    h2, p {
-      grid-column-end: span 3;
-    }
   }
 `;
 
