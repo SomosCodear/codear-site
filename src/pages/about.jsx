@@ -29,6 +29,15 @@ const Members = styled.div`
   grid-template-columns: min-content 1fr;
   grid-gap: 1rem;
   margin: 3rem 1.5rem;
+`;
+
+const Member = styled.div`
+  display: grid;
+  grid-column: span 2;
+  grid-row: span 2;
+  grid-template-columns: inherit;
+  grid-template-columns: subgrid;
+  grid-gap: 0 1rem;
 
   img {
     grid-row-end: span 2;
@@ -67,7 +76,7 @@ const About = () => (
       </p>
       <Members>
         {MEMBERS.map(({ name, photo, role }) => (
-          <Fragment key={name}>
+          <Member key={name}>
             <img src={photo} alt={name} />
             <h2>
               {name}
@@ -75,7 +84,7 @@ const About = () => (
             <p>
               {role}
             </p>
-          </Fragment>
+          </Member>
         ))}
       </Members>
     </UsSection>
