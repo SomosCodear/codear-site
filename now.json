@@ -8,5 +8,9 @@
       "use": "@now/static-build",
       "config": { "distDir": "out" }
     }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/([^/]+)", "dest": "/$1.html" }
   ]
 }
