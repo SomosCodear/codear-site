@@ -40,6 +40,7 @@ export const ContentWrapper = styled.div`
 `;
 
 export const Content = styled.main`
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: stretch;
