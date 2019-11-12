@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import events from '../events.json';
-import { ROUTES } from '../data/constants';
+import { MEMBERS, ROUTES } from '../data/constants';
 import { Container, Content } from '../components/Container';
 import { Calendar } from '../components/Calendar';
 
@@ -255,20 +255,18 @@ const Index = () => {
           nosotros
         </h1>
         <PhotosContainer>
-          <img src="/images/photos/santi.png" alt="Santiago Persico" />
-          <img src="/images/photos/agus.png" alt="Agustin Carrasco" />
-          <img src="/images/photos/ata.png" alt="Atahualpa Sánchez" />
-          <PhotoStrut />
-          <PhotoStrut />
-          <PhotoStrut />
-          <img src="/images/photos/flor.png" alt="Florencia Carillo" />
-          <img src="/images/photos/homer0.png" alt="Leo Apiwan" />
-          <img src="/images/photos/joey.png" alt="Joel Villarreal Bertoldi" />
-          <PhotoStrut />
-          <PhotoStrut />
-          <PhotoStrut />
-          <img src="/images/photos/migue.png" alt="Migue Moyano" />
-          <img src="/images/photos/nabi.png" alt="Nabi Gudiño" />
+          {MEMBERS.map(({ photo, name }, index) => (
+            <Fragment key={name}>
+              <img src={photo} alt={name} />
+              {(index + 1) % 3 === 0 ? (
+                <>
+                  <PhotoStrut />
+                  <PhotoStrut />
+                  <PhotoStrut />
+                </>
+              ) : null}
+            </Fragment>
+          ))}
           <Link href={ROUTES.ABOUT.path}>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>
