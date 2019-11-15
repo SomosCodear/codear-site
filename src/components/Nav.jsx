@@ -93,6 +93,9 @@ const MenuCloseButton = styled.a`
 `;
 
 const NavContainer = styled.nav`
+  position: sticky;
+  top: 0;
+  z-index: 200;
   flex: 0;
   display: flex;
   flex-direction: row;
@@ -140,6 +143,9 @@ const NavContainer = styled.nav`
   }
 
   @media (min-width: 80rem) {
+    position: unset;
+    top: unset;
+    z-index: unset;
     align-self: center;
     width: 80rem;
     padding: 2rem 3rem;
