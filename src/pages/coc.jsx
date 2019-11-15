@@ -109,8 +109,17 @@ const OutroSection = styled.section`
   }
 `;
 
+const CocContainer = styled(Container)`
+  background-image:
+  url(/images/backgrounds/content-left.svg),
+  url(/images/backgrounds/content-right.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 35%,24%;
+  background-position: right -14% top, left top;
+`;
+
 const Coc = () => (
-  <Container>
+  <CocContainer>
     <Content>
       <h1>
         código de conducta
@@ -205,7 +214,7 @@ const Coc = () => (
         </Important>
       </OutroSection>
     </Content>
-  </Container>
+  </CocContainer>
 );
 
 export default Coc;
