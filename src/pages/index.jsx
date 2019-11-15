@@ -202,6 +202,15 @@ const LandingContainer = styled(Container)`
       }
     }
   }
+
+  @media (min-width: 120rem) {
+    background-image:
+    url(/images/backgrounds/content-left.svg),
+    url(/images/backgrounds/content-right.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 35%,24%;
+    background-position: right -14% top, left top;
+  }
 `;
 
 const Index = () => {
