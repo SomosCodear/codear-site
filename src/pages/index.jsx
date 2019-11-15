@@ -117,8 +117,6 @@ const MeetTheTeam = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
-  border: 0.0625rem solid var(--color-secondary);
-  border-radius: 0.625rem;
   font-family: Source Sans Pro;
   font-size: 0.875rem;
   text-align: center;
@@ -135,6 +133,10 @@ const UsSection = styled.section`
     font-family: Source Sans Pro;
     color: var(--color-primary);
     text-align: center;
+  }
+
+  lilac-button {
+    display: flex;
   }
 
   @media (min-width: 80rem) {
@@ -244,6 +246,7 @@ const Index = () => {
           <lilac-button
             href="https://webconf.tech"
             target="_blank"
+            title="DESCUBRÍ WebConf"
             secundario
           >
             DESCUBRÍ WebConf
@@ -268,13 +271,13 @@ const Index = () => {
             </Fragment>
           ))}
           <Link href={ROUTES.ABOUT.path}>
-            <a href={ROUTES.ABOUT.path} title="Conocé al equipo">
+            <lilac-button href={ROUTES.ABOUT.path} title="Conocé al equipo" secundario>
               <MeetTheTeam>
                 CONOCÉ
                 <br />
                 AL EQUIPO
               </MeetTheTeam>
-            </a>
+            </lilac-button>
           </Link>
         </PhotosContainer>
         <p>
