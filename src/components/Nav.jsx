@@ -160,7 +160,8 @@ export const Nav = () => (
       {MENU.map((option) => (
         <MenuItem key={option.path}>
           <Link href={option.path}>
-            <a href={option.path} title={option.label}>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a title={option.label}>
               {option.label}
             </a>
           </Link>
