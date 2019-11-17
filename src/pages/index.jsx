@@ -166,14 +166,18 @@ const UsSection = styled.section`
   }
 `;
 
+const CalendarContainer = styled.div`
+  @media (min-width: 45rem) {
+    align-self: center;
+  }
+  @media (min-width: 80rem) {
+    grid-area: calendar;
+    padding-left: 3rem;
+  }
+`;
+
 const LandingContainer = styled(Container)`
   ${Content} {
-    @media (min-width: 45rem) {
-      lilac-calendar {
-        align-self: center;
-      }
-    }
-
     @media (min-width: 80rem) {
       display: grid;
       grid-template-columns: 1fr 53rem 27rem 1fr;
@@ -181,11 +185,6 @@ const LandingContainer = styled(Container)`
         "     .       calendar    projects        .     "
         "communities communities communities communities"
         "     .          us          us           .     ";
-
-      lilac-calendar {
-        grid-area: calendar;
-        padding-left: 3rem;
-      }
 
       ${ProjectsSection} {
         grid-area: projects;
@@ -212,10 +211,12 @@ const Index = () => {
 
   return (
     <LandingContainer>
-      <Calendar
-        name="eventos"
-        events={events}
-      />
+      <CalendarContainer>
+        <Calendar
+          name="eventos"
+          events={events}
+        />
+      </CalendarContainer>
       <CommunitiesSection>
         <h1>
           comunidades

@@ -27,6 +27,15 @@ const Events = styled.div`
   }
 `;
 
+const EventContainer = styled.div`
+  @media (min-width: 45rem) {
+    display: list-item;
+    &::marker {
+      font-size: 0.9rem;
+    }
+  }
+`;
+
 const Container = styled.div`
   display: block;
   lilac-icon-bullet, lilac-icon-plus {
@@ -46,12 +55,6 @@ const Container = styled.div`
       justify-content: flex-end;
       stroke: var(--color-gray);
     }
-    lilac-calendar-event {
-      display: list-item;
-    }
-    lilac-calendar-event::marker {
-      font-size: 0.9rem;
-    }
   }
 `;
 
@@ -60,6 +63,11 @@ const DayContainer = styled.div`
     display: none;
   `}
   @media (min-width: 45rem) {
+    flex-grow: 1;
+    overflow: hidden;
+    padding: 0.625rem;
+    border: 0.0625rem solid var(--color-secondary);
+    border-radius: 0.625rem;
     ${({ empty }) => empty && css`
       display: block;
     `}
@@ -120,16 +128,17 @@ export const Day = ({
         </DayNumber>
         <Events role="list">
           {events.map((event) => (
-            <Event
-              key={`${event.name} ${event.date}`}
-              role="listitem"
-              date={event.date}
-              name={event.name}
-              street={event.street}
-              city={event.city}
-              country={event.country}
-              link={event.link}
-            />
+            <EventContainer key={`${event.name} ${event.date}`}>
+              <Event
+                role="listitem"
+                date={event.date}
+                name={event.name}
+                street={event.street}
+                city={event.city}
+                country={event.country}
+                link={event.link}
+              />
+            </EventContainer>
           ))}
         </Events>
       </DayContainer>
