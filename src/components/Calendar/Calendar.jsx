@@ -1,5 +1,4 @@
-/* eslint-disable no-param-reassign */
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { MonthSelector } from './MonthSelector';
@@ -55,10 +54,10 @@ const Days = styled.div`
 export const Calendar = ({
   name,
   events,
-  currentMonth,
-  currentYear,
 }) => {
   const today = new Date();
+  const [currentMonth, setCurrentMonth] = useState(today.getMonth());
+  const [currentYear, setCurrentYear] = useState(today.getFullYear());
 
   const getDaysInMonth = () => {
     // passing 0 to the day parameter makes the new date to point to the last day of the previous
@@ -81,20 +80,22 @@ export const Calendar = ({
   });
 
   const handlePreviousMonthEvent = () => {
-    currentMonth -= 1;
-
-    if (currentMonth < 0) {
-      currentMonth = 11;
-      currentYear -= 1;
+    const nextCurrentMonth = currentMonth - 1;
+    if (nextCurrentMonth < 0) {
+      setCurrentMonth(11);
+      setCurrentYear(currentYear - 1);
+    } else {
+      setCurrentMonth(nextCurrentMonth);
     }
   };
 
   const handleNextMonthEvent = () => {
-    currentMonth += 1;
-
-    if (currentMonth > 11) {
-      currentMonth = 0;
-      currentYear += 1;
+    const nextCurrentMonth = currentMonth + 1;
+    if (nextCurrentMonth > 11) {
+      setCurrentMonth(0);
+      setCurrentYear(currentYear + 1);
+    } else {
+      setCurrentMonth(nextCurrentMonth);
     }
   };
 
@@ -140,11 +141,6 @@ export const Calendar = ({
   );
 };
 
-Calendar.defaultProps = {
-  currentMonth: (new Date()).getMonth(),
-  currentYear: (new Date()).getFullYear(),
-};
-
 Calendar.propTypes = {
   name: PropTypes.string.isRequired,
   events: PropTypes.arrayOf(
@@ -157,6 +153,4 @@ Calendar.propTypes = {
       link: PropTypes.string.isRequired,
     }),
   ).isRequired,
-  currentMonth: PropTypes.number,
-  currentYear: PropTypes.number,
 };
