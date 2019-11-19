@@ -224,6 +224,8 @@ const Index = () => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       // eslint-disable-next-line global-require
+      require('@webcomponents/webcomponentsjs/webcomponents-bundle');
+      // eslint-disable-next-line global-require
       require('@codear/lilac');
     }
   }, []);
