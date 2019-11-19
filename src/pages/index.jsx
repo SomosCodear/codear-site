@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import events from '../events.json';
 import { MEMBERS, ROUTES } from '../data/constants';
+import { BREAKPOINTS } from '../style/constants';
 import { Container, Content } from '../components/Container';
 import { Calendar } from '../components/Calendar';
 
@@ -16,7 +17,7 @@ const CommunitiesSection = styled.section`
     font-size: 3.25rem;
   }
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     flex-direction: row;
     justify-content: center;
     padding: 1.5rem 0;
@@ -51,7 +52,7 @@ const CommunitiesBanner = styled.div`
     margin-left: 0.5rem;
   }
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     box-sizing: border-box;
     width: 25rem;
     margin-top: 0;
@@ -64,7 +65,7 @@ const ProjectsSection = styled.section`
   flex-direction: column;
   align-items: center;
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     padding-right: 3rem;
   }
 `;
@@ -97,7 +98,7 @@ const PhotosContainer = styled.div`
     color: var(--color-secondary);
   }
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     grid-template-columns: repeat(5, 6.5rem);
     justify-content: flex-start;
     margin: 0;
@@ -107,7 +108,7 @@ const PhotosContainer = styled.div`
 const PhotoStrut = styled.div`
   display: none;
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     display: block;
   }
 `;
@@ -139,7 +140,7 @@ const UsSection = styled.section`
     display: flex;
   }
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     padding: 0 3rem;
     display: grid;
     align-items: flex-start;
@@ -172,7 +173,7 @@ const CalendarContainer = styled.div`
   @media (min-width: 45rem) {
     align-self: center;
   }
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     grid-area: calendar;
     padding-left: 3rem;
   }
@@ -180,7 +181,7 @@ const CalendarContainer = styled.div`
 
 const LandingContainer = styled(Container)`
   ${Content} {
-    @media (min-width: 80rem) {
+    @media (min-width: ${BREAKPOINTS.hd}) {
       display: grid;
       grid-template-columns: 1fr 53rem 27rem 1fr;
       grid-template-areas:
@@ -202,7 +203,7 @@ const LandingContainer = styled(Container)`
     }
   }
 
-  @media (min-width: 120rem) {
+  @media (min-width: ${BREAKPOINTS.wideScreen}) {
     background-image:
     url(/images/backgrounds/content-left.svg),
     url(/images/backgrounds/content-right.svg);

@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-
+import { BREAKPOINTS } from '../../style/constants';
 import { Event } from './Event';
 import { SROnlyText } from '../SROnlyText';
 import { formatNumber, inflect } from '../../utils/format';
 
 const DayNumber = styled.div`
   display: none;
-  @media (min-width: 45rem) {
+  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,7 +18,7 @@ const DayNumber = styled.div`
 `;
 
 const Events = styled.div`
-  @media (min-width: 45rem) {
+  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     padding-left: 0.9rem;
     list-style: disc;
     font-size: 0.75rem;
@@ -28,7 +28,7 @@ const Events = styled.div`
 `;
 
 const EventContainer = styled.div`
-  @media (min-width: 45rem) {
+  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     display: list-item;
     &::marker {
       font-size: 0.9rem;
@@ -41,7 +41,7 @@ const Container = styled.div`
   lilac-icon-bullet, lilac-icon-plus {
     display: none;
   }
-  @media (min-width: 45rem) {
+  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -62,7 +62,7 @@ const DayContainer = styled.div`
   ${({ empty }) => empty && css`
     display: none;
   `}
-  @media (min-width: 45rem) {
+  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     flex-grow: 1;
     overflow: hidden;
     padding: 0.625rem;

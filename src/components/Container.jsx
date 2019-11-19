@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Head from 'next/head';
+import { BREAKPOINTS } from '../style/constants';
 import { Nav } from './Nav';
 import { Footer } from './Footer';
 import { Separator } from './Separator';
@@ -13,7 +14,7 @@ export const Wrapper = styled.div`
 `;
 
 export const HeaderLine = styled.div`
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     min-height: 0.75rem;
     background-image: url(/images/backgrounds/nav-desktop.png);
     background-position: left top;

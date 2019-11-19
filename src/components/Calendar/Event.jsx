@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
+import { BREAKPOINTS, COLORS } from '../../style/constants';
 import { SROnlyText } from '../SROnlyText';
 import { formatNumber } from '../../utils/format';
 
@@ -9,7 +9,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 1rem;
-  @media (min-width: 45rem) {
+  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     margin-top: 0;
   }
 `;
@@ -25,7 +25,7 @@ const EventDate = styled.div`
   font-size: 1.5rem;
   line-height: 1.5rem;
   color: var(--color-text);
-  @media (min-width: 45rem) {
+  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     display: none;
   }
 `;
@@ -43,7 +43,7 @@ const EventInfo = styled.div`
   padding: 0.625rem 1.25rem;
   border: solid 0.0625rem var(--color-secondary);
   border-right: 0;
-  @media (min-width: 45rem) {
+  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     border: 0;
     padding: 0;
   }
@@ -59,7 +59,7 @@ const EventName = styled.span`
   color: var(--color-primary-light);
   white-space: nowrap;
   text-overflow: ellipsis;
-  @media (min-width: 45rem) {
+  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     text-transform: none;
     font-weight: 400;
     font-size: inherit;
@@ -69,7 +69,7 @@ const EventName = styled.span`
 
 const EventAddressMeta = styled.div`
   color: var(--color-primary);
-  @media (min-width: 45rem) {
+  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     display: none;
   }
 `;
@@ -83,7 +83,7 @@ const EventLink = styled.a`
   border-left: 0;
   border-radius: 0 0.625rem 0.625rem 0;
   fill: var(--color-secondary);
-  @media (min-width: 45rem) {
+  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     display: none;
   }
 `;
@@ -158,7 +158,7 @@ export const Event = ({
       >
         <lilac-icon-chevron
           direction="right"
-          color="#A70055"
+          color={COLORS.secondary}
           width="16"
           height="40"
         />

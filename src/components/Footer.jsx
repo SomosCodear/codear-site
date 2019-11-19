@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { BREAKPOINTS } from '../style/constants';
 
 const FooterContainer = styled.footer`
   flex: 0;
@@ -16,7 +17,7 @@ const FooterContainer = styled.footer`
   font-size: 0.875rem;
   font-family: Source Sans Pro;
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     padding: 0;
     background-image: url(/images/backgrounds/footer-desktop.png);
     background-position: left top;
@@ -29,7 +30,7 @@ const FooterContent = styled.div`
   flex-direction: column;
   align-items: flex-end;
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     box-sizing: border-box;
     width: 80rem;
     padding: 1.75rem 3rem;
@@ -48,7 +49,7 @@ const SocialMediaContainer = styled.div`
     margin-left: 1.5rem;
   }
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     margin-top: 0;
   }
 `;

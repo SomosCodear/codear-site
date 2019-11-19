@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { BREAKPOINTS } from '../../style/constants';
 import { MonthSelector } from './MonthSelector';
 import { SROnlyText } from '../SROnlyText';
 import { formatMonth } from '../../utils/format';
@@ -10,7 +11,7 @@ const Section = styled.section`
   position: relative;
   max-width: 47.5rem;
   padding: 1rem;
-  @media (min-width: 45rem) {
+  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     display: grid;
     grid-template-columns: repeat(auto-fill, 6.25rem);
     grid-auto-rows: 6.25rem;
@@ -20,7 +21,7 @@ const Section = styled.section`
 
 const Header = styled.header`
   z-index: 1;
-  @media (min-width: 45rem) {
+  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     display: flex;
     flex-direction: column-reverse;
     grid-column-start: 1;
@@ -30,7 +31,7 @@ const Header = styled.header`
 
 const Title = styled.h2`
   display: none;
-  @media (min-width: 45rem) {
+  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     display: initial;
     font-size: 4rem;
     font-weight: 100;
@@ -45,7 +46,7 @@ const Days = styled.div`
   padding: 0;
   margin: 0.25rem 0 0;
   min-height: 27rem;
-  @media (min-width: 45rem) {
+  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     display: contents;
     min-height: unset;
   }

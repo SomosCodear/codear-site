@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-
+import { BREAKPOINTS, COLORS } from '../../style/constants';
 import { formatMonth } from '../../utils/format';
 
 const List = styled.ol`
@@ -12,7 +12,7 @@ const List = styled.ol`
   list-style: none;
   padding: 0;
   margin: 0;
-  @media (min-width: 45rem) {
+  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     justify-content: flex-start;
   }
 `;
@@ -22,7 +22,7 @@ const ListItem = styled.li`
     font-family: Source Sans Pro;
     font-size: 1.5rem;
     color: var(--color-primary-light);
-    @media (min-width: 45rem) {
+    @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
       min-width: 12rem;
       text-align: center;
       color: var(--color-primary-lightest);
@@ -42,7 +42,7 @@ const NavButton = styled.button`
     border-color: var(--color-secondary);
     fill: var(--color-secondary);
   }
-  @media (min-width: 45rem) {
+  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     padding: 0;
     border: 0;
   }
@@ -95,8 +95,8 @@ export const MonthSelector = ({
             onClick={onPreviousMonthClick}
           >
             <lilac-icon-chevron
-              color="#657CBD"
-              hovercolor="#A70055"
+              color={COLORS.primaryLightest}
+              hovercolor={COLORS.secondary}
             />
           </NavButton>
         </ListItem>
@@ -114,8 +114,8 @@ export const MonthSelector = ({
           >
             <lilac-icon-chevron
               direction="right"
-              color="#657CBD"
-              hovercolor="#A70055"
+              color={COLORS.primaryLightest}
+              hovercolor={COLORS.secondary}
             />
           </NavButton>
         </ListItem>
