@@ -803,10 +803,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@codear/lilac@^0.0.8":
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/@codear/lilac/-/lilac-0.0.8.tgz#745a70e8a692d97b1629d54ecb202da94a6a2b2b"
-  integrity sha512-DBU3nDgKA2rqz7xxh2IjH25A3LUBCxQOLzKLyzHx2lBXeWeCf5555i3UuU/N4fNrfzvrb2ttLJz72MywjSstKg==
+"@codear/lilac@0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@codear/lilac/-/lilac-0.0.9.tgz#f03f6173f5d2014704bd5a4146b6747c70597781"
+  integrity sha512-5bZFodmYVGQUxP039MokkKXYOqBHL9N6MaP4LBi8EpTzL6thFVC5A9zEoDEID66/mJy0VE5PdlMhFd4ttKeVvA==
 
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"

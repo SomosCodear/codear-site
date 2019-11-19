@@ -58,9 +58,6 @@ export const Footer = () => (
     <FooterContent>
       © 2019 | Comunidad de Desarrolladores de Argentina
       <SocialMediaContainer>
-        <a href="https://www.facebook.com/SomosCodear" target="_blank" rel="noopener noreferrer">
-          <img src="/images/social-media-logos/logo-facebook.svg" alt="facebook" />
-        </a>
         <a href="https://www.instagram.com/somoscodear/" target="_blank" rel="noopener noreferrer">
           <img src="/images/social-media-logos/logo-instagram.svg" alt="instagram" />
         </a>

@@ -6,6 +6,7 @@ module.exports = withCSS(withFonts({
     return {
       '/': { page: '/' },
       '/conocenos': { page: '/about' },
+      '/codigo-de-conducta': { page: '/coc' },
     };
   },
 }));

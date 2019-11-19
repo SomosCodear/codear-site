@@ -93,6 +93,9 @@ const MenuCloseButton = styled.a`
 `;
 
 const NavContainer = styled.nav`
+  position: sticky;
+  top: 0;
+  z-index: 200;
   flex: 0;
   display: flex;
   flex-direction: row;
@@ -140,6 +143,9 @@ const NavContainer = styled.nav`
   }
 
   @media (min-width: 80rem) {
+    position: unset;
+    top: unset;
+    z-index: unset;
     align-self: center;
     width: 80rem;
     padding: 2rem 3rem;
@@ -160,7 +166,8 @@ export const Nav = () => (
       {MENU.map((option) => (
         <MenuItem key={option.path}>
           <Link href={option.path}>
-            <a href={option.path} title={option.label}>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a title={option.label}>
               {option.label}
             </a>
           </Link>

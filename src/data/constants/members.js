@@ -6,7 +6,7 @@ export const MEMBERS = [
   },
   {
     photo: '/images/photos/agus.png',
-    name: 'Agustin Carrasco',
+    name: 'Agustín Carrasco',
     role: 'Secretario',
   },
   {
@@ -16,7 +16,7 @@ export const MEMBERS = [
   },
   {
     photo: '/images/photos/flor.png',
-    name: 'Florencia Carillo',
+    name: 'Florencia Carrillo',
     role: 'Vocal',
   },
   {

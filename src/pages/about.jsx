@@ -10,7 +10,7 @@ const PhotoCommissionContainer = styled.div`
 
   img {
     width: 100vw;
-    max-height: 46rem;
+    max-height: 40rem;
     object-fit: cover;
     object-position: top center;
   }
