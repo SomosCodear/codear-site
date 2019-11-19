@@ -113,6 +113,13 @@ const PhotoStrut = styled.div`
   }
 `;
 
+const MeetTheTeamContainer = styled.span`
+  display: flex;
+  lilac-button {
+    width: 100%;
+  }
+`;
+
 const MeetTheTeam = styled.div`
   display: flex;
   align-items: center;
@@ -282,13 +289,19 @@ const Index = () => {
             </Fragment>
           ))}
           <Link href={ROUTES.ABOUT.path}>
-            <lilac-button href={ROUTES.ABOUT.path} title="Conocé al equipo" secundario>
-              <MeetTheTeam>
-                CONOCÉ
-                <br />
-                AL EQUIPO
-              </MeetTheTeam>
-            </lilac-button>
+            <MeetTheTeamContainer>
+              <lilac-button
+                href={ROUTES.ABOUT.path}
+                title="Conocé al equipo"
+                secundario
+              >
+                <MeetTheTeam>
+                  CONOCÉ
+                  <br />
+                  AL EQUIPO
+                </MeetTheTeam>
+              </lilac-button>
+            </MeetTheTeamContainer>
           </Link>
         </PhotosContainer>
         <p>
