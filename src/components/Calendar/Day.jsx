@@ -71,22 +71,6 @@ const DayContainer = styled.div`
     ${({ empty }) => empty && css`
       display: block;
     `}
-    ${({ today }) => today && css`
-      background-color: var(--color-secondary);
-      ${DayNumber} {
-        color: var(--color-text);
-        font-weight: 700;
-      }
-      ${Events} {
-        padding-left: 0;
-        list-style: none;
-        font-size: 1.125rem;
-        color: var(--color-text);
-      }
-      &:hover {
-        fill: var(--color-text);
-      }
-    `}
     &:hover {
       ${DayNumber} {
         font-weight: bold;
@@ -96,6 +80,19 @@ const DayContainer = styled.div`
         fill: var(--color-secondary);
       }
     }
+    ${({ today }) => today && css`
+      background-color: var(--color-secondary);
+      ${DayNumber} {
+        color: var(--color-text);
+        font-weight: 700;
+      }
+      ${Events}, a {
+        color: var(--color-text);
+      }
+      &:hover lilac-icon-bullet {
+        fill: var(--color-text);
+      }
+    `}
   }
 `;
 

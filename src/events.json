@@ -48,6 +48,14 @@
     "link": "https://google.com"
   },
   {
+    "date": "2019-11-19T15:00:00.000Z",
+    "name": "Some Event",
+    "street": "test",
+    "city": "Cordoba",
+    "country": "Argentina",
+    "link": "https://yahoo.com"
+  },
+  {
     "date": "2019-11-03T20:00:00.000Z",
     "name": "Beer JS",
     "street": "Blabla",

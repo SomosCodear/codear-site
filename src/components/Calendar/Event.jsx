@@ -5,16 +5,18 @@ import { BREAKPOINTS, COLORS } from '../../style/constants';
 import { SROnlyText } from '../SROnlyText';
 import { formatNumber } from '../../utils/format';
 
-const Container = styled.div`
+const Container = styled.a`
   display: flex;
   flex-direction: row;
   margin-top: 1rem;
+  text-decoration: none;
+  color: var(--color-primary-light);
   @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     margin-top: 0;
   }
 `;
 
-const EventDate = styled.div`
+const EventDate = styled.span`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,12 +32,13 @@ const EventDate = styled.div`
   }
 `;
 
-const EventDay = styled.div`
+const EventDay = styled.span`
+  display: block;
   font-size: 4rem;
   line-height: 4rem;
 `;
 
-const EventInfo = styled.div`
+const EventInfo = styled.span`
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -56,7 +59,6 @@ const EventName = styled.span`
   font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--color-primary-light);
   white-space: nowrap;
   text-overflow: ellipsis;
   @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
@@ -67,14 +69,15 @@ const EventName = styled.span`
   }
 `;
 
-const EventAddressMeta = styled.div`
+const EventAddressMeta = styled.span`
+  display: block;
   color: var(--color-primary);
   @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     display: none;
   }
 `;
 
-const EventLink = styled.a`
+const EventArrow = styled.span`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -118,7 +121,11 @@ export const Event = ({
 }) => {
   const fdate = new Date(date);
   return (
-    <Container>
+    <Container
+      href={link}
+      target="_blank"
+      aria-label="Abrir página del evento"
+    >
       <EventDate>
         <div>
           <span aria-hidden="true">
@@ -151,18 +158,14 @@ export const Event = ({
           {`${city}, ${country}`}
         </EventAddressMeta>
       </EventInfo>
-      <EventLink
-        href={link}
-        target="_blank"
-        aria-label="Abrir página del evento"
-      >
+      <EventArrow aria-hidden="true">
         <lilac-icon-chevron
           direction="right"
           color={COLORS.secondary}
           width="16"
           height="40"
         />
-      </EventLink>
+      </EventArrow>
     </Container>
   );
 };
