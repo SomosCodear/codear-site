@@ -119,10 +119,7 @@ const NavContainer = styled.nav`
     z-index: 1000;
     left: 0;
     top: 0;
-    background-image: url(/images/backgrounds/menu.png);
-    background-repeat: no-repeat;
-    background-position: -0.0625rem -0.0625rem;
-    background-size: auto;
+    background: linear-gradient(var(--color-secondary), var(--color-primary));
 
     ${LogoMobile} {
       position: absolute;
