@@ -119,7 +119,7 @@ const NavContainer = styled.nav`
     z-index: 1000;
     left: 0;
     top: 0;
-    background: linear-gradient(var(--color-secondary), var(--color-primary));
+    background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
 
     ${LogoMobile} {
       position: absolute;
