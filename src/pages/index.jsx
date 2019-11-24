@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import events from '../events.json';
 import { MEMBERS, ROUTES } from '../data/constants';
+import { BREAKPOINTS } from '../style/constants';
 import { Container, Content } from '../components/Container';
 import { Calendar } from '../components/Calendar';
 
@@ -16,7 +17,7 @@ const CommunitiesSection = styled.section`
     font-size: 3.25rem;
   }
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     flex-direction: row;
     justify-content: center;
     padding: 1.5rem 0;
@@ -51,7 +52,7 @@ const CommunitiesBanner = styled.div`
     margin-left: 0.5rem;
   }
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     box-sizing: border-box;
     width: 25rem;
     margin-top: 0;
@@ -64,7 +65,7 @@ const ProjectsSection = styled.section`
   flex-direction: column;
   align-items: center;
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     padding-right: 3rem;
   }
 `;
@@ -97,7 +98,7 @@ const PhotosContainer = styled.div`
     color: var(--color-secondary);
   }
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     grid-template-columns: repeat(5, 6.5rem);
     justify-content: flex-start;
     margin: 0;
@@ -107,8 +108,15 @@ const PhotosContainer = styled.div`
 const PhotoStrut = styled.div`
   display: none;
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     display: block;
+  }
+`;
+
+const MeetTheTeamContainer = styled.span`
+  display: flex;
+  lilac-button {
+    width: 100%;
   }
 `;
 
@@ -139,7 +147,7 @@ const UsSection = styled.section`
     display: flex;
   }
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     padding: 0 3rem;
     display: grid;
     align-items: flex-start;
@@ -168,26 +176,25 @@ const UsSection = styled.section`
   }
 `;
 
+const CalendarContainer = styled.div`
+  @media (min-width: 45rem) {
+    align-self: center;
+  }
+  @media (min-width: ${BREAKPOINTS.hd}) {
+    grid-area: calendar;
+    padding-left: 3rem;
+  }
+`;
+
 const LandingContainer = styled(Container)`
   ${Content} {
-    @media (min-width: 45rem) {
-      lilac-calendar {
-        align-self: center;
-      }
-    }
-
-    @media (min-width: 80rem) {
+    @media (min-width: ${BREAKPOINTS.hd}) {
       display: grid;
       grid-template-columns: 1fr 53rem 27rem 1fr;
       grid-template-areas:
         "     .       calendar    projects        .     "
         "communities communities communities communities"
         "     .          us          us           .     ";
-
-      lilac-calendar {
-        grid-area: calendar;
-        padding-left: 3rem;
-      }
 
       ${ProjectsSection} {
         grid-area: projects;
@@ -203,7 +210,7 @@ const LandingContainer = styled(Container)`
     }
   }
 
-  @media (min-width: 120rem) {
+  @media (min-width: ${BREAKPOINTS.wideScreen}) {
     background-image:
     url(/images/backgrounds/content-left.svg),
     url(/images/backgrounds/content-right.svg);
@@ -217,16 +224,20 @@ const Index = () => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       // eslint-disable-next-line global-require
+      require('@webcomponents/webcomponentsjs/webcomponents-bundle');
+      // eslint-disable-next-line global-require
       require('@codear/lilac');
     }
   }, []);
 
   return (
     <LandingContainer>
-      <Calendar
-        name="eventos"
-        events={events}
-      />
+      <CalendarContainer>
+        <Calendar
+          name="eventos"
+          events={events}
+        />
+      </CalendarContainer>
       <CommunitiesSection>
         <h1>
           comunidades
@@ -280,13 +291,19 @@ const Index = () => {
             </Fragment>
           ))}
           <Link href={ROUTES.ABOUT.path}>
-            <lilac-button href={ROUTES.ABOUT.path} title="Conocé al equipo" secundario>
-              <MeetTheTeam>
-                CONOCÉ
-                <br />
-                AL EQUIPO
-              </MeetTheTeam>
-            </lilac-button>
+            <MeetTheTeamContainer>
+              <lilac-button
+                href={ROUTES.ABOUT.path}
+                title="Conocé al equipo"
+                secundario
+              >
+                <MeetTheTeam>
+                  CONOCÉ
+                  <br />
+                  AL EQUIPO
+                </MeetTheTeam>
+              </lilac-button>
+            </MeetTheTeamContainer>
           </Link>
         </PhotosContainer>
         <p>

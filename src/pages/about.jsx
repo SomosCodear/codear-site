@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { MEMBERS } from '../data/constants';
+import { BREAKPOINTS } from '../style/constants';
 import { Container } from '../components/Container';
 import { Separator } from '../components/Separator';
 
@@ -15,7 +16,7 @@ const PhotoCommissionContainer = styled.div`
     object-position: top center;
   }
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -28,7 +29,7 @@ const Content = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     flex-direction: row;
     align-items: flex-start;
     max-width: 73.75rem;
@@ -38,7 +39,7 @@ const Content = styled.div`
 
 const Texts = styled.div`
   text-align: center;
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     text-align: left;
     max-width: 17.5rem;
     margin: 0 3.125rem;
@@ -63,7 +64,7 @@ const UsSection = styled.section`
     color: var(--color-primary);
   }
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     p {
       margin: 0;
       text-align: left;
@@ -77,7 +78,7 @@ const Members = styled.div`
   grid-gap: 1rem;
   margin: 3rem 1.5rem;
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     flex-grow: 1;
     grid-template-columns: 1fr 1fr;
   }

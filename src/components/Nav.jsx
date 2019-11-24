@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
+import { BREAKPOINTS } from '../style/constants';
 import { MENU } from '../data/constants';
 
 const LogoMobile = styled.img`
   display: block;
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     display: none;
   }
 `;
@@ -14,7 +15,7 @@ const LogoMobile = styled.img`
 const LogoDesktop = styled.img`
   display: none;
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     display: block;
   }
 `;
@@ -28,7 +29,7 @@ const Menu = styled.ul`
   height: 100%;
   width: 100%;
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     display: flex;
     height: auto;
     width: auto;
@@ -60,7 +61,7 @@ const MenuItem = styled.li`
     margin-bottom: 0;
   }
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     margin: 0;
 
     a {
@@ -79,7 +80,7 @@ const MenuOpenButton = styled.a`
   display: inline-block;
   padding: 0.25rem;
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     display: none;
   }
 `;
@@ -118,10 +119,7 @@ const NavContainer = styled.nav`
     z-index: 1000;
     left: 0;
     top: 0;
-    background-image: url(/images/backgrounds/menu.png);
-    background-repeat: no-repeat;
-    background-position: -0.0625rem -0.0625rem;
-    background-size: auto;
+    background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
 
     ${LogoMobile} {
       position: absolute;
@@ -142,7 +140,7 @@ const NavContainer = styled.nav`
     }
   }
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     position: unset;
     top: unset;
     z-index: unset;

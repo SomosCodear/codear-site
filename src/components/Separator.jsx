@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { BREAKPOINTS } from '../style/constants';
 
 export const Container = styled.div`
   display: none;
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     display: block;
     background: linear-gradient(90deg, #350C4B, #474A7D);
     min-height: 0.75rem;

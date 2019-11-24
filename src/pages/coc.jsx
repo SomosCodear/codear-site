@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { BREAKPOINTS } from '../style/constants';
 import { Container } from '../components/Container';
 
 const Content = styled.div`
@@ -39,7 +40,7 @@ const Content = styled.div`
     }
   }
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     align-self: center;
     max-width: 73.75rem;
     width: 100%;
@@ -61,7 +62,7 @@ const Content = styled.div`
 const Intro = styled.p`
   margin: 2rem 0;
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     margin-left: 0 !important;
     font-weight: bold;
   }
@@ -83,7 +84,7 @@ const ObjectivesSection = styled.section`
     color: var(--color-primary-lightest);
   }
 
-  @media (min-width: 80rem) {
+  @media (min-width: ${BREAKPOINTS.hd}) {
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-column-gap: 7.4rem;
