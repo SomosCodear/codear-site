@@ -9,13 +9,24 @@ import { Day } from './Day';
 
 const Section = styled.section`
   position: relative;
+  min-height: 25rem;
   max-width: 47.5rem;
   padding: 1rem;
+
+  lilac-overlay {
+    margin-top: 5rem;
+  }
+
   @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
+    min-height: unset;
     display: grid;
     grid-template-columns: repeat(auto-fill, 6.25rem);
     grid-auto-rows: 6.25rem;
     grid-gap: 0.625rem;
+
+    lilac-overlay {
+      margin-top: 0;
+    }
   }
 `;
 
@@ -41,16 +52,6 @@ const Title = styled.h2`
 `;
 
 const Subtitle = styled.h3``;
-const Days = styled.div`
-  position: relative;
-  padding: 0;
-  margin: 0.25rem 0 0;
-  min-height: 27rem;
-  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
-    display: contents;
-    min-height: unset;
-  }
-`;
 
 export const Calendar = ({
   name,
@@ -134,10 +135,8 @@ export const Calendar = ({
           </Subtitle>
         </SROnlyText>
       </Header>
-      <Days>
-        {days.map(renderDay)}
-        {hasEventsForMonth() ? null : renderNoEventsOverlay()}
-      </Days>
+      {days.map(renderDay)}
+      {hasEventsForMonth() ? null : renderNoEventsOverlay()}
     </Section>
   );
 };
