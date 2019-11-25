@@ -127,14 +127,14 @@ export const Event = ({
       aria-label="Abrir página del evento"
     >
       <EventDate>
-        <div>
+        <span>
           <span aria-hidden="true">
             {DAY_NAMES[fdate.getDay()]}
           </span>
           <SROnlyText>
             {SR_DAY_NAMES[fdate.getDay()]}
           </SROnlyText>
-        </div>
+        </span>
         <EventDay>
           {formatNumber(fdate.getDate())}
         </EventDay>
