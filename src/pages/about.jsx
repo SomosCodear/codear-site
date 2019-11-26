@@ -114,7 +114,7 @@ const Member = styled.div`
 `;
 
 const About = () => (
-  <Container>
+  <Container title="Conocenos">
     <UsSection>
       <PhotoCommissionContainer>
         <img src="/images/photos/us.jpg" alt="Foto de la comisión directiva" />

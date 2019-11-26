@@ -44,10 +44,13 @@ export const Content = styled.main`
   }
 `;
 
-export const Container = ({ children, className }) => (
+export const Container = ({ children, className, title }) => (
   <Wrapper className={className}>
     <Head>
-      <title>CoDeAr</title>
+      <title>
+        {`${title} `}
+        | Comunidad de Desarrolladores de Argentina
+      </title>
     </Head>
     <Separator />
     <Nav />
@@ -63,8 +66,10 @@ export const Container = ({ children, className }) => (
 Container.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  title: PropTypes.string,
 };
 
 Container.defaultProps = {
   className: null,
+  title: '¡Hola!',
 };

@@ -120,7 +120,7 @@ const CocContainer = styled(Container)`
 `;
 
 const Coc = () => (
-  <CocContainer>
+  <CocContainer title="Código de Conducta">
     <Content>
       <h1>
         código de conducta
