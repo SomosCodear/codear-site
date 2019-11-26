@@ -86,7 +86,7 @@ export const MonthSelector = ({
   };
 
   return (
-    <nav aria-label="Eventos por més">
+    <nav aria-label="Eventos por mes">
       <List>
         <ListItem>
           <NavButton
