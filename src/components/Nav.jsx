@@ -1,8 +1,9 @@
+import Link from 'next/link';
+import { withRouter } from 'next/router';
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
-import { BREAKPOINTS } from '../style/constants';
 import { MENU } from '../data/constants';
+import { BREAKPOINTS } from '../style/constants';
 
 const LogoMobile = styled.img`
   display: block;
@@ -55,6 +56,36 @@ const MenuItem = styled.li`
     text-decoration: none;
     color: var(--color-text);
     line-height: 2.5rem;
+    transition: color linear 100ms;
+    text-transform: lowercase;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 0%;
+      margin-left: 50%;
+      height: 3px;
+      transition: width linear 100ms;
+    }
+
+    &:hover {
+      color: var(--color-primary-lightest);
+      padding-bottom: 0;
+
+      &:after {
+        width: 50%;
+        background: linear-gradient(90deg, #ffffff, var(--color-primary-lightest));
+      }
+    }
+
+    &.current {
+      color: var(--color-secondary);
+
+      &:after {
+        width: 50%;
+        background: linear-gradient(90deg, #ffffff, var(--color-secondary));
+      }
+    }
   }
 
   &:last-child {
@@ -152,37 +183,39 @@ const NavContainer = styled.nav`
   }
 `;
 
-export const Nav = () => (
-  <NavContainer id="menu">
-    <Link href="/">
-      <a href="/" title="inicio">
-        <LogoMobile src="/images/brand/codear-logo-mobile.svg" alt="logo de codear" />
-        <LogoDesktop src="/images/brand/codear-logo-desktop.svg" alt="logo de codear" />
-      </a>
-    </Link>
-    <Menu>
-      {MENU.map((option) => (
-        <MenuItem key={option.path}>
-          <Link href={option.path}>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a title={option.label}>
-              {option.label}
-            </a>
-          </Link>
-        </MenuItem>
-      ))}
-    </Menu>
-    <MenuOpenButton href="#menu" title="Abrir menu">
-      <img
-        src="/icons/hamburger-menu.svg"
-        alt="Abrir menu"
-      />
-    </MenuOpenButton>
-    <MenuCloseButton href="#" title="Cerrar menu">
-      <img
-        src="/icons/chevron-up.svg"
-        alt="Cerrar menu"
-      />
-    </MenuCloseButton>
-  </NavContainer>
+export const Nav = withRouter(
+  ({ router }) => (
+    <NavContainer id="menu">
+      <Link href="/">
+        <a href="/" title="Inicio">
+          <LogoMobile src="/images/brand/codear-logo-mobile.svg" alt="Logo de CoDeAr" />
+          <LogoDesktop src="/images/brand/codear-logo-desktop.svg" alt="Logo de CoDeAr" />
+        </a>
+      </Link>
+      <Menu>
+        {MENU.map((option) => (
+          <MenuItem key={option.path}>
+            <Link href={option.path}>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+              <a alt={option.label} className={router.asPath === option.path ? 'current' : ''}>
+                {option.label}
+              </a>
+            </Link>
+          </MenuItem>
+        ))}
+      </Menu>
+      <MenuOpenButton href="#menu" title="Abrir menu">
+        <img
+          src="/icons/hamburger-menu.svg"
+          alt="Abrir menu"
+        />
+      </MenuOpenButton>
+      <MenuCloseButton href="#" title="Cerrar menu">
+        <img
+          src="/icons/chevron-up.svg"
+          alt="Cerrar menu"
+        />
+      </MenuCloseButton>
+    </NavContainer>
+  ),
 );

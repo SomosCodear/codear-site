@@ -3,10 +3,10 @@ import { ROUTES } from './routes';
 export const MENU = [
   {
     ...ROUTES.ABOUT,
-    label: 'conocenos',
+    label: 'Conocenos',
   },
   {
     ...ROUTES.COC,
-    label: 'código de conducta',
+    label: 'Código de conducta',
   },
 ];
