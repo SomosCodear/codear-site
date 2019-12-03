@@ -1,0 +1,82 @@
+[
+  {
+    "date": "2019-11-21T22:00:00.000Z",
+    "name": "BeerJS Cba No. 36",
+    "street": "Coworking Garden, Ituzaingó 270",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://www.meetup.com/Beer-js-Cordoba/events/266471715/"
+  },
+  {
+    "date": "2019-11-22T21:15:00.000Z",
+    "name": "DevOps Cba #3",
+    "street": "The Tech Pub, Av.Vélez Sarsfield 576",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://www.meetup.com/es-ES/DevOps-Cordoba/events/266448471/"
+  },
+  {
+    "date": "2019-11-22T21:00:00.000Z",
+    "name": "Voucher Workshop Fundamentals",
+    "street": "UTN FRC, Maestro López esq. Cruz Roja",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://cryptoresources.mitiendanube.com/workshops/voucher-workshop-fundamentals-cordoba/"
+  },
+  {
+    "date": "2019-11-26T21:30:00.000Z",
+    "name": "GDG Dev Talks #1",
+    "street": "Distillery, Av. 24 de Septiembre 1536",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://www.meetup.com/es-ES/GDG-CORDOBA-AR/events/266206214/"
+  },
+  {
+    "date": "2019-11-27T21:00:00.000Z",
+    "name": "La oratoria: El auditorio y yo",
+    "street": "Coworking Garden, Ituzaingó 270",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://www.eventbrite.com/e/la-oratoria-el-auditorio-y-yo-tickets-81242100309"
+  },
+  {
+    "date": "2019-11-28T21:30:00.000Z",
+    "name": "Docker Córdoba #21",
+    "street": "Olapic, Corrientes 161 Piso 2",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://www.meetup.com/es-ES/Docker-Cordoba-ARG/events/266300247/"
+  },
+  {
+    "date": "2019-11-28T21:30:00.000Z",
+    "name": "DevC",
+    "street": "Eureka Labs, Av. Poeta Lugones 340",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://www.facebook.com/groups/DevCCordoba/"
+  },
+  {
+    "date": "2019-12-03T19:30:00.000Z",
+    "name": "MeT CBA Fin de Año",
+    "street": "Espacio Cultural Museo de las Mujeres, Rivera Indarte 55",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://www.eventbrite.com.ar/e/fin-de-ano-met-cba-tickets-82199955279"
+  },
+  {
+    "date": "2019-12-06T22:00:00.000Z",
+    "name": "#AdminBirras en Córdoba",
+    "street": "Av. Marcelo T. de Alvear 545",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://www.meetup.com/es-ES/DoctArmy-a-SysArmy-Chapter/events/xcxqjryzqbjb/"
+  },
+  {
+    "date": "2019-12-19T22:00:00.000Z",
+    "name": "BeerJs Cba No. 37",
+    "street": "TBD",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://www.meetup.com/Beer-js-Cordoba/"
+  }
+]
