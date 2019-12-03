@@ -195,7 +195,7 @@ export const Nav = withRouter(
       <Menu>
         {MENU.map((option) => (
           <MenuItem key={option.path}>
-            <Link href={option.path}>
+            <Link href={option.page} as={option.path}>
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a alt={option.label} className={router.asPath === option.path ? 'current' : ''}>
                 {option.label}

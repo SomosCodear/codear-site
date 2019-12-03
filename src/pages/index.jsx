@@ -290,7 +290,7 @@ const Index = () => {
               ) : null}
             </Fragment>
           ))}
-          <Link href={ROUTES.ABOUT.path}>
+          <Link href={ROUTES.ABOUT.page} as={ROUTES.ABOUT.path}>
             <MeetTheTeamContainer>
               <lilac-button
                 href={ROUTES.ABOUT.path}
