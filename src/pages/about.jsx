@@ -59,7 +59,7 @@ const UsSection = styled.section`
   p {
     margin: 1.5rem 3rem 0;
     text-align: center;
-    font-family: Source Sans Pro;
+    font-family: Source Sans Pro, sans-serif;
     line-height: 1.5rem;
     color: var(--color-primary);
   }
@@ -97,7 +97,7 @@ const Member = styled.div`
     margin: 0;
     align-self: flex-end;
     text-align: left;
-    font-family: Source Sans Pro;
+    font-family: Source Sans Pro, sans-serif;
     font-weight: bold;
     font-size: 1.5rem;
     color: var(--color-secondary);
@@ -107,7 +107,7 @@ const Member = styled.div`
     margin: 0;
     align-self: flex-start;
     text-align: left;
-    font-family: Source Sans Pro;
+    font-family: Source Sans Pro, sans-serif;
     font-size: 1.5rem;
     color: var(--color-primary);
   }

@@ -49,7 +49,7 @@ const MenuItem = styled.li`
     width: 15rem;
     border: 0.0625rem solid var(--color-text);
     border-radius: 0.625rem;
-    font-family: Source Sans Pro;
+    font-family: Source Sans Pro, sans-serif;
     font-weight: bold;
     font-size: 1.5rem;
     text-align: center;

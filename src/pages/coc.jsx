@@ -21,7 +21,7 @@ const Content = styled.div`
 
   p, li {
     font-size: 1.25rem;
-    font-family: Source Sans Pro;
+    font-family: Source Sans Pro, sans-serif;
     line-height: 1.5;
     color: var(--color-primary);
   }

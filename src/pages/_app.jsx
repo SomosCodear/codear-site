@@ -1,5 +1,3 @@
-import 'typeface-roboto';
-import 'typeface-source-sans-pro';
 import '@codear/lilac/dist/lilac.css';
 import '../global.css';
 import App from 'next/app';

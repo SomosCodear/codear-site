@@ -15,7 +15,7 @@ const FooterContainer = styled.footer`
   background-size: 300%;
   color: var(--color-text);
   font-size: 0.875rem;
-  font-family: Source Sans Pro;
+  font-family: Source Sans Pro, sans-serif;
 
   @media (min-width: ${BREAKPOINTS.hd}) {
     padding: 0;

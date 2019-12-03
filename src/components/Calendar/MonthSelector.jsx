@@ -19,7 +19,7 @@ const List = styled.ol`
 
 const ListItem = styled.li`
   ${({ currentMonth }) => currentMonth && css`
-    font-family: Source Sans Pro;
+    font-family: Source Sans Pro, sans-serif;
     font-size: 1.5rem;
     color: var(--color-primary-light);
     @media (min-width: ${BREAKPOINTS.lilac.mobile}) {

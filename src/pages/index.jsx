@@ -78,7 +78,7 @@ const ProjectContainer = styled.div`
 
   p {
     margin: 2rem 0;
-    font-family: Source Sans Pro;
+    font-family: Source Sans Pro, sans-serif;
     color: var(--color-primary);
     text-align: center;
   }
@@ -125,7 +125,7 @@ const MeetTheTeam = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
-  font-family: Source Sans Pro;
+  font-family: Source Sans Pro, sans-serif;
   font-size: 0.875rem;
   text-align: center;
 `;
@@ -138,7 +138,7 @@ const UsSection = styled.section`
 
   p {
     margin: 2.5rem 2.5rem 0;
-    font-family: Source Sans Pro;
+    font-family: Source Sans Pro, sans-serif;
     color: var(--color-primary);
     text-align: center;
   }

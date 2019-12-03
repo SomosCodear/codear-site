@@ -45,6 +45,7 @@ class CodearDocument extends Document {
           <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png" />
           <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png" />
           <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png" />
+          <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro&display=swap" rel="stylesheet" />
         </Head>
         <body>
           <Main />

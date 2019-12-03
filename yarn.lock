@@ -6234,16 +6234,6 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typeface-roboto@^0.0.75:
-  version "0.0.75"
-  resolved "https://registry.yarnpkg.com/typeface-roboto/-/typeface-roboto-0.0.75.tgz#98d5ba35ec234bbc7172374c8297277099cc712b"
-  integrity sha512-VrR/IiH00Z1tFP4vDGfwZ1esNqTiDMchBEXYY9kilT6wRGgFoCAlgkEUMHb1E3mB0FsfZhv756IF0+R+SFPfdg==
-
-typeface-source-sans-pro@^0.0.75:
-  version "0.0.75"
-  resolved "https://registry.yarnpkg.com/typeface-source-sans-pro/-/typeface-source-sans-pro-0.0.75.tgz#33e60ea079738c2dbdb2d0aa28f899f565e1646e"
-  integrity sha512-8aI6ywe+5py1MoMQjdnuQKepOATSLpFoyatVMweF6JNUD8cu+sWaVEfZBN08CRxPrSC4KYTArf6prrQzcqpyQA==
-
 typescript-styled-plugin@^0.15.0:
   version "0.15.0"
   resolved "https://registry.yarnpkg.com/typescript-styled-plugin/-/typescript-styled-plugin-0.15.0.tgz#9e307f04f7cfab8c6319787bf854330326c9ba92"
