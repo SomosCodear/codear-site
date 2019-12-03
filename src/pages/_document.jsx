@@ -32,17 +32,6 @@ class CodearDocument extends Document {
     return (
       <html lang="es-AR">
         <Head>
-          <meta name="description" content="Somos una asociación civil dedicada a la formación y difusión de conocimientos de tecnología, aplicándola como un instrumento transformador y potenciador para la sociedad." />
-          <meta property="og:title" content="CoDeAr | Comunidad de Desarrolladores de Argentina" />
-          <meta property="og:site_name" content="CoDeAr | Comunidad de Desarrolladores de Argentina" />
-          <meta property="og:description" content="Somos una asociación civil dedicada a la formación y difusión de conocimientos de tecnología, aplicándola como un instrumento transformador y potenciador para la sociedad." />
-          <meta property="og:url" content="https://codear.org" />
-          <meta property="og:locale" content="es_AR" />
-          <meta property="og:image" content="https://codear.org/icons/apple-icon-180x180.png" />
-          <meta name="twitter:title" content="CoDeAr | Comunidad de Desarrolladores de Argentina" />
-          <meta name="twitter:description" content="Somos una asociación civil dedicada a la formación y difusión de conocimientos de tecnología, aplicándola como un instrumento transformador y potenciador para la sociedad." />
-          <meta name="twitter:site" content="@SomosCodear" />
-          <meta name="twitter:creator" content="@SomosCodear" />
           <link rel="manifest" href="manifest.json" />
           <link rel="shortcut icon" sizes="16x16" href="/icons/favicon-16x16.png" />
           <link rel="shortcut icon" sizes="32x32" href="/icons/favicon-32x32.png" />

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Head from 'next/head';
+import { META } from '../data/constants';
 import { BREAKPOINTS } from '../style/constants';
 import { Nav } from './Nav';
 import { Footer } from './Footer';
@@ -44,32 +45,57 @@ export const Content = styled.main`
   }
 `;
 
-export const Container = ({ children, className, title }) => (
-  <Wrapper className={className}>
-    <Head>
-      <title>
-        {`${title} `}
-        | Comunidad de Desarrolladores de Argentina
-      </title>
-    </Head>
-    <Separator />
-    <Nav />
-    <ContentWrapper>
-      <Content>
-        {children}
-      </Content>
-      <Footer />
-    </ContentWrapper>
-  </Wrapper>
-);
+export const Container = ({
+  children,
+  className,
+  title,
+  meta,
+}) => {
+  const metaWithDefaults = useMemo(
+    () => ({ ...META, ...meta }),
+    [meta],
+  );
+
+  return (
+    <Wrapper className={className}>
+      <Head>
+        <title>
+          {`${title} `}
+          | Comunidad de Desarrolladores de Argentina
+        </title>
+        <meta name="description" content={metaWithDefaults.description} />
+        <meta property="og:title" content={metaWithDefaults.ogTitle} />
+        <meta property="og:site_name" content={metaWithDefaults.ogSiteName} />
+        <meta property="og:description" content={metaWithDefaults.ogDescription} />
+        <meta property="og:url" content={metaWithDefaults.ogUrl} />
+        <meta property="og:locale" content={metaWithDefaults.ogLocale} />
+        <meta property="og:image" content={metaWithDefaults.ogImage} />
+        <meta name="twitter:title" content={metaWithDefaults.twitterTitle} />
+        <meta name="twitter:description" content={metaWithDefaults.twitterDescription} />
+        <meta name="twitter:site" content={metaWithDefaults.twitterSite} />
+        <meta name="twitter:creator" content={metaWithDefaults.twitterCreator} />
+      </Head>
+      <Separator />
+      <Nav />
+      <ContentWrapper>
+        <Content>
+          {children}
+        </Content>
+        <Footer />
+      </ContentWrapper>
+    </Wrapper>
+  );
+};
 
 Container.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   title: PropTypes.string,
+  meta: PropTypes.objectOf(PropTypes.string),
 };
 
 Container.defaultProps = {
   className: null,
   title: '¡Hola!',
+  meta: {},
 };
