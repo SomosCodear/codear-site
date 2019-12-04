@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { BREAKPOINTS, COLORS } from '../../style/constants';
 import { SROnlyText } from '../SROnlyText';
 import { formatNumber } from '../../utils/format';
+import { browser } from '../../utils/browser';
 
 const Container = styled.a`
   display: flex;
@@ -13,6 +14,11 @@ const Container = styled.a`
   color: var(--color-primary-light);
   @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     margin-top: 0;
+    max-width: 100%;
+    ${({ inline }) => inline && css`
+      display: inline-block;
+      margin-bottom: -4px;
+    `}
   }
 `;
 
@@ -49,6 +55,7 @@ const EventInfo = styled.span`
   @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     border: 0;
     padding: 0;
+    display: block;
   }
 `;
 
@@ -66,6 +73,7 @@ const EventName = styled.span`
     font-weight: 400;
     font-size: inherit;
     color: inherit;
+    display: block;
   }
 `;
 
@@ -125,6 +133,7 @@ export const Event = ({
       href={link}
       target="_blank"
       aria-label="Abrir página del evento"
+      inline={browser.isEdgeHTML}
     >
       <EventDate>
         <span>
