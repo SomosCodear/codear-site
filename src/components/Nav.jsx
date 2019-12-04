@@ -141,6 +141,7 @@ const NavContainer = styled.nav`
   background-size: cover;
 
   &:target {
+    display: block;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
