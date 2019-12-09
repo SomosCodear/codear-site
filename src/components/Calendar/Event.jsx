@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 import { BREAKPOINTS, COLORS } from '../../style/constants';
 import { SROnlyText } from '../SROnlyText';
 import { formatNumber } from '../../utils/format';
-import { browser } from '../../utils/browser';
+import { useEdgeHTML } from '../../hooks/useEdgeHTML';
 
 const Container = styled.a`
   display: flex;
@@ -128,12 +128,13 @@ export const Event = ({
   link,
 }) => {
   const fdate = new Date(date);
+  const edge = useEdgeHTML();
   return (
     <Container
       href={link}
       target="_blank"
       aria-label="Abrir página del evento"
-      inline={browser.isEdgeHTML}
+      inline={edge}
     >
       <EventDate>
         <span>
