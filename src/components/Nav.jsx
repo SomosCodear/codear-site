@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { withRouter } from 'next/router';
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { MENU } from '../data/constants';
 import { BREAKPOINTS } from '../style/constants';
+import { enableScroll, disableScroll } from '../utils/scroll';
 
 const LogoMobile = styled.img`
   display: block;
@@ -141,6 +142,7 @@ const NavContainer = styled.nav`
   background-size: cover;
 
   &:target {
+    display: block;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -183,8 +185,13 @@ const NavContainer = styled.nav`
   }
 `;
 
-export const Nav = withRouter(
-  ({ router }) => (
+export const Nav = withRouter(({ router }) => {
+  useEffect(() => {
+    if (router.asPath.match(/#menu$/i)) {
+      disableScroll();
+    }
+  }, []);
+  return (
     <NavContainer id="menu">
       <Link href="/">
         <a href="/" title="Inicio">
@@ -204,18 +211,18 @@ export const Nav = withRouter(
           </MenuItem>
         ))}
       </Menu>
-      <MenuOpenButton href="#menu" title="Abrir menu">
+      <MenuOpenButton href="#menu" title="Abrir menu" onClick={disableScroll}>
         <img
           src="/icons/hamburger-menu.svg"
           alt="Abrir menu"
         />
       </MenuOpenButton>
-      <MenuCloseButton href="#" title="Cerrar menu">
+      <MenuCloseButton href="#" title="Cerrar menu" onClick={enableScroll}>
         <img
           src="/icons/chevron-up.svg"
           alt="Cerrar menu"
         />
       </MenuCloseButton>
     </NavContainer>
-  ),
-);
+  );
+});
