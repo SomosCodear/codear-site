@@ -272,10 +272,9 @@ const Index = () => {
           <lilac-button
             href="https://webconf.tech"
             target="_blank"
-            title="DESCUBRÍ WebConf"
             secundario
           >
-            DESCUBRÍ WebConf
+            ¿Querés ser disertante?
           </lilac-button>
         </ProjectContainer>
       </ProjectsSection>
