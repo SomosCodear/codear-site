@@ -1,11 +1,11 @@
+import Link from 'next/link';
 import React, { Fragment, useEffect } from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
-import events from '../events.json';
-import { MEMBERS, ROUTES } from '../data/constants';
-import { BREAKPOINTS } from '../style/constants';
-import { Container, Content } from '../components/Container';
 import { Calendar } from '../components/Calendar';
+import { Container, Content } from '../components/Container';
+import { MEMBERS, ROUTES } from '../data/constants';
+import events from '../events.json';
+import { BREAKPOINTS } from '../style/constants';
 
 const CommunitiesSection = styled.section`
   display: flex;
@@ -81,6 +81,10 @@ const ProjectContainer = styled.div`
     font-family: Source Sans Pro, sans-serif;
     color: var(--color-primary);
     text-align: center;
+  }
+
+  img {
+    max-width: 150px;
   }
 `;
 
@@ -256,7 +260,9 @@ const Index = () => {
           proyectos
         </h1>
         <ProjectContainer>
-          <img src="/images/brand/webconf-logo.png" alt="Logo de Webconf" />
+          <a href="https://webconf.tech" rel="noopener noreferrer" target="_blank">
+            <img src="/images/brand/webconf-logo.png" alt="Logo de WebConf" />
+          </a>
           <p>
             <b>WebConf</b>
             &nbsp;es la primera conferencia de tecnologías Web del interior del país,
