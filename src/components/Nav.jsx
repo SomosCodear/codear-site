@@ -190,7 +190,10 @@ export const Nav = withRouter(({ router }) => {
     if (router.asPath.match(/#menu$/i)) {
       disableScroll();
     }
-  }, []);
+
+    return () => enableScroll();
+  }, [router.asPath]);
+
   return (
     <NavContainer id="menu">
       <Link href="/">
