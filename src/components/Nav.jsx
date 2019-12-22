@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { withRouter } from 'next/router';
-import React, { useEffect } from 'react';
-import styled from 'styled-components';
+import React, { useState, useCallback, useEffect } from 'react';
+import styled, { css } from 'styled-components';
 import { MENU } from '../data/constants';
 import { BREAKPOINTS } from '../style/constants';
 import { enableScroll, disableScroll } from '../utils/scroll';
@@ -108,21 +108,25 @@ const MenuItem = styled.li`
   }
 `;
 
-const MenuOpenButton = styled.a`
+const MenuOpenButton = styled.button`
   display: inline-block;
   padding: 0.25rem;
+  background: transparent;
+  border: 0;
 
   @media (min-width: ${BREAKPOINTS.hd}) {
     display: none;
   }
 `;
 
-const MenuCloseButton = styled.a`
+const MenuCloseButton = styled.button`
   display: none;
   padding: 0.25rem;
   position: absolute;
   top: 1.875rem;
   right: 1.25rem;
+  background: transparent;
+  border: 0;
 `;
 
 const NavContainer = styled.nav`
@@ -141,7 +145,7 @@ const NavContainer = styled.nav`
   background-position: left center;
   background-size: cover;
 
-  &:target {
+  ${({ open }) => open && css`
     display: block;
     flex-direction: column;
     justify-content: flex-start;
@@ -171,7 +175,7 @@ const NavContainer = styled.nav`
     ${MenuOpenButton} {
       display: none;
     }
-  }
+  `}
 
   @media (min-width: ${BREAKPOINTS.hd}) {
     position: unset;
@@ -186,16 +190,26 @@ const NavContainer = styled.nav`
 `;
 
 export const Nav = withRouter(({ router }) => {
+  const [open, setOpen] = useState(false);
+
+  const toggleMenu = useCallback(() => {
+    setOpen((isOpen) => !isOpen);
+  }, []);
+
   useEffect(() => {
-    if (router.asPath.match(/#menu$/i)) {
+    if (open) {
       disableScroll();
     }
 
-    return () => enableScroll();
-  }, [router.asPath]);
+    return enableScroll;
+  }, [open]);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [router.route]);
 
   return (
-    <NavContainer id="menu">
+    <NavContainer open={open}>
       <Link href="/">
         <a href="/" title="Inicio">
           <LogoMobile src="/images/brand/codear-logo-mobile.svg" alt="Logo de CoDeAr" />
@@ -214,13 +228,13 @@ export const Nav = withRouter(({ router }) => {
           </MenuItem>
         ))}
       </Menu>
-      <MenuOpenButton href="#menu" title="Abrir menu" onClick={disableScroll}>
+      <MenuOpenButton title="Abrir menu" onClick={toggleMenu}>
         <img
           src="/icons/hamburger-menu.svg"
           alt="Abrir menu"
         />
       </MenuOpenButton>
-      <MenuCloseButton href="#" title="Cerrar menu" onClick={enableScroll}>
+      <MenuCloseButton title="Cerrar menu" onClick={toggleMenu}>
         <img
           src="/icons/chevron-up.svg"
           alt="Cerrar menu"
