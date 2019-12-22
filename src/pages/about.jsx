@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { MEMBERS } from '../data/constants';
 import { BREAKPOINTS } from '../style/constants';
-import { Container } from '../components/Container';
 import { Separator } from '../components/Separator';
 
 const PhotoCommissionContainer = styled.div`
@@ -114,39 +113,41 @@ const Member = styled.div`
 `;
 
 const About = () => (
-  <Container title="Conocenos">
-    <UsSection>
-      <PhotoCommissionContainer>
-        <img src="/images/photos/us.jpg" alt="Foto de la comisión directiva" />
-      </PhotoCommissionContainer>
-      <Separator />
-      <Content>
-        <Texts>
-          <h1>
-            nosotros
-          </h1>
-          <p>
-            Somos una comunidad dedicada a la formación y difusión de conocimientos de tecnología,
-            aplicando la disciplina como un instrumento transformador y potenciador para la
-            sociedad.
-          </p>
-        </Texts>
-        <Members>
-          {MEMBERS.map(({ name, photo, role }) => (
-            <Member key={name}>
-              <img src={photo} alt={name} />
-              <h2>
-                {name}
-              </h2>
-              <p>
-                {role}
-              </p>
-            </Member>
-          ))}
-        </Members>
-      </Content>
-    </UsSection>
-  </Container>
+  <UsSection>
+    <PhotoCommissionContainer>
+      <img src="/images/photos/us.jpg" alt="Foto de la comisión directiva" />
+    </PhotoCommissionContainer>
+    <Separator />
+    <Content>
+      <Texts>
+        <h1>
+          nosotros
+        </h1>
+        <p>
+          Somos una comunidad dedicada a la formación y difusión de conocimientos de tecnología,
+          aplicando la disciplina como un instrumento transformador y potenciador para la
+          sociedad.
+        </p>
+      </Texts>
+      <Members>
+        {MEMBERS.map(({ name, photo, role }) => (
+          <Member key={name}>
+            <img src={photo} alt={name} />
+            <h2>
+              {name}
+            </h2>
+            <p>
+              {role}
+            </p>
+          </Member>
+        ))}
+      </Members>
+    </Content>
+  </UsSection>
 );
+
+About.getInitialProps = async () => ({
+  title: 'Conocenos',
+});
 
 export default About;

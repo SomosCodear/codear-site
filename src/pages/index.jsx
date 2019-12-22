@@ -2,7 +2,6 @@ import Link from 'next/link';
 import React, { Fragment, useEffect } from 'react';
 import styled from 'styled-components';
 import { Calendar } from '../components/Calendar';
-import { Container, Content } from '../components/Container';
 import { MEMBERS, ROUTES } from '../data/constants';
 import events from '../events.json';
 import { BREAKPOINTS } from '../style/constants';
@@ -190,37 +189,31 @@ const CalendarContainer = styled.div`
   }
 `;
 
-const LandingContainer = styled(Container)`
-  ${Content} {
-    @media (min-width: ${BREAKPOINTS.hd}) {
-      display: grid;
-      grid-template-columns: 1fr 53rem 27rem 1fr;
-      grid-template-areas:
-        "     .       calendar    projects        .     "
-        "communities communities communities communities"
-        "     .          us          us           .     ";
+const LandingContent = styled.main`
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 
-      ${ProjectsSection} {
-        grid-area: projects;
-      }
+  @media (min-width: ${BREAKPOINTS.hd}) {
+    display: grid;
+    grid-template-columns: 1fr 53rem 27rem 1fr;
+    grid-template-areas:
+      "     .       calendar    projects        .     "
+      "communities communities communities communities"
+      "     .          us          us           .     ";
 
-      ${CommunitiesSection} {
-        grid-area: communities;
-      }
-
-      ${UsSection} {
-        grid-area: us;
-      }
+    ${ProjectsSection} {
+      grid-area: projects;
     }
-  }
 
-  @media (min-width: ${BREAKPOINTS.wideScreen}) {
-    background-image:
-    url(/images/backgrounds/content-left.svg),
-    url(/images/backgrounds/content-right.svg);
-    background-repeat: no-repeat, no-repeat;
-    background-size: 35%,24%;
-    background-position: right -14% top, left top;
+    ${CommunitiesSection} {
+      grid-area: communities;
+    }
+
+    ${UsSection} {
+      grid-area: us;
+    }
   }
 `;
 
@@ -235,7 +228,7 @@ const Index = () => {
   }, []);
 
   return (
-    <LandingContainer>
+    <LandingContent>
       <CalendarContainer>
         <Calendar
           name="eventos"
@@ -319,7 +312,7 @@ const Index = () => {
           para la sociedad.
         </p>
       </UsSection>
-    </LandingContainer>
+    </LandingContent>
   );
 };
 

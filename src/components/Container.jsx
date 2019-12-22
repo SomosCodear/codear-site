@@ -12,6 +12,15 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
+
+  @media (min-width: ${BREAKPOINTS.wideScreen}) {
+    background-image:
+    url(/images/backgrounds/content-left.svg),
+    url(/images/backgrounds/content-right.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 35%,24%;
+    background-position: right -14% top, left top;
+  }
 `;
 
 export const HeaderLine = styled.div`
@@ -29,13 +38,6 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
-`;
-
-export const Content = styled.main`
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
 
   h1 {
     margin: 0;
@@ -47,7 +49,6 @@ export const Content = styled.main`
 
 export const Container = ({
   children,
-  className,
   title,
   meta,
 }) => {
@@ -57,7 +58,7 @@ export const Container = ({
   );
 
   return (
-    <Wrapper className={className}>
+    <Wrapper>
       <Head>
         <title>
           {`${title} `}
@@ -78,9 +79,7 @@ export const Container = ({
       <Separator />
       <Nav />
       <ContentWrapper>
-        <Content>
-          {children}
-        </Content>
+        {children}
         <Footer />
       </ContentWrapper>
     </Wrapper>
@@ -89,13 +88,11 @@ export const Container = ({
 
 Container.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
   title: PropTypes.string,
   meta: PropTypes.objectOf(PropTypes.string),
 };
 
 Container.defaultProps = {
-  className: null,
   title: '¡Hola!',
   meta: {},
 };
