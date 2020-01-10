@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { BREAKPOINTS } from '../../style/constants';
@@ -55,6 +55,7 @@ const Subtitle = styled.h3``;
 
 export const Calendar = ({ name, events }) => {
   const today = new Date();
+  const [highlightCurrentDay, setHighlightCurrentDay] = useState(false);
   const [currentMonth, setCurrentMonth] = useState(today.getMonth());
   const [currentYear, setCurrentYear] = useState(today.getFullYear());
 
@@ -103,6 +104,8 @@ export const Calendar = ({ name, events }) => {
     }
   }, [currentMonth, currentYear, setCurrentMonth, setCurrentYear]);
 
+  useEffect(() => setHighlightCurrentDay(true), []);
+
   return (
     <Section>
       <Header>
@@ -124,7 +127,11 @@ export const Calendar = ({ name, events }) => {
           key={currentDay}
           day={currentDay}
           events={getEventsForDay(currentDay)}
-          isToday={currentMonth === today.getMonth() && currentDay === today.getDate()}
+          isToday={
+            highlightCurrentDay
+            && currentMonth === today.getMonth()
+            && currentDay === today.getDate()
+          }
         />
       ))}
       {hasNoEventsForMonth ? (
