@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { BREAKPOINTS } from '../../style/constants';
@@ -101,7 +101,7 @@ export const Day = ({
   events,
   isToday,
 }) => {
-  const isEmpty = events.length === 0;
+  const isEmpty = useMemo(() => events.length === 0, [events]);
   return (
     <Container
       aria-hidden={isEmpty}
