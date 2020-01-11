@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { BREAKPOINTS } from '../../style/constants';
@@ -53,35 +53,38 @@ const Title = styled.h2`
 
 const Subtitle = styled.h3``;
 
-export const Calendar = ({
-  name,
-  events,
-}) => {
+export const Calendar = ({ name, events }) => {
   const today = new Date();
+  const [highlightCurrentDay, setHighlightCurrentDay] = useState(false);
   const [currentMonth, setCurrentMonth] = useState(today.getMonth());
   const [currentYear, setCurrentYear] = useState(today.getFullYear());
 
-  const getDaysInMonth = () => {
+  const daysInMonth = useMemo(() => {
     // passing 0 to the day parameter makes the new date to point to the last day of the previous
     // month; hence the currentMonth + 1
     const lastDay = new Date(currentYear, currentMonth + 1, 0);
-    return lastDay.getDate();
-  };
+    const numberOfDays = lastDay.getDate();
+    return Array.from(Array(numberOfDays), (_, index) => index + 1);
+  }, [currentYear, currentMonth]);
 
-  const hasEventsForMonth = () => events.find(({ date }) => {
-    const eventDate = new Date(date);
-    return eventDate.getFullYear() === currentYear
-      && eventDate.getMonth() === currentMonth;
-  }) != null;
+  const hasNoEventsForMonth = useMemo(() => (
+    events.find(({ date }) => {
+      const eventDate = new Date(date);
+      return eventDate.getFullYear() === currentYear
+        && eventDate.getMonth() === currentMonth;
+    }) == null
+  ), [events, currentYear, currentMonth]);
 
-  const getEventsForDay = (day) => events.filter(({ date }) => {
-    const eventDate = new Date(date);
-    return eventDate.getFullYear() === currentYear
-      && eventDate.getMonth() === currentMonth
-      && eventDate.getDate() === day;
-  });
+  const getEventsForDay = useCallback((day) => (
+    events.filter(({ date }) => {
+      const eventDate = new Date(date);
+      return eventDate.getFullYear() === currentYear
+        && eventDate.getMonth() === currentMonth
+        && eventDate.getDate() === day;
+    })
+  ), [currentMonth, currentYear, events]);
 
-  const handlePreviousMonthEvent = () => {
+  const handlePreviousMonthEvent = useCallback(() => {
     const nextCurrentMonth = currentMonth - 1;
     if (nextCurrentMonth < 0) {
       setCurrentMonth(11);
@@ -89,9 +92,9 @@ export const Calendar = ({
     } else {
       setCurrentMonth(nextCurrentMonth);
     }
-  };
+  }, [currentMonth, currentYear, setCurrentMonth, setCurrentYear]);
 
-  const handleNextMonthEvent = () => {
+  const handleNextMonthEvent = useCallback(() => {
     const nextCurrentMonth = currentMonth + 1;
     if (nextCurrentMonth > 11) {
       setCurrentMonth(0);
@@ -99,26 +102,10 @@ export const Calendar = ({
     } else {
       setCurrentMonth(nextCurrentMonth);
     }
-  };
+  }, [currentMonth, currentYear, setCurrentMonth, setCurrentYear]);
 
-  const renderDay = (currentDay) => (
-    <Day
-      key={currentDay}
-      day={currentDay}
-      events={getEventsForDay(currentDay)}
-      isToday={currentMonth === today.getMonth() && today.getDate() === currentDay}
-    />
-  );
+  useEffect(() => setHighlightCurrentDay(true), []);
 
-  const renderNoEventsOverlay = () => (
-    <lilac-overlay size="big" open>
-      <lilac-overlay-title>
-        No tenemos eventos agendados para este mes
-      </lilac-overlay-title>
-    </lilac-overlay>
-  );
-
-  const days = Array.from(Array(getDaysInMonth()), (_, index) => index + 1);
   return (
     <Section>
       <Header>
@@ -135,8 +122,25 @@ export const Calendar = ({
           </Subtitle>
         </SROnlyText>
       </Header>
-      {days.map(renderDay)}
-      {hasEventsForMonth() ? null : renderNoEventsOverlay()}
+      {daysInMonth.map((currentDay) => (
+        <Day
+          key={currentDay}
+          day={currentDay}
+          events={getEventsForDay(currentDay)}
+          isToday={
+            highlightCurrentDay
+            && currentMonth === today.getMonth()
+            && currentDay === today.getDate()
+          }
+        />
+      ))}
+      {hasNoEventsForMonth ? (
+        <lilac-overlay size="big" open>
+          <lilac-overlay-title>
+            No tenemos eventos agendados para este mes
+          </lilac-overlay-title>
+        </lilac-overlay>
+      ) : null}
     </Section>
   );
 };
