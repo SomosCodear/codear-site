@@ -80,6 +80,22 @@
     "link": "https://www.meetup.com/Beer-js-Cordoba/events/267166976/"
   },
   {
+    "date": "2020-01-23T22:00:00.000Z",
+    "name": "BeerJs Cba No. 38",
+    "street": "CAPITAN, Achával Rodríguez 244",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://bit.ly/beerjscba38"
+  },
+  {
+    "date": "2020-01-30T22:00:00.000Z",
+    "name": "React CBA First Meeting",
+    "street": "Prominente S.A., José Baigorrí 653",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://www.eventbrite.com/e/react-cba-first-meeting-tickets-89978158093"
+  },
+  {
     "date": "2020-02-06T22:00:00.000Z",
     "name": "AWS Re:Invent Re:Cap Córdoba",
     "street": "Olapic, Corrientes 161 Piso 2",
