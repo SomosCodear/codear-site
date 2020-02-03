@@ -94,5 +94,37 @@
     "city": "Córdoba",
     "country": "Argentina",
     "link": "https://www.eventbrite.com/e/react-cba-first-meeting-tickets-89978158093"
+  },
+  {
+    "date": "2020-02-06T22:00:00.000Z",
+    "name": "AWS Re:Invent Re:Cap Córdoba",
+    "street": "Olapic, Corrientes 161 Piso 2",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://www.meetup.com/es/DoctArmy-a-SysArmy-Chapter/events/vfkfmrybcdbkb/"
+  },
+  {
+    "date": "2020-02-07T22:00:00.000Z",
+    "name": "#AdminBirras en Córdoba",
+    "street": "Blvd. San Juan 354",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://www.meetup.com/es/AWS-User-Group-Cordoba-Argentina/events/268266224/"
+  },
+  {
+    "date": "2020-02-20T22:00:00.000Z",
+    "name": "BeerJs Cba No. 39",
+    "street": "TBD",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://www.meetup.com/Beer-js-Cordoba/"
+  },
+  {
+    "date": "2020-02-27T21:30:00.000Z",
+    "name": "ReactCBA",
+    "street": "TBD",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://www.eventbrite.com.ar/o/react-cba-29215693235"
   }
 ]
