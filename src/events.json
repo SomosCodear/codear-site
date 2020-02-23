@@ -126,5 +126,261 @@
     "city": "Córdoba",
     "country": "Argentina",
     "link": "https://www.eventbrite.com.ar/o/react-cba-29215693235"
+  },
+  {
+    "date": "2020-03-05T08:30:00.000Z",
+    "name": "WIDS Córdoba",
+    "street": "UTN Córdoba, Maestro M. Lopez esq. Cruz Roja",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://www.eventbrite.com.ar/e/wids-cordoba-2020-tickets-86911036249"
+  },
+  {
+    "date": "2020-05-29T09:00:00.000Z",
+    "name": "WebConf",
+    "street": "UTN Córdoba, Maestro M. Lopez esq. Cruz Roja",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://webconf.tech"
+  },
+  {
+    "date": "2020-05-30T09:00:00.000Z",
+    "name": "WebConf",
+    "street": "UTN Córdoba, Maestro M. Lopez esq. Cruz Roja",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://webconf.tech"
+  },
+  {
+    "date": "2020-10-09T09:00:00.000Z",
+    "name": "NodeConf",
+    "street": "Ciudad Cultural Konex, Sarmiento 3131, CABA",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://2020.nodeconfar.com/"
+  },
+  {
+    "date": "2020-10-22T09:00:00.000Z",
+    "name": "Nerdearla",
+    "street": "Ciudad Cultural Konex, Sarmiento 3131, CABA",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://nerdear.la/"
+  },
+   {
+    "date": "2020-10-23T09:00:00.000Z",
+    "name": "Nerdearla",
+    "street": "Ciudad Cultural Konex, Sarmiento 3131, CABA",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://nerdear.la/"
+  },
+  {
+    "date": "2020-10-24T09:00:00.000Z",
+    "name": "Nerdearla",
+    "street": "Ciudad Cultural Konex, Sarmiento 3131, CABA",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://nerdear.la/"
+  },
+  {
+    "date": "2020-06-22T08:30:00.000Z",
+    "name": "JCC-BD&ET",
+    "street": "Universidad de La Plata",
+    "city": "La Plata",
+    "country": "Argentina",
+    "link": "https://jcc.info.unlp.edu.ar/"
+  },
+  {
+    "date": "2020-06-23T08:30:00.000Z",
+    "name": "JCC-BD&ET",
+    "street": "Universidad de La Plata",
+    "city": "La Plata",
+    "country": "Argentina",
+    "link": "https://jcc.info.unlp.edu.ar/"
+  },
+  {
+    "date": "2020-06-24T08:30:00.000Z",
+    "name": "JCC-BD&ET",
+    "street": "Universidad de La Plata",
+    "city": "La Plata",
+    "country": "Argentina",
+    "link": "https://jcc.info.unlp.edu.ar/"
+  },
+  {
+    "date": "2020-06-25T08:30:00.000Z",
+    "name": "JCC-BD&ET",
+    "street": "Universidad de La Plata",
+    "city": "La Plata",
+    "country": "Argentina",
+    "link": "https://jcc.info.unlp.edu.ar/"
+  },
+  {
+    "date": "2020-06-26T08:30:00.000Z",
+    "name": "JCC-BD&ET",
+    "street": "Universidad de La Plata",
+    "city": "La Plata",
+    "country": "Argentina",
+    "link": "https://jcc.info.unlp.edu.ar/"
+  },
+  {
+    "date": "2020-04-21T08:30:00.000Z",
+    "name": "Segurinfo",
+    "street": "Buenos Aires Sheraton Hotel & Convention Center",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://segurinfo.org/argentina-2020/"
+  },
+  {
+    "date": "2020-02-27T08:30:00.000Z",
+    "name": "ICSPD",
+    "street": "TBD",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://waset.org/software-programming-and-databases-conference-in-february-2020-in-buenos-aires"
+  },
+  {
+    "date": "2020-02-28T08:30:00.000Z",
+    "name": "ICSPD",
+    "street": "TBD",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://waset.org/software-programming-and-databases-conference-in-february-2020-in-buenos-aires"
+  },
+  {
+    "date": "2020-09-25T09:30:00.000Z",
+    "name": "PyData Córdoba",
+    "street": "TBD",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://twitter.com/PyDataCba"
+  },
+  {
+    "date": "2020-09-26T09:30:00.000Z",
+    "name": "PyData Córdoba",
+    "street": "TBD",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://twitter.com/PyDataCba"
+  },
+  {
+    "date": "2020-09-27T09:30:00.000Z",
+    "name": "PyData Córdoba",
+    "street": "TBD",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://twitter.com/PyDataCba"
+  },
+  {
+    "date": "2020-09-23T09:00:00.000Z",
+    "name": "EKOPARTY 16",
+    "street": "Ciudad Cultural Konex, Sarmiento 3131, CABA",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://ekoparty.org/event/ekoparty-16-2020-09-23-2020-09-26-5/register"
+  },
+  {
+    "date": "2020-09-24T09:00:00.000Z",
+    "name": "EKOPARTY 16",
+    "street": "Ciudad Cultural Konex, Sarmiento 3131, CABA",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://ekoparty.org/event/ekoparty-16-2020-09-23-2020-09-26-5/register"
+  },
+  {
+    "date": "2020-09-25T09:00:00.000Z",
+    "name": "EKOPARTY 16",
+    "street": "Ciudad Cultural Konex, Sarmiento 3131, CABA",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://ekoparty.org/event/ekoparty-16-2020-09-23-2020-09-26-5/register"
+  },
+  {
+    "date": "2020-09-26T09:00:00.000Z",
+    "name": "EKOPARTY 16",
+    "street": "Ciudad Cultural Konex, Sarmiento 3131, CABA",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://ekoparty.org/event/ekoparty-16-2020-09-23-2020-09-26-5/register"
+  },
+  {
+    "date": "2020-06-11T09:00:00.000Z",
+    "name": "Buzzconf Workshops",
+    "street": "Ciudad Cultural Konex, Sarmiento 3131, CABA",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://buzzconf.org/"
+  },
+  {
+    "date": "2020-06-12T09:00:00.000Z",
+    "name": "Buzzconf",
+    "street": "Ciudad Cultural Konex, Sarmiento 3131, CABA",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://buzzconf.org/"
+  },
+  {
+    "date": "2020-07-20T09:00:00.000Z",
+    "name": "ECIDCUBA #34",
+    "street": "Pabellon 1, Ciudad Universitaria, CABA",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://eci2020.dc.uba.ar/index.html"
+  },
+  {
+    "date": "2020-07-21T09:00:00.000Z",
+    "name": "ECIDCUBA #34",
+    "street": "Pabellon 1, Ciudad Universitaria, CABA",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://eci2020.dc.uba.ar/index.html"
+  },
+  {
+    "date": "2020-07-22T09:00:00.000Z",
+    "name": "ECIDCUBA #34",
+    "street": "Pabellon 1, Ciudad Universitaria, CABA",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://eci2020.dc.uba.ar/index.html"
+  },
+  {
+    "date": "2020-07-23T09:00:00.000Z",
+    "name": "ECIDCUBA #34",
+    "street": "Pabellon 1, Ciudad Universitaria, CABA",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://eci2020.dc.uba.ar/index.html"
+  },
+  {
+    "date": "2020-07-24T09:00:00.000Z",
+    "name": "ECIDCUBA #34",
+    "street": "Pabellon 1, Ciudad Universitaria, CABA",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://eci2020.dc.uba.ar/index.html"
+  },
+  {
+    "date": "2020-03-14T09:00:00.000Z",
+    "name": "Testathon",
+    "street": "TBD",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://testathon.co/more-info---buenos-aires-saturday-march-14th/"
+  },
+  {
+    "date": "2020-03-15T09:00:00.000Z",
+    "name": "Testathon",
+    "street": "TBD",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "link": "https://testathon.co/more-info---buenos-aires-saturday-march-14th/"
+  },
+  {
+    "date": "2020-06-11T09:00:00.000Z",
+    "name": "EKOPARTY CBA",
+    "street": "TBD",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://www.eventbrite.com.ar/e/ekoparty-cordoba-2020-tickets-94013911139"
   }
 ]
