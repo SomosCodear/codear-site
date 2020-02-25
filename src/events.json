@@ -114,10 +114,10 @@
   {
     "date": "2020-02-20T22:00:00.000Z",
     "name": "BeerJs Cba No. 39",
-    "street": "TBD",
+    "street": "BurgerBeer, Rondeau 159",
     "city": "Córdoba",
     "country": "Argentina",
-    "link": "https://www.meetup.com/Beer-js-Cordoba/"
+    "link": "https://www.meetup.com/Beer-js-Cordoba/events/268786435/"
   },
   {
     "date": "2020-02-27T21:30:00.000Z",
@@ -136,6 +136,30 @@
     "link": "https://www.eventbrite.com.ar/e/wids-cordoba-2020-tickets-86911036249"
   },
   {
+    "date": "2020-03-19T22:00:00.000Z",
+    "name": "BeerJs Cba No. 40",
+    "street": "TBD",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://beerjscba.com"
+  },
+  {
+    "date": "2020-04-23T22:00:00.000Z",
+    "name": "BeerJs Cba No. 41",
+    "street": "TBD",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://beerjscba.com"
+  },
+  {
+    "date": "2020-05-21T22:00:00.000Z",
+    "name": "BeerJs Cba No. 42",
+    "street": "TBD",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://beerjscba.com"
+  },
+  {
     "date": "2020-05-29T09:00:00.000Z",
     "name": "WebConf",
     "street": "UTN Córdoba, Maestro M. Lopez esq. Cruz Roja",
@@ -152,6 +176,38 @@
     "link": "https://webconf.tech"
   },
   {
+    "date": "2020-06-18T22:00:00.000Z",
+    "name": "BeerJs Cba No. 43",
+    "street": "TBD",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://beerjscba.com"
+  },
+  {
+    "date": "2020-07-23T22:00:00.000Z",
+    "name": "BeerJs Cba No. 44",
+    "street": "TBD",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://beerjscba.com"
+  },
+  {
+    "date": "2020-08-20T22:00:00.000Z",
+    "name": "BeerJs Cba No. 45",
+    "street": "TBD",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://beerjscba.com"
+  },
+  {
+    "date": "2020-09-17T22:00:00.000Z",
+    "name": "BeerJs Cba No. 46",
+    "street": "TBD",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://beerjscba.com"
+  },
+  {
     "date": "2020-10-09T09:00:00.000Z",
     "name": "NodeConf",
     "street": "Ciudad Cultural Konex, Sarmiento 3131, CABA",
@@ -166,6 +222,14 @@
     "city": "Buenos Aires",
     "country": "Argentina",
     "link": "https://2020.nodeconfar.com/"
+  },
+  {
+    "date": "2020-10-22T22:00:00.000Z",
+    "name": "BeerJs Cba No. 47",
+    "street": "TBD",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://beerjscba.com"
   },
   {
     "date": "2020-10-22T09:00:00.000Z",
@@ -190,6 +254,22 @@
     "city": "Buenos Aires",
     "country": "Argentina",
     "link": "https://nerdear.la/"
+  },
+  {
+    "date": "2020-11-19T22:00:00.000Z",
+    "name": "BeerJs Cba No. 48",
+    "street": "TBD",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://beerjscba.com"
+  },
+  {
+    "date": "2020-12-17T22:00:00.000Z",
+    "name": "BeerJs Cba No. 49",
+    "street": "TBD",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://beerjscba.com"
   },
   {
     "date": "2020-06-22T08:30:00.000Z",
