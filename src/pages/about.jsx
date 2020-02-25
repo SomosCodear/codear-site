@@ -97,7 +97,7 @@ const Member = styled.div`
 
   img {
     grid-row-end: span 2;
-    width: 150px;
+    width: 9.375rem;
     border-radius: 10px;
   }
 
@@ -123,7 +123,7 @@ const Member = styled.div`
 
   @media (min-width: ${BREAKPOINTS.hd}) {
     img {
-      width: 200px;
+      width: 12.5rem;
     }
 
     p {
