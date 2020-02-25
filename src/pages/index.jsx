@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React, { Fragment, useEffect } from 'react';
 import styled from 'styled-components';
 import { Calendar } from '../components/Calendar';
-import { MEMBERS, ROUTES } from '../data/constants';
+import { CORE_MEMBERS, ROUTES } from '../data/constants';
 import events from '../events.json';
 import { BREAKPOINTS } from '../style/constants';
 
@@ -95,6 +95,12 @@ const PhotosContainer = styled.div`
   grid-template-columns: repeat(auto-fill, 6.5rem);
   grid-auto-rows: 6.5rem;
   grid-gap: 0.5rem;
+
+  img {
+    width: 6.25rem;
+    border-radius: 4px;
+    border: 1px solid var(--color-secondary);
+  }
 
   a {
     text-decoration: none;
@@ -277,7 +283,7 @@ const Index = () => {
           nosotros
         </h1>
         <PhotosContainer>
-          {MEMBERS.map(({ photo, name }, index) => (
+          {CORE_MEMBERS.map(({ photo, name }, index) => (
             <Fragment key={name}>
               <img src={photo} alt={name} />
               {(index + 1) % 3 === 0 ? (
