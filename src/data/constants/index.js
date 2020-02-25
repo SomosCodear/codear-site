@@ -1,4 +1,4 @@
 export { ROUTES } from './routes';
 export { MENU } from './menu';
-export { MEMBERS } from './members';
+export { CORE_MEMBERS, COLLABORATORS } from './members';
 export { META } from './meta';
