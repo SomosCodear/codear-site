@@ -62,7 +62,7 @@ export const Container = ({
       <Head>
         <title>
           {`${title} `}
-          | Comunidad de Desarrolladores de Argentina
+          | Comunidad de Desarrolladores de Argentina (CoDeAr)
         </title>
         <meta name="description" content={metaWithDefaults.description} />
         <meta property="og:title" content={metaWithDefaults.ogTitle} />
