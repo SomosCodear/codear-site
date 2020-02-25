@@ -97,7 +97,7 @@ const PhotosContainer = styled.div`
   grid-gap: 0.5rem;
 
   img {
-    width: 100px;
+    width: 6.25rem;
     border-radius: 4px;
     border: 1px solid var(--color-secondary);
   }
