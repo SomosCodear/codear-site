@@ -470,5 +470,13 @@
     "city": "Córdoba",
     "country": "Argentina",
     "link": "https://www.eventbrite.com.ar/e/ekoparty-cordoba-2020-tickets-94013911139"
+  },
+  {
+    "date": "2020-06-11T09:00:00.000Z",
+    "name": "Android Hacking",
+    "street": "Córdoba Hacker Space, Edificio Miragolf, Av. La Voz del Interior 7000",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://twitter.com/cbahackerspace/status/1232744047929896962"
   }
 ]
