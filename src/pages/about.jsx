@@ -2,26 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { CORE_MEMBERS, COLLABORATORS } from '../data/constants';
 import { BREAKPOINTS } from '../style/constants';
-import { Separator } from '../components/Separator';
-
-const PhotoCommissionContainer = styled.div`
-  width: 100%;
-  overflow: hidden;
-
-  img {
-    width: 100vw;
-    max-height: 40rem;
-    object-fit: cover;
-    object-position: top center;
-  }
-
-  @media (min-width: ${BREAKPOINTS.hd}) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-`;
 
 const Content = styled.div`
   display: flex;
@@ -139,10 +119,6 @@ const Member = styled.div`
 
 const About = () => (
   <UsSection>
-    <PhotoCommissionContainer>
-      <img src="/images/photos/us.jpg" alt="Foto de la comisión directiva" />
-    </PhotoCommissionContainer>
-    <Separator />
     <Content>
       <Texts>
         <h1>
@@ -172,8 +148,8 @@ const About = () => (
           nuestra familia extendida
         </h1>
         <p>
-          Trabajamos en diversas iniciativas con personas que creen en nuestra causa y nuestros valores,
-          y creamos comunidad a través de alianzas con ellas y otras organizaciones.
+          Trabajamos en diversas iniciativas con personas que creen en nuestra causa y nuestros
+          valores, y creamos comunidad a través de alianzas con ellas y otras organizaciones.
         </p>
       </Texts>
       <Members>
