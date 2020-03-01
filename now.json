@@ -1,5 +1,11 @@
 {
   "version": 2,
   "name": "codear-site",
-  "alias": ["codear.org"]
+  "alias": ["codear.org"],
+  "redirects": [
+    {
+      "source": "/media-kit/brandbook",
+      "destination": "https://drive.google.com/open?id=17A1wuAZ5AjBT_rg0XeJ0RCcbQI6rwL7s"
+    }
+  ]
 }
