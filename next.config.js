@@ -8,6 +8,7 @@ module.exports = withCSS(withFonts({
         { source: '/', destination: '/' },
         { source: '/conocenos', destination: '/about' },
         { source: '/codigo-de-conducta', destination: '/coc' },
+        { source: '/comunicaciones', destination: '/comuniques' },
       ];
     },
     catchAllRouting: true,
