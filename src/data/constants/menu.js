@@ -9,4 +9,8 @@ export const MENU = [
     ...ROUTES.COC,
     label: 'Código de conducta',
   },
+  {
+    ...ROUTES.COMUNIQUES,
+    label: 'Comunicaciones',
+  },
 ];
