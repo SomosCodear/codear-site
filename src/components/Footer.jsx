@@ -57,7 +57,8 @@ const SocialMediaContainer = styled.div`
 export const Footer = () => (
   <FooterContainer>
     <FooterContent>
-      © 2019 | Comunidad de Desarrolladores de Argentina
+      {`© 2019 - ${new Date().getFullYear()} | `}
+      Comunidad de Desarrolladores de Argentina
       <SocialMediaContainer>
         <a href="https://www.instagram.com/somoscodear/" target="_blank" rel="noopener noreferrer">
           <img src="/images/social-media-logos/logo-instagram.svg" alt="instagram" />

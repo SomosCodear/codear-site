@@ -19,4 +19,8 @@ export const ROUTES = {
     path: '/codigo-de-conducta',
     page: '/coc',
   },
+  COMUNIQUES: {
+    path: '/comunicaciones',
+    page: '/comuniques',
+  },
 };
