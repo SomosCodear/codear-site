@@ -79,7 +79,15 @@ const Comuniques = () => (
 );
 
 Comuniques.getInitialProps = async () => ({
-  title: 'Comunicaciones',
+  title: `${comuniques[0].title} | Comunicaciones`,
+  meta: {
+    ogTitle: `${comuniques[0].title} | CoDeAr`,
+    ogDescription: comuniques[0].content[0],
+    description: comuniques[0].content[0],
+    ogUrl: `https://codear.org/comunicaciones#${comuniques[0].slug}`,
+    twitterTitle: `${comuniques[0].title} | CoDeAr`,
+    twitterDescription: comuniques[0].content[0],
+  },
 });
 
 export default Comuniques;
