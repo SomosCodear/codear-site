@@ -1,0 +1,40 @@
+[
+  {
+    "slug": "covid-19",
+    "title": "Comunicado oficial por COVID-19",
+    "date": "12 de Marzo de 2020",
+    "content": [
+      "Desde la Comisión Directiva de la Comunidad de Desarrolladores de Argentina, estamos siguiendo día a día las novedades sobre la emergencia sanitaria declarada por la Presidencia de la Nación y las medidas preventivas tomadas por los gobiernos de la Provincia de Córdoba y de la Municipalidad de Córdoba, a raíz de la situación de pandemia del coronavirus COVID-19.",
+
+      "En esta comunicación, queremos informar sobre las medidas que estamos tomando respecto al desarrollo de nuestras actividades.",
+
+      {
+        "type": "subtitle",
+        "content": "Sobre WebConf 2020"
+      },
+
+      "Estando a poco menos de tres meses de la fecha de WebConf 2020 y sin información concreta sobre cuándo finalizarán las medidas preventivas locales, consideramos que aún es muy pronto para decidir sobre suspender, posponer o cancelar el evento de este año. Por el momento, seguiremos trabajando con las personas que han postulado sus propuestas de charla y con las organizaciones que se han acercado para participar en calidad de auspiciantes. Estamos siguiendo las resoluciones emitidas conjuntamente por el Ministerio de Educación y el Ministerio de Salud que afectan al funcionamiento de la Universidad Tecnológica de Córdoba, que sería la sede de WebConf 2020, así como también manteniendo contacto con la Universidad respecto a cualquier decisión que tome en esta situación.",
+
+      {
+        "type": "subtitle",
+        "content": "Sobre el funcionamiento de la Asociación"
+      },
+
+      "La Comisión Directiva opera mayormente a través de plataformas on-line, con lo cual no habrá muchos cambios respecto a cómo trabajamos en el día a día. Sin embargo, hemos decidido preventivamente reemplazar nuestras reuniones presenciales por reuniones on-line.",
+
+      {
+        "type": "subtitle",
+        "content": "Sobre CoDeAr y las comunidades"
+      },
+
+      "A partir del 16 de marzo, vamos a abrir nuestra plataforma de servicios digitales para todas aquellas comunidades que deseen realizar eventos on-line. Estamos preparados para ofrecer cuentas con Google Meet (para realizar llamadas con hasta 100 personas), Google Classroom (para el seguimiento de cursos on-line) y Google Drive (para almacenar archivos), bajo una cuenta de correo @comunidades.codear.org. Publicaremos un formulario de inscripción para aquellas comunidades que deseen hacer uso de estos servicios sin cargo alguno.",
+
+      "Continuaremos publicando actualizaciones a medida que la situación evolucione.",
+
+      {
+        "type": "emphasis",
+        "content": "Recomendamos a todas las personas tomar las medidas de prevención y seguridad para cuidar su salud y contribuir a una salida positiva de esta emergencia sanitaria."
+      }
+    ]
+  }
+]
