@@ -58,23 +58,34 @@ const PlaceAndDate = styled.p`
 `;
 
 const Components = {
+  // eslint-disable-next-line react/prop-types
   p: ({ children }) => <p>{children}</p>,
+  // eslint-disable-next-line react/prop-types
   subtitle: ({ children }) => <h3>{children}</h3>,
-  indentedBlock: ({ children }) => <IndentedBlock>{children}</IndentedBlock>,
+  // eslint-disable-next-line react/prop-types
   emphasis: ({ children }) => <p><strong>{children}</strong></p>,
-}
+};
 
 const Comuniques = () => (
   <Content>
     <h1>
       comunicaciones
     </h1>
-    {comuniques.map((comunique, index) => <article key={`comunique${index}`}>
-      <a name={comunique.slug}></a>
-      <PlaceAndDate>Córdoba, {comunique.date}</PlaceAndDate>
-      <h2>{comunique.title}</h2>
-      {comunique.content.map(block => block.type ? Components[block.type]({ children: block.content }) : Components.p({ children: block }))}
-    </article>)}
+    {comuniques.map(({
+      slug, date, title, content,
+    }) => (
+      <article id={slug} key={`comunique_${slug}`}>
+        <PlaceAndDate>
+            Córdoba,
+          {' '}
+          {date}
+        </PlaceAndDate>
+        <h2>{title}</h2>
+        {content.map((block) => (block.type
+          ? Components[block.type]({ children: block.content })
+          : Components.p({ children: block })))}
+      </article>
+    ))}
   </Content>
 );
 
