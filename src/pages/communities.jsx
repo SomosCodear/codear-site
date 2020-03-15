@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { BREAKPOINTS } from '../style/constants';
 import { URLS } from '../data/constants';
 import communities from '../communities.json';
+import services from '../services.json';
 import { useLilac } from '../hooks';
 
 const Content = styled.div`
@@ -158,7 +159,14 @@ const ListDescription = styled.article`
 
   @media (min-width: ${BREAKPOINTS.hd}) {
     text-align: left;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
+  }
+`;
+
+const ServiceIcon = styled.img`
+  @media (min-width: ${BREAKPOINTS.hd}) {
+    width: 10rem;
+    height: 10rem;
   }
 `;
 
@@ -222,57 +230,17 @@ const Communities = () => {
     </ProgramBanner>,
     <Content key="third-block">
       <List>
-        <li>
-          <img src="/icons/chalkboard.svg" alt="Ícono de pizarra" />
-          <ListDescription>
-            <h4>Áula virtual</h4>
-            <p>
-            Podrás ofrecer cursos, talleres y workshops utilizando Google Classroom
-            para contenidos educativos.
-            </p>
-          </ListDescription>
-        </li>
-        <li>
-          <img src="/icons/calendar-date.svg" alt="Ícono de calendario" />
-          <ListDescription>
-            <h4>Calendario</h4>
-            <p>
-            Utilizá Google Calendar para comunicar las fechas de tus actividades
-            y que las personas de tu comunidad puedan enterarse cuándo y dónde ocurrirán.
-            </p>
-          </ListDescription>
-        </li>
-        <li>
-          <img src="/icons/letter.svg" alt="Ícono de sobre para correo electrónico" />
-          <ListDescription>
-            <h4>Correo electrónico</h4>
-            <p>
-            Te brindamos una cuenta de Gmail bajo el dominio @comunidades.codear.org,
-            para que puedas centralizar toda la comunicación externa hacia tu
-            comunidad en un único lugar.
-            </p>
-          </ListDescription>
-        </li>
-        <li>
-          <img src="/icons/film.svg" alt="Ícono de cámara de video" />
-          <ListDescription>
-            <h4>Videollamadas</h4>
-            <p>
-            Con Google Meet, podrás dar webinars y organizar llamadas on-line con hasta
-            100 personas en simultáneo (no incluye soporte para grabación).
-            </p>
-          </ListDescription>
-        </li>
-        <li>
-          <img src="/icons/cloud-upload-96.svg" alt="Ícono de nube para carga de archivos" />
-          <ListDescription>
-            <h4>Nube de archivos</h4>
-            <p>
-            Podrás subir el material con el que trabaje tu comunidad a Google Drive,
-            con una capacidad de almacenamiento de hasta 30 Gb.
-            </p>
-          </ListDescription>
-        </li>
+        {services.map(({
+          id, title, description, icon, alt,
+        }) => (
+          <li key={`service_${id}`}>
+            <ServiceIcon src={`/icons/${icon}.svg`} alt={`Ícono de ${alt}`} />
+            <ListDescription>
+              <h4>{title}</h4>
+              <p>{description}</p>
+            </ListDescription>
+          </li>
+        ))}
       </List>
       <LegalNotice>
         <h2>TÉRMINOS Y CONDICIONES DE USO</h2>
