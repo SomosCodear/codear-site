@@ -186,6 +186,12 @@ const CommunityLogo = styled.img`
   }
 `;
 
+const IntroText = `Una parte esencial de nuestra actividad como organización es el trabajo en conjunto con
+        otras comunidades de tecnología del país. Como parte de nuestros esfuerzos por reducir
+        la barrera de ingreso a la industria tecnológica y de fomentar la difusión abierta del
+        conocimiento, brindamos difusión, asesoramiento y apoyo técnico en la realización de
+        diversas actividades.`;
+
 const Communities = () => [
   <Content>
     <h1>
@@ -193,11 +199,7 @@ const Communities = () => [
     </h1>
     <Intro>
       <p>
-        Una parte esencial de nuestra actividad como organización es el trabajo en conjunto con
-        otras comunidades de tecnología del país. Como parte de nuestros esfuerzos por reducir
-        la barrera de ingreso a la industria tecnológica y de fomentar la difusión abierta del
-        conocimiento, brindamos difusión, asesoramiento y apoyo técnico en la realización de
-        diversas actividades.
+        {IntroText}
       </p>
     </Intro>
   </Content>,
@@ -349,6 +351,14 @@ const Communities = () => [
 
 Communities.getInitialProps = async () => ({
   title: 'Comunidades',
+  meta: {
+    ogTitle: 'Servicios para comunidades | CoDeAr',
+    ogDescription: IntroText,
+    description: IntroText,
+    ogUrl: 'https://codear.org/comunidades',
+    twitterTitle: 'Servicios para comunidades | CoDeAr',
+    twitterDescription: IntroText,
+  },
 });
 
 export default Communities;
