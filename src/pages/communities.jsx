@@ -164,10 +164,8 @@ const ListDescription = styled.article`
 `;
 
 const ServiceIcon = styled.img`
-  @media (min-width: ${BREAKPOINTS.hd}) {
-    width: 10rem;
-    height: 10rem;
-  }
+  width: 10rem;
+  height: 10rem;
 `;
 
 const LegalNotice = styled.section`
