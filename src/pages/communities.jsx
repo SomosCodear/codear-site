@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { BREAKPOINTS } from '../style/constants';
 import { URLS } from '../data/constants';
 import communities from '../communities.json';
+import { useLilac } from '../hooks';
 
 const Content = styled.div`
   margin: 1.5rem 1.25rem;
@@ -188,162 +189,166 @@ const CommunityLogo = styled.img`
 
 const IntroText = 'Una parte esencial de nuestra actividad como organización es el trabajo en conjunto con otras comunidades de tecnología del país. Como parte de nuestros esfuerzos por reducir la barrera de ingreso a la industria tecnológica y de fomentar la difusión abierta del conocimiento, brindamos difusión, asesoramiento y apoyo técnico en la realización de diversas actividades.';
 
-const Communities = () => [
-  <Content>
-    <h1>
+const Communities = () => {
+  useLilac();
+
+  return [
+    <Content key="first-block">
+      <h1>
       comunidades
-    </h1>
-    <Intro>
-      <p>
-        {IntroText}
-      </p>
-    </Intro>
-  </Content>,
-  <ProgramBanner>
-    <Content>
-      <h2>Programa de Apoyo a Comunidades de Tecnología</h2>
-      <p>
+      </h1>
+      <Intro>
+        <p>
+          {IntroText}
+        </p>
+      </Intro>
+    </Content>,
+    <ProgramBanner key="second-block">
+      <Content>
+        <h2>Programa de Apoyo a Comunidades de Tecnología</h2>
+        <p>
         Abrimos nuestra plataforma digital basada en G Suite para Organizaciones sin
         Fines de Lucro para que tu comunidad pueda disponer de una infraestructura
         tecnológica adecuada para la realización de sus actividades,
         ya sean on-line u off-line.
-      </p>
-      <lilac-button
-        href="/submissions/tcsp"
-        target="_blank"
-      >
+        </p>
+        <lilac-button
+          href="/submissions/tcsp"
+          target="_blank"
+        >
         Sumate al programa
-      </lilac-button>
-    </Content>
-  </ProgramBanner>,
-  <Content>
-    <List>
-      <li>
-        <img src="/icons/chalkboard.svg" alt="Ícono de pizarra" />
-        <ListDescription>
-          <h4>Áula virtual</h4>
-          <p>
+        </lilac-button>
+      </Content>
+    </ProgramBanner>,
+    <Content key="third-block">
+      <List>
+        <li>
+          <img src="/icons/chalkboard.svg" alt="Ícono de pizarra" />
+          <ListDescription>
+            <h4>Áula virtual</h4>
+            <p>
             Podrás ofrecer cursos, talleres y workshops utilizando Google Classroom
             para contenidos educativos.
-          </p>
-        </ListDescription>
-      </li>
-      <li>
-        <img src="/icons/calendar-date.svg" alt="Ícono de calendario" />
-        <ListDescription>
-          <h4>Calendario</h4>
-          <p>
+            </p>
+          </ListDescription>
+        </li>
+        <li>
+          <img src="/icons/calendar-date.svg" alt="Ícono de calendario" />
+          <ListDescription>
+            <h4>Calendario</h4>
+            <p>
             Utilizá Google Calendar para comunicar las fechas de tus actividades
             y que las personas de tu comunidad puedan enterarse cuándo y dónde ocurrirán.
-          </p>
-        </ListDescription>
-      </li>
-      <li>
-        <img src="/icons/letter.svg" alt="Ícono de sobre para correo electrónico" />
-        <ListDescription>
-          <h4>Correo electrónico</h4>
-          <p>
+            </p>
+          </ListDescription>
+        </li>
+        <li>
+          <img src="/icons/letter.svg" alt="Ícono de sobre para correo electrónico" />
+          <ListDescription>
+            <h4>Correo electrónico</h4>
+            <p>
             Te brindamos una cuenta de Gmail bajo el dominio @comunidades.codear.org,
             para que puedas centralizar toda la comunicación externa hacia tu
             comunidad en un único lugar.
-          </p>
-        </ListDescription>
-      </li>
-      <li>
-        <img src="/icons/film.svg" alt="Ícono de cámara de video" />
-        <ListDescription>
-          <h4>Videollamadas</h4>
-          <p>
+            </p>
+          </ListDescription>
+        </li>
+        <li>
+          <img src="/icons/film.svg" alt="Ícono de cámara de video" />
+          <ListDescription>
+            <h4>Videollamadas</h4>
+            <p>
             Con Google Meet, podrás dar webinars y organizar llamadas on-line con hasta
             100 personas en simultáneo (no incluye soporte para grabación).
-          </p>
-        </ListDescription>
-      </li>
-      <li>
-        <img src="/icons/cloud-upload-96.svg" alt="Ícono de nube para carga de archivos" />
-        <ListDescription>
-          <h4>Nube de archivos</h4>
-          <p>
+            </p>
+          </ListDescription>
+        </li>
+        <li>
+          <img src="/icons/cloud-upload-96.svg" alt="Ícono de nube para carga de archivos" />
+          <ListDescription>
+            <h4>Nube de archivos</h4>
+            <p>
             Podrás subir el material con el que trabaje tu comunidad a Google Drive,
             con una capacidad de almacenamiento de hasta 30 Gb.
-          </p>
-        </ListDescription>
-      </li>
-    </List>
-    <LegalNotice>
-      <h2>TÉRMINOS Y CONDICIONES DE USO</h2>
-      <p>
+            </p>
+          </ListDescription>
+        </li>
+      </List>
+      <LegalNotice>
+        <h2>TÉRMINOS Y CONDICIONES DE USO</h2>
+        <p>
         El uso de estos servicios implica la aceptación de los términos y condiciones de G Suite
         para Organizaciones sin Fines de Lucro. Una vez aprobada la solicitud de adhesión al
         Programa de Apoyo a Comunidades de Tecnología, la persona que actúe en representación
         de la comunidad beneficiaria recibirá las credenciales de acceso correspondientes,
         con una cuenta de G Suite bajo el dominio @comunidades.codear.org.
-        <strong> RESTRICCIONES: </strong>
+          <strong> RESTRICCIONES: </strong>
         El uso de esta cuenta queda exclusivamente restringido
         para las actividades y comunicaciones de la comunidad beneficiaria, no pudiendo extender
         su propósito a otros fines que no sean los declarados en la solicitud de adhesión.
-        <strong> ACEPTACIÓN, DENEGACIÓN Y REVOCACIÓN DE ACCESO: </strong>
+          <strong> ACEPTACIÓN, DENEGACIÓN Y REVOCACIÓN DE ACCESO: </strong>
         La Comunidad de Desarrolladores de Argentina se reserva el derecho de aceptar o rechazar
         las solicitudes conforme a una evaluación caso por caso, así como también de suspender o
         revocar el acceso de manera permanente a su plataforma de servicios digitales en el caso
         de detectar comportamientos que no se correspondan con el uso previamente declarado en la
         solicitud de adhesión.
-        <strong> CÓDIGO DE CONDUCTA: </strong>
+          <strong> CÓDIGO DE CONDUCTA: </strong>
         La adhesión al Programa de Apoyo a Comunidades de Tecnología implica la aceptación del
         Código de Conducta de la Comunidad de Desarrolladores de Argentina.
-      </p>
-    </LegalNotice>
-  </Content>,
-  <ProgramBanner>
-    <Content>
-      <h2>Asamblea de Comunidades</h2>
-      <p>
+        </p>
+      </LegalNotice>
+    </Content>,
+    <ProgramBanner key="fourth-block">
+      <Content>
+        <h2>Asamblea de Comunidades</h2>
+        <p>
         Un espacio digital donde representantes de todas las comunidades de tecnología pueden
         reunirse a intercambiar ideas y coordinar esfuerzos en conjunto.
-      </p>
-      <lilac-button
-        href="/submissions/casm"
-        target="_blank"
-      >
+        </p>
+        <lilac-button
+          href="/submissions/casm"
+          target="_blank"
+        >
         Unite a la Asamblea
-      </lilac-button>
-    </Content>
-  </ProgramBanner>,
-  <Content>
-    <List>
-      {communities.map(({ id, name, links }) => (
-        <li key={`community_${id}`}>
-          <CommunityLogo src={`/images/community-logos/${id}.png`} alt={`Logo de ${name}`} />
-          <ListDescription>
-            <h4>{name}</h4>
-            <p>
-              {links.map(({ type, username }) => (
-                <a href={`${URLS[type]}${username}`} target="_blank" rel="noopener noreferrer" title={`Seguí a esta comunidad en @${username}`}>
-                  <SocialMediaIcon src={`/images/social-media-logos/logo-${type}.svg`} key={`${id}_${type}_icon`} alt={`Ícono de ${type}`} />
-                </a>
-              ))}
-            </p>
-          </ListDescription>
-        </li>
-      ))}
-    </List>
-    <LegalNotice>
-      <h2>TÉRMINOS Y CONDICIONES DE PARTICIPACIÓN</h2>
-      <p>
+        </lilac-button>
+      </Content>
+    </ProgramBanner>,
+    <Content key="fifth-block">
+      <List>
+        {communities.map(({ id, name, links }) => (
+          <li key={`community_${id}`}>
+            <CommunityLogo src={`/images/community-logos/${id}.png`} alt={`Logo de ${name}`} />
+            <ListDescription>
+              <h4>{name}</h4>
+              <p>
+                {links.map(({ type, username }) => (
+                  <a key={`${id}_${type}_link`} href={`${URLS[type]}${username}`} target="_blank" rel="noopener noreferrer" title={`Seguí a esta comunidad en @${username}`}>
+                    <SocialMediaIcon key={`${id}_${type}_icon`} src={`/images/social-media-logos/logo-${type}.svg`} alt={`Ícono de ${type}`} />
+                  </a>
+                ))}
+              </p>
+            </ListDescription>
+          </li>
+        ))}
+      </List>
+      <LegalNotice>
+        <h2>TÉRMINOS Y CONDICIONES DE PARTICIPACIÓN</h2>
+        <p>
         La participación en la Asamblea de Comunidades implica la aceptación los términos y
         condiciones de Slack para Organizaciones sin Fines de Lucro.
-        <strong> CÓDIGO DE CONDUCTA: </strong>
+          <strong> CÓDIGO DE CONDUCTA: </strong>
         La adhesión a la Asamblea de Comunidades implica la aceptación del
         Código de Conducta de la Comunidad de Desarrolladores de Argentina.
-        <strong> ACEPTACIÓN, DENEGACIÓN Y REVOCACIÓN DE ACCESO: </strong>
+          <strong> ACEPTACIÓN, DENEGACIÓN Y REVOCACIÓN DE ACCESO: </strong>
         La Comunidad de Desarrolladores de Argentina se reserva el derecho de aceptar o rechazar
         las solicitudes conforme a una evaluación caso por caso, así como también de suspender o
         revocar el acceso de manera permanente a la Asamblea de Comunidades en el caso
         de detectar comportamientos que no se correspondan con el Código de Conducta.
-      </p>
-    </LegalNotice>
-  </Content>,
-];
+        </p>
+      </LegalNotice>
+    </Content>,
+  ];
+};
 
 Communities.getInitialProps = async () => ({
   title: 'Comunidades',

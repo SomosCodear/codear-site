@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
+import { useLilac } from '../hooks';
 import { Calendar } from '../components/Calendar';
 import { CORE_MEMBERS, ROUTES } from '../data/constants';
 import events from '../events.json';
@@ -251,14 +252,7 @@ const LandingContent = styled.main`
 `;
 
 const Index = () => {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // eslint-disable-next-line global-require
-      require('@webcomponents/webcomponentsjs/webcomponents-bundle');
-      // eslint-disable-next-line global-require
-      require('@codear/lilac');
-    }
-  }, []);
+  useLilac();
 
   return (
     <LandingContent>
@@ -275,7 +269,7 @@ const Index = () => {
         </h1>
         <CommunitiesBanner>
           {communities.map(({ id, name }) => (
-            <a href={ROUTES.COMMUNITIES.path}>
+            <a key={`community_${id}`} href={ROUTES.COMMUNITIES.path}>
               <img alt={`Logo de ${name}`} src={`/images/community-logos/${id}.png`} />
             </a>
           ))}
