@@ -213,7 +213,7 @@ const Communities = () => [
         ya sean on-line u off-line.
       </p>
       <lilac-button
-        href="https://webconf.tech"
+        href="/submissions/tcsp"
         target="_blank"
       >
         Sumate al programa
@@ -306,7 +306,7 @@ const Communities = () => [
         reunirse a intercambiar ideas y coordinar esfuerzos en conjunto.
       </p>
       <lilac-button
-        href="https://webconf.tech"
+        href="/submissions/casm"
         target="_blank"
       >
         Unite a la Asamblea
