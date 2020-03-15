@@ -1,0 +1,37 @@
+[
+  {
+    "id": "classroom",
+    "title": "Áula virtual",
+    "description": "Podrás ofrecer cursos, talleres y workshops utilizando Google Classroom para contenidos educativos.",
+    "icon": "chalkboard",
+    "alt": "pizarra"
+  },
+  {
+    "id": "calendar",
+    "title": "Calendario",
+    "description": "Utilizá Google Calendar para comunicar las fechas de tus actividades y que las personas de tu comunidad puedan enterarse cuándo y dónde ocurrirán.",
+    "icon": "calendar-date",
+    "alt": "calendario"
+  },
+  {
+    "id": "email",
+    "title": "Correo electrónico",
+    "description": "Te brindamos una cuenta de Gmail bajo el dominio @comunidades.codear.org, para que puedas centralizar toda la comunicación externa hacia tu comunidad en un único lugar.",
+    "icon": "letter",
+    "alt": "sobre"
+  },
+  {
+    "id": "calls",
+    "title": "Videollamadas",
+    "description": "Con Google Meet, podrás dar webinars y organizar videollamadas on-line con hasta 100 personas en simultáneo (no incluye soporte para grabación).",
+    "icon": "film",
+    "alt": "cámara de video"
+  },
+  {
+    "id": "cloud",
+    "title": "Nube de archivos",
+    "description": " Podrás subir el material con el que trabaje tu comunidad a Google Drive con una capacidad de almacenamiento de hasta 30 Gb.",
+    "icon": "cloud-upload-96",
+    "alt": "nube"
+  }
+]
