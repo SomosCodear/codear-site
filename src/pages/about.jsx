@@ -117,6 +117,8 @@ const Member = styled.div`
   }
 `;
 
+const IntroText = 'Somos una comunidad dedicada a la formación y difusión de conocimientos de tecnología, aplicándola como un instrumento transformador y potenciador para la sociedad.';
+
 const About = () => (
   <UsSection>
     <Content>
@@ -125,9 +127,7 @@ const About = () => (
           nosotros
         </h1>
         <p>
-          Somos una comunidad dedicada a la formación y difusión de conocimientos de tecnología,
-          aplicando la disciplina como un instrumento transformador y potenciador para la
-          sociedad.
+          {IntroText}
         </p>
       </Texts>
       <Members>
@@ -171,6 +171,14 @@ const About = () => (
 
 About.getInitialProps = async () => ({
   title: 'Conocenos',
+  meta: {
+    ogTitle: 'Acerca de nosotros | CoDeAr',
+    ogDescription: IntroText,
+    description: IntroText,
+    ogUrl: 'https://codear.org/conocenos',
+    twitterTitle: 'Acerca de nosotros | CoDeAr',
+    twitterDescription: IntroText,
+  },
 });
 
 export default About;

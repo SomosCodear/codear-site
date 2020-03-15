@@ -109,17 +109,15 @@ const OutroSection = styled.section`
   }
 `;
 
+const IntroText = 'Quienes formamos parte de CoDeAr nos comprometemos a mantener un ambiente confortable y seguro para todas las personas dentro de la conferencia, más allá de su identidad y expresión de género, orientación sexual, discapacidades, apariencia física, etnia, nacionalidad, religión (o falta de la misma), nivel socioeconómico u otras características personales.';
+
 const Coc = () => (
   <Content>
     <h1>
       código de conducta
     </h1>
     <Intro>
-      Quienes formamos parte de CoDeAr nos comprometemos a mantener un ambiente confortable y
-      seguro para todas las personas dentro de la conferencia, más allá de su identidad y
-      expresión de género, orientación sexual, discapacidades, apariencia física, etnia,
-      nacionalidad, religión (o falta de la misma), nivel socio-económico u otras
-      características personales.
+      {IntroText}
     </Intro>
     <ObjectivesSection>
       <h2>
@@ -208,6 +206,14 @@ const Coc = () => (
 
 Coc.getInitialProps = async () => ({
   title: 'Código de Conducta',
+  meta: {
+    ogTitle: 'Código de Conducta | CoDeAr',
+    ogDescription: IntroText,
+    description: IntroText,
+    ogUrl: 'https://codear.org/codigo-de-conducta',
+    twitterTitle: 'Código de Conducta | CoDeAr',
+    twitterDescription: IntroText,
+  },
 });
 
 export default Coc;

@@ -165,7 +165,7 @@ const ListDescription = styled.article`
 
 const ServiceIcon = styled.img`
   width: 10rem;
-  height: 10rem;
+  height: auto;
 `;
 
 const LegalNotice = styled.section`
