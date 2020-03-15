@@ -186,11 +186,7 @@ const CommunityLogo = styled.img`
   }
 `;
 
-const IntroText = `Una parte esencial de nuestra actividad como organización es el trabajo en conjunto con
-        otras comunidades de tecnología del país. Como parte de nuestros esfuerzos por reducir
-        la barrera de ingreso a la industria tecnológica y de fomentar la difusión abierta del
-        conocimiento, brindamos difusión, asesoramiento y apoyo técnico en la realización de
-        diversas actividades.`;
+const IntroText = 'Una parte esencial de nuestra actividad como organización es el trabajo en conjunto con otras comunidades de tecnología del país. Como parte de nuestros esfuerzos por reducir la barrera de ingreso a la industria tecnológica y de fomentar la difusión abierta del conocimiento, brindamos difusión, asesoramiento y apoyo técnico en la realización de diversas actividades.';
 
 const Communities = () => [
   <Content>
@@ -334,8 +330,8 @@ const Communities = () => [
     <LegalNotice>
       <h2>TÉRMINOS Y CONDICIONES DE PARTICIPACIÓN</h2>
       <p>
-        La participación en la Asamblea de Comunidades implica la aceptación los términos y condiciones
-        de Slack para Organizaciones sin Fines de Lucro.
+        La participación en la Asamblea de Comunidades implica la aceptación los términos y
+        condiciones de Slack para Organizaciones sin Fines de Lucro.
         <strong> CÓDIGO DE CONDUCTA: </strong>
         La adhesión a la Asamblea de Comunidades implica la aceptación del
         Código de Conducta de la Comunidad de Desarrolladores de Argentina.
