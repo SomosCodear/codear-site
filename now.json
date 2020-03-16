@@ -6,6 +6,14 @@
     {
       "source": "/media-kit/brandbook",
       "destination": "https://drive.google.com/open?id=17A1wuAZ5AjBT_rg0XeJ0RCcbQI6rwL7s"
+    },
+    {
+      "source": "/submissions/tcsp",
+      "destination": "https://forms.gle/meyrvYJ4MAsBSG8v9"
+    },
+    {
+      "source": "/submissions/casm",
+      "destination": "https://forms.gle/XcjkJ4anpks9LUKT7"
     }
   ]
 }

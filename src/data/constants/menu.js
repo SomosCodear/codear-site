@@ -6,11 +6,15 @@ export const MENU = [
     label: 'Conocenos',
   },
   {
-    ...ROUTES.COC,
-    label: 'Código de conducta',
+    ...ROUTES.COMMUNITIES,
+    label: 'Comunidades',
   },
   {
     ...ROUTES.COMUNIQUES,
     label: 'Comunicaciones',
+  },
+  {
+    ...ROUTES.COC,
+    label: 'Código de conducta',
   },
 ];

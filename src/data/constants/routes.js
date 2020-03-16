@@ -7,14 +7,6 @@ export const ROUTES = {
     path: '/conocenos',
     page: '/about',
   },
-  SCHEDULE: {
-    path: '/agenda',
-    page: '/schedule',
-  },
-  PROJECTS: {
-    path: '/proyectos',
-    page: '/projects',
-  },
   COC: {
     path: '/codigo-de-conducta',
     page: '/coc',
@@ -22,5 +14,9 @@ export const ROUTES = {
   COMUNIQUES: {
     path: '/comunicaciones',
     page: '/comuniques',
+  },
+  COMMUNITIES: {
+    path: '/comunidades',
+    page: '/communities',
   },
 };

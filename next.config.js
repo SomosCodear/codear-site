@@ -9,6 +9,7 @@ module.exports = withCSS(withFonts({
         { source: '/conocenos', destination: '/about' },
         { source: '/codigo-de-conducta', destination: '/coc' },
         { source: '/comunicaciones', destination: '/comuniques' },
+        { source: '/comunidades', destination: '/communities' },
       ];
     },
     catchAllRouting: true,
