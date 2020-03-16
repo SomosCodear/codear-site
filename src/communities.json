@@ -1,0 +1,110 @@
+[
+  {
+    "id": "beerjs-cba",
+    "name": "BeerJS Cba",
+    "links": [
+      {
+        "type": "twitter",
+        "username": "beerjscba"
+      },
+      {
+        "type": "instagram",
+        "username": "beerjscba"
+      }
+    ]
+  },
+  {
+    "id": "react-cba",
+    "name": "React Cba",
+    "links": [
+      {
+        "type": "twitter",
+        "username": "reactcba"
+      },
+      {
+        "type": "instagram",
+        "username": "reactcba.ok"
+      }
+    ]
+  },
+  {
+    "id": "met-cba",
+    "name": "Mujeres en Tecnología",
+    "links": [
+      {
+        "type": "twitter",
+        "username": "metcbaok"
+      },
+      {
+        "type": "instagram",
+        "username": "metcbaok"
+      }
+    ]
+  },
+  {
+    "id": "indie-game-garage",
+    "name": "Indie Game Garage",
+    "links": [
+      {
+        "type": "twitter",
+        "username": "indiegamegarage"
+      },
+      {
+        "type": "instagram",
+        "username": "indiegamegarage"
+      }
+    ]
+  },
+  {
+    "id": "frontendcafe",
+    "name": "FrontEndCafé",
+    "links": [
+      {
+        "type": "twitter",
+        "username": "frontendcafe"
+      },
+      {
+        "type": "instagram",
+        "username": "frontendcafe_"
+      }
+    ]
+  },
+  {
+    "id": "burgerjs-cba",
+    "name": "BurgerJS Córdoba",
+    "links": [
+      {
+        "type": "twitter",
+        "username": "burgerjscba"
+      }
+    ]
+  },
+  {
+    "id": "devc-cordoba",
+    "name": "DevC Córdoba",
+    "links": [
+      {
+        "type": "twitter",
+        "username": "devccordoba"
+      },
+      {
+        "type": "instagram",
+        "username": "devccordoba"
+      }
+    ]
+  },
+    {
+    "id": "vue-cordoba",
+    "name": "Vue Córdoba",
+    "links": [
+      {
+        "type": "twitter",
+        "username": "vuecba"
+      },
+      {
+        "type": "instagram",
+        "username": "vuecba"
+      }
+    ]
+  }
+]

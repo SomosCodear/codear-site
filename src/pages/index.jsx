@@ -1,9 +1,11 @@
 import Link from 'next/link';
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
+import { useLilac } from '../hooks';
 import { Calendar } from '../components/Calendar';
 import { CORE_MEMBERS, ROUTES } from '../data/constants';
 import events from '../events.json';
+import communities from '../communities.json';
 import { BREAKPOINTS } from '../style/constants';
 
 const CommunitiesSection = styled.section`
@@ -14,6 +16,18 @@ const CommunitiesSection = styled.section`
 
   h1 {
     font-size: 3.25rem;
+    text-align: center;
+  }
+
+  h1 a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  h1 p {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0 1rem;
   }
 
   @media (min-width: ${BREAKPOINTS.hd}) {
@@ -25,12 +39,23 @@ const CommunitiesSection = styled.section`
     background-position: left center;
     background-size: cover;
 
+    h1 {
+      text-align: left;
+      margin-left: 1rem;
+    }
+
     h1:first-child {
       box-sizing: border-box;
       width: 55rem;
       padding: 0 3rem;
       font-size: 4.5rem;
       color: var(--color-text);
+    }
+
+    h1 p {
+      margin: 0;
+      padding: 0;
+      font-size: 1rem;
     }
   }
 `;
@@ -46,9 +71,12 @@ const CommunitiesBanner = styled.div`
   background-repeat: no-repeat;
   background-position: left center;
   background-size: cover;
+  flex-flow: wrap;
 
-  img + img {
-    margin-left: 0.5rem;
+  img {
+    max-width: 3rem;
+    max-height: 3rem;
+    margin: 0.5rem;
   }
 
   @media (min-width: ${BREAKPOINTS.hd}) {
@@ -224,14 +252,7 @@ const LandingContent = styled.main`
 `;
 
 const Index = () => {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // eslint-disable-next-line global-require
-      require('@webcomponents/webcomponentsjs/webcomponents-bundle');
-      // eslint-disable-next-line global-require
-      require('@codear/lilac');
-    }
-  }, []);
+  useLilac();
 
   return (
     <LandingContent>
@@ -243,15 +264,15 @@ const Index = () => {
       </CalendarContainer>
       <CommunitiesSection>
         <h1>
-          comunidades
+          <a href={ROUTES.COMMUNITIES.path}>comunidades</a>
+          <p>Descubrí los programas y servicios que ofrecemos para tu comunidad.</p>
         </h1>
         <CommunitiesBanner>
-          <img src="/images/community-logos/beer-js.png" alt="Logo de BeerJs" />
-          <img src="/images/community-logos/met-cba.png" alt="Logo de MeT CBA" />
-          <img
-            src="/images/community-logos/facebook-dev-circle.png"
-            alt="Logo de Facebook Dev Circle"
-          />
+          {communities.map(({ id, name }) => (
+            <a key={`community_${id}`} href={ROUTES.COMMUNITIES.path}>
+              <img alt={`Logo de ${name}`} src={`/images/community-logos/${id}.png`} />
+            </a>
+          ))}
         </CommunitiesBanner>
       </CommunitiesSection>
       <ProjectsSection>

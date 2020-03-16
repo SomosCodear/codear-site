@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 import { BREAKPOINTS, COLORS } from '../../style/constants';
 import { SROnlyText } from '../SROnlyText';
 import { formatNumber } from '../../utils/format';
-import { useEdgeHTML } from '../../hooks/useEdgeHTML';
+import { useEdgeHTML } from '../../hooks';
 
 const Container = styled.a`
   display: flex;
