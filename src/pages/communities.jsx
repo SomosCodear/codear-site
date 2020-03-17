@@ -137,6 +137,16 @@ const List = styled.ol`
       margin-top: 1rem;
       margin-bottom: 0;
       font-size: 1.5rem;
+
+      a {
+        text-decoration: none;
+        color: var(--color-primary);
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: var(--color-secondary);
+      }
     }
   }
 
@@ -182,15 +192,24 @@ const LegalNotice = styled.section`
 const SocialMediaIcon = styled.img`
   filter: invert(58%) sepia(35%) saturate(857%) hue-rotate(192deg) brightness(59%) contrast(150%);
   margin-right: 0.5rem;
+
+  a:hover & {
+    filter: invert(58%) sepia(35%) saturate(857%) hue-rotate(270deg) brightness(99%) contrast(150%);
+  }
 `;
 
 const CommunityLogo = styled.img`
   max-width: 140px;
   max-height: 140px;
+  border-radius: 100px;
 
   @media (min-width: ${BREAKPOINTS.hd}) {
     margin-right: 1rem;
   }
+`;
+
+const CommunityDescription = styled.article`
+  font-size: 0.85rem;
 `;
 
 const IntroText = 'Una parte esencial de nuestra actividad como organización es el trabajo en conjunto con otras comunidades de tecnología del país. Como parte de nuestros esfuerzos por reducir la barrera de ingreso a la industria tecnológica y de fomentar la difusión abierta del conocimiento, brindamos difusión, asesoramiento y apoyo técnico en la realización de diversas actividades.';
@@ -281,11 +300,20 @@ const Communities = () => {
     </ProgramBanner>,
     <Content key="fifth-block">
       <List>
-        {communities.map(({ id, name, links }) => (
+        {communities.map(({
+          id, name, description, links, iconFormat = 'png',
+        }) => (
           <li key={`community_${id}`}>
-            <CommunityLogo src={`/images/community-logos/${id}.png`} alt={`Logo de ${name}`} />
+            <a href={`${URLS[links[0].type]}${links[0].username}`} target="_blank" rel="noopener noreferrer" title={`Visitá la web de ${name}`}>
+              <CommunityLogo src={`/images/community-logos/${id}.${iconFormat}`} alt={`Logo de ${name}`} />
+            </a>
             <ListDescription>
-              <h4>{name}</h4>
+              <h4>
+                <a href={`${URLS[links[0].type]}${links[0].username}`} target="_blank" rel="noopener noreferrer" title={`Visitá la web de ${name}`}>
+                  {name}
+                </a>
+              </h4>
+              <CommunityDescription>{description}</CommunityDescription>
               <p>
                 {links.map(({ type, username }) => (
                   <a key={`${id}_${type}_link`} href={`${URLS[type]}${username}`} target="_blank" rel="noopener noreferrer" title={`Seguí a esta comunidad en @${username}`}>
