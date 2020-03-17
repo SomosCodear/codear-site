@@ -77,6 +77,7 @@ const CommunitiesBanner = styled.div`
     max-width: 3rem;
     max-height: 3rem;
     margin: 0.5rem;
+    border-radius: 100px;
   }
 
   @media (min-width: ${BREAKPOINTS.hd}) {
@@ -268,9 +269,9 @@ const Index = () => {
           <p>Descubrí los programas y servicios que ofrecemos para tu comunidad.</p>
         </h1>
         <CommunitiesBanner>
-          {communities.map(({ id, name }) => (
+          {communities.map(({ id, name, iconFormat = 'png' }) => (
             <a key={`community_${id}`} href={ROUTES.COMMUNITIES.path}>
-              <img alt={`Logo de ${name}`} src={`/images/community-logos/${id}.png`} />
+              <img alt={`Logo de ${name}`} src={`/images/community-logos/${id}.${iconFormat}`} />
             </a>
           ))}
         </CommunitiesBanner>
