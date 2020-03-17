@@ -2,6 +2,7 @@
   {
     "id": "beerjs-cba",
     "name": "BeerJS Cba",
+    "description": "Capítulo cordobés del meetup internacional BeerJS.",
     "links": [
       {
         "type": "twitter",
@@ -16,6 +17,7 @@
   {
     "id": "react-cba",
     "name": "React Cba",
+    "description": "Comunidad de desarrolladores de #ReactJS en Córdoba, nos juntamos una vez al mes a compartir grandes charlas y conocer nuevos amigos.",
     "links": [
       {
         "type": "twitter",
@@ -30,6 +32,7 @@
   {
     "id": "met-cba",
     "name": "Mujeres en Tecnología",
+    "description": "Transformando nuestro entorno de tecnología!👩🏻‍💻👨🏽‍💻👩🏼‍💻 Buscamos potenciar el impacto y la participación de las mujeres en las diversas áreas #tech.",
     "links": [
       {
         "type": "twitter",
@@ -44,6 +47,7 @@
   {
     "id": "indie-game-garage",
     "name": "Indie Game Garage",
+    "description": "👾 Comunidad Game Jamera Independiente!! 🎮 Lugar de encuentro para #gamedev y aficionados a las #gamejam",
     "links": [
       {
         "type": "twitter",
@@ -58,6 +62,7 @@
   {
     "id": "frontendcafe",
     "name": "FrontEndCafé",
+    "description": "📚 Proyectos, mentorías, consultas, charlas, workshops online y offline. Comunidad de desarrolladorxs web. ✨",
     "links": [
       {
         "type": "twitter",
@@ -72,6 +77,7 @@
   {
     "id": "burgerjs-cba",
     "name": "BurgerJS Córdoba",
+    "description": "Nos juntamos una vez al mes a comer hamburguesas y hablar de JavaScript 🍻 🍻🍔🍔",
     "links": [
       {
         "type": "twitter",
@@ -82,6 +88,7 @@
   {
     "id": "devc-cordoba",
     "name": "DevC Córdoba",
+    "description": "Charlas mensuales sobre distintas temáticas del mundo Tech. Becas para cursos exclusivos y eventos especiales de Facebook.",
     "links": [
       {
         "type": "twitter",
@@ -93,9 +100,10 @@
       }
     ]
   },
-    {
+  {
     "id": "vue-cordoba",
     "name": "Vue Córdoba",
+    "description": "Espacio de encuentros, charlas y networking entorno a #vuejs en #Córdoba.",
     "links": [
       {
         "type": "twitter",
@@ -106,5 +114,52 @@
         "username": "vuecba"
       }
     ]
+  },
+  {
+    "id": "cba-hackerspace",
+    "name": "Córdoba Hacker Space",
+    "description": "Primer HackerSpace en Córdoba, Argentina. Talleres, charlas, proyectos abiertos, CTFs, hacks y mucho más.",
+    "links": [
+      {
+        "type": "twitter",
+        "username": "cbahackerspace"
+      },
+      {
+        "type": "instagram",
+        "username": "cordobahackerspace"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "gdg-cordoba",
+    "name": "GDG Córdoba",
+    "description": "Google Developers Group Córdoba",
+    "links": [
+      {
+        "type": "twitter",
+        "username": "gdgcordoba"
+      },
+      {
+        "type": "instagram",
+        "username": "gdgcordobaargentina"
+      }
+    ]
+  },
+  {
+    "id": "dotnet-cba",
+    "name": "Comunidad .NET Córdoba",
+    "description": "Comunidad destinada a la organización de charlas técnicas del ecosistema .NET",
+    "links": [
+      {
+        "type": "twitter",
+        "username": "dotnetcba"
+      },
+      {
+        "type": "instagram",
+        "username": "dotnetcba"
+      }
+    ],
+    "iconFormat": "jpg"
   }
 ]
