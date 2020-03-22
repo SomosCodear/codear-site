@@ -34,8 +34,9 @@ const Menu = styled.ul`
   @media (min-width: ${BREAKPOINTS.hd}) {
     display: flex;
     height: auto;
-    width: auto;
+    width: 100%;
     margin-left: 5rem;
+    justify-content: space-between;
   }
 `;
 
@@ -72,6 +73,7 @@ const MenuItem = styled.li`
       width: auto;
       border: none;
       color: var(--color-primary);
+      font-size: 1.35rem;
 
       &:after {
         content: '';
@@ -100,10 +102,6 @@ const MenuItem = styled.li`
           background: linear-gradient(90deg, #ffffff, var(--color-secondary));
         }
       }
-    }
-
-    & + & {
-      margin-left: 3rem;
     }
   }
 `;

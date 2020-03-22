@@ -19,4 +19,8 @@ export const ROUTES = {
     path: '/comunidades',
     page: '/communities',
   },
+  KNOWLEDGE: {
+    path: '/conocimiento',
+    page: '/knowledge',
+  },
 };

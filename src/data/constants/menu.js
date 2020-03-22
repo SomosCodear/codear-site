@@ -10,6 +10,10 @@ export const MENU = [
     label: 'Comunidades',
   },
   {
+    ...ROUTES.KNOWLEDGE,
+    label: 'Conocimiento',
+  },
+  {
     ...ROUTES.COMUNIQUES,
     label: 'Comunicaciones',
   },
