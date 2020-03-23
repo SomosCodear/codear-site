@@ -248,13 +248,14 @@ const Communities = () => {
     <Content key="third-block">
       <List>
         {services.map(({
-          id, title, description, icon, alt,
+          id, title, description, icon, alt, moreInfo,
         }) => (
           <li key={`service_${id}`}>
             <ServiceIcon src={`/icons/${icon}.svg`} alt={`Ícono de ${alt}`} />
             <ListDescription>
               <h4>{title}</h4>
               <p>{description}</p>
+              {moreInfo && (<a target="_blank" rel="noopener noreferrer" href={moreInfo.href}>{moreInfo.label}</a>)}
             </ListDescription>
           </li>
         ))}
