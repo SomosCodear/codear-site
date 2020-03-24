@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { BREAKPOINTS } from '../style/constants';
 import { useLilac } from '../hooks';
+import webinars from '../webinars.json';
 
 const Content = styled.div`
   margin: 1.5rem 1.25rem;
@@ -10,7 +11,7 @@ const Content = styled.div`
   align-items: flex-start;
 
   h1 {
-    font-size: 3rem;
+    font-size: 3rem !important;
     line-height: 1.1;
   }
 
@@ -34,6 +35,10 @@ const Content = styled.div`
     color: var(--color-primary);
   }
 
+  lilac-button {
+    align-self: center;
+  }
+
   @media (min-width: ${BREAKPOINTS.hd}) {
     align-self: center;
     max-width: 73.75rem;
@@ -49,6 +54,10 @@ const Content = styled.div`
 
     p {
       margin-left: 0;
+    }
+
+    lilac-button {
+      align-self: flex-end;
     }
   }
 `;
@@ -103,9 +112,54 @@ const ProgramBanner = styled.div`
   }
   `;
 
+const Webinar = styled.article`
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  padding: 3rem 0;
+
+  & + & {
+    border-top: 1px solid var(--color-accent);
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  lilac-button {
+    align-self: center;
+  }
+
+  @media (min-width: ${BREAKPOINTS.hd}) {
+    lilac-button {
+      width: 20rem;
+      align-self: flex-end;
+    }
+  }
+`;
+
+const DateTime = styled.div`
+  margin: 0;
+  font-weight: bold;
+  font-size: 1rem;
+`;
+
+const Description = styled.section`
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 2rem 0;
+
+  @media (min-width: ${BREAKPOINTS.hd}) {
+    border-left: 10px solid var(--color-accent);
+    padding-left: 3rem;
+  }
+`;
+
 const introText = 'Estamos preparándonos para ofrecer entrenamiento a educadores que necesiten ayuda para formarse en herramientas digitales para enfrentar los desafíos de la educación on-line.';
 
-const Comuniques = () => {
+const Knowledge = () => {
   useLilac();
 
   return [
@@ -117,23 +171,46 @@ const Comuniques = () => {
     </Content>,
     <ProgramBanner>
       <Content>
+        <h2>#EncuentrosCodear</h2>
+      </Content>
+    </ProgramBanner>,
+    <Content>
+      {webinars.map(({
+        dateText, dateJson, name, description, links,
+      }) => (
+        <Webinar key={dateJson}>
+          <h3>{name}</h3>
+          <DateTime>{dateText}</DateTime>
+          <Description>{description}</Description>
+          {new Date().valueOf() < Date.parse(dateJson)
+                && <lilac-button target="_blank" secondary href={links.signup}>Inscribite al evento</lilac-button>}
+          {links.recording && new Date().valueOf() > Date.parse(dateJson)
+                && <a href={links.recording}>Reviví el encuentro</a>}
+          {links.extra && links.extra.href && <a href={links.extra.href}>{links.extra.title}</a>}
+        </Webinar>
+      ))}
+    </Content>,
+    <ProgramBanner>
+      <Content>
         <h2>Participá de nuestro relevamiento</h2>
-        <p>Para poder ofrecer una solución que impacte en nuestra comunidad educativa, necesitamos conocer las problemáticas que se afrontan día a día. Te invitamos a sumar tu mirada completando nuestro formulario de relevamiento.</p>
+        <p>
+          Para poder ofrecer una solución que impacte en nuestra comunidad educativa, necesitamos
+          conocer las problemáticas que se afrontan día a día. Te invitamos a sumar tu mirada
+          completando nuestro formulario de relevamiento.
+        </p>
         <lilac-button
           href="/surveys/online-teaching"
           target="_blank"
         >
-        Quiero participar
+          Quiero participar
         </lilac-button>
       </Content>
     </ProgramBanner>,
-    <Content>
-      <p>Próximamente anunciaremos fechas de capacitaciones on-line en gestión, administración y uso de plataformas como Google Classroom y MoodleCloud.</p>
-    </Content>,
+    <Content />,
   ];
 };
 
-Comuniques.getInitialProps = async () => ({
+Knowledge.getInitialProps = async () => ({
   title: 'Conocimiento',
   meta: {
     ogTitle: 'Capacitaciones técnicas para educación digital | CoDeAr',
@@ -145,4 +222,4 @@ Comuniques.getInitialProps = async () => ({
   },
 });
 
-export default Comuniques;
+export default Knowledge;
