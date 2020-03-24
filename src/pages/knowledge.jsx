@@ -192,7 +192,9 @@ const Knowledge = () => {
         dateText, dateJson, name, description, links, image,
       }) => (
         <Webinar key={dateJson}>
-          <img src={`/images/webinars/${image}`} alt={`Imagen del evento: ${name}`} />
+          <a href={links.recording || links.signup}>
+            <img src={`/images/webinars/${image}`} alt={`Imagen del evento: ${name}`} />
+          </a>
           <h3>{name}</h3>
           <DateTime>{dateText}</DateTime>
           <Description>{description}</Description>
