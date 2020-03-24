@@ -133,6 +133,10 @@ const Webinar = styled.article`
     align-self: center;
   }
 
+  & > a {
+    align-self: center;
+  }
+
   img {
     width: 100%;
     margin-bottom: 1.5rem;
