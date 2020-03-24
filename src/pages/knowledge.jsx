@@ -125,13 +125,25 @@ const Webinar = styled.article`
   h3 {
     margin-top: 0;
     margin-bottom: 0.5rem;
+    text-align: center;
+    align-self: center;
   }
 
   lilac-button {
     align-self: center;
   }
 
+  img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    align-self: center;
+  }
+
   @media (min-width: ${BREAKPOINTS.hd}) {
+    img {
+      max-width: 50rem;
+    }
+
     lilac-button {
       width: 20rem;
       align-self: flex-end;
@@ -143,6 +155,7 @@ const DateTime = styled.div`
   margin: 0;
   font-weight: bold;
   font-size: 1rem;
+  align-self: center;
 `;
 
 const Description = styled.section`
@@ -176,9 +189,10 @@ const Knowledge = () => {
     </ProgramBanner>,
     <Content>
       {webinars.map(({
-        dateText, dateJson, name, description, links,
+        dateText, dateJson, name, description, links, image,
       }) => (
         <Webinar key={dateJson}>
+          <img src={`/images/webinars/${image}`} alt={`Imagen del evento: ${name}`} />
           <h3>{name}</h3>
           <DateTime>{dateText}</DateTime>
           <Description>{description}</Description>
