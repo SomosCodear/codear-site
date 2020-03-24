@@ -18,6 +18,10 @@
     {
       "source": "/surveys/online-teaching",
       "destination": "https://forms.gle/xXfgPt2N7pTdebBw8"
+    },
+    {
+      "source": "/encuentros/25/03/2020",
+      "destination": "https://www.eventbrite.com/e/educar-en-tiempos-de-yomequedoencasa-tickets-100855904726"
     }
   ]
 }
