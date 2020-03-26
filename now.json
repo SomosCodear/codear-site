@@ -21,7 +21,15 @@
     },
     {
       "source": "/encuentros/25/03/2020",
-      "destination": "https://www.eventbrite.com/e/educar-en-tiempos-de-yomequedoencasa-tickets-100855904726"
+      "destination": "https://www.youtube.com/watch?v=cNO0KWdHuWI"
+    },
+    {
+      "source": "/encuentros",
+      "destination": "https://www.youtube.com/playlist?list=PLOSm8YmXdTygCZnhvEVW5EO5tbwjLbUlc"
+    },
+    {
+      "source": "/grupos/educacion-online",
+      "destination": "https://chat.whatsapp.com/JBo1iG5qZS8GT8asqffNja"
     }
   ]
 }

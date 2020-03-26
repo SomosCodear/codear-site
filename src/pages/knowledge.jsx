@@ -174,6 +174,22 @@ const Description = styled.section`
   }
 `;
 
+const Links = styled.nav`
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row;
+  align-self: flex-end;
+
+  lilac-button {
+    align-self: flex-start;
+  }
+
+  lilac-button + lilac-button {
+    margin-left: 1rem;
+  }
+`;
+
 const introText = 'Estamos preparándonos para ofrecer entrenamiento a educadores que necesiten ayuda para formarse en herramientas digitales para enfrentar los desafíos de la educación on-line.';
 
 const Knowledge = () => {
@@ -202,11 +218,13 @@ const Knowledge = () => {
           <h3>{name}</h3>
           <DateTime>{dateText}</DateTime>
           <Description>{description}</Description>
-          {new Date().valueOf() < Date.parse(dateJson)
+          <Links>
+            {new Date().valueOf() < Date.parse(dateJson)
                 && <lilac-button target="_blank" secondary href={links.signup}>Inscribite al evento</lilac-button>}
-          {links.recording && new Date().valueOf() > Date.parse(dateJson)
-                && <a href={links.recording}>Reviví el encuentro</a>}
-          {links.extra && links.extra.href && <a href={links.extra.href}>{links.extra.title}</a>}
+            {links.recording && new Date().valueOf() > Date.parse(dateJson)
+                && <lilac-button target="_blank" secondary href={links.recording}>Reviví el encuentro</lilac-button>}
+            {links.extra && links.extra.href && <lilac-button target="_blank" href={links.extra.href}>{links.extra.label}</lilac-button>}
+          </Links>
         </Webinar>
       ))}
     </Content>,

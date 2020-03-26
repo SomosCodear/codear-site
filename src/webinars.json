@@ -6,11 +6,11 @@
     "description": "¿Cómo podemos ayudar a quienes facilitan la educación de las personas desde nuestro lugar? Nos reunimos virtualmente con Florencia Carrillo (Coordinadora de #EncuentrosCodear), Joel Villarreal Bertoldi (Comunicación Institucional en CoDeAr e Instructor en DoctaDevs) y Lucio Negrello (Instructor en DoctaDevs y CEO de Lunestudio) a conversar en un debate abierto sobre su experiencia con la creación de espacios virtuales de enseñanza, así como también propuestas para enfrentar las problemáticas más comunes de estos espacios (falta de conectividad, problemas al compartir archivos).",
     "image": "2020-03-25.jpg",
     "links": {
-      "signup": "/encuentros/25/03/2020",
-      "recording": "",
+      "signup": "https://www.eventbrite.com/e/educar-en-tiempos-de-yomequedoencasa-tickets-100855904726",
+      "recording": "/encuentros/25/03/2020",
       "extra": {
-        "label": "",
-        "href": ""
+        "label": "Sumate a la comunidad de Educación Online",
+        "href": "https://codear.org/grupos/educacion-online"
       }
     }
   }
