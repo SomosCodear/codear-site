@@ -293,7 +293,7 @@ const Index = () => {
           <lilac-button
             href="https://webconf.tech"
             target="_blank"
-            secondary
+            color="secondary"
             inverted
           >
             ¿Querés ser disertante?
@@ -322,7 +322,7 @@ const Index = () => {
               <lilac-button
                 href={ROUTES.ABOUT.path}
                 title="Conocé al equipo"
-                secondary
+                color="secondary"
                 inverted
               >
                 <MeetTheTeam>

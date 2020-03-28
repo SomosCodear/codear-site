@@ -247,11 +247,32 @@ const Knowledge = () => {
           <DateTime>{dateText}</DateTime>
           <Description>{description}</Description>
           <Links>
-            {new Date().valueOf() < Date.parse(dateJson)
-                && <lilac-button target="_blank" secondary href={links.signup}>Inscribite al evento</lilac-button>}
-            {links.recording && new Date().valueOf() > Date.parse(dateJson)
-                && <lilac-button target="_blank" secondary href={links.recording}>Reviví el encuentro</lilac-button>}
-            {links.extra && links.extra.href && <lilac-button target="_blank" href={links.extra.href}>{links.extra.label}</lilac-button>}
+            {new Date().valueOf() < Date.parse(dateJson) && (
+              <lilac-button
+                target="_blank"
+                color="secondary"
+                href={links.signup}
+              >
+                Inscribite al evento
+              </lilac-button>
+            )}
+            {links.recording && new Date().valueOf() > Date.parse(dateJson) && (
+              <lilac-button
+                target="_blank"
+                color="secondary"
+                href={links.recording}
+              >
+                Reviví el encuentro
+              </lilac-button>
+            )}
+            {links.extra && links.extra.href && (
+              <lilac-button
+                target="_blank"
+                href={links.extra.href}
+              >
+                {links.extra.label}
+              </lilac-button>
+            )}
           </Links>
         </Webinar>
       ))}
