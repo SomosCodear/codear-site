@@ -30,6 +30,10 @@
     {
       "source": "/grupos/educacion-online",
       "destination": "https://chat.whatsapp.com/JBo1iG5qZS8GT8asqffNja"
+    },
+    {
+      "source": "/donaciones/educacion",
+      "destination": "https://donaronline.org/codear-comunidad-de-desarrolladores-de-argentina/colaboremos-juntos-en-la-transformacion-de-la-educacion"
     }
   ]
 }
