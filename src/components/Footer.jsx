@@ -49,6 +49,11 @@ const SocialMediaContainer = styled.div`
     margin-left: 1.5rem;
   }
 
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
   @media (min-width: ${BREAKPOINTS.hd}) {
     margin-top: 0;
   }
@@ -57,14 +62,21 @@ const SocialMediaContainer = styled.div`
 export const Footer = () => (
   <FooterContainer>
     <FooterContent>
-      {`© 2019 - ${new Date().getFullYear()} | `}
+      {`© 2019 - ${new Date().getFullYear()}`}
+      <br />
       Comunidad de Desarrolladores de Argentina
       <SocialMediaContainer>
-        <a href="https://www.instagram.com/somoscodear/" target="_blank" rel="noopener noreferrer">
-          <img src="/images/social-media-logos/logo-instagram.svg" alt="instagram" />
+        <a href="https://fb.me/somoscodear/" target="_blank" rel="noopener noreferrer" title="Seguinos en Facebook">
+          <img src="/images/social-media-logos/logo-facebook.svg" alt="Facebook" />
         </a>
-        <a href="https://twitter.com/SomosCodear" target="_blank" rel="noopener noreferrer">
-          <img src="/images/social-media-logos/logo-twitter.svg" alt="twitter" />
+        <a href="https://www.instagram.com/somoscodear/" target="_blank" rel="noopener noreferrer" title="Seguinos en Instagram">
+          <img src="/images/social-media-logos/logo-instagram.svg" alt="Instagram" />
+        </a>
+        <a href="https://twitter.com/SomosCodear" target="_blank" rel="noopener noreferrer" title="Seguinos en Twitter">
+          <img src="/images/social-media-logos/logo-twitter.svg" alt="Twitter" />
+        </a>
+        <a href="https://linkedin.com/company/codear" target="_blank" rel="noopener noreferrer" title="Seguinos en LinkedIn">
+          <img src="/images/social-media-logos/logo-linkedin.svg" alt="Twitter" />
         </a>
       </SocialMediaContainer>
     </FooterContent>
