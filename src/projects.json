@@ -1,0 +1,32 @@
+[
+  {
+    "id": "webconf",
+    "name": "WebConf",
+    "brandImage": "webconf-logo.png",
+    "description": "WebConf es la primera conferencia de tecnologías Web del interior del país, nacida en la ciudad de Córdoba. En la edición de 2019, 270 personas de distintas provincias se sumaron a este espacio para compartir conocimiento.",
+    "cta": {
+      "title": "¿Querés ser disertante?",
+      "href": "https://webconf.tech"
+    }
+  },
+  {
+    "id": "edupunto",
+    "name": "Edupunto",
+    "brandImage": "edupunto-logo.png",
+    "description": "Como parte de nuestros esfuerzos para apoyar y brindar soporte a la comunidad educativa en tiempos de pandemia (y más allá), proponemos este espacio para proponer herramientas, plataformas tecnológicas, conocimiento y experiencias que creemos que pueden sumar a la transformación digital de la educación.",
+    "cta": {
+      "title": "Visitá el portal",
+      "href": "https://edu.codear.org"
+    }
+  },
+  {
+    "id": "encuentros-codear",
+    "name": "#EncuentrosCodear",
+    "brandImage": "encuentros-logo.png",
+    "description": "#EncuentrosCodear es un ciclo de charlas, capacitaciones técnicas y debates abiertos de distintas temáticas atravesadas por la industria tecnológica. Ofrecemos espacios virtuales y presenciales para encontrarnos y compartir experiencias e ideas a partir de la diversidad de opinión de quienes participan del encuentro.",
+    "cta": {
+      "title": "Enterate más",
+      "href": "https://codear.org/conocimiento"
+    }
+  }
+]
