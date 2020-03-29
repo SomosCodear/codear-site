@@ -6,6 +6,7 @@ import React, {
 } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Swipeable } from 'react-swipeable';
 import { Chevron } from '../Chevron';
 
 const Container = styled.div`
@@ -13,7 +14,7 @@ const Container = styled.div`
   flex-direction: row;
 `;
 
-const SlidesContainer = styled.div`
+const SlidesContainer = styled(Swipeable)`
   flex-grow: 1;
   margin: 0 2rem;
   display: flex;
@@ -96,11 +97,16 @@ export const Carousel = ({ children, className }) => {
         role="button"
         tabIndex="0"
       />
-      <SlidesContainer ref={slidesRef}>
+      <SlidesContainer
+        onSwipedRight={previousSlide}
+        onSwipedLeft={nextSlide}
+        innerRef={(el) => { slidesRef.current = el; }}
+        preventDefaultTouchmoveEvent
+      >
         {slideWidth !== null ? React.Children.map(children, (child, i) => (
           <ChildContainer
             width={slideWidth}
-            key={i /* eslint-disable-line */}
+            key={i /* eslint-disable-line react/no-array-index-key */}
             aria-hidden={i === currentSlide ? 'false' : 'true'}
           >
             {child}
