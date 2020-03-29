@@ -76,7 +76,7 @@ const Comuniques = () => (
     }) => (
       <article id={slug} key={`comunique_${slug}`}>
         <PlaceAndDate>
-            Córdoba,
+          Córdoba,
           {' '}
           {date}
         </PlaceAndDate>

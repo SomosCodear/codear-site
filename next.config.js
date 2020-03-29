@@ -1,7 +1,4 @@
-const withCSS = require('@zeit/next-css');
-const withFonts = require('next-fonts');
-
-module.exports = withCSS(withFonts({
+module.exports = {
   experimental: {
     async rewrites() {
       return [
@@ -15,4 +12,4 @@ module.exports = withCSS(withFonts({
     },
     catchAllRouting: true,
   },
-}));
+};
