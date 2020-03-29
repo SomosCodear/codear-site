@@ -278,7 +278,10 @@ const Index = () => {
             href={ROUTES.COMMUNITIES.page}
             as={ROUTES.COMMUNITIES.path}
           >
-            comunidades
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a>
+              comunidades
+            </a>
           </Link>
           <p>Descubrí los programas y servicios que ofrecemos para tu comunidad.</p>
         </h1>
