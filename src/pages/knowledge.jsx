@@ -198,7 +198,7 @@ const Knowledge = () => {
   return [
     <Content>
       <h1>
-      conocimiento
+        conocimiento
       </h1>
       <p>{introText}</p>
     </Content>,

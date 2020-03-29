@@ -1,4 +1,6 @@
-import React, { useState, useCallback, useMemo, useEffect } from 'react';
+import React, {
+  useState, useCallback, useMemo, useEffect,
+} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { BREAKPOINTS } from '../../style/constants';
