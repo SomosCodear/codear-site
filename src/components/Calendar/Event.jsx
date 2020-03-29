@@ -133,6 +133,7 @@ export const Event = ({
     <Container
       href={link}
       target="_blank"
+      rel="noopener noreferrer"
       aria-label="Abrir página del evento"
       inline={edge}
     >

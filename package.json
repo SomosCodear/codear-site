@@ -9,8 +9,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint --ignore-path .gitignore --ext .js,jsx ."
+    "start": "next start"
   },
   "dependencies": {
     "@codear/lilac": "2.1.0",
@@ -20,6 +19,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
+    "react-swipeable": "^5.5.1",
     "styled-components": "5.0.1"
   },
   "devDependencies": {
@@ -32,13 +32,17 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
     "husky": "^4.2.3",
+    "lint-staged": ">=10",
     "prop-types": "^15.7.2",
     "typescript-styled-plugin": "^0.15.0",
     "webpack": "^4.42.1"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint --cache --fix"
   }
 }

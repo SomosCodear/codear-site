@@ -1,12 +1,14 @@
 import Link from 'next/link';
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
+import { BREAKPOINTS } from '../style/constants';
+import { CORE_MEMBERS, ROUTES } from '../data/constants';
 import { useLilac } from '../hooks';
 import { Calendar } from '../components/Calendar';
-import { CORE_MEMBERS, ROUTES } from '../data/constants';
-import events from '../events.json';
+import { Carousel } from '../components/Carousel';
 import communities from '../communities.json';
-import { BREAKPOINTS } from '../style/constants';
+import events from '../events.json';
+import projects from '../projects.json';
 
 const CommunitiesSection = styled.section`
   display: flex;
@@ -98,13 +100,20 @@ const ProjectsSection = styled.section`
   }
 `;
 
+const ProjectsCarousel = styled(Carousel)`
+  flex-grow: 1;
+  align-self: stretch;
+  margin: 2.5rem;
+`;
+
 const ProjectContainer = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2.5rem 4.5rem;
 
   p {
+    flex-grow: 1;
     margin: 2rem 0;
     font-family: Source Sans Pro, sans-serif;
     color: var(--color-primary);
@@ -265,14 +274,29 @@ const Index = () => {
       </CalendarContainer>
       <CommunitiesSection>
         <h1>
-          <a href={ROUTES.COMMUNITIES.path}>comunidades</a>
+          <Link
+            href={ROUTES.COMMUNITIES.page}
+            as={ROUTES.COMMUNITIES.path}
+          >
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a>
+              comunidades
+            </a>
+          </Link>
           <p>Descubrí los programas y servicios que ofrecemos para tu comunidad.</p>
         </h1>
         <CommunitiesBanner>
           {communities.map(({ id, name, iconFormat = 'png' }) => (
-            <a key={`community_${id}`} href={ROUTES.COMMUNITIES.path}>
-              <img alt={`Logo de ${name}`} src={`/images/community-logos/${id}.${iconFormat}`} />
-            </a>
+            <Link
+              key={`community_${id}`}
+              href={ROUTES.COMMUNITIES.page}
+              as={ROUTES.COMMUNITIES.path}
+            >
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+              <a>
+                <img alt={`Logo de ${name}`} src={`/images/community-logos/${id}.${iconFormat}`} />
+              </a>
+            </Link>
           ))}
         </CommunitiesBanner>
       </CommunitiesSection>
@@ -280,25 +304,28 @@ const Index = () => {
         <h1>
           proyectos
         </h1>
-        <ProjectContainer>
-          <a href="https://webconf.tech" rel="noopener noreferrer" target="_blank">
-            <img src="/images/brand/webconf-logo.png" alt="Logo de WebConf" />
-          </a>
-          <p>
-            <b>WebConf</b>
-            &nbsp;es la primera conferencia de tecnologías Web del interior del país,
-            nacida en la ciudad de Córdoba. En la última edición, 270 personas de distintas
-            provincias se sumaron a este espacio para compartir conocimiento.
-          </p>
-          <lilac-button
-            href="https://webconf.tech"
-            target="_blank"
-            color="secondary"
-            inverted
-          >
-            ¿Querés ser disertante?
-          </lilac-button>
-        </ProjectContainer>
+        <ProjectsCarousel>
+          {projects.map(({
+            id, name, brandImage, description, cta,
+          }) => (
+            <ProjectContainer key={id}>
+              <a href={cta.href} rel="noopener noreferrer" target="_blank">
+                <img src={`/images/brand/${brandImage}`} alt={`Logo de ${name}`} />
+              </a>
+              <p>
+                {description}
+              </p>
+              <lilac-button
+                href={cta.href}
+                target="_blank"
+                color="secondary"
+                inverted
+              >
+                {cta.title}
+              </lilac-button>
+            </ProjectContainer>
+          ))}
+        </ProjectsCarousel>
       </ProjectsSection>
       <UsSection>
         <h1>
