@@ -273,14 +273,26 @@ const Index = () => {
       </CalendarContainer>
       <CommunitiesSection>
         <h1>
-          <a href={ROUTES.COMMUNITIES.path}>comunidades</a>
+          <Link
+            href={ROUTES.COMMUNITIES.page}
+            as={ROUTES.COMMUNITIES.path}
+          >
+            comunidades
+          </Link>
           <p>Descubrí los programas y servicios que ofrecemos para tu comunidad.</p>
         </h1>
         <CommunitiesBanner>
           {communities.map(({ id, name, iconFormat = 'png' }) => (
-            <a key={`community_${id}`} href={ROUTES.COMMUNITIES.path}>
-              <img alt={`Logo de ${name}`} src={`/images/community-logos/${id}.${iconFormat}`} />
-            </a>
+            <Link
+              key={`community_${id}`}
+              href={ROUTES.COMMUNITIES.page}
+              as={ROUTES.COMMUNITIES.path}
+            >
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+              <a>
+                <img alt={`Logo de ${name}`} src={`/images/community-logos/${id}.${iconFormat}`} />
+              </a>
+            </Link>
           ))}
         </CommunitiesBanner>
       </CommunitiesSection>
