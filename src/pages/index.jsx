@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
+import { BREAKPOINTS } from '../style/constants';
+import { CORE_MEMBERS, ROUTES } from '../data/constants';
 import { useLilac } from '../hooks';
 import { Calendar } from '../components/Calendar';
-import { CORE_MEMBERS, ROUTES } from '../data/constants';
-import events from '../events.json';
+import { Carousel } from '../components/Carousel';
 import communities from '../communities.json';
-import { BREAKPOINTS } from '../style/constants';
+import events from '../events.json';
 
 const CommunitiesSection = styled.section`
   display: flex;
@@ -98,11 +99,16 @@ const ProjectsSection = styled.section`
   }
 `;
 
+const ProjectsCarousel = styled(Carousel)`
+  flex-grow: 1;
+  align-self: stretch;
+  margin: 2.5rem 2.5rem;
+`;
+
 const ProjectContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2.5rem 4.5rem;
 
   p {
     margin: 2rem 0;
@@ -280,25 +286,44 @@ const Index = () => {
         <h1>
           proyectos
         </h1>
-        <ProjectContainer>
-          <a href="https://webconf.tech" rel="noopener noreferrer" target="_blank">
-            <img src="/images/brand/webconf-logo.png" alt="Logo de WebConf" />
-          </a>
-          <p>
-            <b>WebConf</b>
-            &nbsp;es la primera conferencia de tecnologías Web del interior del país,
-            nacida en la ciudad de Córdoba. En la última edición, 270 personas de distintas
-            provincias se sumaron a este espacio para compartir conocimiento.
-          </p>
-          <lilac-button
-            href="https://webconf.tech"
-            target="_blank"
-            color="secondary"
-            inverted
-          >
-            ¿Querés ser disertante?
-          </lilac-button>
-        </ProjectContainer>
+        <ProjectsCarousel>
+          <ProjectContainer>
+            <a href="https://webconf.tech" rel="noopener noreferrer" target="_blank">
+              <img src="/images/brand/webconf-logo.png" alt="Logo de WebConf" />
+            </a>
+            <p>
+              <b>WebConf</b>
+              &nbsp;es la primera conferencia de tecnologías Web del interior del país,
+              nacida en la ciudad de Córdoba. En la última edición, 270 personas de distintas
+              provincias se sumaron a este espacio para compartir conocimiento.
+            </p>
+            <lilac-button
+              href="https://webconf.tech"
+              target="_blank"
+              color="secondary"
+              inverted
+            >
+              ¿Querés ser disertante?
+            </lilac-button>
+          </ProjectContainer>
+          <ProjectContainer>
+            <a href="https://webconf.tech" rel="noopener noreferrer" target="_blank">
+              <img src="/images/brand/webconf-logo.png" alt="Logo de WebConf" />
+            </a>
+            <p>
+              <b>edupunto</b>
+              some text
+            </p>
+            <lilac-button
+              href="https://edu.codear.org"
+              target="_blank"
+              color="secondary"
+              inverted
+            >
+              edupunto
+            </lilac-button>
+          </ProjectContainer>
+        </ProjectsCarousel>
       </ProjectsSection>
       <UsSection>
         <h1>
