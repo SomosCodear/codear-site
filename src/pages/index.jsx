@@ -103,7 +103,7 @@ const ProjectsSection = styled.section`
 const ProjectsCarousel = styled(Carousel)`
   flex-grow: 1;
   align-self: stretch;
-  margin: 2.5rem 2.5rem;
+  margin: 2.5rem;
 `;
 
 const ProjectContainer = styled.div`

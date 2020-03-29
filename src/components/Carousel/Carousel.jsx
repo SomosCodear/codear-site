@@ -20,6 +20,7 @@ const SlidesContainer = styled(Swipeable)`
   margin: 0 2rem;
   display: flex;
   flex-direction: row;
+  align-items: stretch;
   overflow: hidden;
   scroll-snap-type: x proximity;
 `;
