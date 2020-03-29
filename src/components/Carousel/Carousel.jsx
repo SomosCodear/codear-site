@@ -12,6 +12,7 @@ import { Chevron } from '../Chevron';
 const Container = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
 `;
 
 const SlidesContainer = styled(Swipeable)`
@@ -32,6 +33,11 @@ const Arrow = styled(Chevron)`
   width: 1rem;
   cursor: pointer;
   opacity: ${({ disabled = false }) => (disabled ? 0.5 : 1)};
+  padding: 0.125rem;
+
+  &:focus {
+    outline: 1px dotted var(--color-secondary);
+  }
 `;
 
 const validNavKeys = [' ', 'Enter'];
