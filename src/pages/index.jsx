@@ -8,6 +8,7 @@ import { Calendar } from '../components/Calendar';
 import { Carousel } from '../components/Carousel';
 import communities from '../communities.json';
 import events from '../events.json';
+import projects from '../projects.json';
 
 const CommunitiesSection = styled.section`
   display: flex;
@@ -301,42 +302,26 @@ const Index = () => {
           proyectos
         </h1>
         <ProjectsCarousel>
-          <ProjectContainer>
-            <a href="https://webconf.tech" rel="noopener noreferrer" target="_blank">
-              <img src="/images/brand/webconf-logo.png" alt="Logo de WebConf" />
-            </a>
-            <p>
-              <b>WebConf</b>
-              &nbsp;es la primera conferencia de tecnologías Web del interior del país,
-              nacida en la ciudad de Córdoba. En la última edición, 270 personas de distintas
-              provincias se sumaron a este espacio para compartir conocimiento.
-            </p>
-            <lilac-button
-              href="https://webconf.tech"
-              target="_blank"
-              color="secondary"
-              inverted
-            >
-              ¿Querés ser disertante?
-            </lilac-button>
-          </ProjectContainer>
-          <ProjectContainer>
-            <a href="https://webconf.tech" rel="noopener noreferrer" target="_blank">
-              <img src="/images/brand/webconf-logo.png" alt="Logo de WebConf" />
-            </a>
-            <p>
-              <b>edupunto</b>
-              some text
-            </p>
-            <lilac-button
-              href="https://edu.codear.org"
-              target="_blank"
-              color="secondary"
-              inverted
-            >
-              edupunto
-            </lilac-button>
-          </ProjectContainer>
+          {projects.map(({
+            id, name, brandImage, description, cta,
+          }) => (
+            <ProjectContainer key={id}>
+              <a href={cta.href} rel="noopener noreferrer" target="_blank">
+                <img src={`/images/brand/${brandImage}`} alt={`Logo de ${name}`} />
+              </a>
+              <p>
+                {description}
+              </p>
+              <lilac-button
+                href={cta.href}
+                target="_blank"
+                color="secondary"
+                inverted
+              >
+                {cta.title}
+              </lilac-button>
+            </ProjectContainer>
+          ))}
         </ProjectsCarousel>
       </ProjectsSection>
       <UsSection>
