@@ -106,11 +106,13 @@ const ProjectsCarousel = styled(Carousel)`
 `;
 
 const ProjectContainer = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   p {
+    flex-grow: 1;
     margin: 2rem 0;
     font-family: Source Sans Pro, sans-serif;
     color: var(--color-primary);
