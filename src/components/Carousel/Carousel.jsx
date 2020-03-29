@@ -44,7 +44,7 @@ export const Carousel = ({ children, className }) => {
   const nextSlide = useCallback(() => setCurrentSlide((current) => {
     let next = current + 1;
 
-    if (next >= React.Children.count()) {
+    if (next >= React.Children.count(children)) {
       next = React.Children.count(children) - 1;
     }
 
