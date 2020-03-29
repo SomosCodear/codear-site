@@ -27,6 +27,7 @@ const ChildContainer = styled.div`
 `;
 
 const Arrow = styled(Chevron)`
+  flex-shrink: 0;
   width: 1rem;
   cursor: pointer;
   opacity: ${({ disabled = false }) => (disabled ? 0.5 : 1)};
