@@ -204,34 +204,6 @@ const Knowledge = () => {
     </Content>,
     <ProgramBanner>
       <Content>
-        <h2>edupunto.</h2>
-        <p>
-          Abrimos este espacio para proponer herramientas, plataformas
-          tecnológicas, conocimiento y experiencias que creemos que pueden sumar a la
-          transformación digital de la educación.
-        </p>
-        <lilac-button
-          href="https://edu.codear.org"
-          target="_blank"
-        >
-          Visitá edupunto
-        </lilac-button>
-      </Content>
-    </ProgramBanner>,
-    <Content>
-      <p>
-        Esta iniciativa surge a partir de las conversaciones que tuvieron lugar en el primer
-        #EncuentroCodear de 2020, donde nos reunimos con docentes y educadores de diversos
-        puntos del país para discutir dónde nos encontramos hoy en día y hacia dónde podemos ir.
-      </p>
-      <p>
-        Publicaremos contenido frecuentemente para acompañar este proceso repentino de
-        transformación de la educación, centralizando en este portal buenas prácticas,
-        ideas, herramientas y más.
-      </p>
-    </Content>,
-    <ProgramBanner>
-      <Content>
         <h2>#EncuentrosCodear</h2>
       </Content>
     </ProgramBanner>,
@@ -279,21 +251,32 @@ const Knowledge = () => {
     </Content>,
     <ProgramBanner>
       <Content>
-        <h2>Participá de nuestro relevamiento</h2>
+        <h2>edupunto.</h2>
         <p>
-          Para poder ofrecer una solución que impacte en nuestra comunidad educativa, necesitamos
-          conocer las problemáticas que se afrontan día a día. Te invitamos a sumar tu mirada
-          completando nuestro formulario de relevamiento.
+          Abrimos este espacio para proponer herramientas, plataformas
+          tecnológicas, conocimiento y experiencias que creemos que pueden sumar a la
+          transformación digital de la educación.
         </p>
         <lilac-button
-          href="/surveys/online-teaching"
+          href="https://edu.codear.org"
           target="_blank"
         >
-          Quiero participar
+          Visitá edupunto
         </lilac-button>
       </Content>
     </ProgramBanner>,
-    <Content />,
+    <Content>
+      <p>
+        Esta iniciativa surge a partir de las conversaciones que tuvieron lugar en el primer
+        #EncuentroCodear de 2020, donde nos reunimos con docentes y educadores de diversos
+        puntos del país para discutir dónde nos encontramos hoy en día y hacia dónde podemos ir.
+      </p>
+      <p>
+        Publicaremos contenido frecuentemente para acompañar este proceso repentino de
+        transformación de la educación, centralizando en este portal buenas prácticas,
+        ideas, herramientas y más.
+      </p>
+    </Content>,
   ];
 };
 
