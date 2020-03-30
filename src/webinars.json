@@ -1,5 +1,16 @@
 [
   {
+    "dateText": "Martes 31 de Marzo de 2020, 18:30 hs.",
+    "dateJson": "2020-03-31T21:30:00.000Z",
+    "name": "Introducción a Google Classroom",
+    "description": "En esta edición de #EncuentrosCodear, Florencia Carrillo y Joel Villarreal Bertoldi nos guían en el uso de Google Classroom, la plataforma del gigante de la búsqueda Web para organizar cursos y actividades educativas de manera online y gratuita.",
+    "image": "2020-03-31.jpg",
+    "links": {
+      "signup": "https://www.eventbrite.com/e/encuentroscodear-introduccion-a-google-classroom-registration-101501814660",
+      "recording": ""
+    }
+  },
+  {
     "dateText": "Miércoles 25 de Marzo de 2020, 18:30 hs.",
     "dateJson": "2020-03-25T21:30:00.000Z",
     "name": "Educar en tiempos del #YoMeQuedoEnCasa",
