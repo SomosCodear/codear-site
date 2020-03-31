@@ -1,10 +1,4 @@
-const branch = process.env.NOW_GITHUB_COMMIT_REF ? process.env.NOW_GITHUB_COMMIT_REF : 'local';
-const analyticsIdKey = `${branch.toUpperCase()}_ANALYTICS_ID`;
-
 module.exports = {
-  env: {
-    ANALYTICS_ID: process.env[analyticsIdKey],
-  },
   experimental: {
     async rewrites() {
       return [
