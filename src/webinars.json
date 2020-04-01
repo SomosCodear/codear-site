@@ -1,17 +1,21 @@
 [
   {
-    "dateText": "Martes 31 de Marzo de 2020, 18:30 hs.",
+    "dateText": "Martes 31 de Marzo de 2020, 18:30 hs. (Hora de Argentina)",
     "dateJson": "2020-03-31T21:30:00.000Z",
     "name": "Introducción a Google Classroom",
     "description": "En esta edición de #EncuentrosCodear, Florencia Carrillo y Joel Villarreal Bertoldi nos guían en el uso de Google Classroom, la plataforma del gigante de la búsqueda Web para organizar cursos y actividades educativas de manera online y gratuita.",
     "image": "2020-03-31.jpg",
     "links": {
       "signup": "https://www.eventbrite.com/e/encuentroscodear-introduccion-a-google-classroom-registration-101501814660",
-      "recording": ""
+      "recording": "/encuentros/31/03/2020",
+      "extra": {
+        "label": "Sumate al WhatsApp de Educación Online",
+        "href": "https://codear.org/grupos/educacion-online"
+      }
     }
   },
   {
-    "dateText": "Miércoles 25 de Marzo de 2020, 18:30 hs.",
+    "dateText": "Miércoles 25 de Marzo de 2020, 18:30 hs. (Hora de Argentina)",
     "dateJson": "2020-03-25T21:30:00.000Z",
     "name": "Educar en tiempos del #YoMeQuedoEnCasa",
     "description": "¿Cómo podemos ayudar a quienes facilitan la educación de las personas desde nuestro lugar? Nos reunimos virtualmente con Florencia Carrillo (Coordinadora de #EncuentrosCodear), Joel Villarreal Bertoldi (Comunicación Institucional en CoDeAr e Instructor en DoctaDevs) y Lucio Negrello (Instructor en DoctaDevs y CEO de Lunestudio) a conversar en un debate abierto sobre su experiencia con la creación de espacios virtuales de enseñanza, así como también propuestas para enfrentar las problemáticas más comunes de estos espacios (falta de conectividad, problemas al compartir archivos).",
