@@ -160,22 +160,6 @@
     "link": "https://beerjscba.com"
   },
   {
-    "date": "2020-05-29T12:00:00.000Z",
-    "name": "WebConf",
-    "street": "UTN Córdoba, Maestro M. Lopez esq. Cruz Roja",
-    "city": "Córdoba",
-    "country": "Argentina",
-    "link": "https://webconf.tech"
-  },
-  {
-    "date": "2020-05-30T12:00:00.000Z",
-    "name": "WebConf",
-    "street": "UTN Córdoba, Maestro M. Lopez esq. Cruz Roja",
-    "city": "Córdoba",
-    "country": "Argentina",
-    "link": "https://webconf.tech"
-  },
-  {
     "date": "2020-06-18T22:00:00.000Z",
     "name": "BeerJs Cba No. 43",
     "street": "TBD",
@@ -318,6 +302,174 @@
     "city": "Buenos Aires",
     "country": "Argentina",
     "link": "https://segurinfo.org/argentina-2020/"
+  },
+  {
+    "date": "2020-04-04T13:00:00.000Z",
+    "name": "Online Ruby Wine",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://www.eventbrite.com/e/online-ruby-wine-tickets-80543801679"
+  },
+  {
+    "date": "2020-04-04T08:30:00.000Z",
+    "name": "NetCoreConf",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://netcoreconf.com/virtual.html"
+  },
+  {
+    "date": "2020-04-04T10:00:00.000Z",
+    "name": "zapatillasFromMars",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://www.uifrommars.com/zapatillas/"
+  },
+  {
+    "date": "2020-04-14T18:30:00.000Z",
+    "name": "DevOps Exchange",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://www.meetup.com/es/devops-exchange-barcelona/events/269625362/"
+  },
+  {
+    "date": "2020-04-14T12:00:00.000Z",
+    "name": "The Remote Work Summit",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://www.theremoteworksummit.com/"
+  },
+  {
+    "date": "2020-04-15T12:00:00.000Z",
+    "name": "The Remote Work Summit",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://www.theremoteworksummit.com/"
+  },
+  {
+    "date": "2020-04-16T12:00:00.000Z",
+    "name": "The Remote Work Summit",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://www.theremoteworksummit.com/"
+  },
+  {
+    "date": "2020-05-01T12:00:00.000Z",
+    "name": "Byteconf React",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://www.bytesized.xyz/react-2020"
+  },
+  {
+    "date": "2020-05-02T12:00:00.000Z",
+    "name": "Byteconf React",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://www.bytesized.xyz/react-2020"
+  },
+    {
+    "date": "2020-05-07T11:00:00.000Z",
+    "name": "JS VidCon",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://jsvidcon.com/"
+  },
+  {
+    "date": "2020-05-14T12:00:00.000Z",
+    "name": "Javascript Remote Conf",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://devchat.tv/conferences/javascript-remote-2020/"
+  },
+  {
+    "date": "2020-05-15T12:00:00.000Z",
+    "name": "Javascript Remote Conf",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://devchat.tv/conferences/javascript-remote-2020/"
+  },
+  {
+    "date": "2020-05-18T12:00:00.000Z",
+    "name": "ESNext Conf",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://www.esnextconf.com/"
+  },
+  {
+    "date": "2020-05-19T12:00:00.000Z",
+    "name": "ESNext Conf",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://www.esnextconf.com/"
+  },
+  {
+    "date": "2020-05-20T12:00:00.000Z",
+    "name": "ESNext Conf",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://www.esnextconf.com/"
+  },
+  {
+    "date": "2020-05-21T12:00:00.000Z",
+    "name": "ESNext Conf",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://www.esnextconf.com/"
+  },
+  {
+    "date": "2020-05-22T12:00:00.000Z",
+    "name": "ESNext Conf",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://www.esnextconf.com/"
+  },
+  {
+    "date": "2020-05-26T12:00:00.000Z",
+    "name": "ForwardJS Ottawa",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://forwardjs.com/ottawa/"
+  },
+  {
+    "date": "2020-05-27T03:00:00.000Z",
+    "name": "ForwardJS Ottawa",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://forwardjs.com/ottawa/"
+  },
+  {
+    "date": "2020-05-28T12:00:00.000Z",
+    "name": "ForwardJS Ottawa",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://forwardjs.com/ottawa/"
+  },
+  {
+    "date": "2020-05-29T12:00:00.000Z",
+    "name": "ForwardJS Ottawa",
+    "street": "",
+    "city": "",
+    "country": "Online",
+    "link": "https://forwardjs.com/ottawa/"
   },
   {
     "date": "2020-02-27T11:30:00.000Z",
