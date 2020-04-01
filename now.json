@@ -4,7 +4,8 @@
   "alias": ["codear.org"],
   "build": {
     "env": {
-      "MASTER_ANALYTICS_ID": "@master-analytics-id"
+      "MASTER_ANALYTICS_ID": "@master-analytics-id",
+      "DEVELOP_ANALYTICS_ID": "@master-analytics-id"
     }
   },
   "redirects": [
