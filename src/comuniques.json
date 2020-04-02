@@ -1,5 +1,32 @@
 [
   {
+    "slug": "aplazamiento-webconf-2020",
+    "title": "Aplazamiento de WebConf 2020",
+    "date": "01 de Abril de 2020",
+    "content": [
+      "Como informamos en nuestra primera comunicación respecto a la situación global de pandemia por COVID-19 el pasado 12 de Marzo, desde la Comisión Directiva de la Comunidad de Desarrolladores de Argentina, estamos siguiendo día a día las novedades sobre la emergencia sanitaria declarada por la Presidencia de la Nación y las medidas preventivas tomadas por los gobiernos de la Provincia de Córdoba y de la Municipalidad de Córdoba, a raíz de la situación de pandemia del coronavirus COVID-19.",
+      "En el escenario actual, bajo el DNU 325/2020, publicado en el Boletín Oficial el 31 de Marzo, el Gobierno Nacional prorrogó el aislamiento social, preventivo y obligatorio hasta el 12 de Abril inclusive.",
+      "Durante las últimas tres semanas, acordamos esperar a ver cómo evolucionaba la situación para decidir el futuro de WebConf 2020.",
+      {
+        "type": "emphasisAccent",
+        "content": "Luego de reflexionar profundamente en este tiempo, hemos decidido aplazar definitivamente la realización de Córdoba WebConf 2020. No habrá edición de la conferencia durante este año, ni en formato físico ni en formato virtual."
+      },
+      "Creemos que la esencia de la experiencia de nuestra conferencia radica en conectarnos en presencia con la comunidad, y preferimos preservar ese recuerdo de WebConf antes que redefinir el concepto en una experiencia on-line de la cual, dado el masivo consumo de servicios de Internet a nivel global, tampoco podríamos garantizar la calidad que quisiéramos.",
+      "En los próximos días, nos comunicaremos con aquellas personas que dedicaron tiempo y esfuerzo a elaborar las postulaciones para nuestra conferencia, para conversar sobre nuevas oportunidades de presentación que estamos trabajando desde la Asociación.",
+      {
+        "type": "emphasis",
+        "content": "Queremos agradecer a esas personas que apostaron a presentar sus ideas en WebConf, por todo el trabajo y la paciencia que han dedicado durante estos meses a trabajar con nosotros, y queremos asegurarles que haremos nuestro mejor esfuerzo en hallar nuevas maneras de ayudarnos mutuamente a dar a conocer sus ideas."
+      },
+      "También haremos contacto con nuestros prospectos para auspicio de la conferencia para informarles de nuestros planes más allá de WebConf.",
+      {
+        "type": "emphasis",
+        "content": "Agradecemos la confianza que depositaron en nosotros en las conversaciones que hemos mantenido estos últimos meses y queremos transmitir nuestro más sincero deseo de continuar trabajando juntos en nuevos proyectos."
+      },
+      "Durante 2020, la Comunidad de Desarrolladores de Argentina continuará brindando espacios de encuentro, esta vez en lo virtual, llevando adelante su misión de difundir el conocimiento en tecnología y contribuir a la inclusión digital. En este espíritu, lanzamos recientemente las primeras dos ediciones de nuestros #EncuentrosCodear, un espacio de intercambio y formación dedicado a la tecnología y a las problemáticas sociales que pueden abordarse desde un enfoque tecnológico.",
+      "Será un año difícil. Pero también será un año lleno de nuevas oportunidades. Les invitamos a descubrir estas oportunidades juntos, en comunidad."
+    ]
+  },
+  {
     "slug": "covid-19",
     "title": "Comunicado oficial por COVID-19",
     "date": "12 de Marzo de 2020",

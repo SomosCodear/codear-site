@@ -9,6 +9,10 @@ const Content = styled.div`
   flex-direction: column;
   align-items: flex-start;
 
+  article {
+    margin: 5rem 0;
+  }
+
   h1 {
     font-size: 3rem;
     line-height: 1.1;
@@ -64,6 +68,8 @@ const Components = {
   subtitle: ({ children }) => <h3>{children}</h3>,
   // eslint-disable-next-line react/prop-types
   emphasis: ({ children }) => <p><strong>{children}</strong></p>,
+  // eslint-disable-next-line react/prop-types
+  emphasisAccent: ({ children }) => <p><strong style={{ color: 'var(--color-accent)', fontSize: '130%' }}>{children}</strong></p>,
 };
 
 const Comuniques = () => (
