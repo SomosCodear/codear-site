@@ -6,11 +6,19 @@
     "links": [
       {
         "type": "twitter",
-        "username": "beerjscba"
+        "handler": "beerjscba"
       },
       {
         "type": "instagram",
-        "username": "beerjscba"
+        "handler": "beerjscba"
+      },
+      {
+        "type": "meetup",
+        "handler": "Beer-js-Cordoba"
+      },
+      {
+        "type": "web",
+        "handler": "https://beerjscba.com"
       }
     ]
   },
@@ -21,11 +29,15 @@
     "links": [
       {
         "type": "twitter",
-        "username": "reactcba"
+        "handler": "reactcba"
       },
       {
         "type": "instagram",
-        "username": "reactcba.ok"
+        "handler": "reactcba.ok"
+      },
+      {
+        "type": "eventbrite",
+        "handler": "react-cba-29215693235"
       }
     ]
   },
@@ -36,11 +48,23 @@
     "links": [
       {
         "type": "twitter",
-        "username": "metcbaok"
+        "handler": "metcbaok"
       },
       {
         "type": "instagram",
-        "username": "metcbaok"
+        "handler": "metcbaok"
+      },
+      {
+        "type": "linkedin",
+        "handler": "met-cba"
+      },
+      {
+        "type": "facebook",
+        "handler": "MetCbaOK"
+      },
+      {
+        "type": "web",
+        "handler": "https://metcba.org"
       }
     ]
   },
@@ -51,11 +75,15 @@
     "links": [
       {
         "type": "twitter",
-        "username": "indiegamegarage"
+        "handler": "indiegamegarage"
       },
       {
         "type": "instagram",
-        "username": "indiegamegarage"
+        "handler": "indiegamegarage"
+      },
+      {
+        "type": "discord",
+        "handler": "qbWpDEF"
       }
     ]
   },
@@ -66,11 +94,15 @@
     "links": [
       {
         "type": "twitter",
-        "username": "frontendcafe"
+        "handler": "frontendcafe"
       },
       {
         "type": "instagram",
-        "username": "frontendcafe_"
+        "handler": "frontendcafe_"
+      },
+      {
+        "type": "discord",
+        "handler": "q2SkxjK"
       }
     ]
   },
@@ -81,7 +113,7 @@
     "links": [
       {
         "type": "twitter",
-        "username": "burgerjscba"
+        "handler": "burgerjscba"
       }
     ]
   },
@@ -92,11 +124,15 @@
     "links": [
       {
         "type": "twitter",
-        "username": "devccordoba"
+        "handler": "devccordoba"
       },
       {
         "type": "instagram",
-        "username": "devccordoba"
+        "handler": "devccordoba"
+      },
+      {
+        "type": "facebook",
+        "handler": "groups/DevCCordoba"
       }
     ]
   },
@@ -107,11 +143,23 @@
     "links": [
       {
         "type": "twitter",
-        "username": "vuecba"
+        "handler": "vuecba"
       },
       {
         "type": "instagram",
-        "username": "vuecba"
+        "handler": "vuecba"
+      },
+      {
+        "type": "twitch",
+        "handler": "vuecba"
+      },
+      {
+        "type": "discord",
+        "handler": "GsmgPP6"
+      },
+      {
+        "type": "web",
+        "handler": "https://vuecba.com"
       }
     ]
   },
@@ -122,11 +170,15 @@
     "links": [
       {
         "type": "twitter",
-        "username": "cbahackerspace"
+        "handler": "cbahackerspace"
       },
       {
         "type": "instagram",
-        "username": "cordobahackerspace"
+        "handler": "cordobahackerspace"
+      },
+      {
+        "type": "web",
+        "handler": "https://cordobahackerspace.org/es/"
       }
     ],
     "iconFormat": "jpg"
@@ -138,11 +190,15 @@
     "links": [
       {
         "type": "twitter",
-        "username": "gdgcordobaarg"
+        "handler": "gdgcordobaarg"
       },
       {
         "type": "instagram",
-        "username": "gdgcordobaargentina"
+        "handler": "gdgcordobaargentina"
+      },
+      {
+        "type": "meetup",
+        "handler": "GDG-CORDOBA-AR"
       }
     ]
   },
@@ -153,11 +209,170 @@
     "links": [
       {
         "type": "twitter",
-        "username": "dotnetcba"
+        "handler": "dotnetcba"
       },
       {
         "type": "instagram",
-        "username": "dotnetcba"
+        "handler": "dotnetcba"
+      },
+      {
+        "type": "meetup",
+        "handler": "Comunidad-NET-Cordoba"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "javajug-bsas",
+    "name": "Java JUG BsAs Community",
+    "description": "Somos una Comunidad de Desarrolladoras/es e interesad@s en JAVA. Expertos o iniciados, todos son bienvenidos. Nos reunimos para capacitarnos, compartir nuestros conocimientos, experiencias que nos permitan crecer en nuestras profesiones y proyectos, en el cual entre todos, podamos aprender nuevas herramientas, métodos, procedimientos, técnicas y tecnologías.",
+    "links": [
+      {
+        "type": "twitter",
+        "handler": "javabsas"
+      },
+      {
+        "type": "instagram",
+        "handler": "javajugbsas"
+      },
+      {
+        "type": "linkedin",
+        "handler": "java-bsas-meetup"
+      },
+      {
+        "type": "facebook",
+        "handler": "javabsascomunidad"
+      },
+      {
+        "type": "meetup",
+        "handler": "Java-Bs-As"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "nodeco",
+    "name": "NodeCo",
+    "description": "De la comunidad NodeJS Colombia + NodeJS Medellín para la comunidad. 💚",
+    "links": [
+      {
+        "type": "twitter",
+        "handler": "node_co"
+      },
+      {
+        "type": "instagram",
+        "handler": "node_co"
+      },
+      {
+        "type": "youtube",
+        "handler": "c/nodecolombia"
+      },
+      {
+        "type": "meetup",
+        "handler": "node_co"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "devc-lapaz",
+    "name": "DevC La Paz",
+    "description": "Grupo de Facebook Developer Circles, con sede en La Paz.",
+    "links": [
+      {
+        "type": "facebook",
+        "handler": "groups/DevCLaPaz"
+      }
+    ]
+  },
+  {
+    "id": "kotlin-lapaz",
+    "name": "Kotlin La Paz",
+    "description": "Comunidad en la ciudad de La Paz enfocada en fomentar el uso y desarrollo del lenguaje de programación Kotlin.",
+    "links": [
+      {
+        "type": "twitter",
+        "handler": "KotlinLaPaz"
+      },
+      {
+        "type": "instagram",
+        "handler": "KotlinLaPaz"
+      },
+      {
+        "type": "facebook",
+        "handler": "KotlinLaPaz"
+      },
+      {
+        "type": "youtube",
+        "handler": "channel/UCqu2DetlQtg3q4VZJ4UA1Mw"
+      },
+      {
+        "type": "web",
+        "handler": "https://kotlinlapaz.dev/"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "net-baires",
+    "name": "NET-Baires",
+    "description": "Comunidad de desarrolladores .Net de la ciudad de Buenos Aires. Buscamos generar un espacio donde compartir conocimiento, anécdotas y todo tipo de experiencias que puedan generar interés en cualquiera de nosotros.",
+    "links": [
+      {
+        "type": "twitter",
+        "handler": "netbaires"
+      },
+      {
+        "type": "instagram",
+        "handler": "netbaires"
+      },
+      {
+        "type": "meetup",
+        "handler": "NET-Baires"
+      },
+      {
+        "type": "web",
+        "handler": "https://net-baires.com"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "latino-net-online",
+    "name": "Latino .NET Online",
+    "description": "Buscamos poder conectar a todas las comunidades de desarrolladores .NET de Latinoamérica. Realizamos Webinars todos los sábados donde hay una charla dada por un speaker de alguna de estas comunidades de Latinoamérica.",
+    "links": [
+      {
+        "type": "twitter",
+        "handler": "LatinoNetOnline"
+      },
+      {
+        "type": "mixer",
+        "handler": "LatinoNetOnline"
+      },
+      {
+        "type": "web",
+        "handler": "https://latinonet.online"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "r-argentina-programa",
+    "name": "r/argentina programa",
+    "description": "Enseñamos JavaScript y conceptos generales de programación.",
+    "links": [
+      {
+        "type": "twitch",
+        "handler": "rargentinaprograma"
+      },
+      {
+        "type": "youtube",
+        "handler": "channel/UCXfQLgiBQPIzBp8-nRsG0KA"
+      },
+      {
+        "type": "web",
+        "handler": "https://argentinaprograma.com/"
       }
     ],
     "iconFormat": "jpg"

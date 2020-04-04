@@ -191,10 +191,20 @@ const LegalNotice = styled.section`
 
 const SocialMediaIcon = styled.img`
   filter: invert(58%) sepia(35%) saturate(857%) hue-rotate(192deg) brightness(59%) contrast(150%);
-  margin-right: 0.5rem;
+  margin-top: 1rem;
+
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 1rem;
 
   a:hover & {
     filter: invert(58%) sepia(35%) saturate(857%) hue-rotate(270deg) brightness(99%) contrast(150%);
+  }
+
+  @media (min-width: ${BREAKPOINTS.hd}) {
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
   }
 `;
 
@@ -209,7 +219,25 @@ const CommunityLogo = styled.img`
 `;
 
 const CommunityDescription = styled.article`
-  font-size: 0.85rem;
+  font-size: 1rem;
+
+  @media (min-width: ${BREAKPOINTS.hd}) {
+    font-size: 0.85rem;
+  }
+`;
+
+const CommunityLinks = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: ${BREAKPOINTS.hd}) {
+    justify-content: flex-start;
+
+    a + a {
+      margin-left: 1rem;
+    }
+  }
 `;
 
 const IntroText = 'Una parte esencial de nuestra actividad como organización es el trabajo en conjunto con otras comunidades de tecnología del país. Como parte de nuestros esfuerzos por reducir la barrera de ingreso a la industria tecnológica y de fomentar la difusión abierta del conocimiento, brindamos difusión, asesoramiento y apoyo técnico en la realización de diversas actividades.';
@@ -305,23 +333,23 @@ const Communities = () => {
           id, name, description, links, iconFormat = 'png',
         }) => (
           <li key={`community_${id}`}>
-            <a href={`${URLS[links[0].type]}${links[0].username}`} target="_blank" rel="noopener noreferrer" title={`Visitá la web de ${name}`}>
+            <a href={`${URLS[links[0].type]}${links[0].handler}`} target="_blank" rel="noopener noreferrer" title={`Visitá la web de ${name}`}>
               <CommunityLogo src={`/images/community-logos/${id}.${iconFormat}`} alt={`Logo de ${name}`} />
             </a>
             <ListDescription>
               <h4>
-                <a href={`${URLS[links[0].type]}${links[0].username}`} target="_blank" rel="noopener noreferrer" title={`Visitá la web de ${name}`}>
+                <a href={`${URLS[links[0].type]}${links[0].handler}`} target="_blank" rel="noopener noreferrer" title={`Visitá la web de ${name}`}>
                   {name}
                 </a>
               </h4>
               <CommunityDescription>{description}</CommunityDescription>
-              <p>
-                {links.map(({ type, username }) => (
-                  <a key={`${id}_${type}_link`} href={`${URLS[type]}${username}`} target="_blank" rel="noopener noreferrer" title={`Seguí a esta comunidad en @${username}`}>
+              <CommunityLinks>
+                {links.map(({ type, handler }) => (
+                  <a key={`${id}_${type}_link`} href={`${URLS[type]}${handler}`} target="_blank" rel="noopener noreferrer" title={`Seguí a esta comunidad en @${handler}`}>
                     <SocialMediaIcon key={`${id}_${type}_icon`} src={`/images/social-media-logos/logo-${type}.svg`} alt={`Ícono de ${type}`} />
                   </a>
                 ))}
-              </p>
+              </CommunityLinks>
             </ListDescription>
           </li>
         ))}
