@@ -81,6 +81,9 @@ export const Footer = () => (
         <a href="https://codear.eventbrite.com/" target="_blank" rel="noopener noreferrer" title="Seguinos en Eventbrite">
           <img src="/images/social-media-logos/logo-eventbrite.svg" alt="Logo de Eventbrite" />
         </a>
+        <a href="https://www.youtube.com/channel/UCl86c2Wxlyouq8F1K8l-wGg" target="_blank" rel="noopener noreferrer" title="Seguinos en YouTube">
+          <img src="/images/social-media-logos/logo-youtube.svg" alt="Logo de YouTube" />
+        </a>
       </SocialMediaContainer>
     </FooterContent>
   </FooterContainer>
