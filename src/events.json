@@ -635,8 +635,24 @@
     "date": "2020-03-25T21:30:00.000Z",
     "name": "Educar en tiempos de #YoMeQuedoEnCasa",
     "street": "Encuentro On-Line",
-    "city": "",
+    "city": "Córdoba",
     "country": "Argentina",
     "link": "https://codear.org/encuentros/25/03/2020"
+  },
+  {
+    "date": "2020-03-31T21:30:00.000Z",
+    "name": "Introducción a Google Classroom",
+    "street": "Encuentro On-Line",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://codear.org/encuentros/31/03/2020"
+  },
+    {
+    "date": "2020-04-08T21:30:00.000Z",
+    "name": "Google Forms para las aulas",
+    "street": "Encuentro On-Line",
+    "city": "Córdoba",
+    "country": "Argentina",
+    "link": "https://www.eventbrite.com/e/encuentroscodear-google-forms-para-las-aulas-registration-102140944314"
   }
 ]
