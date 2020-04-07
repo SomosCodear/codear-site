@@ -67,16 +67,19 @@ export const Footer = () => (
       Comunidad de Desarrolladores de Argentina
       <SocialMediaContainer>
         <a href="https://fb.me/somoscodear/" target="_blank" rel="noopener noreferrer" title="Seguinos en Facebook">
-          <img src="/images/social-media-logos/logo-facebook.svg" alt="Facebook" />
+          <img src="/images/social-media-logos/logo-facebook.svg" alt="Logo de Facebook" />
         </a>
         <a href="https://www.instagram.com/somoscodear/" target="_blank" rel="noopener noreferrer" title="Seguinos en Instagram">
-          <img src="/images/social-media-logos/logo-instagram.svg" alt="Instagram" />
+          <img src="/images/social-media-logos/logo-instagram.svg" alt="Logo de Instagram" />
         </a>
         <a href="https://twitter.com/SomosCodear" target="_blank" rel="noopener noreferrer" title="Seguinos en Twitter">
-          <img src="/images/social-media-logos/logo-twitter.svg" alt="Twitter" />
+          <img src="/images/social-media-logos/logo-twitter.svg" alt="Logo de Twitter" />
         </a>
         <a href="https://linkedin.com/company/codear" target="_blank" rel="noopener noreferrer" title="Seguinos en LinkedIn">
-          <img src="/images/social-media-logos/logo-linkedin.svg" alt="Twitter" />
+          <img src="/images/social-media-logos/logo-linkedin.svg" alt="Logo de LinkedIn" />
+        </a>
+        <a href="https://codear.eventbrite.com/" target="_blank" rel="noopener noreferrer" title="Seguinos en Eventbrite">
+          <img src="/images/social-media-logos/logo-eventbrite.svg" alt="Logo de Eventbrite" />
         </a>
       </SocialMediaContainer>
     </FooterContent>
