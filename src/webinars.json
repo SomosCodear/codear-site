@@ -7,7 +7,11 @@
     "image": "2020-04-08.jfif",
     "links": {
       "signup": "https://www.eventbrite.com/e/encuentroscodear-google-forms-para-las-aulas-registration-102140944314",
-      "recording": ""
+      "recording": "/encuentros/08/04/2020",
+      "extra": {
+        "label": "Sumate al WhatsApp de Educación Online",
+        "href": "https://codear.org/grupos/educacion-online"
+      }
     }
   },
   {
@@ -18,11 +22,7 @@
     "image": "2020-03-31.jpg",
     "links": {
       "signup": "https://www.eventbrite.com/e/encuentroscodear-introduccion-a-google-classroom-registration-101501814660",
-      "recording": "/encuentros/31/03/2020",
-      "extra": {
-        "label": "Sumate al WhatsApp de Educación Online",
-        "href": "https://codear.org/grupos/educacion-online"
-      }
+      "recording": "/encuentros/31/03/2020"
     }
   },
   {
@@ -33,11 +33,7 @@
     "image": "2020-03-25.jpg",
     "links": {
       "signup": "https://www.eventbrite.com/e/educar-en-tiempos-de-yomequedoencasa-tickets-100855904726",
-      "recording": "/encuentros/25/03/2020",
-      "extra": {
-        "label": "Sumate a la comunidad de Educación Online",
-        "href": "https://codear.org/grupos/educacion-online"
-      }
+      "recording": "/encuentros/25/03/2020"
     }
   }
 ]

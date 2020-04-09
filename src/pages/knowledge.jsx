@@ -190,7 +190,7 @@ const Links = styled.nav`
   }
 `;
 
-const introText = 'Estamos preparándonos para ofrecer entrenamiento a educadores que necesiten ayuda para formarse en herramientas digitales para enfrentar los desafíos de la educación on-line.';
+const introText = 'Estamos ofreciendo sesiones de capacitación a educadores que necesiten ayuda para formarse en herramientas digitales para enfrentar los desafíos de la educación on-line.';
 
 const Knowledge = () => {
   useLilac();
@@ -220,30 +220,30 @@ const Knowledge = () => {
           <Description>{description}</Description>
           <Links>
             {new Date().valueOf() < Date.parse(dateJson) && (
-              <lilac-button
-                target="_blank"
-                color="secondary"
-                href={links.signup}
-              >
-                Inscribite al evento
-              </lilac-button>
+            <lilac-button
+              target="_blank"
+              color="secondary"
+              href={links.signup}
+            >
+              Inscribite al evento
+            </lilac-button>
             )}
             {links.recording && new Date().valueOf() > Date.parse(dateJson) && (
-              <lilac-button
-                target="_blank"
-                color="secondary"
-                href={links.recording}
-              >
-                Reviví el encuentro
-              </lilac-button>
+            <lilac-button
+              target="_blank"
+              color="secondary"
+              href={links.recording}
+            >
+              Reviví el encuentro
+            </lilac-button>
             )}
             {links.extra && links.extra.href && (
-              <lilac-button
-                target="_blank"
-                href={links.extra.href}
-              >
-                {links.extra.label}
-              </lilac-button>
+            <lilac-button
+              target="_blank"
+              href={links.extra.href}
+            >
+              {links.extra.label}
+            </lilac-button>
             )}
           </Links>
         </Webinar>
