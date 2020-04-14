@@ -1,5 +1,16 @@
 [
   {
+    "dateText": "Miércoles 15 de Abril de 2020, 18:30 hs. (Hora de Argentina)",
+    "dateJson": "2020-04-15T21:30:00.000Z",
+    "name": "Apuntes y trabajo de clase en Google Drive",
+    "description": "Junto a nuestra facilitador, Migue Moyano, estaremos explorando Google Drive, la plataforma de gestión de archivos y documentos de Google, desde la perspectiva del uso en un aula virtual. En ediciones anteriores de #EncuentrosCodear, vimos cómo Google Classroom y Google Forms pueden ayudarnos a realizar el seguimiento de nuestro programa educativo y de nuestros estudiantes. Sumamos esta herramienta para facilitar la confección de materiales de clase y continuar aprendiendo juntos. Migue Moyano es Ing. en Sistemas, co-fundador de la Comunidad de Desarrolladores de Argentina y organizador de Indie Game Garage, una comunidad online dedicada al desarrollo de videojuegos.",
+    "image": "2020-04-15.jfif",
+    "links": {
+      "signup": "https://www.eventbrite.com/e/encuentroscodear-apuntes-y-trabajo-de-clase-en-google-drive-registration-102636855598",
+      "recording": ""
+    }
+  },
+  {
     "dateText": "Miércoles 08 de Abril de 2020, 18:30 hs. (Hora de Argentina)",
     "dateJson": "2020-04-08T21:30:00.000Z",
     "name": "Google Forms para las aulas",
