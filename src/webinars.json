@@ -7,7 +7,11 @@
     "image": "2020-04-15.jfif",
     "links": {
       "signup": "https://www.eventbrite.com/e/encuentroscodear-apuntes-y-trabajo-de-clase-en-google-drive-registration-102636855598",
-      "recording": ""
+      "recording": "/encuentros/15/04/2020",
+      "extra": {
+        "label": "Sumate al WhatsApp de Educación Online",
+        "href": "https://codear.org/grupos/educacion-online"
+      }
     }
   },
   {
@@ -19,10 +23,6 @@
     "links": {
       "signup": "https://www.eventbrite.com/e/encuentroscodear-google-forms-para-las-aulas-registration-102140944314",
       "recording": "/encuentros/08/04/2020",
-      "extra": {
-        "label": "Sumate al WhatsApp de Educación Online",
-        "href": "https://codear.org/grupos/educacion-online"
-      }
     }
   },
   {
