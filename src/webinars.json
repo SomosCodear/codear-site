@@ -1,5 +1,16 @@
 [
   {
+    "dateText": "Sábado 18 de Abril de 2020, 17:00 hs. (Hora de Argentina)",
+    "dateJson": "2020-04-18T20:00:00.000Z",
+    "name": "#YoSéQuePuedo: Cara a cara con el síndrome del impostor",
+    "description": "Pauline Clance y Suzanne Imes en 1978, le dieron nombre a esa diminuta pero incesante voz: \"Impostor Phenomenon\" (o como se lo conoce en español, \"síndrome del impostor\"). Siete de cada diez personas ha experimentado al menos una vez esta clase de temor. En esta edición de #EncuentrosCodear, reunimos a un panel de personas con distintos trasfondos, carreras, profesiones e intereses para discutir sobre cómo este síndrome afecta a nuestras vidas personales y profesionales, compartiendo experiencias diversas y algunos tips y estrategias para sobrellevarlo lo mejor posible.",
+    "image": "2020-04-18.jfif",
+    "links": {
+      "signup": "https://www.eventbrite.com/e/yosequepuedo-cara-a-cara-con-el-sindrome-del-impostor-registration-102948491710",
+      "recording": ""
+    }
+  },
+  {
     "dateText": "Miércoles 15 de Abril de 2020, 18:30 hs. (Hora de Argentina)",
     "dateJson": "2020-04-15T21:30:00.000Z",
     "name": "Apuntes y trabajo de clase en Google Drive",
@@ -7,7 +18,11 @@
     "image": "2020-04-15.jfif",
     "links": {
       "signup": "https://www.eventbrite.com/e/encuentroscodear-apuntes-y-trabajo-de-clase-en-google-drive-registration-102636855598",
-      "recording": ""
+      "recording": "/encuentros/15/04/2020",
+      "extra": {
+        "label": "Sumate al WhatsApp de Educación Online",
+        "href": "https://codear.org/grupos/educacion-online"
+      }
     }
   },
   {
@@ -18,11 +33,7 @@
     "image": "2020-04-08.jfif",
     "links": {
       "signup": "https://www.eventbrite.com/e/encuentroscodear-google-forms-para-las-aulas-registration-102140944314",
-      "recording": "/encuentros/08/04/2020",
-      "extra": {
-        "label": "Sumate al WhatsApp de Educación Online",
-        "href": "https://codear.org/grupos/educacion-online"
-      }
+      "recording": "/encuentros/08/04/2020"
     }
   },
   {
