@@ -190,7 +190,7 @@ const Links = styled.nav`
   }
 `;
 
-const introText = 'Estamos ofreciendo sesiones de capacitación a educadores que necesiten ayuda para formarse en herramientas digitales para enfrentar los desafíos de la educación on-line.';
+const introText = 'Como parte de las actividades de la Comunidad de Desarrolladores de Argentina, ofrecemos encuentros y webinars sobre diversas temáticas que afectan a la industria.';
 
 const Knowledge = () => {
   useLilac();
@@ -283,11 +283,11 @@ const Knowledge = () => {
 Knowledge.getInitialProps = async () => ({
   title: 'Conocimiento',
   meta: {
-    ogTitle: 'Capacitaciones técnicas para educación digital | CoDeAr',
+    ogTitle: 'Capacitaciones para la industria tecnológica y la educación digital | CoDeAr',
     ogDescription: introText,
     description: introText,
     ogUrl: 'https://codear.org/conocimiento',
-    twitterTitle: 'Capacitaciones técnicas para educación digital | CoDeAr',
+    twitterTitle: 'Capacitaciones para la industria tecnológica y la educación digital | CoDeAr',
     twitterDescription: introText,
   },
 });
