@@ -1,5 +1,16 @@
 [
   {
+    "dateText": "Martes 21 de Abril de 2020, 18:30 hs. (Hora de Argentina)",
+    "dateJson": "2020-04-21T21:30:00.000Z",
+    "name": "Reuniones con Google Hangouts y Calendar",
+    "description": "Junto a nuestro facilitador, Migue Moyano, estaremos explorando Google Hangouts, la plataforma de comunicación de Google, y Google Calendar, la herramienta de coordinación de reuniones y planificación de actividades, desde la perspectiva del uso en un aula virtual. En ediciones anteriores de #EncuentrosCodear, vimos cómo otras herramientas de Google como Classroom, Forms y Drive pueden ayudarnos a realizar el seguimiento de nuestro programa educativo y de nuestros estudiantes. Sumamos esta herramienta para facilitar la coordinación de encuentros entre colegas docentes o grupos de estudiantes y continuar aprendiendo juntos.",
+    "image": "2020-04-21.jpg",
+    "links": {
+      "signup": "https://www.eventbrite.com/e/encuentroscodear-reuniones-con-google-hangouts-y-calendar-registration-103097092178",
+      "recording": ""
+    }
+  },
+  {
     "dateText": "Sábado 18 de Abril de 2020, 17:00 hs. (Hora de Argentina)",
     "dateJson": "2020-04-18T20:00:00.000Z",
     "name": "#YoSéQuePuedo: Cara a cara con el síndrome del impostor",
@@ -14,7 +25,7 @@
     "dateText": "Miércoles 15 de Abril de 2020, 18:30 hs. (Hora de Argentina)",
     "dateJson": "2020-04-15T21:30:00.000Z",
     "name": "Apuntes y trabajo de clase en Google Drive",
-    "description": "Junto a nuestra facilitador, Migue Moyano, estaremos explorando Google Drive, la plataforma de gestión de archivos y documentos de Google, desde la perspectiva del uso en un aula virtual. En ediciones anteriores de #EncuentrosCodear, vimos cómo Google Classroom y Google Forms pueden ayudarnos a realizar el seguimiento de nuestro programa educativo y de nuestros estudiantes. Sumamos esta herramienta para facilitar la confección de materiales de clase y continuar aprendiendo juntos. Migue Moyano es Ing. en Sistemas, co-fundador de la Comunidad de Desarrolladores de Argentina y organizador de Indie Game Garage, una comunidad online dedicada al desarrollo de videojuegos.",
+    "description": "Junto a nuestro facilitador, Migue Moyano, estaremos explorando Google Drive, la plataforma de gestión de archivos y documentos de Google, desde la perspectiva del uso en un aula virtual. En ediciones anteriores de #EncuentrosCodear, vimos cómo Google Classroom y Google Forms pueden ayudarnos a realizar el seguimiento de nuestro programa educativo y de nuestros estudiantes. Sumamos esta herramienta para facilitar la confección de materiales de clase y continuar aprendiendo juntos. Migue Moyano es Ing. en Sistemas, co-fundador de la Comunidad de Desarrolladores de Argentina y organizador de Indie Game Garage, una comunidad online dedicada al desarrollo de videojuegos.",
     "image": "2020-04-15.jfif",
     "links": {
       "signup": "https://www.eventbrite.com/e/encuentroscodear-apuntes-y-trabajo-de-clase-en-google-drive-registration-102636855598",
