@@ -42,6 +42,14 @@
       "destination": "https://www.youtube.com/watch?v=n4xlSPketQ8"
     },
     {
+      "source": "/encuentros/15/04/2020",
+      "destination": "https://www.youtube.com/watch?v=yQp0sfUlAKQ"
+    },
+    {
+      "source": "/encuentros/18/04/2020",
+      "destination": "https://www.youtube.com/watch?v=rlajAxdkOiY"
+    },
+    {
       "source": "/encuentros",
       "destination": "https://www.youtube.com/playlist?list=PLOSm8YmXdTygCZnhvEVW5EO5tbwjLbUlc"
     },
