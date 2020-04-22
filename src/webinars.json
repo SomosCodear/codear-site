@@ -7,7 +7,11 @@
     "image": "2020-04-21.jpg",
     "links": {
       "signup": "https://www.eventbrite.com/e/encuentroscodear-reuniones-con-google-hangouts-y-calendar-registration-103097092178",
-      "recording": ""
+      "recording": "/encuentros/21/04/2020",
+      "extra": {
+        "label": "Sumate al WhatsApp de Educación Online",
+        "href": "https://codear.org/grupos/educacion-online"
+      }
     }
   },
   {
@@ -29,11 +33,7 @@
     "image": "2020-04-15.jfif",
     "links": {
       "signup": "https://www.eventbrite.com/e/encuentroscodear-apuntes-y-trabajo-de-clase-en-google-drive-registration-102636855598",
-      "recording": "/encuentros/15/04/2020",
-      "extra": {
-        "label": "Sumate al WhatsApp de Educación Online",
-        "href": "https://codear.org/grupos/educacion-online"
-      }
+      "recording": "/encuentros/15/04/2020"
     }
   },
   {
