@@ -1,5 +1,16 @@
 [
   {
+    "dateText": "Martes 29 de Abril de 2020, 18:30 hs. (Hora de Argentina)",
+    "dateJson": "2020-04-29T21:30:00.000Z",
+    "name": "Apuntes con Google Docs",
+    "description": "Junto a nuestra facilitadora, Lara Díaz, estaremos explorando Google Docs, el procesador de textos de Google, para su uso en producción de material y contenido educativo para aulas virtuales. En ediciones anteriores de #EncuentrosCodear, vimos cómo otras herramientas de Google como Classroom, Forms y Drive pueden ayudarnos a realizar el seguimiento de nuestro programa educativo y de nuestros estudiantes. Sumamos esta herramienta para facilitar la creación de contenido en las aulas. Lara Díaz es desarrolladora frontend en Churrasco, Community Manager en React Córdoba y Vue Córdoba y coordinadora de la Asamblea de Comunidades en la Comunidad de Desarrolladores de Argentina.",
+    "image": "2020-04-29.jpg",
+    "links": {
+      "signup": "https://www.eventbrite.com/e/encuentroscodear-apuntes-con-google-docs-registration-103725222934",
+      "recording": ""
+    }
+  },
+  {
     "dateText": "Martes 21 de Abril de 2020, 18:30 hs. (Hora de Argentina)",
     "dateJson": "2020-04-21T21:30:00.000Z",
     "name": "Reuniones con Google Hangouts y Calendar",
