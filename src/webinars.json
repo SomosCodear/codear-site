@@ -1,5 +1,16 @@
 [
   {
+    "dateText": "Lunes 4 de Mayo de 2020, 18:30 hs. (Hora de Argentina)",
+    "dateJson": "2020-05-04T21:30:00.000Z",
+    "name": "Reactivá tu negocio con TiendaNube",
+    "description": "inauguramos una nueva temática de #EncuentrosCodear, orientada a emprendimientos, y qué mejor que empezar con una emprendedora cordobesa que pueda compartir su experiencia con la comunidad. Candela Bertoldi es la creadora de Pasionaria Delicatessen, un emprendimiento gastronómico que combina arte, sabor, colores y texturas, con ingredientes de origen 100% vegetal. A comienzos de este año, progresivamente ingresó al mundo del comercio electrónico, a través de TiendaNube, una plataforma que facilita la creación de tiendas on-line. En esta edición de #EncuentrosCodear, vamos a charlar sobre cómo a través de TiendaNube, podemos levantar y administrar nuestra propia tienda virtual y potenciar nuestro negocio.",
+    "image": "2020-05-04.jpg",
+    "links": {
+      "signup": "https://www.eventbrite.com/e/encuentroscodear-reactiva-tu-negocio-con-tiendanube-registration-103979204600",
+      "recording": ""
+    }
+  },
+  {
     "dateText": "Martes 29 de Abril de 2020, 18:30 hs. (Hora de Argentina)",
     "dateJson": "2020-04-29T21:30:00.000Z",
     "name": "Apuntes con Google Docs",
