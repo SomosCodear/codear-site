@@ -68,6 +68,10 @@
     {
       "source": "/donar",
       "destination": "https://donaronline.org/codear-comunidad-de-desarrolladores-de-argentina/colaboremos-juntos-en-la-transformacion-de-la-educacion"
+    },
+    {
+      "source": "/en-vivo",
+      "destination": "https://www.youtube.com/watch?v=oOj3NOUz9TU"
     }
   ]
 }
