@@ -62,6 +62,10 @@
       "destination": "https://chat.whatsapp.com/JBo1iG5qZS8GT8asqffNja"
     },
     {
+      "source": "/grupos/emprendedorismo",
+      "destination": "https://chat.whatsapp.com/KSGPd8suMmU9HJHTAauREQ"
+    },
+    {
       "source": "/donaciones/educacion",
       "destination": "https://donaronline.org/codear-comunidad-de-desarrolladores-de-argentina/colaboremos-juntos-en-la-transformacion-de-la-educacion"
     },
