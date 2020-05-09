@@ -710,5 +710,13 @@
     "city": "Córdoba",
     "country": "Argentina",
     "link": "https://www.eventbrite.com/e/encuentroscodear-por-que-sindrome-por-que-impostor-registration-104809696624"
+  },
+  {
+    "date": "2020-05-16T12:30:00.000Z",
+    "name": "WTM-GDG Connect Latam",
+    "street": "Conferencia On-Line",
+    "city": "Córdoba + Río de la Plata",
+    "country": "Argentina",
+    "link": "https://www.meetup.com/es/GDG-CORDOBA-AR/events/270531140"
   }
 ]
