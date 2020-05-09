@@ -54,10 +54,6 @@
       "destination": "https://www.youtube.com/watch?v=mqHr3e22lVU"
     },
     {
-      "source": "/encuentros",
-      "destination": "https://www.youtube.com/playlist?list=PLOSm8YmXdTygCZnhvEVW5EO5tbwjLbUlc"
-    },
-    {
       "source": "/grupos/educacion-online",
       "destination": "https://chat.whatsapp.com/JBo1iG5qZS8GT8asqffNja"
     },
@@ -75,7 +71,7 @@
     },
     {
       "source": "/en-vivo",
-      "destination": "https://www.youtube.com/watch?v=oOj3NOUz9TU"
+      "destination": "https://www.youtube.com/watch?v=JhidTkZ3URM"
     }
   ]
 }
