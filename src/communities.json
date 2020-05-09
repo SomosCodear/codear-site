@@ -161,7 +161,8 @@
         "type": "web",
         "handler": "https://vuecba.com"
       }
-    ]
+    ],
+    "iconFormat": "jpg"
   },
   {
     "id": "cba-hackerspace",
@@ -373,6 +374,22 @@
       {
         "type": "web",
         "handler": "https://argentinaprograma.com/"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "no-lo-testeamos",
+    "name": "No Lo Testeamos",
+    "description": "El único podast en donde te van a contar el lado B del mundo IT.",
+    "links": [
+      {
+        "type": "twitter",
+        "handler": "nolotesteamos"
+      },
+      {
+        "type": "web",
+        "handler": "https://anchor.fm/no-lo-testeamos"
       }
     ],
     "iconFormat": "jpg"
