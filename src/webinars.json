@@ -1,5 +1,16 @@
 [
   {
+    "dataText": "Lunes 11 de Mayo de 2020, 18:30 hs. (Hora de Argentina)",
+    "dateJson": "2020-05-11T21:30:00.000Z",
+    "name": "¿Por qué síndrome, por qué impostor?",
+    "description": "",
+    "image": "2020-05-11.jpg",
+    "links": {
+      "signup": "https://www.eventbrite.com/e/encuentroscodear-por-que-sindrome-por-que-impostor-registration-104809696624",
+      "live": "https://www.youtube.com/watch?v=JhidTkZ3URM"
+    }
+  },
+  {
     "dateText": "Miércoles 6 de Mayo de 2020, 18:30 hs. (Hora de Argentina)",
     "dateJson": "2020-05-06T21:30:00.000Z",
     "name": "Presentaciones con Google Slides",

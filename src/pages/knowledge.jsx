@@ -212,7 +212,7 @@ const Knowledge = () => {
         dateText, dateJson, name, description, links, image,
       }) => (
         <Webinar key={dateJson}>
-          <a href={links.recording || links.signup}>
+          <a href={links.live || links.recording || links.signup}>
             <img src={`/images/webinars/${image}`} alt={`Imagen del evento: ${name}`} />
           </a>
           <h3>{name}</h3>
@@ -235,6 +235,15 @@ const Knowledge = () => {
               href={links.recording}
             >
               Reviví el encuentro
+            </lilac-button>
+            )}
+            {links.live && (
+            <lilac-button
+              target="_blank"
+              color="secondary"
+              href={links.live}
+            >
+              Entrá al vivo en YouTube
             </lilac-button>
             )}
             {links.extra && links.extra.href && (
