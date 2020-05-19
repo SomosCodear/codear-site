@@ -1,12 +1,24 @@
 [
   {
+    "dataText": "Miércoles 20 de Mayo de 2020, 18:30 hs. (Hora de Argentina)",
+    "dateJson": "2020-05-20T21:30:00.000Z",
+    "name": "Trivias con Genially",
+    "description": "En toda clase, física o virtual, siempre hay un momento en el que verificamos si nuestros estudiantes están comprendiendo los conceptos que estamos incorporando, y utilizamos herramientas como preguntas, exámenes, quizzes, trivias. En esta edición de #EncuentrosCodear, nuestro facilitador Joel Villarreal Bertoldi nos estará mostrando cómo utilizar Genially para crear estos espacios evaluativos.",
+    "image": "2020-05-20.jfif",
+    "links": {
+      "signup": "https://www.eventbrite.com/e/encuentroscodear-trivias-con-genially-registration-105933367554",
+      "recording": ""
+    }
+  },
+  {
     "dataText": "Lunes 18 de Mayo de 2020, 18:30 hs. (Hora de Argentina)",
     "dateJson": "2020-05-18T21:30:00.000Z",
     "name": "Tu tienda online con Pency",
     "description": "Continuamos empoderando a la comunidad emprendedora con herramientas para reinventarnos en los tiempos que corren. Pency es una herramienta que te permite crear tu tienda online, fácil y gratis, cargando tus productos y recibiendo tus pedidos por WhatsApp en cuestión de minutos. Vamos a estar conversando junto a quien le dio origen al proyecto: Gonzalo Pozzo. Apodado Goncy, es desarrollador especializado en React en Tradehelm, co-organizador en freeCodeCampBA, al que le gusta mentorear, ayudar y los perritos.",
     "image": "2020-05-18.jfif",
     "links": {
-      "signup": "https://www.eventbrite.com/e/encuentroscodear-tu-tienda-online-con-pency-registration-105657634830"
+      "signup": "https://www.eventbrite.com/e/encuentroscodear-tu-tienda-online-con-pency-registration-105657634830",
+      "recording": "https://youtu.be/FTpcgOK39o8"
     }
   },
   {
@@ -16,7 +28,12 @@
     "description": "¡Continuamos incorporando herramientas para nuestras clases virtuales! Junto a nuestra facilitadora, Florencia Carrillo, estaremos explorando Genially, para sumarle un toque de interactividad y dinamismo a nuestras clases. Esta capacitación se enfoca en las funcionalidades de presentación de la plataforma. En futuros encuentros exploraremos partes aún más interactivas, como quizzes y trivias.",
     "image": "2020-05-15.jfif",
     "links": {
-      "signup": "https://www.eventbrite.com/e/encuentroscodear-presentaciones-interactivas-con-genially-registration-105330229552"
+      "signup": "https://www.eventbrite.com/e/encuentroscodear-presentaciones-interactivas-con-genially-registration-105330229552",
+      "recording": "https://www.youtube.com/watch?v=MK8px8zOqVs",
+      "extra": {
+        "label": "Sumate al WhatsApp de Educación Online",
+        "href": "https://codear.org/grupos/educacion-online"
+      }
     }
   },
   {
@@ -38,11 +55,7 @@
     "image": "2020-05-06.jpg",
     "links": {
       "signup": "https://www.eventbrite.com/e/encuentroscodear-presentaciones-con-google-slides-registration-104427712098",
-      "recording": "https://www.youtube.com/watch?v=kuevFyA0Mj0",
-      "extra": {
-        "label": "Sumate al WhatsApp de Educación Online",
-        "href": "https://codear.org/grupos/educacion-online"
-      }
+      "recording": "https://www.youtube.com/watch?v=kuevFyA0Mj0"
     }
   },
   {
