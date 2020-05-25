@@ -1,5 +1,16 @@
 [
   {
+    "dataText": "Lunes 25 de Mayo de 2020, 18:30 hs. (Hora de Argentina)",
+    "dateJson": "2020-05-25T21:30:00.000Z",
+    "name": "De cara a las redes con Canva",
+    "description": "En toda clase, física o virtual, siempre hay un momento en el que verificamos si nuestros estudiantes están comprendiendo los conceptos que estamos incorporando, y utilizamos herramientas como preguntas, exámenes, quizzes, trivias. En esta edición de #EncuentrosCodear, nuestro facilitador Joel Villarreal Bertoldi nos estará mostrando cómo utilizar Genially para crear estos espacios evaluativos.",
+    "image": "2020-05-25.jfif",
+    "links": {
+      "signup": "https://www.eventbrite.com/e/encuentroscodear-de-cara-a-las-redes-con-canva-registration-106523590928",
+      "recording": ""
+    }
+  },
+  {
     "dataText": "Miércoles 20 de Mayo de 2020, 18:30 hs. (Hora de Argentina)",
     "dateJson": "2020-05-20T21:30:00.000Z",
     "name": "Trivias con Genially",
@@ -7,7 +18,11 @@
     "image": "2020-05-20.jfif",
     "links": {
       "signup": "https://www.eventbrite.com/e/encuentroscodear-trivias-con-genially-registration-105933367554",
-      "recording": ""
+      "recording": "https://www.youtube.com/watch?v=e2oMoQ5TcxI",
+      "extra": {
+        "label": "Sumate al WhatsApp de Educación Online",
+        "href": "https://codear.org/grupos/educacion-online"
+      }
     }
   },
   {
@@ -29,11 +44,7 @@
     "image": "2020-05-15.jfif",
     "links": {
       "signup": "https://www.eventbrite.com/e/encuentroscodear-presentaciones-interactivas-con-genially-registration-105330229552",
-      "recording": "https://www.youtube.com/watch?v=MK8px8zOqVs",
-      "extra": {
-        "label": "Sumate al WhatsApp de Educación Online",
-        "href": "https://codear.org/grupos/educacion-online"
-      }
+      "recording": "https://www.youtube.com/watch?v=MK8px8zOqVs"
     }
   },
   {
