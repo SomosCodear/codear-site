@@ -1,13 +1,43 @@
 [
   {
+    "dataText": "Lunes 01 de Junio de 2020, 18:30 hs. (Hora de Argentina)",
+    "dateJson": "2020-06-01T21:30:00.000Z",
+    "name": "Buenas prácticas con código SOLIDo",
+    "description": "Siempre hablamos de \"hay que aplicar buenas prácticas en el código\", ¿pero qué son las \"buenas prácticas\"? Hay muchísimas herramientas, principios, reglas, recomendaciones y guías que podemos utilizar. En esta edición de #EncuentrosCodear, presentamos una de las herramientas más conocidas en la ingeniería de software: los principios SOLID. Junto a nuestro facilitador, Joel A. Villarreal Bertoldi, vamos a explorar qué significa cada uno de estos principios y cómo podemos aplicarlos a nuestro trabajo, sin importar en qué lenguaje estemos escribiendo nuestro código.",
+    "image": "2020-06-01.jfif",
+    "links": {
+      "signup": "https://www.eventbrite.com/e/encuentroscodear-buenas-practicas-con-codigo-solido-registration-107342887466",
+      "recording": ""
+    }
+  },
+  {
+    "dataText": "Miércoles 27 de Mayo de 2020, 18:30 hs. (Hora de Argentina)",
+    "dateJson": "2020-05-27T21:30:00.000Z",
+    "name": "Aprender jugando con Genially",
+    "description": "En toda clase, física o virtual, siempre hay un momento en el que verificamos si nuestros estudiantes están comprendiendo los conceptos que estamos incorporando, y utilizamos herramientas como juegos educativos. En esta edición de #EncuentrosCodear, nuestro facilitador Migue Moyano nos estará mostrando cómo utilizar Genially para crear estos espacios de entretenimiento y aprendizaje.",
+    "image": "2020-05-27.jfif",
+    "links": {
+      "signup": "https://www.eventbrite.com/e/encuentroscodear-aprender-jugando-con-genially-registration-106724997340",
+      "recording": "",
+      "extra": {
+        "label": "Sumate al WhatsApp de Educación Online",
+        "href": "https://codear.org/grupos/educacion-online"
+      }
+    }
+  },
+  {
     "dataText": "Lunes 25 de Mayo de 2020, 18:30 hs. (Hora de Argentina)",
     "dateJson": "2020-05-25T21:30:00.000Z",
     "name": "De cara a las redes con Canva",
-    "description": "En toda clase, física o virtual, siempre hay un momento en el que verificamos si nuestros estudiantes están comprendiendo los conceptos que estamos incorporando, y utilizamos herramientas como preguntas, exámenes, quizzes, trivias. En esta edición de #EncuentrosCodear, nuestro facilitador Joel Villarreal Bertoldi nos estará mostrando cómo utilizar Genially para crear estos espacios evaluativos.",
+    "description": "Canva es una herramienta que nos permite rápidamente crear piezas de diseño multimedia (tanto impresas como digitales) utilizando recursos creados por el equipo de diseño de Canva para atraer y comunicar efectivamente mensajes en nuestras redes sociales. Junto a nuestra facilitadora, Lara Díaz, veremos una introducción general a cómo aplicamos los recursos de Canva a nuestras redes sociales.",
     "image": "2020-05-25.jfif",
     "links": {
       "signup": "https://www.eventbrite.com/e/encuentroscodear-de-cara-a-las-redes-con-canva-registration-106523590928",
-      "recording": ""
+      "recording": "https://www.youtube.com/watch?v=PVhjrRnhpxM",
+      "extra": {
+        "label": "Sumate al WhatsApp de Emprendedorismo",
+        "href": "https://codear.org/grupos/emprendedorismo"
+      }
     }
   },
   {
@@ -18,11 +48,7 @@
     "image": "2020-05-20.jfif",
     "links": {
       "signup": "https://www.eventbrite.com/e/encuentroscodear-trivias-con-genially-registration-105933367554",
-      "recording": "https://www.youtube.com/watch?v=e2oMoQ5TcxI",
-      "extra": {
-        "label": "Sumate al WhatsApp de Educación Online",
-        "href": "https://codear.org/grupos/educacion-online"
-      }
+      "recording": "https://www.youtube.com/watch?v=e2oMoQ5TcxI"
     }
   },
   {
@@ -77,11 +103,7 @@
     "image": "2020-05-04.jpg",
     "links": {
       "signup": "https://www.eventbrite.com/e/encuentroscodear-reactiva-tu-negocio-con-tiendanube-registration-103979204600",
-      "recording": "https://www.youtube.com/watch?v=oOj3NOUz9TU",
-      "extra": {
-        "label": "Sumate al WhatsApp de Emprendedorismo",
-        "href": "https://codear.org/grupos/emprendedorismo"
-      }
+      "recording": "https://www.youtube.com/watch?v=oOj3NOUz9TU"
     }
   },
   {
