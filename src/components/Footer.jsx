@@ -54,6 +54,10 @@ const SocialMediaContainer = styled.div`
     height: 1.5rem;
   }
 
+  [href*="pscp.tv"] img {
+    filter: invert(1);
+  }
+
   @media (min-width: ${BREAKPOINTS.hd}) {
     margin-top: 0;
   }
@@ -69,7 +73,7 @@ export const Footer = () => (
         <a href="https://fb.me/somoscodear/" target="_blank" rel="noopener noreferrer" title="Seguinos en Facebook">
           <img src="/images/social-media-logos/logo-facebook.svg" alt="Logo de Facebook" />
         </a>
-        <a href="https://www.instagram.com/somoscodear/" target="_blank" rel="noopener noreferrer" title="Seguinos en Instagram">
+        <a href="https://instagram.com/somoscodear/" target="_blank" rel="noopener noreferrer" title="Seguinos en Instagram">
           <img src="/images/social-media-logos/logo-instagram.svg" alt="Logo de Instagram" />
         </a>
         <a href="https://twitter.com/SomosCodear" target="_blank" rel="noopener noreferrer" title="Seguinos en Twitter">
@@ -84,7 +88,7 @@ export const Footer = () => (
         <a href="https://codear.eventbrite.com/" target="_blank" rel="noopener noreferrer" title="Seguinos en Eventbrite">
           <img src="/images/social-media-logos/logo-eventbrite.svg" alt="Logo de Eventbrite" />
         </a>
-        <a href="https://www.youtube.com/channel/UCl86c2Wxlyouq8F1K8l-wGg" target="_blank" rel="noopener noreferrer" title="Seguinos en YouTube">
+        <a href="https://youtube.com/c/codear" target="_blank" rel="noopener noreferrer" title="Seguinos en YouTube">
           <img src="/images/social-media-logos/logo-youtube.svg" alt="Logo de YouTube" />
         </a>
       </SocialMediaContainer>
