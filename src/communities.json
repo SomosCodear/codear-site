@@ -38,6 +38,22 @@
       {
         "type": "eventbrite",
         "handler": "react-cba-29215693235"
+      },
+      {
+        "type": "twitch",
+        "handler": "reactcba"
+      },
+      {
+        "type": "youtube",
+        "handler": "channel/UCp75IH4i6xRpgVI5iAUxoOQ"
+      },
+      {
+        "type": "periscope",
+        "handler": "reactcba"
+      },
+      {
+        "type": "discord",
+        "handler": "invite/RJRrVE"
       }
     ]
   },
