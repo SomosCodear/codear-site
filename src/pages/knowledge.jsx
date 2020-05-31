@@ -190,6 +190,22 @@ const Links = styled.nav`
   }
 `;
 
+const WebinarPlayer = styled.iframe`
+  width: 100%;
+  height: 13rem;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: ${BREAKPOINTS.hd}) {
+    height: 675px;
+  }
+`;
+
+const CenteredTitle = styled.h1`
+  width: 100%;
+  text-align: center;
+`;
+
 const introText = 'Como parte de las actividades de la Comunidad de Desarrolladores de Argentina, ofrecemos encuentros y webinars sobre diversas temáticas que afectan a la industria.';
 
 const upcomingWebinars = webinars.filter((webinar) => !webinar.links.recording);
@@ -209,10 +225,8 @@ const Knowledge = () => {
         <h2>#EncuentrosCodear</h2>
       </Content>
     </ProgramBanner>,
-    <Content>
-      <iframe
-        width="1200"
-        height="675"
+    <Content style={{ margin: 0, padding: 0 }}>
+      <WebinarPlayer
         frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
@@ -220,26 +234,8 @@ const Knowledge = () => {
         title="Reproductor de videos de #EncuentrosCodear"
       />
     </Content>,
-    <Content style={{ marginRight: '-1.5rem' }}>
-      <Links>
-        <lilac-button
-          target="_blank"
-          color="primary"
-          href="/grupos/educacion-online"
-        >
-          Sumate al grupo de Educación Online
-        </lilac-button>
-        <lilac-button
-          target="_blank"
-          color="secondary"
-          href="/grupos/emprendedorismo"
-        >
-          Unite al grupo de Emprendedorismo
-        </lilac-button>
-      </Links>
-    </Content>,
     <Content>
-      {upcomingWebinars.length && <h1>Inscribite a nuestros próximos encuentros</h1>}
+      {upcomingWebinars.length && <CenteredTitle>próximamente</CenteredTitle>}
       {upcomingWebinars.map(({
         dateText, dateJson, name, description, links, image,
       }) => (
