@@ -210,7 +210,15 @@ const Knowledge = () => {
       </Content>
     </ProgramBanner>,
     <Content>
-      <iframe width="1200" height="675" frameBorder="0" allowFullScreen src="https://www.youtube-nocookie.com/embed?listType=playlist&list=PLOSm8YmXdTygCZnhvEVW5EO5tbwjLbUlc&hl=es-AR&color=white&controls=2" title="Reproductor de videos de #EncuentrosCodear" />
+      <iframe
+        width="1200"
+        height="675"
+        frameBorder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        src="https://www.youtube-nocookie.com/embed?listType=playlist&list=PLOSm8YmXdTygCZnhvEVW5EO5tbwjLbUlc&hl=es-AR&color=white&controls=2"
+        title="Reproductor de videos de #EncuentrosCodear"
+      />
     </Content>,
     <Content style={{ marginRight: '-1.5rem' }}>
       <Links>
