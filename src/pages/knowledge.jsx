@@ -192,6 +192,8 @@ const Links = styled.nav`
 
 const introText = 'Como parte de las actividades de la Comunidad de Desarrolladores de Argentina, ofrecemos encuentros y webinars sobre diversas temáticas que afectan a la industria.';
 
+const upcomingWebinars = webinars.filter((webinar) => !webinar.links.recording);
+
 const Knowledge = () => {
   useLilac();
 
@@ -208,7 +210,29 @@ const Knowledge = () => {
       </Content>
     </ProgramBanner>,
     <Content>
-      {webinars.map(({
+      <iframe width="1200" height="675" frameBorder="0" allowFullScreen src="https://www.youtube-nocookie.com/embed?listType=playlist&list=PLOSm8YmXdTygCZnhvEVW5EO5tbwjLbUlc&hl=es-AR&color=white&controls=2" title="Reproductor de videos de #EncuentrosCodear" />
+    </Content>,
+    <Content style={{ marginRight: '-1.5rem' }}>
+      <Links>
+        <lilac-button
+          target="_blank"
+          color="primary"
+          href="/grupos/educacion-online"
+        >
+          Sumate al grupo de Educación Online
+        </lilac-button>
+        <lilac-button
+          target="_blank"
+          color="secondary"
+          href="/grupos/emprendedorismo"
+        >
+          Unite al grupo de Emprendedorismo
+        </lilac-button>
+      </Links>
+    </Content>,
+    <Content>
+      {upcomingWebinars.length && <h1>Inscribite a nuestros próximos encuentros</h1>}
+      {upcomingWebinars.map(({
         dateText, dateJson, name, description, links, image,
       }) => (
         <Webinar key={dateJson}>
@@ -226,32 +250,6 @@ const Knowledge = () => {
               href={links.signup}
             >
               Inscribite al evento
-            </lilac-button>
-            )}
-            {links.recording && new Date().valueOf() > Date.parse(dateJson) && (
-            <lilac-button
-              target="_blank"
-              color="secondary"
-              href={links.recording}
-            >
-              Reviví el encuentro
-            </lilac-button>
-            )}
-            {links.live && (
-            <lilac-button
-              target="_blank"
-              color="secondary"
-              href={links.live}
-            >
-              Entrá al vivo en YouTube
-            </lilac-button>
-            )}
-            {links.extra && links.extra.href && (
-            <lilac-button
-              target="_blank"
-              href={links.extra.href}
-            >
-              {links.extra.label}
             </lilac-button>
             )}
           </Links>
