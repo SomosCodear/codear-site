@@ -9,5 +9,6 @@ export const URLS = {
   twitch: 'https://twitch.tv/',
   youtube: 'https://youtube.com/',
   mixer: 'https://mixer.com/',
+  periscope: 'https://pscp.tv/',
   web: '',
 };
