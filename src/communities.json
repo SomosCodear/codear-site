@@ -17,6 +17,10 @@
         "handler": "Beer-js-Cordoba"
       },
       {
+        "type": "youtube",
+        "handler": "channel/UCszmr16K8Yxl8fD_9lxmSbQ"
+      },
+      {
         "type": "web",
         "handler": "https://beerjscba.com"
       }
@@ -77,6 +81,10 @@
       {
         "type": "facebook",
         "handler": "MetCbaOK"
+      },
+      {
+        "type": "youtube",
+        "handler": "channel/UCqNQB9ksOYjXF7ezuEBzpmA"
       },
       {
         "type": "web",
@@ -174,6 +182,10 @@
         "handler": "GsmgPP6"
       },
       {
+        "type": "youtube",
+        "handler": "channel/UClIPJ3CDURsyRZDMrNsny_Q"
+      },
+      {
         "type": "web",
         "handler": "https://vuecba.com"
       }
@@ -212,6 +224,10 @@
       {
         "type": "instagram",
         "handler": "gdgcordobaargentina"
+      },
+      {
+        "type": "youtube",
+        "handler": "channel/UCQjlRmNbq23GIb4uGo6IpcQ"
       },
       {
         "type": "meetup",
