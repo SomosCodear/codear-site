@@ -208,7 +208,9 @@ const CenteredTitle = styled.h1`
 
 const introText = 'Como parte de las actividades de la Comunidad de Desarrolladores de Argentina, ofrecemos encuentros y webinars sobre diversas temáticas que afectan a la industria.';
 
-const upcomingWebinars = webinars.filter((webinar) => !webinar.links.recording);
+const upcomingWebinars = webinars.filter(
+  (webinar) => new Date().valueOf() < new Date(webinar.dateJson).valueOf(),
+);
 
 const Knowledge = () => {
   useLilac();
@@ -235,7 +237,7 @@ const Knowledge = () => {
       />
     </Content>,
     <Content>
-      {upcomingWebinars.length && <CenteredTitle>próximamente</CenteredTitle>}
+      {upcomingWebinars.length > 0 && <CenteredTitle>próximamente</CenteredTitle>}
       {upcomingWebinars.map(({
         dateText, dateJson, name, description, links, image,
       }) => (
