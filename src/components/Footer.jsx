@@ -28,15 +28,40 @@ const FooterContainer = styled.footer`
 const FooterContent = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  text-align: center;
 
   @media (min-width: ${BREAKPOINTS.hd}) {
     box-sizing: border-box;
     width: 80rem;
+    text-align: left;
     padding: 1.75rem 3rem;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+  }
+`;
+
+const DonationContainer = styled.div`
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+
+  a {
+    font-size: 1.35rem;
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 1rem;
+    border-color: rgba(255, 255, 255, 0);
+    border-width: 3px;
+    border-style: solid;
+    padding: 1rem;
+  }
+
+  a:hover {
+    border-color: var(--color-white);
+  }
+
+  @media (min-width: ${BREAKPOINTS.hd}) {
+    margin: 0;
   }
 `;
 
@@ -69,6 +94,9 @@ export const Footer = () => (
       {`© 2019 - ${new Date().getFullYear()}`}
       <br />
       Comunidad de Desarrolladores de Argentina
+      <DonationContainer>
+        <a href="https://codear.org/donar" target="_blank" rel="noopener noreferrer">Apoyá nuestra misión con tu donación</a>
+      </DonationContainer>
       <SocialMediaContainer>
         <a href="https://fb.me/somoscodear/" target="_blank" rel="noopener noreferrer" title="Seguinos en Facebook">
           <img src="/images/social-media-logos/logo-facebook.svg" alt="Logo de Facebook" />
