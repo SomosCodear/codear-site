@@ -1,9 +1,6 @@
-const branch = process.env.VERCEL_GITHUB_COMMIT_REF ? process.env.VERCEL_GITHUB_COMMIT_REF : 'local';
-const analyticsIdKey = `${branch.toUpperCase()}_ANALYTICS_ID`;
-
 module.exports = {
   env: {
-    ANALYTICS_ID: process.env[analyticsIdKey],
+    ANALYTICS_ID: process.env.ANALYTICS_ID,
   },
   experimental: {
     async rewrites() {
