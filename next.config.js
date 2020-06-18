@@ -1,4 +1,4 @@
-const branch = process.env.NOW_GITHUB_COMMIT_REF ? process.env.NOW_GITHUB_COMMIT_REF : 'local';
+const branch = process.env.VERCEL_GITHUB_COMMIT_REF ? process.env.VERCEL_GITHUB_COMMIT_REF : 'local';
 const analyticsIdKey = `${branch.toUpperCase()}_ANALYTICS_ID`;
 
 module.exports = {
