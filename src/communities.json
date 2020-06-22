@@ -62,6 +62,22 @@
     ]
   },
   {
+    "id": "react-ladies-cba",
+    "name": "React Ladies",
+    "description": "Por ELLAS, para ELLAS. Juntas por más mujeres en la comunidad.",
+    "links": [
+      {
+        "type": "twitter",
+        "handler": "reactladiescba"
+      },
+      {
+        "type": "instagram",
+        "handler": "reactladies.cba"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
     "id": "met-cba",
     "name": "Mujeres en Tecnología",
     "description": "Transformando nuestro entorno de tecnología!👩🏻‍💻👨🏽‍💻👩🏼‍💻 Buscamos potenciar el impacto y la participación de las mujeres en las diversas áreas #tech.",
