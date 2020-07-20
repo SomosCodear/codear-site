@@ -76,6 +76,7 @@ export const Container = ({
         <meta name="twitter:description" content={metaWithDefaults.twitterDescription} />
         <meta name="twitter:site" content={metaWithDefaults.twitterSite} />
         <meta name="twitter:creator" content={metaWithDefaults.twitterCreator} />
+        <meta name="facebook-domain-verification" content={metaWithDefaults.facebookDomainVerification} />
       </Head>
       <Separator />
       <Nav />
