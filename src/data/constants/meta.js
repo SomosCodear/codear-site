@@ -10,4 +10,5 @@ export const META = {
   twitterDescription: 'Somos una asociación civil dedicada a la formación y difusión de conocimientos de tecnología, aplicándola como un instrumento transformador y potenciador para la sociedad.',
   twitterSite: '@SomosCodear',
   twitterCreator: '@SomosCodear',
+  facebookDomainVerification: '5by66qt7wm212pizpm9fluabgs0xt7',
 };
