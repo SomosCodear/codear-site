@@ -230,9 +230,15 @@ const CommunityLinks = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  max-width: 90%;
+  margin: 0 auto;
 
   @media (min-width: ${BREAKPOINTS.hd}) {
     justify-content: flex-start;
+    flex-wrap: nowrap;
+    max-width: none;
+    margin: 0;
 
     a + a {
       margin-left: 1rem;
@@ -345,7 +351,7 @@ const Communities = () => {
               <CommunityDescription>{description}</CommunityDescription>
               <CommunityLinks>
                 {links.map(({ type, handler }) => (
-                  <a key={`${id}_${type}_link`} href={`${URLS[type]}${handler}`} target="_blank" rel="noopener noreferrer" title={`Seguí a esta comunidad en @${handler}`}>
+                  <a key={`${id}_${type}_link`} href={`${URLS[type]}${handler}`} target="_blank" rel="noopener noreferrer" title={`Seguí a esta comunidad en ${type === 'web' ? 'su web oficial' : type[0].toUpperCase() + type.substr(1)}`}>
                     <SocialMediaIcon key={`${id}_${type}_icon`} src={`/images/social-media-logos/logo-${type}.svg`} alt={`Ícono de ${type}`} />
                   </a>
                 ))}
