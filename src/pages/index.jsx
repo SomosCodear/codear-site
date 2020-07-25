@@ -48,7 +48,7 @@ const CommunitiesSection = styled.section`
 
     h1:first-child {
       box-sizing: border-box;
-      width: 55rem;
+      width: 50rem;
       padding: 0 3rem;
       font-size: 4.5rem;
       color: var(--color-text);
@@ -84,7 +84,7 @@ const CommunitiesBanner = styled.div`
 
   @media (min-width: ${BREAKPOINTS.hd}) {
     box-sizing: border-box;
-    width: 25rem;
+    width: 30rem;
     margin-top: 0;
     background: none;
   }
