@@ -46,11 +46,11 @@ const DonationContainer = styled.div`
   margin-bottom: 1rem;
 
   a {
-    font-size: 1.35rem;
+    font-size: 1.1rem;
     color: var(--color-white);
     text-decoration: none;
     border-radius: 1rem;
-    border-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0.3);
     border-width: 3px;
     border-style: solid;
     padding: 1rem;
@@ -62,6 +62,8 @@ const DonationContainer = styled.div`
 
   @media (min-width: ${BREAKPOINTS.hd}) {
     margin: 0;
+    font-size: 1.35rem;
+    border-color: rgba(255, 255, 255, 0);
   }
 `;
 
@@ -69,9 +71,11 @@ const SocialMediaContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
-  * + * {
-    margin-left: 1.5rem;
+  a {
+    padding: 0.3rem;
   }
 
   img {
@@ -79,12 +83,22 @@ const SocialMediaContainer = styled.div`
     height: 1.5rem;
   }
 
-  [href*="pscp.tv"] img {
+  [href*="pscp.tv"] img, [href*="t.me"] img {
     filter: invert(1);
+  }
+
+  [href*="cafecito"] img {
+    width: auto;
   }
 
   @media (min-width: ${BREAKPOINTS.hd}) {
     margin-top: 0;
+    flex-wrap: none;
+    justify-content: normal;
+
+    * + * {
+      margin-left: 1.5rem;
+    }
   }
 `;
 
@@ -95,7 +109,7 @@ export const Footer = () => (
       <br />
       Comunidad de Desarrolladores de Argentina
       <DonationContainer>
-        <a href="https://codear.org/donar" target="_blank" rel="noopener noreferrer">Apoyá nuestra misión con tu donación</a>
+        <a href="https://codear.org/donar" target="_blank" rel="noopener noreferrer">#TuApoyoSuma: Doná hoy</a>
       </DonationContainer>
       <SocialMediaContainer>
         <a href="https://fb.me/somoscodear/" target="_blank" rel="noopener noreferrer" title="Seguinos en Facebook">
@@ -118,6 +132,12 @@ export const Footer = () => (
         </a>
         <a href="https://youtube.com/c/codear" target="_blank" rel="noopener noreferrer" title="Seguinos en YouTube">
           <img src="/images/social-media-logos/logo-youtube.svg" alt="Logo de YouTube" />
+        </a>
+        <a href="https://t.me/somoscodear" target="_blank" rel="noopener noreferrer" title="Seguinos en Telegram">
+          <img src="/images/social-media-logos/logo-telegram.svg" alt="Logo de Telegram" />
+        </a>
+        <a href="https://cafecito.app/codear" rel="noopener noreferrer" target="_blank">
+          <img srcSet="https://cdn.cafecito.app/imgs/buttons/button_2.png 1x, https://cdn.cafecito.app/imgs/buttons/button_2_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_2_3.75x.png 3.75x" src="https://cdn.cafecito.app/imgs/buttons/button_2.png" alt="Invitame un café en cafecito.app" />
         </a>
       </SocialMediaContainer>
     </FooterContent>
