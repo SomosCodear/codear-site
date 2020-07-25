@@ -10,5 +10,6 @@ export const URLS = {
   youtube: 'https://youtube.com/',
   mixer: 'https://mixer.com/',
   periscope: 'https://pscp.tv/',
+  spotify: 'https://open.spotify.com/',
   web: '',
 };

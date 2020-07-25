@@ -109,6 +109,22 @@
     ]
   },
   {
+    "id": "wwc-ba",
+    "name": "Women Who Code BA",
+    "description": "Empoderamos a mujeres en el sector IT y ayudamos a quienes están ingresando o quieren ingresar al área.",
+    "links": [
+      {
+        "type": "twitter",
+        "handler": "wwcodeba"
+      },
+      {
+        "type": "meetup",
+        "handler": "Women-Who-Code-Buenos-Aires"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
     "id": "indie-game-garage",
     "name": "Indie Game Garage",
     "description": "👾 Comunidad Game Jamera Independiente!! 🎮 Lugar de encuentro para #gamedev y aficionados a las #gamejam",
@@ -429,7 +445,7 @@
   {
     "id": "no-lo-testeamos",
     "name": "No Lo Testeamos",
-    "description": "El único podast en donde te van a contar el lado B del mundo IT.",
+    "description": "El único podcast en donde te van a contar el lado B del mundo IT.",
     "links": [
       {
         "type": "twitter",
@@ -438,6 +454,74 @@
       {
         "type": "web",
         "handler": "https://anchor.fm/no-lo-testeamos"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "doctarmy",
+    "name": "DoctArmy",
+    "description": "Proveemos un ambiente de networking descontracturado para gente de tecnología en general. Nuestro grupo es una rama de SysArmy y realizamos mensualmente un evento denominado AdminBirras y promovemos Nerdearla entre otras cosas.",
+    "links": [
+      {
+        "type": "twitter",
+        "handler": "doctarmy"
+      },
+      {
+        "type": "instagram",
+        "handler": "doctarmy"
+      },
+      {
+        "type": "meetup",
+        "handler": "DoctArmy-a-SysArmy-Chapter"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "aws-cba",
+    "name": "AWS User Group Córdoba",
+    "description": "Promovemos la adopción de tecnologías Cloud sobre Amazon web services, proveyendo un espacio para compartir experiencias de implementaciones reales, facilitando la capacitación y el aprendizaje.",
+    "links": [
+      {
+        "type": "meetup",
+        "handler": "AWS-User-Group-Cordoba-Argentina"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "service-design-club",
+    "name": "Service Design Club",
+    "description": "Service Design Club es una comunidad internacional que tiene como objetivo conectar profesionales y principiantes que tengan interés en compartir su conocimiento y aprender acerca de Service Design.",
+    "links": [
+      {
+        "type": "web",
+        "handler": "https://servicedesignclub.com"
+      },
+      {
+        "type": "discord",
+        "handler": "eCZUDtH"
+      },
+      {
+        "type": "twitter",
+        "handler": "servicedsgnclub"
+      },
+      {
+        "type": "instagram",
+        "handler": "servicedesignclub"
+      },
+      {
+        "type": "youtube",
+        "handler": "c/ServiceDesignClub"
+      },
+      {
+        "type": "spotify",
+        "handler": "show/1WlfeCvjGxPGGUdPCMUGe4"
+      },
+      {
+        "type": "linkedin",
+        "handler": "servicedesignclub"
       }
     ],
     "iconFormat": "jpg"
