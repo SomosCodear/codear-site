@@ -71,9 +71,11 @@ const SocialMediaContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
-  * + * {
-    margin-left: 1.5rem;
+  a {
+    padding: 0.3rem;
   }
 
   img {
@@ -81,12 +83,22 @@ const SocialMediaContainer = styled.div`
     height: 1.5rem;
   }
 
-  [href*="pscp.tv"] img {
+  [href*="pscp.tv"] img, [href*="t.me"] img {
     filter: invert(1);
+  }
+
+  [href*="cafecito"] img {
+    width: auto;
   }
 
   @media (min-width: ${BREAKPOINTS.hd}) {
     margin-top: 0;
+    flex-wrap: none;
+    justify-content: normal;
+
+    * + * {
+      margin-left: 1.5rem;
+    }
   }
 `;
 
@@ -120,6 +132,12 @@ export const Footer = () => (
         </a>
         <a href="https://youtube.com/c/codear" target="_blank" rel="noopener noreferrer" title="Seguinos en YouTube">
           <img src="/images/social-media-logos/logo-youtube.svg" alt="Logo de YouTube" />
+        </a>
+        <a href="https://t.me/somoscodear" target="_blank" rel="noopener noreferrer" title="Seguinos en Telegram">
+          <img src="/images/social-media-logos/logo-telegram.svg" alt="Logo de Telegram" />
+        </a>
+        <a href="https://cafecito.app/codear" rel="noopener noreferrer" target="_blank">
+          <img srcSet="https://cdn.cafecito.app/imgs/buttons/button_2.png 1x, https://cdn.cafecito.app/imgs/buttons/button_2_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_2_3.75x.png 3.75x" src="https://cdn.cafecito.app/imgs/buttons/button_2.png" alt="Invitame un café en cafecito.app" />
         </a>
       </SocialMediaContainer>
     </FooterContent>
