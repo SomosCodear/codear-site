@@ -11,6 +11,7 @@ module.exports = {
         { source: '/comunicaciones', destination: '/comuniques' },
         { source: '/comunidades', destination: '/communities' },
         { source: '/conocimiento', destination: '/knowledge' },
+        { source: '/encuentros/proximo', destination: '/api/next-encuentros-codear' },
       ];
     },
     catchAllRouting: true,
