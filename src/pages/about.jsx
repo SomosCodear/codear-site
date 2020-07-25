@@ -169,7 +169,7 @@ const About = () => (
   </UsSection>
 );
 
-About.getInitialProps = async () => ({
+About.layoutProps = {
   title: 'Conocenos',
   meta: {
     ogTitle: 'Acerca de nosotros | CoDeAr',
@@ -179,6 +179,6 @@ About.getInitialProps = async () => ({
     twitterTitle: 'Acerca de nosotros | CoDeAr',
     twitterDescription: IntroText,
   },
-});
+};
 
 export default About;

@@ -8,7 +8,7 @@ import { Container } from '../components/Container';
 
 /* eslint-disable react/prop-types, react/jsx-props-no-spreading */
 const CodearApp = ({ Component, pageProps }) => (
-  <Container {...pageProps}>
+  <Container {...Component.layoutProps}>
     <Component {...pageProps} />
   </Container>
 );

@@ -215,85 +215,87 @@ const upcomingWebinars = webinars.filter(
 const Knowledge = () => {
   useLilac();
 
-  return [
-    <Content>
-      <h1>
-        conocimiento
-      </h1>
-      <p>{introText}</p>
-    </Content>,
-    <ProgramBanner>
+  return (
+    <>
       <Content>
-        <h2>#EncuentrosCodear</h2>
+        <h1>
+          conocimiento
+        </h1>
+        <p>{introText}</p>
       </Content>
-    </ProgramBanner>,
-    <Content style={{ margin: 0, padding: 0 }}>
-      <WebinarPlayer
-        frameBorder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        src="https://www.youtube-nocookie.com/embed?listType=playlist&list=PLOSm8YmXdTygCZnhvEVW5EO5tbwjLbUlc&hl=es-AR&color=white&controls=2"
-        title="Reproductor de videos de #EncuentrosCodear"
-      />
-    </Content>,
-    <Content>
-      {upcomingWebinars.length > 0 && <CenteredTitle>próximamente</CenteredTitle>}
-      {upcomingWebinars.map(({
-        dateText, dateJson, name, description, links, image,
-      }) => (
-        <Webinar key={dateJson}>
-          <a href={links.live || links.recording || links.signup}>
-            <img src={`/images/webinars/${image}`} alt={`Imagen del evento: ${name}`} />
-          </a>
-          <h3>{name}</h3>
-          <DateTime>{dateText}</DateTime>
-          <Description>{description}</Description>
-          <Links>
-            {new Date().valueOf() < Date.parse(dateJson) && (
-            <lilac-button
-              target="_blank"
-              color="secondary"
-              href={links.signup}
-            >
-              Inscribite al evento
-            </lilac-button>
-            )}
-          </Links>
-        </Webinar>
-      ))}
-    </Content>,
-    <ProgramBanner>
+      <ProgramBanner>
+        <Content>
+          <h2>#EncuentrosCodear</h2>
+        </Content>
+      </ProgramBanner>
+      <Content style={{ margin: 0, padding: 0 }}>
+        <WebinarPlayer
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          src="https://www.youtube-nocookie.com/embed?listType=playlist&list=PLOSm8YmXdTygCZnhvEVW5EO5tbwjLbUlc&hl=es-AR&color=white&controls=2"
+          title="Reproductor de videos de #EncuentrosCodear"
+        />
+      </Content>
       <Content>
-        <h2>edupunto.</h2>
+        {upcomingWebinars.length > 0 && <CenteredTitle>próximamente</CenteredTitle>}
+        {upcomingWebinars.map(({
+          dateText, dateJson, name, description, links, image,
+        }) => (
+          <Webinar key={dateJson}>
+            <a href={links.live || links.recording || links.signup}>
+              <img src={`/images/webinars/${image}`} alt={`Imagen del evento: ${name}`} />
+            </a>
+            <h3>{name}</h3>
+            <DateTime>{dateText}</DateTime>
+            <Description>{description}</Description>
+            <Links>
+              {new Date().valueOf() < Date.parse(dateJson) && (
+              <lilac-button
+                target="_blank"
+                color="secondary"
+                href={links.signup}
+              >
+                Inscribite al evento
+              </lilac-button>
+              )}
+            </Links>
+          </Webinar>
+        ))}
+      </Content>
+      <ProgramBanner>
+        <Content>
+          <h2>edupunto.</h2>
+          <p>
+            Abrimos este espacio para proponer herramientas, plataformas
+            tecnológicas, conocimiento y experiencias que creemos que pueden sumar a la
+            transformación digital de la educación.
+          </p>
+          <lilac-button
+            href="https://edu.codear.org"
+            target="_blank"
+          >
+            Visitá edupunto
+          </lilac-button>
+        </Content>
+      </ProgramBanner>
+      <Content>
         <p>
-          Abrimos este espacio para proponer herramientas, plataformas
-          tecnológicas, conocimiento y experiencias que creemos que pueden sumar a la
-          transformación digital de la educación.
+          Esta iniciativa surge a partir de las conversaciones que tuvieron lugar en el primer
+          #EncuentroCodear de 2020, donde nos reunimos con docentes y educadores de diversos
+          puntos del país para discutir dónde nos encontramos hoy en día y hacia dónde podemos ir.
         </p>
-        <lilac-button
-          href="https://edu.codear.org"
-          target="_blank"
-        >
-          Visitá edupunto
-        </lilac-button>
+        <p>
+          Publicaremos contenido frecuentemente para acompañar este proceso repentino de
+          transformación de la educación, centralizando en este portal buenas prácticas,
+          ideas, herramientas y más.
+        </p>
       </Content>
-    </ProgramBanner>,
-    <Content>
-      <p>
-        Esta iniciativa surge a partir de las conversaciones que tuvieron lugar en el primer
-        #EncuentroCodear de 2020, donde nos reunimos con docentes y educadores de diversos
-        puntos del país para discutir dónde nos encontramos hoy en día y hacia dónde podemos ir.
-      </p>
-      <p>
-        Publicaremos contenido frecuentemente para acompañar este proceso repentino de
-        transformación de la educación, centralizando en este portal buenas prácticas,
-        ideas, herramientas y más.
-      </p>
-    </Content>,
-  ];
+    </>
+  );
 };
 
-Knowledge.getInitialProps = async () => ({
+Knowledge.layoutProps = {
   title: 'Conocimiento',
   meta: {
     ogTitle: 'Capacitaciones para la industria tecnológica y la educación digital | CoDeAr',
@@ -303,6 +305,6 @@ Knowledge.getInitialProps = async () => ({
     twitterTitle: 'Capacitaciones para la industria tecnológica y la educación digital | CoDeAr',
     twitterDescription: introText,
   },
-});
+};
 
 export default Knowledge;

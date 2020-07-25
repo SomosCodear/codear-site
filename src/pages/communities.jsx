@@ -379,7 +379,7 @@ const Communities = () => {
   ];
 };
 
-Communities.getInitialProps = async () => ({
+Communities.layoutProps = {
   title: 'Comunidades',
   meta: {
     ogTitle: 'Servicios para comunidades | CoDeAr',
@@ -389,6 +389,6 @@ Communities.getInitialProps = async () => ({
     twitterTitle: 'Servicios para comunidades | CoDeAr',
     twitterDescription: IntroText,
   },
-});
+};
 
 export default Communities;
