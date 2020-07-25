@@ -46,11 +46,11 @@ const DonationContainer = styled.div`
   margin-bottom: 1rem;
 
   a {
-    font-size: 1.35rem;
+    font-size: 1.1rem;
     color: var(--color-white);
     text-decoration: none;
     border-radius: 1rem;
-    border-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0.3);
     border-width: 3px;
     border-style: solid;
     padding: 1rem;
@@ -62,6 +62,8 @@ const DonationContainer = styled.div`
 
   @media (min-width: ${BREAKPOINTS.hd}) {
     margin: 0;
+    font-size: 1.35rem;
+    border-color: rgba(255, 255, 255, 0);
   }
 `;
 
@@ -95,7 +97,7 @@ export const Footer = () => (
       <br />
       Comunidad de Desarrolladores de Argentina
       <DonationContainer>
-        <a href="https://codear.org/donar" target="_blank" rel="noopener noreferrer">Apoyá nuestra misión con tu donación</a>
+        <a href="https://codear.org/donar" target="_blank" rel="noopener noreferrer">#TuApoyoSuma: Doná hoy</a>
       </DonationContainer>
       <SocialMediaContainer>
         <a href="https://fb.me/somoscodear/" target="_blank" rel="noopener noreferrer" title="Seguinos en Facebook">
