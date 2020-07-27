@@ -60,7 +60,7 @@ export const COLLABORATORS = [
     photo: '/images/photos/agustina-demalde.jpg',
     name: 'Agustina',
     role: 'Colaboradora',
-    bio: 'Ingeniera en sistemas. Actualmente desarrolladora frontend en Mercado Libre e integrante del comité directivo de Mujeres en Tecnología. Siempre combinando la moda, el rosa y el código en una misma línea.',
+    bio: 'Ingeniera en sistemas. Actualmente desarrolladora frontend en Mercado Libre e integrante del comité directivo de Mujeres en Tecnología.',
   },
   {
     photo: '/images/photos/andres-arruti.jpg',
