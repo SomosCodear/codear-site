@@ -63,13 +63,19 @@ const PlaceAndDate = styled.p`
 
 const Components = {
   // eslint-disable-next-line react/prop-types
-  p: ({ children }) => <p>{children}</p>,
+  p: ({ children, key }) => <p key={key}>{children}</p>,
   // eslint-disable-next-line react/prop-types
-  subtitle: ({ children }) => <h3>{children}</h3>,
+  subtitle: ({ children, key }) => <h3 key={key}>{children}</h3>,
   // eslint-disable-next-line react/prop-types
-  emphasis: ({ children }) => <p><strong>{children}</strong></p>,
+  emphasis: ({ children, key }) => <p key={key}><strong>{children}</strong></p>,
   // eslint-disable-next-line react/prop-types
-  emphasisAccent: ({ children }) => <p><strong style={{ color: 'var(--color-accent)', fontSize: '130%' }}>{children}</strong></p>,
+  emphasisAccent: ({ children, key }) => (
+    <p key={key}>
+      <strong style={{ color: 'var(--color-accent)', fontSize: '130%' }}>
+        {children}
+      </strong>
+    </p>
+  ),
 };
 
 const Comuniques = () => (
@@ -80,22 +86,22 @@ const Comuniques = () => (
     {comuniques.map(({
       slug, date, title, content,
     }) => (
-      <article id={slug} key={`comunique_${slug}`}>
+      <article id={slug} key={slug}>
         <PlaceAndDate>
           Córdoba,
           {' '}
           {date}
         </PlaceAndDate>
         <h2>{title}</h2>
-        {content.map((block) => (block.type
-          ? Components[block.type]({ children: block.content })
-          : Components.p({ children: block })))}
+        {content.map((block, index) => (block.type
+          ? Components[block.type]({ children: block.content, key: index })
+          : Components.p({ children: block, key: index })))}
       </article>
     ))}
   </Content>
 );
 
-Comuniques.getInitialProps = async () => ({
+Comuniques.layoutProps = {
   title: `${comuniques[0].title} | Comunicaciones`,
   meta: {
     ogTitle: `${comuniques[0].title} | CoDeAr`,
@@ -105,6 +111,6 @@ Comuniques.getInitialProps = async () => ({
     twitterTitle: `${comuniques[0].title} | CoDeAr`,
     twitterDescription: comuniques[0].content[0],
   },
-});
+};
 
 export default Comuniques;

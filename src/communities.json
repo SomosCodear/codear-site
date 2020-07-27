@@ -78,35 +78,36 @@
     "iconFormat": "jpg"
   },
   {
-    "id": "met-cba",
+    "id": "met",
     "name": "Mujeres en Tecnología",
-    "description": "Transformando nuestro entorno de tecnología!👩🏻‍💻👨🏽‍💻👩🏼‍💻 Buscamos potenciar el impacto y la participación de las mujeres en las diversas áreas #tech.",
+    "description": "Somos una comunidad que trabajamos con el propósito de impulsar la participación de las mujeres y personas de género no binario en diversas áreas de tecnología, promoviendo un ecosistema diverso e inclusivo.",
     "links": [
       {
         "type": "twitter",
-        "handler": "metcbaok"
+        "handler": "comunidadmet"
       },
       {
         "type": "instagram",
-        "handler": "metcbaok"
+        "handler": "comunidadmet"
       },
       {
         "type": "linkedin",
-        "handler": "met-cba"
+        "handler": "comunidadmet"
       },
       {
         "type": "facebook",
-        "handler": "MetCbaOK"
+        "handler": "comunidadmet"
       },
       {
         "type": "youtube",
-        "handler": "channel/UCqNQB9ksOYjXF7ezuEBzpmA"
+        "handler": "metcbaok"
       },
       {
         "type": "web",
-        "handler": "https://metcba.org"
+        "handler": "https://mujeresentecnologia.org"
       }
-    ]
+    ],
+    "iconFormat": "jpg"
   },
   {
     "id": "wwc-ba",

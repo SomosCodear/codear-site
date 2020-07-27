@@ -204,7 +204,7 @@ const Coc = () => (
   </Content>
 );
 
-Coc.getInitialProps = async () => ({
+Coc.layoutProps = {
   title: 'Código de Conducta',
   meta: {
     ogTitle: 'Código de Conducta | CoDeAr',
@@ -214,6 +214,6 @@ Coc.getInitialProps = async () => ({
     twitterTitle: 'Código de Conducta | CoDeAr',
     twitterDescription: IntroText,
   },
-});
+};
 
 export default Coc;
