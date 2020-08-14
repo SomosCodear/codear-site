@@ -4,3 +4,5 @@ yarn-error.log
 out
 .eslintcache
 .env.local
+
+.vercel
