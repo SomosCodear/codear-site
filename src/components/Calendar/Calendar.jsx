@@ -1,8 +1,11 @@
+import queryString from 'query-string';
+import axios from 'axios';
 import React, {
   useState, useCallback, useMemo, useEffect,
 } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import useSWR from 'swr';
 import { BREAKPOINTS } from '../../style/constants';
 import { MonthSelector } from './MonthSelector';
 import { SROnlyText } from '../SROnlyText';
@@ -55,11 +58,19 @@ const Title = styled.h2`
 
 const Subtitle = styled.h3``;
 
-export const Calendar = ({ name, events }) => {
+const eventsFetcher = async (month, year) => {
+  const query = queryString.stringify({ month, year });
+  const result = await axios.get('/api/events', query);
+  return result.data;
+};
+
+export const Calendar = ({ name }) => {
   const today = new Date();
   const [highlightCurrentDay, setHighlightCurrentDay] = useState(false);
   const [currentMonth, setCurrentMonth] = useState(today.getMonth());
   const [currentYear, setCurrentYear] = useState(today.getFullYear());
+
+  const { data: events } = useSWR([currentMonth, currentYear], eventsFetcher);
 
   const daysInMonth = useMemo(() => {
     // passing 0 to the day parameter makes the new date to point to the last day of the previous
@@ -70,15 +81,11 @@ export const Calendar = ({ name, events }) => {
   }, [currentYear, currentMonth]);
 
   const hasNoEventsForMonth = useMemo(() => (
-    events.find(({ date }) => {
-      const eventDate = new Date(date);
-      return eventDate.getFullYear() === currentYear
-        && eventDate.getMonth() === currentMonth;
-    }) == null
-  ), [events, currentYear, currentMonth]);
+    events != null && events.length === 0
+  ), [events]);
 
   const getEventsForDay = useCallback((day) => (
-    events.filter(({ date }) => {
+    (events || []).filter(({ date }) => {
       const eventDate = new Date(date);
       return eventDate.getFullYear() === currentYear
         && eventDate.getMonth() === currentMonth
@@ -149,14 +156,4 @@ export const Calendar = ({ name, events }) => {
 
 Calendar.propTypes = {
   name: PropTypes.string.isRequired,
-  events: PropTypes.arrayOf(
-    PropTypes.shape({
-      date: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      street: PropTypes.string.isRequired,
-      city: PropTypes.string.isRequired,
-      country: PropTypes.string.isRequired,
-      link: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
 };
