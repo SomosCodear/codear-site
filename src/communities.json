@@ -59,7 +59,8 @@
         "type": "discord",
         "handler": "invite/RJRrVE"
       }
-    ]
+    ],
+    "iconFormat": "jpg"
   },
   {
     "id": "react-ladies-cba",
