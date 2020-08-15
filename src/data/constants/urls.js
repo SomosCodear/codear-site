@@ -11,5 +11,8 @@ export const URLS = {
   mixer: 'https://mixer.com/',
   periscope: 'https://pscp.tv/',
   spotify: 'https://open.spotify.com/',
+  github: 'https://github.com/',
+  telegram: 'https://t.me/',
   web: '',
+  slack: '',
 };
