@@ -63,8 +63,8 @@ const apiClient = axios.create({
 });
 
 const eventsFetcher = async (month, year) => {
-  const result = await apiClient.get('/event/', { params: { year, month } });
-  return result.data;
+  const { data } = await apiClient.get('/event/', { params: { year, month } });
+  return data;
 };
 
 export const Calendar = ({ name }) => {
