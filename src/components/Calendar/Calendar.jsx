@@ -58,9 +58,14 @@ const Title = styled.h2`
 
 const Subtitle = styled.h3``;
 
+const apiClient = axios.create({
+  baseURL: process.env.NEXT_PUBLIC_CODEAR_API_URL,
+  responseType: 'json',
+});
+
 const eventsFetcher = async (month, year) => {
   const query = queryString.stringify({ month, year });
-  const result = await axios.get('/api/events', query);
+  const result = await apiClient.get('/event/', query);
   return result.data;
 };
 
