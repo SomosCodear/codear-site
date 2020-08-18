@@ -1,4 +1,3 @@
-import queryString from 'query-string';
 import axios from 'axios';
 import React, {
   useState, useCallback, useMemo, useEffect,
@@ -64,8 +63,7 @@ const apiClient = axios.create({
 });
 
 const eventsFetcher = async (month, year) => {
-  const query = queryString.stringify({ month, year });
-  const result = await apiClient.get('/event/', query);
+  const result = await apiClient.get('/event/', { params: { year, month } });
   return result.data;
 };
 
@@ -75,11 +73,10 @@ export const Calendar = ({ name }) => {
   const [currentMonth, setCurrentMonth] = useState(today.getMonth());
   const [currentYear, setCurrentYear] = useState(today.getFullYear());
 
-  const { data: events } = useSWR([currentMonth, currentYear], eventsFetcher);
+  // +1 to the month because it's 0-based while the API is 1-based
+  const { data: events } = useSWR([currentMonth + 1, currentYear], eventsFetcher);
 
   const daysInMonth = useMemo(() => {
-    // passing 0 to the day parameter makes the new date to point to the last day of the previous
-    // month; hence the currentMonth + 1
     const lastDay = new Date(currentYear, currentMonth + 1, 0);
     const numberOfDays = lastDay.getDate();
     return Array.from(Array(numberOfDays), (_, index) => index + 1);
