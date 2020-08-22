@@ -7,7 +7,6 @@ import { useLilac } from '../hooks';
 import { Calendar } from '../components/Calendar';
 import { Carousel } from '../components/Carousel';
 import communities from '../communities.json';
-import events from '../events.json';
 import projects from '../projects.json';
 
 const CommunitiesSection = styled.section`
@@ -267,10 +266,7 @@ const Index = () => {
   return (
     <LandingContent>
       <CalendarContainer>
-        <Calendar
-          name="eventos"
-          events={events}
-        />
+        <Calendar name="eventos" />
       </CalendarContainer>
       <CommunitiesSection>
         <h1>
