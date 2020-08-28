@@ -651,5 +651,25 @@
       }
     ],
     "iconFormat": "jpg"
+  },
+  {
+    "id": "agiles-cordoba",
+    "name": "Ágiles Córdoba",
+    "description": "Somos un grupo auto-organizado de Agilistas, sin fines de lucro, que estamos relanzando la comunidad de prácticas Ágiles de Córdoba. Nuestro objetivo es generar un espacio donde podamos lograr la difusión de conocimiento, prácticas y experiencias de nuestra temática en diferentes contextos.",
+    "links": [
+      {
+        "type": "linkedin",
+        "handler": "%C3%A1giles-c%C3%B3rdoba"
+      },
+      {
+        "type": "facebook",
+        "handler": "AgilesCordoba"
+      },
+      {
+        "type": "instagram",
+        "handler": "agilescordoba"
+      }
+    ],
+    "iconFormat": "jpg"
   }
 ]
