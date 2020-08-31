@@ -10,8 +10,9 @@ import { SROnlyText } from '../SROnlyText';
 import { formatMonth } from '../../utils/format';
 import { Day } from './Day';
 
-const SectionCard = css`
+const SectionCardCalendar = css`
   display: none;
+
   @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     margin-top: -70px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -21,10 +22,6 @@ const SectionCard = css`
     display: grid;
     min-height: 20rem;
     max-width: 90.5rem;
-
-    lilac-overlay {
-      margin-top: 0;
-    }
   }
 `;
 
@@ -33,17 +30,19 @@ const Section = styled.section`
   justify-content: center;
   padding-left: 4.1rem;
   padding-right: 4.1rem;
+
   @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     lilac-overlay {
       margin-top: 5rem;
     }
   }
 
-  ${({ calendarViewMode }) => (calendarViewMode ? null : SectionCard)}
+  ${({ calendarViewMode }) => (calendarViewMode ? null : SectionCardCalendar)}
 `;
 
 const Header = styled.header`
   z-index: 1;
+
   @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
     display: flex;
     flex-direction: column-reverse;
@@ -85,6 +84,10 @@ const ButtonsCalendarContainer = styled.div`
   justify-content: flex-end;
   gap: 20px;
   margin-bottom: 20px;
+
+  lilac-button {
+    outline: 0 !important;
+  }
 
   @media (max-width: ${BREAKPOINTS.lilac.mobile}) {
     display: none;
@@ -178,7 +181,7 @@ export const Calendar = ({ name, events }) => {
           color="secondary"
           onClick={() => handleCalendarMode(false)}
         >
-          Ver como calendario
+          Ver cómo calendario
         </lilac-button>
       </ButtonsCalendarContainer>
       <ContainerNavegation>

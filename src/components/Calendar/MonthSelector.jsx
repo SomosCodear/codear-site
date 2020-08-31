@@ -29,6 +29,7 @@ const List = styled.ol`
 
 const ListItem = styled.li`
   margin-bottom: 20px;
+
   ${({ currentMonth }) => currentMonth
     && css`
       font-family: Source Sans Pro, sans-serif;
@@ -55,6 +56,8 @@ const navButtonCalendar = css`
 
 const NavButton = styled.button`
   border: none;
+  outline: none;
+
   ${({ calendarViewMode }) => (calendarViewMode ? navButtonCalendar : navButtonCalendar)}
 `;
 
