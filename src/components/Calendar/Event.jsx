@@ -1,10 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { BREAKPOINTS, COLORS } from '../../style/constants';
+import { COLORS } from '../../style/constants';
 import { SROnlyText } from '../SROnlyText';
 import { formatNumber } from '../../utils/format';
 import { useEdgeHTML } from '../../hooks';
+
+const hide = css`
+  display: none;
+`;
+
+const containerEvent = css`
+  margin-top: 0;
+  max-width: 100%;
+  ${({ inline }) => inline
+    && css`
+      display: inline-block;
+      margin-bottom: -4px;
+    `}
+`;
 
 const Container = styled.a`
   display: flex;
@@ -12,14 +26,8 @@ const Container = styled.a`
   margin-top: 1rem;
   text-decoration: none;
   color: var(--color-primary-light);
-  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
-    margin-top: 0;
-    max-width: 100%;
-    ${({ inline }) => inline && css`
-      display: inline-block;
-      margin-bottom: -4px;
-    `}
-  }
+
+  ${({ calendarViewMode }) => (calendarViewMode ? null : containerEvent)}
 `;
 
 const EventDate = styled.span`
@@ -33,9 +41,8 @@ const EventDate = styled.span`
   font-size: 1.5rem;
   line-height: 1.5rem;
   color: var(--color-text);
-  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
-    display: none;
-  }
+
+  ${({ calendarViewMode }) => (calendarViewMode ? null : hide)}
 `;
 
 const EventDay = styled.span`
@@ -44,7 +51,13 @@ const EventDay = styled.span`
   line-height: 4rem;
 `;
 
-const EventInfo = styled.span`
+const eventInfoCalendar = css`
+  border: 0;
+  padding: 0;
+  display: block;
+`;
+
+const eventInfoGrid = css`
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -52,14 +65,21 @@ const EventInfo = styled.span`
   padding: 0.625rem 1.25rem;
   border: solid 0.0625rem var(--color-secondary);
   border-right: 0;
-  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
-    border: 0;
-    padding: 0;
-    display: block;
-  }
 `;
 
-const EventName = styled.span`
+const EventInfo = styled.span`
+  ${({ calendarViewMode }) => (calendarViewMode ? eventInfoGrid : eventInfoCalendar)}
+`;
+
+const eventNameCalendar = css`
+  text-transform: none;
+  font-weight: 400;
+  font-size: inherit;
+  color: inherit;
+  display: block;
+`;
+
+const eventNameGrid = css`
   flex-grow: 1;
   overflow: hidden;
   font-family: Source Sans Pro;
@@ -68,21 +88,30 @@ const EventName = styled.span`
   text-transform: uppercase;
   white-space: nowrap;
   text-overflow: ellipsis;
-  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
-    text-transform: none;
-    font-weight: 400;
-    font-size: inherit;
-    color: inherit;
-    display: block;
-  }
+`;
+
+const EventName = styled.span`
+  ${({ calendarViewMode }) => (calendarViewMode ? eventNameGrid : eventNameCalendar)}
+`;
+
+const eventAddressMetaGrid = css`
+  display: block;
+  color: var(--color-primary);
 `;
 
 const EventAddressMeta = styled.span`
-  display: block;
-  color: var(--color-primary);
-  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
-    display: none;
-  }
+  ${({ calendarViewMode }) => (calendarViewMode ? eventAddressMetaGrid : hide)}
+`;
+
+const eventArrowGrid = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.25rem;
+  border: solid 0.0625rem var(--color-secondary);
+  border-left: 0;
+  border-radius: 0 0.625rem 0.625rem 0;
+  fill: var(--color-secondary);
 `;
 
 const EventArrow = styled.span`
@@ -94,20 +123,11 @@ const EventArrow = styled.span`
   border-left: 0;
   border-radius: 0 0.625rem 0.625rem 0;
   fill: var(--color-secondary);
-  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
-    display: none;
-  }
+
+  ${({ calendarViewMode }) => (calendarViewMode ? eventArrowGrid : hide)}
 `;
 
-const DAY_NAMES = [
-  'dom',
-  'lun',
-  'mar',
-  'mié',
-  'jue',
-  'vie',
-  'sáb',
-];
+const DAY_NAMES = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
 
 const SR_DAY_NAMES = [
   'domingo',
@@ -126,9 +146,11 @@ export const Event = ({
   city,
   country,
   link,
+  calendarViewMode,
 }) => {
   const fdate = new Date(date);
   const edge = useEdgeHTML();
+
   return (
     <Container
       href={link}
@@ -137,18 +159,12 @@ export const Event = ({
       aria-label="Abrir página del evento"
       inline={edge}
     >
-      <EventDate>
+      <EventDate calendarViewMode={calendarViewMode}>
         <span>
-          <span aria-hidden="true">
-            {DAY_NAMES[fdate.getDay()]}
-          </span>
-          <SROnlyText>
-            {SR_DAY_NAMES[fdate.getDay()]}
-          </SROnlyText>
+          <span aria-hidden="true">{DAY_NAMES[fdate.getDay()]}</span>
+          <SROnlyText>{SR_DAY_NAMES[fdate.getDay()]}</SROnlyText>
         </span>
-        <EventDay>
-          {formatNumber(fdate.getDate())}
-        </EventDay>
+        <EventDay>{formatNumber(fdate.getDate())}</EventDay>
         <div>
           <SROnlyText>a las</SROnlyText>
           {formatNumber(fdate.getHours())}
@@ -156,20 +172,20 @@ export const Event = ({
           {formatNumber(fdate.getMinutes())}
         </div>
       </EventDate>
-      <EventInfo>
-        <EventName title={name}>
+      <EventInfo calendarViewMode={calendarViewMode}>
+        <EventName calendarViewMode={calendarViewMode} title={name}>
           {name}
         </EventName>
-        <EventAddressMeta>
+        <EventAddressMeta calendarViewMode={calendarViewMode}>
           <SROnlyText>Dirección:</SROnlyText>
           {street}
         </EventAddressMeta>
-        <EventAddressMeta>
+        <EventAddressMeta calendarViewMode={calendarViewMode}>
           <SROnlyText>Ciudad:</SROnlyText>
           {`${city}, ${country}`}
         </EventAddressMeta>
       </EventInfo>
-      <EventArrow aria-hidden="true">
+      <EventArrow calendarViewMode={calendarViewMode} aria-hidden="true">
         <lilac-icon-chevron
           direction="right"
           color={COLORS.secondary}
@@ -192,6 +208,7 @@ Event.propTypes = {
   date: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   street: PropTypes.string,
+  calendarViewMode: PropTypes.bool.isRequired,
   city: PropTypes.string,
   country: PropTypes.string,
   link: PropTypes.string,

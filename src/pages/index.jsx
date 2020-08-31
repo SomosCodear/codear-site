@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import React, { Fragment } from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { BREAKPOINTS } from '../style/constants';
 import { CORE_MEMBERS, ROUTES } from '../data/constants';
@@ -95,7 +95,14 @@ const ProjectsSection = styled.section`
   flex-direction: column;
   align-items: center;
 
+  @media (max-width: ${BREAKPOINTS.hd}) {
+    margin-top: 50px;
+  }
+
   @media (min-width: ${BREAKPOINTS.hd}) {
+    margin-top: 100px;
+    grid-area: projects;
+    padding-left: 3rem;
     padding-right: 3rem;
   }
 `;
@@ -224,12 +231,16 @@ const UsSection = styled.section`
 `;
 
 const CalendarContainer = styled.div`
+  margin-top: 100px;
+  width: 100%;
+
   @media (min-width: 45rem) {
     align-self: center;
   }
+
   @media (min-width: ${BREAKPOINTS.hd}) {
     grid-area: calendar;
-    padding-left: 3rem;
+    width: 100%;
   }
 `;
 
@@ -243,14 +254,10 @@ const LandingContent = styled.main`
     display: grid;
     grid-template-columns: 1fr 53rem 27rem 1fr;
     grid-template-areas:
-      "     .       calendar    projects        .     "
+      "     .       calendar    calendar        .     "
+      "     .       projects    projects        .     "
       "communities communities communities communities"
       "     .          us          us           .     ";
-
-    ${ProjectsSection} {
-      grid-area: projects;
-    }
-
     ${CommunitiesSection} {
       grid-area: communities;
     }
@@ -265,109 +272,106 @@ const Index = () => {
   useLilac();
 
   return (
-    <LandingContent>
-      <CalendarContainer>
-        <Calendar
-          name="eventos"
-          events={events}
-        />
-      </CalendarContainer>
-      <CommunitiesSection>
-        <h1>
-          <Link
-            href={ROUTES.COMMUNITIES.page}
-            as={ROUTES.COMMUNITIES.path}
-          >
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
-              comunidades
-            </a>
-          </Link>
-          <p>Descubrí los programas y servicios que ofrecemos para tu comunidad.</p>
-        </h1>
-        <CommunitiesBanner>
-          {communities.map(({ id, name, iconFormat = 'png' }) => (
-            <Link
-              key={`community_${id}`}
-              href={ROUTES.COMMUNITIES.page}
-              as={ROUTES.COMMUNITIES.path}
-            >
+    <>
+      <LandingContent>
+        <CalendarContainer>
+          <Calendar name="próximos eventos" events={events} />
+        </CalendarContainer>
+        <ProjectsSection>
+          <h1>proyectos</h1>
+          <ProjectsCarousel>
+            {projects.map(({
+              id, name, brandImage, description, cta,
+            }) => (
+              <ProjectContainer key={id}>
+                <a href={cta.href} rel="noopener noreferrer" target="_blank">
+                  <img
+                    src={`/images/brand/${brandImage}`}
+                    alt={`Logo de ${name}`}
+                  />
+                </a>
+                <p>{description}</p>
+                <lilac-button
+                  href={cta.href}
+                  target="_blank"
+                  color="secondary"
+                  inverted
+                >
+                  {cta.title}
+                </lilac-button>
+              </ProjectContainer>
+            ))}
+          </ProjectsCarousel>
+        </ProjectsSection>
+        <CommunitiesSection>
+          <h1>
+            <Link href={ROUTES.COMMUNITIES.page} as={ROUTES.COMMUNITIES.path}>
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a>
-                <img alt={`Logo de ${name}`} src={`/images/community-logos/${id}.${iconFormat}`} />
-              </a>
+              <a>comunidades</a>
             </Link>
-          ))}
-        </CommunitiesBanner>
-      </CommunitiesSection>
-      <ProjectsSection>
-        <h1>
-          proyectos
-        </h1>
-        <ProjectsCarousel>
-          {projects.map(({
-            id, name, brandImage, description, cta,
-          }) => (
-            <ProjectContainer key={id}>
-              <a href={cta.href} rel="noopener noreferrer" target="_blank">
-                <img src={`/images/brand/${brandImage}`} alt={`Logo de ${name}`} />
-              </a>
-              <p>
-                {description}
-              </p>
-              <lilac-button
-                href={cta.href}
-                target="_blank"
-                color="secondary"
-                inverted
+            <p>
+              Descubrí los programas y servicios que ofrecemos para tu
+              comunidad.
+            </p>
+          </h1>
+          <CommunitiesBanner>
+            {communities.map(({ id, name, iconFormat = 'png' }) => (
+              <Link
+                key={`community_${id}`}
+                href={ROUTES.COMMUNITIES.page}
+                as={ROUTES.COMMUNITIES.path}
               >
-                {cta.title}
-              </lilac-button>
-            </ProjectContainer>
-          ))}
-        </ProjectsCarousel>
-      </ProjectsSection>
-      <UsSection>
-        <h1>
-          nosotros
-        </h1>
-        <PhotosContainer>
-          {CORE_MEMBERS.map(({ photo, name }, index) => (
-            <Fragment key={name}>
-              <img src={photo} alt={name} />
-              {(index + 1) % 3 === 0 ? (
-                <>
-                  <PhotoStrut />
-                  <PhotoStrut />
-                  <PhotoStrut />
-                </>
-              ) : null}
-            </Fragment>
-          ))}
-          <Link href={ROUTES.ABOUT.page} as={ROUTES.ABOUT.path}>
-            <MeetTheTeamContainer>
-              <lilac-button
-                href={ROUTES.ABOUT.path}
-                title="Conocé al equipo"
-                color="secondary"
-                inverted
-              >
-                <MeetTheTeam>
-                  CONOCÉ
-                  <br />
-                  AL EQUIPO
-                </MeetTheTeam>
-              </lilac-button>
-            </MeetTheTeamContainer>
-          </Link>
-        </PhotosContainer>
-        <p>
-          Somos una comunidad dedicada a la formación y difusión de conocimientos de
-          tecnología, aplicando la disciplina como un instrumento transformador y potenciador
-          para la sociedad.
-        </p>
-      </UsSection>
-    </LandingContent>
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                <a>
+                  <img
+                    alt={`Logo de ${name}`}
+                    src={`/images/community-logos/${id}.${iconFormat}`}
+                  />
+                </a>
+              </Link>
+            ))}
+          </CommunitiesBanner>
+        </CommunitiesSection>
+        <UsSection>
+          <h1>nosotros</h1>
+          <PhotosContainer>
+            {CORE_MEMBERS.map(({ photo, name }, index) => (
+              <Fragment key={name}>
+                <img src={photo} alt={name} />
+                {(index + 1) % 3 === 0 ? (
+                  <>
+                    <PhotoStrut />
+                    <PhotoStrut />
+                    <PhotoStrut />
+                  </>
+                ) : null}
+              </Fragment>
+            ))}
+            <Link href={ROUTES.ABOUT.page} as={ROUTES.ABOUT.path}>
+              <MeetTheTeamContainer>
+                <lilac-button
+                  href={ROUTES.ABOUT.path}
+                  title="Conocé al equipo"
+                  color="secondary"
+                  inverted
+                >
+                  <MeetTheTeam>
+                    CONOCÉ
+                    <br />
+                    AL EQUIPO
+                  </MeetTheTeam>
+                </lilac-button>
+              </MeetTheTeamContainer>
+            </Link>
+          </PhotosContainer>
+          <p>
+            Somos una comunidad dedicada a la formación y difusión de
+            conocimientos de tecnología, aplicando la disciplina como un
+            instrumento transformador y potenciador para la sociedad.
+          </p>
+        </UsSection>
+      </LandingContent>
+    </>
   );
 };
 
