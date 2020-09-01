@@ -104,8 +104,6 @@ export const Calendar = ({ name, events }) => {
   const [currentYear, setCurrentYear] = useState(today.getFullYear());
 
   const daysInMonth = useMemo(() => {
-    // passing 0 to the day parameter makes the new date to point to the last day of the previous
-    // month; hence the currentMonth + 1
     const lastDay = new Date(currentYear, currentMonth + 1, 0);
     const numberOfDays = lastDay.getDate();
     return Array.from(Array(numberOfDays), (_, index) => index + 1);
