@@ -10,11 +10,11 @@ import { SROnlyText } from '../SROnlyText';
 import { formatMonth } from '../../utils/format';
 import { Day } from './Day';
 
-const SectionCardCalendar = css`
+const sectionCardCalendar = css`
   display: none;
 
   @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
-    margin-top: -70px;
+    margin-top: -4.375rem;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     min-height: unset;
     grid-auto-rows: 5.25rem;
@@ -37,7 +37,7 @@ const Section = styled.section`
     }
   }
 
-  ${({ calendarViewMode }) => (calendarViewMode ? null : SectionCardCalendar)}
+  ${({ calendarViewMode }) => (calendarViewMode ? null : sectionCardCalendar)}
 `;
 
 const Header = styled.header`
@@ -84,10 +84,6 @@ const ButtonsCalendarContainer = styled.div`
   justify-content: flex-end;
   gap: 20px;
   margin-bottom: 20px;
-
-  lilac-button {
-    outline: 0 !important;
-  }
 
   @media (max-width: ${BREAKPOINTS.lilac.mobile}) {
     display: none;
@@ -152,10 +148,6 @@ export const Calendar = ({ name, events }) => {
     }
   }, [currentMonth, currentYear, setCurrentMonth, setCurrentYear]);
 
-  const handleCalendarMode = useCallback((viewMode) => {
-    setCalendarViewMode(viewMode);
-  }, []);
-
   useEffect(() => setHighlightCurrentDay(true), []);
 
   useEffect(() => {
@@ -170,14 +162,14 @@ export const Calendar = ({ name, events }) => {
         <lilac-button
           inverted
           color="secondary"
-          onClick={() => handleCalendarMode(true)}
+          onClick={() => setCalendarViewMode(true)}
         >
           Ver como grilla
         </lilac-button>
         <lilac-button
           inverted
           color="secondary"
-          onClick={() => handleCalendarMode(false)}
+          onClick={() => setCalendarViewMode(false)}
         >
           Ver cómo calendario
         </lilac-button>
