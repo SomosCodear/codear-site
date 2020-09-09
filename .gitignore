@@ -3,3 +3,6 @@ yarn-error.log
 .next
 out
 .eslintcache
+.env.local
+
+.vercel

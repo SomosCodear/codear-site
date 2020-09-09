@@ -59,7 +59,8 @@
         "type": "discord",
         "handler": "invite/RJRrVE"
       }
-    ]
+    ],
+    "iconFormat": "jpg"
   },
   {
     "id": "react-ladies-cba",
@@ -523,6 +524,150 @@
       {
         "type": "linkedin",
         "handler": "servicedesignclub"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "clean-code-ba",
+    "name": "Clean Code BA",
+    "description": "Somos un Meetup basado en los fundamentos de la serie de libros \"Clean Code\" de Robert C. Martin. Armamos eventos informales de programación en el que realizamos charlas especificas o katas aplicando TDD. No estamos atados a ningún lenguaje de programación, la intención es poder generar un espacio para compartir conocimientos.",
+    "links": [
+      {
+        "type": "meetup",
+        "handler": "Clean-Code-Buenos-Aires"
+      },
+      {
+        "type": "twitter",
+        "handler": "cleancodeba"
+      },
+      {
+        "type": "slack",
+        "handler": "http://bit.ly/ccbaslack"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "horchatajs",
+    "name": "HorchataJS",
+    "description": "Somos una comunidad que comenzó con un enfoque en JavaScript y poco a poco se fue abriendo a compartir sobre todo lo relacionado a desarrollo web. Nuestro objetivo es ser un espacio colaborativo para aprender de tecnología y aportar al crecimiento profesional de la comunidad de desarrollo en El Salvador y la región.",
+    "links": [
+      {
+        "type": "twitter",
+        "handler": "horchatajs"
+      },
+      {
+        "type": "facebook",
+        "handler": "horchatajs"
+      },
+      {
+        "type": "instagram",
+        "handler": "horchatajs"
+      },
+      {
+        "type": "github",
+        "handler": "horchatajs"
+      },
+      {
+        "type": "twitch",
+        "handler": "horchatajs"
+      },
+      {
+        "type": "web",
+        "handler": "https://www.horchatajs.com"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "vuenos-aires",
+    "name": "Vuenos Aires",
+    "description": "Vuenos Aires es un meetup donde nos enfocamos en aprender, enseñar y difundir todo lo que tenga que ver con el ecosistema de Vue.js.",
+    "links": [
+      {
+        "type": "twitter",
+        "handler": "vuenos_aires"
+      },
+      {
+        "type": "meetup",
+        "handler": "vuenos-aires"
+      },
+      {
+        "type": "github",
+        "handler": "vuenos-aires"
+      },
+      {
+        "type": "slack",
+        "handler": "http://slack.meetupjs.com.ar"
+      },
+      {
+        "type": "web",
+        "handler": "http://vuenosair.es"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "underc0de",
+    "name": "Underc0de",
+    "description": "Comunidad dedicada al Hacking y seguridad informática. Además tenemos areas de programación, estudio de Malwares y mucho más.",
+    "links": [
+      {
+        "type": "web",
+        "handler": "https://underc0de.org"
+      },
+      {
+        "type": "facebook",
+        "handler": "underc0de"
+      },
+      {
+        "type": "twitter",
+        "handler": "underc0de"
+      },
+      {
+        "type": "instagram",
+        "handler": "underc0de"
+      },
+      {
+        "type": "telegram",
+        "handler": "underc0deoficial"
+      },
+      {
+        "type": "linkedin",
+        "handler": "underc0de"
+      },
+      {
+        "type": "youtube",
+        "handler": "underc0deoficial"
+      },
+      {
+        "type": "slack",
+        "handler": "https://underc0de.slack.com"
+      },
+      {
+        "type": "discord",
+        "handler": "v4C3PxK"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "agiles-cordoba",
+    "name": "Ágiles Córdoba",
+    "description": "Somos un grupo auto-organizado de Agilistas, sin fines de lucro, que estamos relanzando la comunidad de prácticas Ágiles de Córdoba. Nuestro objetivo es generar un espacio donde podamos lograr la difusión de conocimiento, prácticas y experiencias de nuestra temática en diferentes contextos.",
+    "links": [
+      {
+        "type": "linkedin",
+        "handler": "%C3%A1giles-c%C3%B3rdoba"
+      },
+      {
+        "type": "facebook",
+        "handler": "AgilesCordoba"
+      },
+      {
+        "type": "instagram",
+        "handler": "agilescordoba"
       }
     ],
     "iconFormat": "jpg"
