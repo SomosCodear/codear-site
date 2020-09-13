@@ -74,6 +74,10 @@
     {
       "source": "/accedes",
       "destination": "https://github.com/somoscodear/subtitulos/tree/master/README.md"
+    },
+    {
+      "source": "/edupunto",
+      "destination": "https://forms.gle/N8yuHJLTk5iW18B86"
     }
   ]
 }
