@@ -249,7 +249,7 @@
   {
     "id": "gdg-cordoba",
     "name": "GDG Córdoba",
-    "description": "Google Developers Group Córdoba",
+    "description": "Google Developers Group Córdoba.",
     "links": [
       {
         "type": "twitter",
@@ -272,7 +272,7 @@
   {
     "id": "dotnet-cba",
     "name": "Comunidad .NET Córdoba",
-    "description": "Comunidad destinada a la organización de charlas técnicas del ecosistema .NET",
+    "description": "Comunidad destinada a la organización de charlas técnicas del ecosistema .NET.",
     "links": [
       {
         "type": "twitter",
@@ -675,7 +675,7 @@
   {
     "id": "mit",
     "name": "Misiones IT",
-    "description": "Comunidad de desarrolladores y desarrolladoras de Misiones",
+    "description": "Comunidad de desarrolladores y desarrolladoras de Misiones.",
     "links": [
       {
         "type": "web",
