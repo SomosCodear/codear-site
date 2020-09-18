@@ -671,5 +671,33 @@
       }
     ],
     "iconFormat": "jpg"
+  },
+  {
+    "id": "mit",
+    "name": "Misiones IT",
+    "description": "Comunidad de desarrolladores y desarrolladoras de Misiones",
+    "links": [
+      {
+        "type": "web",
+        "handler": "https://comit.ar"
+      },
+      {
+        "type": "twitter",
+        "handler": "comunidadmit"
+      },
+      {
+        "type": "instagram",
+        "handler": "comunidadmit"
+      },
+      {
+        "type": "discord",
+        "handler": "invite/6Tkv8pn"
+      },
+      {
+        "type": "github",
+        "handler": "Comunidad-Misiones-IT"
+      }
+    ],
+    "iconFormat": "jpg"
   }
 ]
