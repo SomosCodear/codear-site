@@ -27,37 +27,29 @@
     ]
   },
   {
-    "id": "react-cba",
-    "name": "React Cba",
-    "description": "Comunidad de desarrolladores de #ReactJS en Córdoba, nos juntamos una vez al mes a compartir grandes charlas y conocer nuevos amigos.",
+    "id": "refactor-devs",
+    "name": "Refactor Devs",
+    "description": "Somos una comunidad hispanohablante enfocada al ambiente IT, ¡pero más nos gusta hablar sarasa, tomar birra y comer chambuchitos!",
     "links": [
       {
         "type": "twitter",
-        "handler": "reactcba"
+        "handler": "refactordevs"
       },
       {
         "type": "instagram",
-        "handler": "reactcba.ok"
-      },
-      {
-        "type": "eventbrite",
-        "handler": "react-cba-29215693235"
+        "handler": "refactordevs"
       },
       {
         "type": "twitch",
-        "handler": "reactcba"
+        "handler": "refactordevs"
       },
       {
         "type": "youtube",
         "handler": "channel/UCp75IH4i6xRpgVI5iAUxoOQ"
       },
       {
-        "type": "periscope",
-        "handler": "reactcba"
-      },
-      {
         "type": "discord",
-        "handler": "invite/RJRrVE"
+        "handler": "invite/RTHktQ8"
       }
     ],
     "iconFormat": "jpg"
@@ -249,7 +241,7 @@
   {
     "id": "gdg-cordoba",
     "name": "GDG Córdoba",
-    "description": "Google Developers Group Córdoba",
+    "description": "Google Developers Group Córdoba.",
     "links": [
       {
         "type": "twitter",
@@ -272,7 +264,7 @@
   {
     "id": "dotnet-cba",
     "name": "Comunidad .NET Córdoba",
-    "description": "Comunidad destinada a la organización de charlas técnicas del ecosistema .NET",
+    "description": "Comunidad destinada a la organización de charlas técnicas del ecosistema .NET.",
     "links": [
       {
         "type": "twitter",
@@ -449,10 +441,6 @@
     "name": "No Lo Testeamos",
     "description": "El único podcast en donde te van a contar el lado B del mundo IT.",
     "links": [
-      {
-        "type": "twitter",
-        "handler": "nolotesteamos"
-      },
       {
         "type": "web",
         "handler": "https://anchor.fm/no-lo-testeamos"
@@ -668,6 +656,34 @@
       {
         "type": "instagram",
         "handler": "agilescordoba"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "mit",
+    "name": "Misiones IT",
+    "description": "Comunidad de desarrolladores y desarrolladoras de Misiones.",
+    "links": [
+      {
+        "type": "web",
+        "handler": "https://comit.ar"
+      },
+      {
+        "type": "twitter",
+        "handler": "comunidadmit"
+      },
+      {
+        "type": "instagram",
+        "handler": "comunidadmit"
+      },
+      {
+        "type": "discord",
+        "handler": "invite/6Tkv8pn"
+      },
+      {
+        "type": "github",
+        "handler": "Comunidad-Misiones-IT"
       }
     ],
     "iconFormat": "jpg"
