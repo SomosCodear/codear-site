@@ -450,10 +450,6 @@
     "description": "El único podcast en donde te van a contar el lado B del mundo IT.",
     "links": [
       {
-        "type": "twitter",
-        "handler": "nolotesteamos"
-      },
-      {
         "type": "web",
         "handler": "https://anchor.fm/no-lo-testeamos"
       }
