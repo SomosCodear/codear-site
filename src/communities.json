@@ -698,7 +698,6 @@
         "handler": "Comunidad-Misiones-IT"
       }
     ],
-    "iconFormat": "jpg",
-    "shape": "square"
+    "iconFormat": "jpg"
   }
 ]
