@@ -27,33 +27,25 @@
     ]
   },
   {
-    "id": "react-cba",
-    "name": "React Cba",
-    "description": "Comunidad de desarrolladores de #ReactJS en Córdoba, nos juntamos una vez al mes a compartir grandes charlas y conocer nuevos amigos.",
+    "id": "refactor-devs",
+    "name": "Refactor Devs",
+    "description": "Somos una comunidad hispanohablante enfocada al ambiente IT, ¡pero más nos gusta hablar sarasa, tomar birra y comer chambuchitos!",
     "links": [
       {
         "type": "twitter",
-        "handler": "reactcba"
+        "handler": "refactordevs"
       },
       {
         "type": "instagram",
-        "handler": "reactcba.ok"
-      },
-      {
-        "type": "eventbrite",
-        "handler": "react-cba-29215693235"
+        "handler": "refactordevs"
       },
       {
         "type": "twitch",
-        "handler": "reactcba"
+        "handler": "refactordevs"
       },
       {
         "type": "youtube",
         "handler": "channel/UCp75IH4i6xRpgVI5iAUxoOQ"
-      },
-      {
-        "type": "periscope",
-        "handler": "reactcba"
       },
       {
         "type": "discord",
