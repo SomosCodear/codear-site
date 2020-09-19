@@ -438,13 +438,25 @@
     "iconFormat": "jpg"
   },
   {
-    "id": "no-lo-testeamos",
-    "name": "No Lo Testeamos",
-    "description": "El único podcast en donde te van a contar el lado B del mundo IT.",
+    "id": "nolomedia",
+    "name": "NoLo",
+    "description": "Hacemos #podcasts semanales sobre #Tech y #DevLife y todo #SinTests.",
     "links": [
       {
         "type": "web",
-        "handler": "https://anchor.fm/no-lo-testeamos"
+        "handler": "https://redcircle.com/shows/el-podcast5407"
+      },
+      {
+        "type": "twitter",
+        "handler": "nolomedia"
+      },
+      {
+        "type": "instagram",
+        "handler": "nolomedia"
+      },
+      {
+        "type": "facebook",
+        "handler": "nolomedia"
       }
     ],
     "iconFormat": "jpg"
