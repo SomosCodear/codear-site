@@ -138,7 +138,7 @@
     ]
   },
   {
-    "id": "frontendcafe",
+    "id": "frontend-cafe",
     "name": "FrontEndCafé",
     "description": "📚 Proyectos, mentorías, consultas, charlas, workshops online y offline. Comunidad de desarrolladorxs web. ✨",
     "links": [
@@ -154,7 +154,8 @@
         "type": "discord",
         "handler": "q2SkxjK"
       }
-    ]
+    ],
+    "iconFormat": "jpg"
   },
   {
     "id": "burgerjs-cba",
