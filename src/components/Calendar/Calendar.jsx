@@ -86,6 +86,7 @@ const ButtonsCalendarContainer = styled.div`
   justify-content: flex-end;
   gap: 20px;
   margin-top: 20px;
+  margin-bottom: 20px;
 
   @media (max-width: ${BREAKPOINTS.lilac.mobile}) {
     display: none;
