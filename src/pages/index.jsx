@@ -229,7 +229,6 @@ const UsSection = styled.section`
 `;
 
 const CalendarContainer = styled.div`
-  margin-top: 100px;
   width: 100%;
 
   @media (min-width: 45rem) {
