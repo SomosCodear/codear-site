@@ -92,6 +92,16 @@ const ButtonsCalendarContainer = styled.div`
   }
 `;
 
+const modalEvents = css`
+  padding: 0;
+`;
+
+const ContainerModalEvents = styled.div`
+  padding: 8rem;
+
+  ${({ calendarViewMode }) => (calendarViewMode ? null : modalEvents)}
+`;
+
 const Subtitle = styled.h3``;
 
 const apiClient = axios.create({
@@ -218,11 +228,13 @@ export const Calendar = ({ name }) => {
           />
         ))}
         {hasNoEventsForMonth ? (
-          <lilac-overlay size="big" open>
-            <lilac-overlay-title>
-              No tenemos eventos agendados para este mes
-            </lilac-overlay-title>
-          </lilac-overlay>
+          <ContainerModalEvents calendarViewMode={calendarViewMode}>
+            <lilac-overlay size="big" open>
+              <lilac-overlay-title>
+                No tenemos eventos agendados para este mes
+              </lilac-overlay-title>
+            </lilac-overlay>
+          </ContainerModalEvents>
         ) : null}
       </Section>
     </>
