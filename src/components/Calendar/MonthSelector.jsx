@@ -1,51 +1,64 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { BREAKPOINTS, COLORS } from '../../style/constants';
+import { COLORS } from '../../style/constants';
 import { formatMonth } from '../../utils/format';
 
-const List = styled.ol`
+const listGrid = css`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
-  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
-    justify-content: flex-start;
-  }
+`;
+
+const listCalendar = css`
+  margin-top: 35px;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  list-style-type: none;
+`;
+
+const List = styled.ol`
+  ${({ calendarViewMode }) => (calendarViewMode ? listGrid : listCalendar)}
 `;
 
 const ListItem = styled.li`
-  ${({ currentMonth }) => currentMonth && css`
-    font-family: Source Sans Pro, sans-serif;
-    font-size: 1.5rem;
-    color: var(--color-primary-light);
-    @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
+  margin-bottom: 20px;
+
+  ${({ currentMonth }) => currentMonth
+    && css`
+      font-family: Source Sans Pro, sans-serif;
+      font-size: 1.5rem;
+      color: var(--color-primary-light);
       min-width: 12rem;
       text-align: center;
       color: var(--color-primary-lightest);
-    }
-  `}
+    `}
 `;
 
-const NavButton = styled.button`
+const navButtonCalendar = css`
   display: block;
   padding: 0.5rem 1rem;
-  border: solid 0.0625rem var(--color-primary-lightest);
-  border-radius: 0.625rem;
   background-color: transparent;
   cursor: pointer;
   fill: var(--color-primary-lightest);
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     border-color: var(--color-secondary);
     fill: var(--color-secondary);
   }
-  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
-    padding: 0;
-    border: 0;
-  }
+`;
+
+const NavButton = styled.button`
+  border: none;
+  outline: none;
+
+  ${({ calendarViewMode }) => (calendarViewMode ? navButtonCalendar : navButtonCalendar)}
 `;
 
 export const MonthSelector = ({
@@ -53,6 +66,7 @@ export const MonthSelector = ({
   currentYear,
   onPreviousMonthClick,
   onNextMonthClick,
+  calendarViewMode,
 }) => {
   const currentMonthText = () => formatMonth(currentMonth, currentYear);
   const previousMonthText = () => {
@@ -87,8 +101,8 @@ export const MonthSelector = ({
 
   return (
     <nav aria-label="Eventos por mes">
-      <List>
-        <ListItem>
+      <List calendarViewMode={calendarViewMode}>
+        <ListItem calendarViewMode={calendarViewMode}>
           <NavButton
             previousMonth
             aria-label={`Ver eventos para ${previousMonthText()}`}
@@ -100,15 +114,13 @@ export const MonthSelector = ({
             />
           </NavButton>
         </ListItem>
-        <ListItem
-          aria-hidden="true"
-          currentMonth
-        >
+        <ListItem aria-hidden="true" currentMonth>
           {currentMonthText()}
         </ListItem>
-        <ListItem>
+        <ListItem calendarViewMode={calendarViewMode}>
           <NavButton
             nextMonth
+            calendarViewMode={calendarViewMode}
             aria-label={`Ver eventos para ${nextMonthText()}`}
             onClick={onNextMonthClick}
           >
@@ -128,5 +140,6 @@ MonthSelector.propTypes = {
   currentMonth: PropTypes.number.isRequired,
   currentYear: PropTypes.number.isRequired,
   onPreviousMonthClick: PropTypes.func.isRequired,
+  calendarViewMode: PropTypes.bool.isRequired,
   onNextMonthClick: PropTypes.func.isRequired,
 };

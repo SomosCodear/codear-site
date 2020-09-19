@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import React, { Fragment } from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { BREAKPOINTS } from '../style/constants';
 import { CORE_MEMBERS, ROUTES } from '../data/constants';
@@ -94,7 +94,13 @@ const ProjectsSection = styled.section`
   flex-direction: column;
   align-items: center;
 
+  @media (max-width: ${BREAKPOINTS.hd}) {
+    margin-top: 50px;
+  }
+
   @media (min-width: ${BREAKPOINTS.hd}) {
+    grid-area: projects;
+    padding-left: 3rem;
     padding-right: 3rem;
   }
 `;
@@ -223,12 +229,15 @@ const UsSection = styled.section`
 `;
 
 const CalendarContainer = styled.div`
+  width: 100%;
+
   @media (min-width: 45rem) {
     align-self: center;
   }
+
   @media (min-width: ${BREAKPOINTS.hd}) {
     grid-area: calendar;
-    padding-left: 3rem;
+    width: 100%;
   }
 `;
 
@@ -242,14 +251,10 @@ const LandingContent = styled.main`
     display: grid;
     grid-template-columns: 1fr 53rem 27rem 1fr;
     grid-template-areas:
-      "     .       calendar    projects        .     "
+      "     .       calendar    calendar        .     "
+      "     .       projects    projects        .     "
       "communities communities communities communities"
       "     .          us          us           .     ";
-
-    ${ProjectsSection} {
-      grid-area: projects;
-    }
-
     ${CommunitiesSection} {
       grid-area: communities;
     }
@@ -266,51 +271,22 @@ const Index = () => {
   return (
     <LandingContent>
       <CalendarContainer>
-        <Calendar name="eventos" />
+        <Calendar name="próximos eventos" />
       </CalendarContainer>
-      <CommunitiesSection>
-        <h1>
-          <Link
-            href={ROUTES.COMMUNITIES.page}
-            as={ROUTES.COMMUNITIES.path}
-          >
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
-              comunidades
-            </a>
-          </Link>
-          <p>Descubrí los programas y servicios que ofrecemos para tu comunidad.</p>
-        </h1>
-        <CommunitiesBanner>
-          {communities.map(({ id, name, iconFormat = 'png' }) => (
-            <Link
-              key={`community_${id}`}
-              href={ROUTES.COMMUNITIES.page}
-              as={ROUTES.COMMUNITIES.path}
-            >
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a>
-                <img alt={`Logo de ${name}`} src={`/images/community-logos/${id}.${iconFormat}`} />
-              </a>
-            </Link>
-          ))}
-        </CommunitiesBanner>
-      </CommunitiesSection>
       <ProjectsSection>
-        <h1>
-          proyectos
-        </h1>
+        <h1>proyectos</h1>
         <ProjectsCarousel>
           {projects.map(({
             id, name, brandImage, description, cta,
           }) => (
             <ProjectContainer key={id}>
               <a href={cta.href} rel="noopener noreferrer" target="_blank">
-                <img src={`/images/brand/${brandImage}`} alt={`Logo de ${name}`} />
+                <img
+                  src={`/images/brand/${brandImage}`}
+                  alt={`Logo de ${name}`}
+                />
               </a>
-              <p>
-                {description}
-              </p>
+              <p>{description}</p>
               <lilac-button
                 href={cta.href}
                 target="_blank"
@@ -323,10 +299,36 @@ const Index = () => {
           ))}
         </ProjectsCarousel>
       </ProjectsSection>
-      <UsSection>
+      <CommunitiesSection>
         <h1>
-          nosotros
+          <Link href={ROUTES.COMMUNITIES.page} as={ROUTES.COMMUNITIES.path}>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a>comunidades</a>
+          </Link>
+          <p>
+            Descubrí los programas y servicios que ofrecemos para tu comunidad.
+          </p>
         </h1>
+        <CommunitiesBanner>
+          {communities.map(({ id, name, iconFormat = 'png' }) => (
+            <Link
+              key={`community_${id}`}
+              href={ROUTES.COMMUNITIES.page}
+              as={ROUTES.COMMUNITIES.path}
+            >
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+              <a>
+                <img
+                  alt={`Logo de ${name}`}
+                  src={`/images/community-logos/${id}.${iconFormat}`}
+                />
+              </a>
+            </Link>
+          ))}
+        </CommunitiesBanner>
+      </CommunitiesSection>
+      <UsSection>
+        <h1>nosotros</h1>
         <PhotosContainer>
           {CORE_MEMBERS.map(({ photo, name }, index) => (
             <Fragment key={name}>
@@ -358,9 +360,9 @@ const Index = () => {
           </Link>
         </PhotosContainer>
         <p>
-          Somos una comunidad dedicada a la formación y difusión de conocimientos de
-          tecnología, aplicando la disciplina como un instrumento transformador y potenciador
-          para la sociedad.
+          Somos una comunidad dedicada a la formación y difusión de
+          conocimientos de tecnología, aplicando la disciplina como un
+          instrumento transformador y potenciador para la sociedad.
         </p>
       </UsSection>
     </LandingContent>
