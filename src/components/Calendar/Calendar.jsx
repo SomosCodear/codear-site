@@ -85,7 +85,7 @@ const ButtonsCalendarContainer = styled.div`
   padding: 0 63px 0 0;
   justify-content: flex-end;
   gap: 20px;
-  margin-bottom: 20px;
+  margin-top: 20px;
 
   @media (max-width: ${BREAKPOINTS.lilac.mobile}) {
     display: none;
@@ -180,22 +180,6 @@ export const Calendar = ({ name }) => {
 
   return (
     <>
-      <ButtonsCalendarContainer>
-        <lilac-button
-          inverted
-          color="secondary"
-          onClick={() => setCalendarViewMode(true)}
-        >
-          Ver como grilla
-        </lilac-button>
-        <lilac-button
-          inverted
-          color="secondary"
-          onClick={() => setCalendarViewMode(false)}
-        >
-          Ver cómo calendario
-        </lilac-button>
-      </ButtonsCalendarContainer>
       <ContainerNavegation>
         <MonthSelector
           currentYear={currentYear}
@@ -237,6 +221,22 @@ export const Calendar = ({ name }) => {
           </ContainerModalEvents>
         ) : null}
       </Section>
+      <ButtonsCalendarContainer>
+        {!calendarViewMode && (<lilac-button
+          inverted
+          color="secondary"
+          onClick={() => setCalendarViewMode(true)}
+        >
+          Ver como grilla
+        </lilac-button>)}
+        {calendarViewMode && (<lilac-button
+          inverted
+          color="secondary"
+          onClick={() => setCalendarViewMode(false)}
+        >
+          Ver como calendario
+        </lilac-button>)}
+      </ButtonsCalendarContainer>
     </>
   );
 };
