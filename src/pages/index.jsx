@@ -99,7 +99,6 @@ const ProjectsSection = styled.section`
   }
 
   @media (min-width: ${BREAKPOINTS.hd}) {
-    margin-top: 100px;
     grid-area: projects;
     padding-left: 3rem;
     padding-right: 3rem;
