@@ -116,9 +116,9 @@ const ProjectContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 
   p {
-    flex-grow: 1;
     margin: 2rem 0;
     font-family: Source Sans Pro, sans-serif;
     color: var(--color-primary);
