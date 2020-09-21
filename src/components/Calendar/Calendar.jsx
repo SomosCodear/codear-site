@@ -33,12 +33,6 @@ const Section = styled.section`
   padding-left: 4.1rem;
   padding-right: 4.1rem;
 
-  @media (min-width: ${BREAKPOINTS.lilac.mobile}) {
-    lilac-overlay {
-      margin-top: 5rem;
-    }
-  }
-
   ${({ calendarViewMode }) => (calendarViewMode ? null : sectionCardCalendar)}
 `;
 
@@ -111,7 +105,7 @@ const apiClient = axios.create({
 });
 
 const eventsFetcher = async (month, year) => {
-  const { data } = await apiClient.get('/event/', { params: { year, month } });
+  const { data } = await apiClient.get('/events/', { params: { year, month } });
   return data;
 };
 
@@ -223,20 +217,24 @@ export const Calendar = ({ name }) => {
         ) : null}
       </Section>
       <ButtonsCalendarContainer>
-        {!calendarViewMode && (<lilac-button
+        {!calendarViewMode && (
+        <lilac-button
           inverted
           color="secondary"
           onClick={() => setCalendarViewMode(true)}
         >
           Ver como grilla
-        </lilac-button>)}
-        {calendarViewMode && (<lilac-button
+        </lilac-button>
+        )}
+        {calendarViewMode && (
+        <lilac-button
           inverted
           color="secondary"
           onClick={() => setCalendarViewMode(false)}
         >
           Ver como calendario
-        </lilac-button>)}
+        </lilac-button>
+        )}
       </ButtonsCalendarContainer>
     </>
   );
