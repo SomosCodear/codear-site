@@ -4,6 +4,10 @@
   "alias": ["codear.org"],
   "redirects": [
     {
+      "source": "/hacktoberfest",
+      "destination": "https://youtube.com/codear"
+    },
+    {
       "source": "/hacktoberfest/coc",
       "destination": "https://docs.google.com/document/d/1HTHDu1YwzYGNergvJ7WnDW6Db_uXy6gNXUouLNHhtF0/edit"
     },
