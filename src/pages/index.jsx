@@ -277,11 +277,11 @@ const Hacktoberfest = styled.a`
 const Index = () => {
   useLilac();
 
-  return (
+  return [
+    <Hacktoberfest href="https://hack.codear.org">
+      <img src="https://pbs.twimg.com/media/EjmHtbdXkAA6qfY?format=jpg&name=4096x4096" alt="Sumate a Hacktoberfest entrando a hack.codear.org" />
+    </Hacktoberfest>,
     <LandingContent>
-      <Hacktoberfest href="https://hack.codear.org">
-        <img src="https://pbs.twimg.com/media/EjmHtbdXkAA6qfY?format=jpg&name=4096x4096" alt="Sumate a Hacktoberfest entrando a hack.codear.org" />
-      </Hacktoberfest>
       <CalendarContainer>
         <Calendar name="próximos eventos" />
       </CalendarContainer>
@@ -378,7 +378,7 @@ const Index = () => {
         </p>
       </UsSection>
     </LandingContent>
-  );
+  ];
 };
 
 export default Index;
