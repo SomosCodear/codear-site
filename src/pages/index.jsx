@@ -265,11 +265,23 @@ const LandingContent = styled.main`
   }
 `;
 
+const Hacktoberfest = styled.a`
+  display: block;
+  margin: 2rem 0;
+
+  img {
+    width: 100%;
+  }
+`;
+
 const Index = () => {
   useLilac();
 
   return (
     <LandingContent>
+      <Hacktoberfest href="https://hack.codear.org">
+        <img src="https://pbs.twimg.com/media/EjmHtbdXkAA6qfY?format=jpg&name=4096x4096" alt="Sumate a Hacktoberfest entrando a hack.codear.org" />
+      </Hacktoberfest>
       <CalendarContainer>
         <Calendar name="próximos eventos" />
       </CalendarContainer>
