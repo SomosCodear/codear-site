@@ -268,10 +268,10 @@ const LandingContent = styled.main`
 const Hacktoberfest = styled.a`
   display: block;
   margin: 2rem 0;
-
+  text-decoration: none;
+  
   span {
     display: block;
-    text-decoration: none;
     text-align: center;
     text-transform: uppercase;
     font-weight: 400;
