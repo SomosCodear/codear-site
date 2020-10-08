@@ -103,7 +103,7 @@ const dayContainerCalendar = css`
         color: var(--color-text);
         font-weight: 700;
       }
-      ${Events}, a {calendarViewMode
+      ${Events}, a {
         color: var(--color-text);
       }
       &:hover lilac-icon-bullet {
