@@ -265,10 +265,42 @@ const LandingContent = styled.main`
   }
 `;
 
+const Hacktoberfest = styled.a`
+  display: block;
+  margin: 2rem 0;
+  text-decoration: none;
+  
+  span {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 5px;
+    font-size: 1.5rem;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+    padding-top: 1rem;
+  }
+
+  @media (min-width: ${BREAKPOINTS.hd}) {
+    span {
+      font-size: 2rem;  
+      font-weight: 100;
+    }  
+  }  
+`;
+
 const Index = () => {
   useLilac();
 
-  return (
+  return [
+    <Hacktoberfest href="https://hack.codear.org">
+      <span>Sumate al Hacktoberfest con CoDeAr</span>
+      <img src="https://pbs.twimg.com/media/EjmHtbdXkAA6qfY?format=jpg&name=4096x4096" alt="Sumate a Hacktoberfest entrando a hack.codear.org" />
+    </Hacktoberfest>,
     <LandingContent>
       <CalendarContainer>
         <Calendar name="próximos eventos" />
@@ -366,7 +398,7 @@ const Index = () => {
         </p>
       </UsSection>
     </LandingContent>
-  );
+  ];
 };
 
 export default Index;
