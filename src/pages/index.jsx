@@ -269,7 +269,7 @@ const Hacktoberfest = styled.a`
   display: block;
   margin: 2rem 0;
   text-decoration: none;
-  
+
   span {
     display: block;
     text-align: center;
@@ -287,10 +287,10 @@ const Hacktoberfest = styled.a`
 
   @media (min-width: ${BREAKPOINTS.hd}) {
     span {
-      font-size: 2rem;  
+      font-size: 2rem;
       font-weight: 100;
-    }  
-  }  
+    }
+  }
 `;
 
 const Index = () => {
@@ -299,7 +299,15 @@ const Index = () => {
   return [
     <Hacktoberfest href="https://hack.codear.org">
       <span>Sumate al Hacktoberfest con CoDeAr</span>
-      <img src="https://pbs.twimg.com/media/EjmHtbdXkAA6qfY?format=jpg&name=4096x4096" alt="Sumate a Hacktoberfest entrando a hack.codear.org" />
+      <img
+        srcSet="/images/hacktoberfest/large.png 2048w,
+                /images/hacktoberfest/medium.png 670w,
+                /images/hacktoberfest/small.png 380w"
+        sizes="(max-width: 380px) 380px,
+               (max-width: 670px) 670px,
+               2048px"
+        alt="Sumate a Hacktoberfest entrando a hack.codear.org"
+      />
     </Hacktoberfest>,
     <LandingContent>
       <CalendarContainer>
@@ -397,7 +405,7 @@ const Index = () => {
           instrumento transformador y potenciador para la sociedad.
         </p>
       </UsSection>
-    </LandingContent>
+    </LandingContent>,
   ];
 };
 
