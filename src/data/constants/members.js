@@ -42,12 +42,6 @@ export const CORE_MEMBERS = [
     bio: 'Desarrollador de software. Me gustan los desafíos, la música y los juegos. ¡Disfruto conocer gente, compartir experiencias y motivar a las personas a hacerlo! Organizador de @IndieGameGarage y presentador en @WebConfAr. Mi juego favorito: Monkey Island.',
   },
   {
-    photo: '/images/photos/ata-sanchez.jpg',
-    name: 'Ata',
-    role: 'Vocal',
-    bio: 'Me interesa construir productos que ayuden a las personas, la comunidad de tecnología e inclusión y la accesibilidad y tecnologías open source.',
-  },
-  {
     photo: '/images/photos/lari-diaz.jpg',
     name: 'Lari',
     role: 'Colaboradora',
