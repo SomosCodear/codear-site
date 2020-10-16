@@ -71,7 +71,8 @@ export const Container = ({
         <meta property="og:url" content={metaWithDefaults.ogUrl} />
         <meta property="og:locale" content={metaWithDefaults.ogLocale} />
         <meta property="og:image" content={metaWithDefaults.ogImage} />
-        <meta name="twitter:card" content="summary" />
+        <meta property="og:type" content={metaWithDefaults.ogType} />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metaWithDefaults.twitterTitle} />
         <meta name="twitter:description" content={metaWithDefaults.twitterDescription} />
         <meta name="twitter:site" content={metaWithDefaults.twitterSite} />
