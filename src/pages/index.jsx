@@ -265,8 +265,8 @@ const LandingContent = styled.main`
   }
 `;
 
-const Hacktoberfest = styled.a`
-  display: block;
+const JumboBanner = styled.a`
+  display: none;
   margin: 2rem 0;
   text-decoration: none;
 
@@ -297,7 +297,7 @@ const Index = () => {
   useLilac();
 
   return [
-    <Hacktoberfest href="https://hack.codear.org">
+    <JumboBanner href="https://hack.codear.org">
       <span>Sumate al Hacktoberfest con CoDeAr</span>
       <img
         srcSet="/images/hacktoberfest/large.png 2048w,
@@ -308,7 +308,7 @@ const Index = () => {
                2048px"
         alt="Sumate a Hacktoberfest entrando a hack.codear.org"
       />
-    </Hacktoberfest>,
+    </JumboBanner>,
     <LandingContent>
       <CalendarContainer>
         <Calendar name="próximos eventos" />
