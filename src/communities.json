@@ -152,7 +152,11 @@
       },
       {
         "type": "discord",
-        "handler": "q2SkxjK"
+        "handler": "frontendcafe"
+      },
+      {
+        "type": "web",
+        "handler": "https://frontend.cafe"
       }
     ],
     "iconFormat": "jpg"
