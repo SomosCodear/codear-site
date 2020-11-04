@@ -1,0 +1,35 @@
+{
+  "printWidth": 70,
+  "semi": true,
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": "./**/*.{js,jsx}",
+      "options": {
+        "parser": "babel",
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "src/**/*.{scss,css}",
+      "options": {
+        "parser": "scss",
+        "singleQuote": false,
+        "semi": true
+      }
+    },
+    {
+      "files": "./**/*.json",
+      "options": {
+        "parser": "json"
+      }
+    },
+    {
+      "files": ".prettierrc",
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
+}
