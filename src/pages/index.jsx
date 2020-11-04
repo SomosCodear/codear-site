@@ -7,7 +7,7 @@ import { useLilac } from '../hooks';
 import { Calendar } from '../components/Calendar';
 import { Carousel } from '../components/Carousel';
 import communities from '../communities.json';
-import projects from '../projects.json';
+import projects from '../projects';
 
 const CommunitiesSection = styled.section`
   display: flex;
@@ -207,8 +207,8 @@ const UsSection = styled.section`
     grid-template-rows: min-content 1fr;
     grid-gap: 0 7rem;
     grid-template-areas:
-      "   title    photos"
-      "description photos";
+      '   title    photos'
+      'description photos';
     margin: 4rem 0;
 
     h1 {
@@ -251,10 +251,10 @@ const LandingContent = styled.main`
     display: grid;
     grid-template-columns: 1fr 53rem 27rem 1fr;
     grid-template-areas:
-      "     .       calendar    calendar        .     "
-      "     .       projects    projects        .     "
-      "communities communities communities communities"
-      "     .          us          us           .     ";
+      '     .       calendar    calendar        .     '
+      '     .       projects    projects        .     '
+      'communities communities communities communities'
+      '     .          us          us           .     ';
     ${CommunitiesSection} {
       grid-area: communities;
     }
@@ -316,37 +316,45 @@ const Index = () => {
       <ProjectsSection>
         <h1>proyectos</h1>
         <ProjectsCarousel>
-          {projects.map(({
-            id, name, brandImage, description, cta,
-          }) => (
-            <ProjectContainer key={id}>
-              <a href={cta.href} rel="noopener noreferrer" target="_blank">
-                <img
-                  src={`/images/brand/${brandImage}`}
-                  alt={`Logo de ${name}`}
-                />
-              </a>
-              <p>{description}</p>
-              <lilac-button
-                href={cta.href}
-                target="_blank"
-                color="secondary"
-                inverted
-              >
-                {cta.title}
-              </lilac-button>
-            </ProjectContainer>
-          ))}
+          {projects.map(
+            ({ id, name, brandImage, description, cta }) => (
+              <ProjectContainer key={id}>
+                <a
+                  href={cta.href}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <img
+                    src={`/images/brand/${brandImage}`}
+                    alt={`Logo de ${name}`}
+                  />
+                </a>
+                <p>{description}</p>
+                <lilac-button
+                  href={cta.href}
+                  target="_blank"
+                  color="secondary"
+                  inverted
+                >
+                  {cta.title}
+                </lilac-button>
+              </ProjectContainer>
+            )
+          )}
         </ProjectsCarousel>
       </ProjectsSection>
       <CommunitiesSection>
         <h1>
-          <Link href={ROUTES.COMMUNITIES.page} as={ROUTES.COMMUNITIES.path}>
+          <Link
+            href={ROUTES.COMMUNITIES.page}
+            as={ROUTES.COMMUNITIES.path}
+          >
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>comunidades</a>
           </Link>
           <p>
-            Descubrí los programas y servicios que ofrecemos para tu comunidad.
+            Descubrí los programas y servicios que ofrecemos para tu
+            comunidad.
           </p>
         </h1>
         <CommunitiesBanner>
