@@ -7,7 +7,7 @@ import { useLilac } from '../hooks';
 import { Calendar } from '../components/Calendar';
 import { Carousel } from '../components/Carousel';
 import communities from '../communities.json';
-import projects from '../projects';
+import projects from '../projects.json';
 
 const CommunitiesSection = styled.section`
   display: flex;
@@ -317,7 +317,9 @@ const Index = () => {
         <h1>proyectos</h1>
         <ProjectsCarousel>
           {projects.map(
-            ({ id, name, brandImage, description, cta }) => (
+            ({
+              id, name, brandImage, description, cta,
+            }) => (
               <ProjectContainer key={id}>
                 <a
                   href={cta.href}
@@ -339,7 +341,7 @@ const Index = () => {
                   {cta.title}
                 </lilac-button>
               </ProjectContainer>
-            )
+            ),
           )}
         </ProjectsCarousel>
       </ProjectsSection>
