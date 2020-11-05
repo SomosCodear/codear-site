@@ -1,24 +1,9 @@
 {
-  "printWidth": 70,
+  "printWidth": 90,
   "semi": true,
-  "trailingComma": "es5",
+  "trailingComma": "all",
   "singleQuote": true,
   "overrides": [
-    {
-      "files": "./**/*.{js,jsx}",
-      "options": {
-        "parser": "babel",
-        "singleQuote": false
-      }
-    },
-    {
-      "files": "src/**/*.{scss,css}",
-      "options": {
-        "parser": "scss",
-        "singleQuote": false,
-        "semi": true
-      }
-    },
     {
       "files": "./**/*.json",
       "options": {
