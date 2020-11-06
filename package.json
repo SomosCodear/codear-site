@@ -43,10 +43,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged prevented an empty git commit."
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": "eslint --cache --fix"
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ]
   }
 }
