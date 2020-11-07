@@ -4,6 +4,10 @@
   "alias": ["codear.org"],
   "redirects": [
     {
+      "source": "/honduras",
+      "destination": "https://donaronline.org/codear-comunidad-de-desarrolladores-de-argentina/ayudemos-a-honduras"
+    },
+    {
       "source": "/hacktoberfest",
       "destination": "https://www.youtube.com/watch?v=lsgIXVhnLuQ"
     },
