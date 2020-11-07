@@ -43,7 +43,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged prevented an empty git commit."
+      "pre-commit": "lint-staged prevented an empty git commit"
     }
   },
   "lint-staged": {
