@@ -13,9 +13,7 @@ const Text = styled.span`
   border: 0;
 `;
 
-export const SROnlyText = ({ children }) => (
-  <Text>{children}</Text>
-);
+export const SROnlyText = ({ children }) => <Text>{children}</Text>;
 
 SROnlyText.propTypes = {
   children: PropTypes.node.isRequired,

@@ -1,7 +1,5 @@
 import axios from 'axios';
-import React, {
-  useState, useCallback, useMemo, useEffect,
-} from 'react';
+import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import useSWR from 'swr';
@@ -117,10 +115,7 @@ export const Calendar = ({ name }) => {
   const [currentYear, setCurrentYear] = useState(today.getFullYear());
 
   // +1 to the month because it's 0-based while the API is 1-based
-  const { data: events } = useSWR(
-    [currentMonth + 1, currentYear],
-    eventsFetcher,
-  );
+  const { data: events } = useSWR([currentMonth + 1, currentYear], eventsFetcher);
 
   const daysInMonth = useMemo(() => {
     const lastDay = new Date(currentYear, currentMonth + 1, 0);
@@ -128,20 +123,20 @@ export const Calendar = ({ name }) => {
     return Array.from(Array(numberOfDays), (_, index) => index + 1);
   }, [currentYear, currentMonth]);
 
-  const hasNoEventsForMonth = useMemo(
-    () => events != null && events.length === 0,
-    [events],
-  );
+  const hasNoEventsForMonth = useMemo(() => events != null && events.length === 0, [
+    events,
+  ]);
 
   const getEventsForDay = useCallback(
-    (day) => (events || []).filter(({ date }) => {
-      const eventDate = new Date(date);
-      return (
-        eventDate.getFullYear() === currentYear
-          && eventDate.getMonth() === currentMonth
-          && eventDate.getDate() === day
-      );
-    }),
+    (day) =>
+      (events || []).filter(({ date }) => {
+        const eventDate = new Date(date);
+        return (
+          eventDate.getFullYear() === currentYear &&
+          eventDate.getMonth() === currentMonth &&
+          eventDate.getDate() === day
+        );
+      }),
     [currentMonth, currentYear, events],
   );
 
@@ -200,9 +195,9 @@ export const Calendar = ({ name }) => {
             calendarViewMode={calendarViewMode}
             events={getEventsForDay(currentDay)}
             isToday={
-              highlightCurrentDay
-              && currentMonth === today.getMonth()
-              && currentDay === today.getDate()
+              highlightCurrentDay &&
+              currentMonth === today.getMonth() &&
+              currentDay === today.getDate()
             }
           />
         ))}
@@ -218,22 +213,22 @@ export const Calendar = ({ name }) => {
       </Section>
       <ButtonsCalendarContainer>
         {!calendarViewMode && (
-        <lilac-button
-          inverted
-          color="secondary"
-          onClick={() => setCalendarViewMode(true)}
-        >
-          Ver como grilla
-        </lilac-button>
+          <lilac-button
+            inverted
+            color="secondary"
+            onClick={() => setCalendarViewMode(true)}
+          >
+            Ver como grilla
+          </lilac-button>
         )}
         {calendarViewMode && (
-        <lilac-button
-          inverted
-          color="secondary"
-          onClick={() => setCalendarViewMode(false)}
-        >
-          Ver como calendario
-        </lilac-button>
+          <lilac-button
+            inverted
+            color="secondary"
+            onClick={() => setCalendarViewMode(false)}
+          >
+            Ver como calendario
+          </lilac-button>
         )}
       </ButtonsCalendarContainer>
     </>

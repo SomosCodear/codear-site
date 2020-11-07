@@ -316,48 +316,26 @@ const Index = () => {
       <ProjectsSection>
         <h1>proyectos</h1>
         <ProjectsCarousel>
-          {projects.map(
-            ({
-              id, name, brandImage, description, cta,
-            }) => (
-              <ProjectContainer key={id}>
-                <a
-                  href={cta.href}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <img
-                    src={`/images/brand/${brandImage}`}
-                    alt={`Logo de ${name}`}
-                  />
-                </a>
-                <p>{description}</p>
-                <lilac-button
-                  href={cta.href}
-                  target="_blank"
-                  color="secondary"
-                  inverted
-                >
-                  {cta.title}
-                </lilac-button>
-              </ProjectContainer>
-            ),
-          )}
+          {projects.map(({ id, name, brandImage, description, cta }) => (
+            <ProjectContainer key={id}>
+              <a href={cta.href} rel="noopener noreferrer" target="_blank">
+                <img src={`/images/brand/${brandImage}`} alt={`Logo de ${name}`} />
+              </a>
+              <p>{description}</p>
+              <lilac-button href={cta.href} target="_blank" color="secondary" inverted>
+                {cta.title}
+              </lilac-button>
+            </ProjectContainer>
+          ))}
         </ProjectsCarousel>
       </ProjectsSection>
       <CommunitiesSection>
         <h1>
-          <Link
-            href={ROUTES.COMMUNITIES.page}
-            as={ROUTES.COMMUNITIES.path}
-          >
+          <Link href={ROUTES.COMMUNITIES.page} as={ROUTES.COMMUNITIES.path}>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>comunidades</a>
           </Link>
-          <p>
-            Descubrí los programas y servicios que ofrecemos para tu
-            comunidad.
-          </p>
+          <p>Descubrí los programas y servicios que ofrecemos para tu comunidad.</p>
         </h1>
         <CommunitiesBanner>
           {communities.map(({ id, name, iconFormat = 'png' }) => (
@@ -410,9 +388,9 @@ const Index = () => {
           </Link>
         </PhotosContainer>
         <p>
-          Somos una comunidad dedicada a la formación y difusión de
-          conocimientos de tecnología, aplicando la disciplina como un
-          instrumento transformador y potenciador para la sociedad.
+          Somos una comunidad dedicada a la formación y difusión de conocimientos de
+          tecnología, aplicando la disciplina como un instrumento transformador y
+          potenciador para la sociedad.
         </p>
       </UsSection>
     </LandingContent>,

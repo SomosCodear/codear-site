@@ -83,8 +83,9 @@ const dayContainerCalendar = css`
   padding: 0.625rem;
   border: 0.0625rem solid var(--color-secondary);
   border-radius: 0.625rem;
-  ${({ empty }) => empty
-    && css`
+  ${({ empty }) =>
+    empty &&
+    css`
       display: block;
     `}
   &:hover {
@@ -96,8 +97,9 @@ const dayContainerCalendar = css`
       fill: var(--color-secondary);
     }
   }
-  ${({ today }) => today
-    && css`
+  ${({ today }) =>
+    today &&
+    css`
       background-color: var(--color-secondary);
       ${DayNumber} {
         color: var(--color-text);
@@ -117,26 +119,21 @@ const mTopCard = css`
 `;
 
 const DayContainer = styled.div`
-  ${({ empty }) => empty
-    && css`
+  ${({ empty }) =>
+    empty &&
+    css`
       display: none;
     `}
 
   ${({ calendarViewMode }) => (calendarViewMode ? mTopCard : dayContainerCalendar)}
 `;
 
-export const Day = ({
-  day, events, isToday, calendarViewMode,
-}) => {
+export const Day = ({ day, events, isToday, calendarViewMode }) => {
   const isEmpty = useMemo(() => events.length === 0, [events]);
 
   return (
     <Container calendarViewMode={calendarViewMode} aria-hidden={isEmpty}>
-      <DayContainer
-        today={isToday}
-        empty={isEmpty}
-        calendarViewMode={calendarViewMode}
-      >
+      <DayContainer today={isToday} empty={isEmpty} calendarViewMode={calendarViewMode}>
         <DayNumber calendarViewMode={calendarViewMode}>
           <SROnlyText>Eventos para el</SROnlyText>
           {formatNumber(day)}
@@ -148,9 +145,7 @@ export const Day = ({
             )} para este dia`}
           </SROnlyText>
           <lilac-icon-bullet />
-          {events.length > 3 ? (
-            <lilac-icon-plus height="16" width="16" />
-          ) : null}
+          {events.length > 3 ? <lilac-icon-plus height="16" width="16" /> : null}
         </DayNumber>
         <Events calendarViewMode={calendarViewMode} role="list">
           {events.map((event) => (

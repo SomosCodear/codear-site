@@ -24,7 +24,6 @@ const Texts = styled.div`
     line-height: 1.5rem;
   }
 
-
   @media (min-width: ${BREAKPOINTS.hd}) {
     p {
       font-size: 1.75rem;
@@ -117,51 +116,39 @@ const Member = styled.div`
   }
 `;
 
-const IntroText = 'Somos una comunidad dedicada a la formación y difusión de conocimientos de tecnología, aplicándola como un instrumento transformador y potenciador para la sociedad.';
+const IntroText =
+  'Somos una comunidad dedicada a la formación y difusión de conocimientos de tecnología, aplicándola como un instrumento transformador y potenciador para la sociedad.';
 
 const About = () => (
   <UsSection>
     <Content>
       <Texts>
-        <h1>
-          nosotros
-        </h1>
-        <p>
-          {IntroText}
-        </p>
+        <h1>nosotros</h1>
+        <p>{IntroText}</p>
       </Texts>
       <Members>
         {CORE_MEMBERS.map(({ name, photo, bio }) => (
           <Member key={name}>
             <img src={photo} alt={name} />
-            <h2>
-              {name}
-            </h2>
-            <p>
-              {bio}
-            </p>
+            <h2>{name}</h2>
+            <p>{bio}</p>
           </Member>
         ))}
       </Members>
       <Texts>
-        <h1>
-          nuestra familia extendida
-        </h1>
+        <h1>nuestra familia extendida</h1>
         <p>
-          Trabajamos en diversas iniciativas con personas que creen en nuestra causa y nuestros
-          valores, y creamos comunidad a través de alianzas con ellas y otras organizaciones.
+          Trabajamos en diversas iniciativas con personas que creen en nuestra causa y
+          nuestros valores, y creamos comunidad a través de alianzas con ellas y otras
+          organizaciones.
         </p>
       </Texts>
       <Members>
         {COLLABORATORS.map(({ name, photo, bio }) => (
           <Member key={name}>
             <img src={photo} alt={name} />
-            <h2>
-              {name}
-            </h2>
-            <p>
-              {bio}
-            </p>
+            <h2>{name}</h2>
+            <p>{bio}</p>
           </Member>
         ))}
       </Members>

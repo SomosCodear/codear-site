@@ -1,9 +1,4 @@
-import React, {
-  useState,
-  useRef,
-  useCallback,
-  useEffect,
-} from 'react';
+import React, { useState, useRef, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Swipeable } from 'react-swipeable';
@@ -59,7 +54,7 @@ export const Carousel = ({ children, className }) => {
 
         return next;
       }),
-    [children, setCurrentSlide]
+    [children, setCurrentSlide],
   );
   const previousSlide = useCallback(
     () =>
@@ -72,7 +67,7 @@ export const Carousel = ({ children, className }) => {
 
         return previous;
       }),
-    [setCurrentSlide]
+    [setCurrentSlide],
   );
   const nextSlideWithKey = useCallback(
     (event) => {
@@ -81,7 +76,7 @@ export const Carousel = ({ children, className }) => {
         nextSlide();
       }
     },
-    [nextSlide]
+    [nextSlide],
   );
   const previousSlideWithKey = useCallback(
     (event) => {
@@ -90,7 +85,7 @@ export const Carousel = ({ children, className }) => {
         previousSlide();
       }
     },
-    [previousSlide]
+    [previousSlide],
   );
 
   useEffect(() => {
@@ -105,14 +100,10 @@ export const Carousel = ({ children, className }) => {
 
     // disable tabindex on all children that are not the current
     slidesRef.current
-      .querySelectorAll(
-        '[aria-hidden="true"] lilac-button, [aria-hidden="true"] a'
-      )
+      .querySelectorAll('[aria-hidden="true"] lilac-button, [aria-hidden="true"] a')
       .forEach((elem) => elem.setAttribute('tabindex', -1));
     slidesRef.current
-      .querySelectorAll(
-        '[aria-hidden="false"] lilac-button, [aria-hidden="false"] a'
-      )
+      .querySelectorAll('[aria-hidden="false"] lilac-button, [aria-hidden="false"] a')
       .forEach((elem) => elem.removeAttribute('tabindex'));
   }, [slideWidth, currentSlide]);
 
@@ -136,15 +127,13 @@ export const Carousel = ({ children, className }) => {
       >
         {slideWidth !== null
           ? React.Children.map(children, (child, i) => (
-              <ChildContainer
-                width={slideWidth}
-                key={
-                  i /* eslint-disable-line react/no-array-index-key */
-                }
-                aria-hidden={i === currentSlide ? 'false' : 'true'}
-              >
-                {child}
-              </ChildContainer>
+            <ChildContainer
+              width={slideWidth}
+              key={i /* eslint-disable-line react/no-array-index-key */}
+              aria-hidden={i === currentSlide ? 'false' : 'true'}
+            >
+              {child}
+            </ChildContainer>
             ))
           : null}
       </SlidesContainer>
