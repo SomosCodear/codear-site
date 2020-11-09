@@ -6,7 +6,6 @@ import withGA from 'next-ga';
 import { ANALYTICS_ID } from '../data/config';
 import { Container } from '../components/Container';
 
-console.log('akjsfghasku.');
 /* eslint-disable react/prop-types, react/jsx-props-no-spreading */
 const CodearApp = ({ Component, pageProps }) => (
   <Container {...Component.layoutProps}>
