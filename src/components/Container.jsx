@@ -14,11 +14,10 @@ export const Wrapper = styled.div`
   align-items: stretch;
 
   @media (min-width: ${BREAKPOINTS.wideScreen}) {
-    background-image:
-    url(/images/backgrounds/content-left.svg),
-    url(/images/backgrounds/content-right.svg);
+    background-image: url(/images/backgrounds/content-left.svg),
+      url(/images/backgrounds/content-right.svg);
     background-repeat: no-repeat, no-repeat;
-    background-size: 35%,24%;
+    background-size: 35%, 24%;
     background-position: right -14% top, left top;
   }
 `;
@@ -47,15 +46,8 @@ export const ContentWrapper = styled.div`
   }
 `;
 
-export const Container = ({
-  children,
-  title,
-  meta,
-}) => {
-  const metaWithDefaults = useMemo(
-    () => ({ ...META, ...meta }),
-    [meta],
-  );
+export const Container = ({ children, title, meta }) => {
+  const metaWithDefaults = useMemo(() => ({ ...META, ...meta }), [meta]);
 
   return (
     <Wrapper>
@@ -77,7 +69,10 @@ export const Container = ({
         <meta name="twitter:description" content={metaWithDefaults.twitterDescription} />
         <meta name="twitter:site" content={metaWithDefaults.twitterSite} />
         <meta name="twitter:creator" content={metaWithDefaults.twitterCreator} />
-        <meta name="facebook-domain-verification" content={metaWithDefaults.facebookDomainVerification} />
+        <meta
+          name="facebook-domain-verification"
+          content={metaWithDefaults.facebookDomainVerification}
+        />
       </Head>
       <Separator />
       <Nav />

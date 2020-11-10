@@ -207,8 +207,8 @@ const UsSection = styled.section`
     grid-template-rows: min-content 1fr;
     grid-gap: 0 7rem;
     grid-template-areas:
-      "   title    photos"
-      "description photos";
+      '   title    photos'
+      'description photos';
     margin: 4rem 0;
 
     h1 {
@@ -251,10 +251,10 @@ const LandingContent = styled.main`
     display: grid;
     grid-template-columns: 1fr 53rem 27rem 1fr;
     grid-template-areas:
-      "     .       calendar    calendar        .     "
-      "     .       projects    projects        .     "
-      "communities communities communities communities"
-      "     .          us          us           .     ";
+      '     .       calendar    calendar        .     '
+      '     .       projects    projects        .     '
+      'communities communities communities communities'
+      '     .          us          us           .     ';
     ${CommunitiesSection} {
       grid-area: communities;
     }
@@ -316,23 +316,13 @@ const Index = () => {
       <ProjectsSection>
         <h1>proyectos</h1>
         <ProjectsCarousel>
-          {projects.map(({
-            id, name, brandImage, description, cta,
-          }) => (
+          {projects.map(({ id, name, brandImage, description, cta }) => (
             <ProjectContainer key={id}>
               <a href={cta.href} rel="noopener noreferrer" target="_blank">
-                <img
-                  src={`/images/brand/${brandImage}`}
-                  alt={`Logo de ${name}`}
-                />
+                <img src={`/images/brand/${brandImage}`} alt={`Logo de ${name}`} />
               </a>
               <p>{description}</p>
-              <lilac-button
-                href={cta.href}
-                target="_blank"
-                color="secondary"
-                inverted
-              >
+              <lilac-button href={cta.href} target="_blank" color="secondary" inverted>
                 {cta.title}
               </lilac-button>
             </ProjectContainer>
@@ -345,9 +335,7 @@ const Index = () => {
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>comunidades</a>
           </Link>
-          <p>
-            Descubrí los programas y servicios que ofrecemos para tu comunidad.
-          </p>
+          <p>Descubrí los programas y servicios que ofrecemos para tu comunidad.</p>
         </h1>
         <CommunitiesBanner>
           {communities.map(({ id, name, iconFormat = 'png' }) => (
@@ -400,9 +388,9 @@ const Index = () => {
           </Link>
         </PhotosContainer>
         <p>
-          Somos una comunidad dedicada a la formación y difusión de
-          conocimientos de tecnología, aplicando la disciplina como un
-          instrumento transformador y potenciador para la sociedad.
+          Somos una comunidad dedicada a la formación y difusión de conocimientos de
+          tecnología, aplicando la disciplina como un instrumento transformador y
+          potenciador para la sociedad.
         </p>
       </UsSection>
     </LandingContent>,

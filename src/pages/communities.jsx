@@ -30,7 +30,8 @@ const Content = styled.div`
     color: var(--color-primary-lightest);
   }
 
-  p, li {
+  p,
+  li {
     font-size: 1.25rem;
     font-family: Source Sans Pro, sans-serif;
     line-height: 1.5;
@@ -81,7 +82,8 @@ const ProgramBanner = styled.div`
   background-position: left center;
   background-size: cover;
 
-  h2, p {
+  h2,
+  p {
     color: var(--color-text);
   }
 
@@ -116,7 +118,7 @@ const ProgramBanner = styled.div`
       align-self: flex-end;
     }
   }
-  `;
+`;
 
 const List = styled.ol`
   display: flex;
@@ -182,7 +184,8 @@ const LegalNotice = styled.section`
   margin: 2rem 0;
   text-align: justify;
 
-  h2, p {
+  h2,
+  p {
     font-size: 0.75rem;
     margin: 0;
     color: var(--color-primary-lightest);
@@ -190,7 +193,8 @@ const LegalNotice = styled.section`
 `;
 
 const SocialMediaIcon = styled.img`
-  filter: invert(58%) sepia(35%) saturate(857%) hue-rotate(192deg) brightness(59%) contrast(150%);
+  filter: invert(58%) sepia(35%) saturate(857%) hue-rotate(192deg) brightness(59%)
+    contrast(150%);
   margin-top: 1rem;
 
   width: 1.5rem;
@@ -198,7 +202,8 @@ const SocialMediaIcon = styled.img`
   padding: 1rem;
 
   a:hover & {
-    filter: invert(58%) sepia(35%) saturate(857%) hue-rotate(270deg) brightness(99%) contrast(150%);
+    filter: invert(58%) sepia(35%) saturate(857%) hue-rotate(270deg) brightness(99%)
+      contrast(150%);
   }
 
   @media (min-width: ${BREAKPOINTS.hd}) {
@@ -246,20 +251,17 @@ const CommunityLinks = styled.nav`
   }
 `;
 
-const IntroText = 'Una parte esencial de nuestra actividad como organización es el trabajo en conjunto con otras comunidades de habla hispana, dedicadas a la tecnología y otras disciplinas afines. Como parte de nuestros esfuerzos por reducir la barrera de ingreso a la industria tecnológica y de fomentar la difusión abierta del conocimiento, brindamos difusión, asesoramiento y apoyo técnico en la realización de diversas actividades.';
+const IntroText =
+  'Una parte esencial de nuestra actividad como organización es el trabajo en conjunto con otras comunidades de habla hispana, dedicadas a la tecnología y otras disciplinas afines. Como parte de nuestros esfuerzos por reducir la barrera de ingreso a la industria tecnológica y de fomentar la difusión abierta del conocimiento, brindamos difusión, asesoramiento y apoyo técnico en la realización de diversas actividades.';
 
 const Communities = () => {
   useLilac();
 
   return [
     <Content key="first-block">
-      <h1>
-        comunidades
-      </h1>
+      <h1>comunidades</h1>
       <Intro>
-        <p>
-          {IntroText}
-        </p>
+        <p>{IntroText}</p>
       </Intro>
     </Content>,
     <ProgramBanner key="second-block">
@@ -268,28 +270,27 @@ const Communities = () => {
         <p>
           Abrimos nuestra plataforma digital basada en G Suite para Organizaciones sin
           Fines de Lucro para que tu comunidad pueda disponer de una infraestructura
-          tecnológica adecuada para la realización de sus actividades,
-          ya sean on-line u off-line.
+          tecnológica adecuada para la realización de sus actividades, ya sean on-line u
+          off-line.
         </p>
-        <lilac-button
-          href="/submissions/tcsp"
-          target="_blank"
-        >
+        <lilac-button href="/submissions/tcsp" target="_blank">
           Sumate al programa
         </lilac-button>
       </Content>
     </ProgramBanner>,
     <Content key="third-block">
       <List>
-        {services.map(({
-          id, title, description, icon, alt, moreInfo,
-        }) => (
+        {services.map(({ id, title, description, icon, alt, moreInfo }) => (
           <li key={`service_${id}`}>
             <ServiceIcon src={`/icons/${icon}.svg`} alt={`Ícono de ${alt}`} />
             <ListDescription>
               <h4>{title}</h4>
               <p>{description}</p>
-              {moreInfo && (<a target="_blank" rel="noopener noreferrer" href={moreInfo.href}>{moreInfo.label}</a>)}
+              {moreInfo && (
+                <a target="_blank" rel="noopener noreferrer" href={moreInfo.href}>
+                  {moreInfo.label}
+                </a>
+              )}
             </ListDescription>
           </li>
         ))}
@@ -297,24 +298,26 @@ const Communities = () => {
       <LegalNotice>
         <h2>TÉRMINOS Y CONDICIONES DE USO</h2>
         <p>
-          El uso de estos servicios implica la aceptación de los términos y condiciones de G Suite
-          para Organizaciones sin Fines de Lucro. Una vez aprobada la solicitud de adhesión al
-          Programa de Apoyo a Comunidades de Tecnología, la persona que actúe en representación
-          de la comunidad beneficiaria recibirá las credenciales de acceso correspondientes,
-          con una cuenta de G Suite bajo el dominio @comunidades.codear.org.
+          El uso de estos servicios implica la aceptación de los términos y condiciones de
+          G Suite para Organizaciones sin Fines de Lucro. Una vez aprobada la solicitud de
+          adhesión al Programa de Apoyo a Comunidades de Tecnología, la persona que actúe
+          en representación de la comunidad beneficiaria recibirá las credenciales de
+          acceso correspondientes, con una cuenta de G Suite bajo el dominio
+          @comunidades.codear.org.
           <strong> RESTRICCIONES: </strong>
-          El uso de esta cuenta queda exclusivamente restringido
-          para las actividades y comunicaciones de la comunidad beneficiaria, no pudiendo extender
-          su propósito a otros fines que no sean los declarados en la solicitud de adhesión.
+          El uso de esta cuenta queda exclusivamente restringido para las actividades y
+          comunicaciones de la comunidad beneficiaria, no pudiendo extender su propósito a
+          otros fines que no sean los declarados en la solicitud de adhesión.
           <strong> ACEPTACIÓN, DENEGACIÓN Y REVOCACIÓN DE ACCESO: </strong>
-          La Comunidad de Desarrolladores de Argentina se reserva el derecho de aceptar o rechazar
-          las solicitudes conforme a una evaluación caso por caso, así como también de suspender o
-          revocar el acceso de manera permanente a su plataforma de servicios digitales en el caso
-          de detectar comportamientos que no se correspondan con el uso previamente declarado en la
-          solicitud de adhesión.
+          La Comunidad de Desarrolladores de Argentina se reserva el derecho de aceptar o
+          rechazar las solicitudes conforme a una evaluación caso por caso, así como
+          también de suspender o revocar el acceso de manera permanente a su plataforma de
+          servicios digitales en el caso de detectar comportamientos que no se
+          correspondan con el uso previamente declarado en la solicitud de adhesión.
           <strong> CÓDIGO DE CONDUCTA: </strong>
-          La adhesión al Programa de Apoyo a Comunidades de Tecnología implica la aceptación del
-          Código de Conducta de la Comunidad de Desarrolladores de Argentina.
+          La adhesión al Programa de Apoyo a Comunidades de Tecnología implica la
+          aceptación del Código de Conducta de la Comunidad de Desarrolladores de
+          Argentina.
         </p>
       </LegalNotice>
     </Content>,
@@ -322,37 +325,59 @@ const Communities = () => {
       <Content>
         <h2>Asamblea de Comunidades</h2>
         <p>
-          Un espacio digital donde representantes de todas las comunidades de tecnología pueden
-          reunirse a intercambiar ideas y coordinar esfuerzos en conjunto.
+          Un espacio digital donde representantes de todas las comunidades de tecnología
+          pueden reunirse a intercambiar ideas y coordinar esfuerzos en conjunto.
         </p>
-        <lilac-button
-          href="/submissions/casm"
-          target="_blank"
-        >
+        <lilac-button href="/submissions/casm" target="_blank">
           Unite a la Asamblea
         </lilac-button>
       </Content>
     </ProgramBanner>,
     <Content key="fifth-block">
       <List>
-        {communities.map(({
-          id, name, description, links, iconFormat = 'png',
-        }) => (
+        {communities.map(({ id, name, description, links, iconFormat = 'png' }) => (
           <li key={`community_${id}`}>
-            <a href={`${URLS[links[0].type]}${links[0].handler}`} target="_blank" rel="noopener noreferrer" title={`Visitá la web de ${name}`}>
-              <CommunityLogo src={`/images/community-logos/${id}.${iconFormat}`} alt={`Logo de ${name}`} />
+            <a
+              href={`${URLS[links[0].type]}${links[0].handler}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={`Visitá la web de ${name}`}
+            >
+              <CommunityLogo
+                src={`/images/community-logos/${id}.${iconFormat}`}
+                alt={`Logo de ${name}`}
+              />
             </a>
             <ListDescription>
               <h4>
-                <a href={`${URLS[links[0].type]}${links[0].handler}`} target="_blank" rel="noopener noreferrer" title={`Visitá la web de ${name}`}>
+                <a
+                  href={`${URLS[links[0].type]}${links[0].handler}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`Visitá la web de ${name}`}
+                >
                   {name}
                 </a>
               </h4>
               <CommunityDescription>{description}</CommunityDescription>
               <CommunityLinks>
                 {links.map(({ type, handler }) => (
-                  <a key={`${id}_${type}_link`} href={`${URLS[type]}${handler}`} target="_blank" rel="noopener noreferrer" title={`Seguí a esta comunidad en ${type === 'web' ? 'su web oficial' : type[0].toUpperCase() + type.substr(1)}`}>
-                    <SocialMediaIcon key={`${id}_${type}_icon`} src={`/images/social-media-logos/logo-${type}.svg`} alt={`Ícono de ${type}`} />
+                  <a
+                    key={`${id}_${type}_link`}
+                    href={`${URLS[type]}${handler}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={`Seguí a esta comunidad en ${
+                      type === 'web'
+                        ? 'su web oficial'
+                        : type[0].toUpperCase() + type.substr(1)
+                    }`}
+                  >
+                    <SocialMediaIcon
+                      key={`${id}_${type}_icon`}
+                      src={`/images/social-media-logos/logo-${type}.svg`}
+                      alt={`Ícono de ${type}`}
+                    />
                   </a>
                 ))}
               </CommunityLinks>
@@ -363,16 +388,17 @@ const Communities = () => {
       <LegalNotice>
         <h2>TÉRMINOS Y CONDICIONES DE PARTICIPACIÓN</h2>
         <p>
-          La participación en la Asamblea de Comunidades implica la aceptación los términos y
-          condiciones de Slack para Organizaciones sin Fines de Lucro.
+          La participación en la Asamblea de Comunidades implica la aceptación los
+          términos y condiciones de Slack para Organizaciones sin Fines de Lucro.
           <strong> CÓDIGO DE CONDUCTA: </strong>
-          La adhesión a la Asamblea de Comunidades implica la aceptación del
-          Código de Conducta de la Comunidad de Desarrolladores de Argentina.
+          La adhesión a la Asamblea de Comunidades implica la aceptación del Código de
+          Conducta de la Comunidad de Desarrolladores de Argentina.
           <strong> ACEPTACIÓN, DENEGACIÓN Y REVOCACIÓN DE ACCESO: </strong>
-          La Comunidad de Desarrolladores de Argentina se reserva el derecho de aceptar o rechazar
-          las solicitudes conforme a una evaluación caso por caso, así como también de suspender o
-          revocar el acceso de manera permanente a la Asamblea de Comunidades en el caso
-          de detectar comportamientos que no se correspondan con el Código de Conducta.
+          La Comunidad de Desarrolladores de Argentina se reserva el derecho de aceptar o
+          rechazar las solicitudes conforme a una evaluación caso por caso, así como
+          también de suspender o revocar el acceso de manera permanente a la Asamblea de
+          Comunidades en el caso de detectar comportamientos que no se correspondan con el
+          Código de Conducta.
         </p>
       </LegalNotice>
     </Content>,

@@ -13,8 +13,9 @@ const hide = css`
 const containerEvent = css`
   margin-top: 0;
   max-width: 100%;
-  ${({ inline }) => inline
-    && css`
+  ${({ inline }) =>
+    inline &&
+    css`
       display: inline-block;
       margin-bottom: -4px;
     `}
@@ -139,15 +140,7 @@ const SR_DAY_NAMES = [
   'sábado',
 ];
 
-export const Event = ({
-  date,
-  name,
-  street,
-  city,
-  country,
-  link,
-  calendarViewMode,
-}) => {
+export const Event = ({ date, name, street, city, country, link, calendarViewMode }) => {
   const fdate = new Date(date);
   const edge = useEdgeHTML();
 

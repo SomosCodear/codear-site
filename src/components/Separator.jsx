@@ -7,7 +7,7 @@ export const Container = styled.div`
 
   @media (min-width: ${BREAKPOINTS.hd}) {
     display: block;
-    background: linear-gradient(90deg, #350C4B, #474A7D);
+    background: linear-gradient(90deg, #350c4b, #474a7d);
     min-height: 0.75rem;
     max-width: 100%;
     overflow-x: hidden;

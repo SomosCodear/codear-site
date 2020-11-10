@@ -8,10 +8,11 @@ class CodearDocument extends Document {
     const originalRenderPage = ctx.renderPage;
 
     try {
-      ctx.renderPage = () => originalRenderPage({
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
-      });
+      ctx.renderPage = () =>
+        originalRenderPage({
+          // eslint-disable-next-line react/jsx-props-no-spreading
+          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
+        });
 
       const initialProps = await Document.getInitialProps(ctx);
       return {
@@ -40,11 +41,31 @@ class CodearDocument extends Document {
           <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png" />
           <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png" />
           <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png" />
-          <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png" />
-          <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png" />
-          <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png" />
-          <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png" />
-          <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png" />
+          <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="/icons/apple-icon-114x114.png"
+          />
+          <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="/icons/apple-icon-120x120.png"
+          />
+          <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="/icons/apple-icon-144x144.png"
+          />
+          <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="/icons/apple-icon-152x152.png"
+          />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/icons/apple-icon-180x180.png"
+          />
           <link
             href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Source+Sans+Pro:400,700&display=swap"
             rel="stylesheet"

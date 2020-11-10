@@ -30,8 +30,9 @@ const List = styled.ol`
 const ListItem = styled.li`
   margin-bottom: 20px;
 
-  ${({ currentMonth }) => currentMonth
-    && css`
+  ${({ currentMonth }) =>
+    currentMonth &&
+    css`
       font-family: Source Sans Pro, sans-serif;
       font-size: 1.5rem;
       color: var(--color-primary-light);
