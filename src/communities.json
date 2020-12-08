@@ -173,25 +173,6 @@
     ]
   },
   {
-    "id": "devc-cordoba",
-    "name": "DevC Córdoba",
-    "description": "Charlas mensuales sobre distintas temáticas del mundo Tech. Becas para cursos exclusivos y eventos especiales de Facebook.",
-    "links": [
-      {
-        "type": "twitter",
-        "handler": "devccordoba"
-      },
-      {
-        "type": "instagram",
-        "handler": "devccordoba"
-      },
-      {
-        "type": "facebook",
-        "handler": "groups/DevCCordoba"
-      }
-    ]
-  },
-  {
     "id": "vue-cordoba",
     "name": "Vue Córdoba",
     "description": "Espacio de encuentros, charlas y networking entorno a #vuejs en #Córdoba.",
