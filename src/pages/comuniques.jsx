@@ -31,7 +31,8 @@ const Content = styled.div`
     color: var(--color-primary-lightest);
   }
 
-  p, li {
+  p,
+  li {
     font-size: 1.25rem;
     font-family: Source Sans Pro, sans-serif;
     line-height: 1.5;
@@ -67,7 +68,11 @@ const Components = {
   // eslint-disable-next-line react/prop-types
   subtitle: ({ children, key }) => <h3 key={key}>{children}</h3>,
   // eslint-disable-next-line react/prop-types
-  emphasis: ({ children, key }) => <p key={key}><strong>{children}</strong></p>,
+  emphasis: ({ children, key }) => (
+    <p key={key}>
+      <strong>{children}</strong>
+    </p>
+  ),
   // eslint-disable-next-line react/prop-types
   emphasisAccent: ({ children, key }) => (
     <p key={key}>
@@ -80,22 +85,19 @@ const Components = {
 
 const Comuniques = () => (
   <Content>
-    <h1>
-      comunicaciones
-    </h1>
-    {comuniques.map(({
-      slug, date, title, content,
-    }) => (
+    <h1>comunicaciones</h1>
+    {comuniques.map(({ slug, date, title, content }) => (
       <article id={slug} key={slug}>
         <PlaceAndDate>
           Córdoba,
-          {' '}
           {date}
         </PlaceAndDate>
         <h2>{title}</h2>
-        {content.map((block, index) => (block.type
-          ? Components[block.type]({ children: block.content, key: index })
-          : Components.p({ children: block, key: index })))}
+        {content.map((block, index) =>
+          block.type
+            ? Components[block.type]({ children: block.content, key: index })
+            : Components.p({ children: block, key: index }),
+        )}
       </article>
     ))}
   </Content>

@@ -28,7 +28,8 @@ const Content = styled.div`
     color: var(--color-primary-lightest);
   }
 
-  p, li {
+  p,
+  li {
     font-size: 1.25rem;
     font-family: Source Sans Pro, sans-serif;
     line-height: 1.5;
@@ -75,7 +76,8 @@ const ProgramBanner = styled.div`
   background-position: left center;
   background-size: cover;
 
-  h2, p {
+  h2,
+  p {
     color: var(--color-text);
   }
 
@@ -110,7 +112,7 @@ const ProgramBanner = styled.div`
       align-self: flex-end;
     }
   }
-  `;
+`;
 
 const Webinar = styled.article`
   display: flex;
@@ -206,7 +208,8 @@ const CenteredTitle = styled.h1`
   text-align: center;
 `;
 
-const introText = 'Como parte de las actividades de la Comunidad de Desarrolladores de Argentina, ofrecemos encuentros y webinars sobre diversas temáticas que afectan a la industria.';
+const introText =
+  'Como parte de las actividades de la Comunidad de Desarrolladores de Argentina, ofrecemos encuentros y webinars sobre diversas temáticas que afectan a la industria.';
 
 const upcomingWebinars = webinars.filter(
   (webinar) => new Date().valueOf() < new Date(webinar.dateJson).valueOf(),
@@ -218,9 +221,7 @@ const Knowledge = () => {
   return (
     <>
       <Content>
-        <h1>
-          conocimiento
-        </h1>
+        <h1>conocimiento</h1>
         <p>{introText}</p>
       </Content>
       <ProgramBanner>
@@ -239,51 +240,48 @@ const Knowledge = () => {
       </Content>
       <Content>
         {upcomingWebinars.length > 0 && <CenteredTitle>próximamente</CenteredTitle>}
-        {upcomingWebinars.map(({
-          dateText, dateJson, name, description, links, image,
-        }) => (
-          <Webinar key={dateJson}>
-            <a href={links.live || links.recording || links.signup}>
-              <img src={`/images/webinars/${image}`} alt={`Imagen del evento: ${name}`} />
-            </a>
-            <h3>{name}</h3>
-            <DateTime>{dateText}</DateTime>
-            <Description>{description}</Description>
-            <Links>
-              {new Date().valueOf() < Date.parse(dateJson) && (
-              <lilac-button
-                target="_blank"
-                color="secondary"
-                href={links.signup}
-              >
-                Inscribite al evento
-              </lilac-button>
-              )}
-            </Links>
-          </Webinar>
-        ))}
+        {upcomingWebinars.map(
+          ({ dateText, dateJson, name, description, links, image }) => (
+            <Webinar key={dateJson}>
+              <a href={links.live || links.recording || links.signup}>
+                <img
+                  src={`/images/webinars/${image}`}
+                  alt={`Imagen del evento: ${name}`}
+                />
+              </a>
+              <h3>{name}</h3>
+              <DateTime>{dateText}</DateTime>
+              <Description>{description}</Description>
+              <Links>
+                {new Date().valueOf() < Date.parse(dateJson) && (
+                  <lilac-button target="_blank" color="secondary" href={links.signup}>
+                    Inscribite al evento
+                  </lilac-button>
+                )}
+              </Links>
+            </Webinar>
+          ),
+        )}
       </Content>
       <ProgramBanner>
         <Content>
           <h2>edupunto.</h2>
           <p>
-            Abrimos este espacio para proponer herramientas, plataformas
-            tecnológicas, conocimiento y experiencias que creemos que pueden sumar a la
-            transformación digital de la educación.
+            Abrimos este espacio para proponer herramientas, plataformas tecnológicas,
+            conocimiento y experiencias que creemos que pueden sumar a la transformación
+            digital de la educación.
           </p>
-          <lilac-button
-            href="https://edu.codear.org"
-            target="_blank"
-          >
+          <lilac-button href="https://edu.codear.org" target="_blank">
             Visitá edupunto
           </lilac-button>
         </Content>
       </ProgramBanner>
       <Content>
         <p>
-          Esta iniciativa surge a partir de las conversaciones que tuvieron lugar en el primer
-          #EncuentroCodear de 2020, donde nos reunimos con docentes y educadores de diversos
-          puntos del país para discutir dónde nos encontramos hoy en día y hacia dónde podemos ir.
+          Esta iniciativa surge a partir de las conversaciones que tuvieron lugar en el
+          primer #EncuentroCodear de 2020, donde nos reunimos con docentes y educadores de
+          diversos puntos del país para discutir dónde nos encontramos hoy en día y hacia
+          dónde podemos ir.
         </p>
         <p>
           Publicaremos contenido frecuentemente para acompañar este proceso repentino de
@@ -298,11 +296,13 @@ const Knowledge = () => {
 Knowledge.layoutProps = {
   title: 'Conocimiento',
   meta: {
-    ogTitle: 'Capacitaciones para la industria tecnológica y la educación digital | CoDeAr',
+    ogTitle:
+      'Capacitaciones para la industria tecnológica y la educación digital | CoDeAr',
     ogDescription: introText,
     description: introText,
     ogUrl: 'https://codear.org/conocimiento',
-    twitterTitle: 'Capacitaciones para la industria tecnológica y la educación digital | CoDeAr',
+    twitterTitle:
+      'Capacitaciones para la industria tecnológica y la educación digital | CoDeAr',
     twitterDescription: introText,
   },
 };

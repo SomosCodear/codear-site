@@ -83,11 +83,12 @@ const SocialMediaContainer = styled.div`
     height: 1.5rem;
   }
 
-  [href*="pscp.tv"] img, [href*="t.me"] img {
+  [href*='pscp.tv'] img,
+  [href*='t.me'] img {
     filter: invert(1);
   }
 
-  [href*="cafecito"] img {
+  [href*='cafecito'] img {
     width: auto;
   }
 
@@ -109,35 +110,99 @@ export const Footer = () => (
       <br />
       Comunidad de Desarrolladores de Argentina
       <DonationContainer>
-        <a href="https://codear.org/donar" target="_blank" rel="noopener noreferrer">#TuApoyoSuma: Doná hoy</a>
+        <a href="https://codear.org/donar" target="_blank" rel="noopener noreferrer">
+          #TuApoyoSuma: Doná hoy
+        </a>
       </DonationContainer>
       <SocialMediaContainer>
-        <a href="https://fb.me/somoscodear/" target="_blank" rel="noopener noreferrer" title="Seguinos en Facebook">
-          <img src="/images/social-media-logos/logo-facebook.svg" alt="Logo de Facebook" />
+        <a
+          href="https://fb.me/somoscodear/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Seguinos en Facebook"
+        >
+          <img
+            src="/images/social-media-logos/logo-facebook.svg"
+            alt="Logo de Facebook"
+          />
         </a>
-        <a href="https://instagram.com/somoscodear/" target="_blank" rel="noopener noreferrer" title="Seguinos en Instagram">
-          <img src="/images/social-media-logos/logo-instagram.svg" alt="Logo de Instagram" />
+        <a
+          href="https://instagram.com/somoscodear/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Seguinos en Instagram"
+        >
+          <img
+            src="/images/social-media-logos/logo-instagram.svg"
+            alt="Logo de Instagram"
+          />
         </a>
-        <a href="https://twitter.com/SomosCodear" target="_blank" rel="noopener noreferrer" title="Seguinos en Twitter">
+        <a
+          href="https://twitter.com/SomosCodear"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Seguinos en Twitter"
+        >
           <img src="/images/social-media-logos/logo-twitter.svg" alt="Logo de Twitter" />
         </a>
-        <a href="https://pscp.tv/SomosCodear" target="_blank" rel="noopener noreferrer" title="Seguinos en Periscope">
-          <img src="/images/social-media-logos/logo-periscope.svg" alt="Logo de Periscope" />
+        <a
+          href="https://pscp.tv/SomosCodear"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Seguinos en Periscope"
+        >
+          <img
+            src="/images/social-media-logos/logo-periscope.svg"
+            alt="Logo de Periscope"
+          />
         </a>
-        <a href="https://linkedin.com/company/codear" target="_blank" rel="noopener noreferrer" title="Seguinos en LinkedIn">
-          <img src="/images/social-media-logos/logo-linkedin.svg" alt="Logo de LinkedIn" />
+        <a
+          href="https://linkedin.com/company/codear"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Seguinos en LinkedIn"
+        >
+          <img
+            src="/images/social-media-logos/logo-linkedin.svg"
+            alt="Logo de LinkedIn"
+          />
         </a>
-        <a href="https://codear.eventbrite.com/" target="_blank" rel="noopener noreferrer" title="Seguinos en Eventbrite">
-          <img src="/images/social-media-logos/logo-eventbrite.svg" alt="Logo de Eventbrite" />
+        <a
+          href="https://codear.eventbrite.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Seguinos en Eventbrite"
+        >
+          <img
+            src="/images/social-media-logos/logo-eventbrite.svg"
+            alt="Logo de Eventbrite"
+          />
         </a>
-        <a href="https://youtube.com/c/codear" target="_blank" rel="noopener noreferrer" title="Seguinos en YouTube">
+        <a
+          href="https://youtube.com/c/codear"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Seguinos en YouTube"
+        >
           <img src="/images/social-media-logos/logo-youtube.svg" alt="Logo de YouTube" />
         </a>
-        <a href="https://t.me/somoscodear" target="_blank" rel="noopener noreferrer" title="Seguinos en Telegram">
-          <img src="/images/social-media-logos/logo-telegram.svg" alt="Logo de Telegram" />
+        <a
+          href="https://t.me/somoscodear"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Seguinos en Telegram"
+        >
+          <img
+            src="/images/social-media-logos/logo-telegram.svg"
+            alt="Logo de Telegram"
+          />
         </a>
         <a href="https://cafecito.app/codear" rel="noopener noreferrer" target="_blank">
-          <img srcSet="https://cdn.cafecito.app/imgs/buttons/button_2.png 1x, https://cdn.cafecito.app/imgs/buttons/button_2_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_2_3.75x.png 3.75x" src="https://cdn.cafecito.app/imgs/buttons/button_2.png" alt="Invitame un café en cafecito.app" />
+          <img
+            srcSet="https://cdn.cafecito.app/imgs/buttons/button_2.png 1x, https://cdn.cafecito.app/imgs/buttons/button_2_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_2_3.75x.png 3.75x"
+            src="https://cdn.cafecito.app/imgs/buttons/button_2.png"
+            alt="Invitame un café en cafecito.app"
+          />
         </a>
       </SocialMediaContainer>
     </FooterContent>

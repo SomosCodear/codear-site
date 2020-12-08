@@ -143,37 +143,39 @@ const NavContainer = styled.nav`
   background-position: left center;
   background-size: cover;
 
-  ${({ open }) => open && css`
-    display: block;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-
-    ${LogoMobile} {
-      position: absolute;
-    }
-
-    ${Menu} {
-      display: flex;
+  ${({ open }) =>
+    open &&
+    css`
+      display: block;
       flex-direction: column;
-      justify-content: center;
-    }
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
 
-    ${MenuCloseButton} {
-      display: inline-block;
-    }
+      ${LogoMobile} {
+        position: absolute;
+      }
 
-    ${MenuOpenButton} {
-      display: none;
-    }
-  `}
+      ${Menu} {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      ${MenuCloseButton} {
+        display: inline-block;
+      }
+
+      ${MenuOpenButton} {
+        display: none;
+      }
+    `}
 
   @media (min-width: ${BREAKPOINTS.hd}) {
     position: unset;
@@ -219,7 +221,10 @@ export const Nav = withRouter(({ router }) => {
           <MenuItem key={option.path}>
             <Link href={option.page} as={option.path}>
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a alt={option.label} className={router.asPath === option.path ? 'current' : ''}>
+              <a
+                alt={option.label}
+                className={router.asPath === option.path ? 'current' : ''}
+              >
                 {option.label}
               </a>
             </Link>
@@ -227,16 +232,10 @@ export const Nav = withRouter(({ router }) => {
         ))}
       </Menu>
       <MenuOpenButton title="Abrir menu" onClick={toggleMenu}>
-        <img
-          src="/icons/hamburger-menu.svg"
-          alt="Abrir menu"
-        />
+        <img src="/icons/hamburger-menu.svg" alt="Abrir menu" />
       </MenuOpenButton>
       <MenuCloseButton title="Cerrar menu" onClick={toggleMenu}>
-        <img
-          src="/icons/chevron-up.svg"
-          alt="Cerrar menu"
-        />
+        <img src="/icons/chevron-up.svg" alt="Cerrar menu" />
       </MenuCloseButton>
     </NavContainer>
   );
