@@ -12,6 +12,7 @@ module.exports = {
         { source: '/comunidades', destination: '/communities' },
         { source: '/conocimiento', destination: '/knowledge' },
         { source: '/encuentros/proximo', destination: '/api/next-encuentros-codear' },
+        { source: '/anuario/2020', destination: '/yearbook/2020' },
       ];
     },
     catchAllRouting: true,
