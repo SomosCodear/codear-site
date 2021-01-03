@@ -187,7 +187,7 @@ const Yearbook = () => {
       >
         {yearbookPages.map((page) => (
           <Page key={`page_${page}`}>
-            <Image layout="fill" src={page} alt="Página del anuario" />
+            <Image src={page} alt="Página del anuario" layout="fill" loading="eager" />
           </Page>
         ))}
       </FlipBook>
