@@ -2,6 +2,7 @@
 /* eslint-disable no-restricted-globals */
 import React from 'react';
 import styled from 'styled-components';
+import Image from 'next/image';
 import HTMLFlipBook from 'react-pageflip';
 import { BREAKPOINTS } from '../../style/constants';
 import { useLilac } from '../../hooks';
@@ -62,7 +63,7 @@ const Content = styled.div`
   }
 `;
 
-const Page = styled.img`
+const Page = styled.div`
   overflow-y: hidden;
 
   &.--left {
@@ -185,7 +186,9 @@ const Yearbook = () => {
         showCover
       >
         {yearbookPages.map((page) => (
-          <Page key={`page_${page}`} src={page} alt="Página del anuario" />
+          <Page key={`page_${page}`}>
+            <Image layout="fill" src={page} alt="Página del anuario" />
+          </Page>
         ))}
       </FlipBook>
       <Download>
