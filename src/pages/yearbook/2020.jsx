@@ -1,15 +1,17 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
-import React, { useLayoutEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
+import HTMLFlipBook from 'react-pageflip';
 import { BREAKPOINTS } from '../../style/constants';
 import { useLilac } from '../../hooks';
 
 const Content = styled.div`
-  margin: 1.5rem 1.25rem;
+  padding: 1.5rem 1.25rem;
   display: flex;
   flex-direction: column;
   text-align: center;
+  overflow: hidden;
 
   article {
     margin: 0;
@@ -58,6 +60,37 @@ const Content = styled.div`
       margin-left: 0;
     }
   }
+`;
+
+const Page = styled.img`
+  overflow-y: hidden;
+
+  &.--left {
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  &.--right {
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  &.--hard {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+`;
+
+const FlipBook = styled(HTMLFlipBook)`
+  overflow: visible;
+
+  & .--portrait ${Page} {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+`;
+
+const Download = styled.section`
+  width: 100%;
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
 `;
 
 const yearbookPages = [
@@ -125,35 +158,8 @@ const yearbookPages = [
   '/images/yearbook/2020/62_Contratapa.jpg',
 ];
 
-const Flipbook = styled.article`
-  .shadow {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-`;
-
-const Download = styled.section`
-  width: 100%;
-  margin: 3rem 0;
-  display: flex;
-  justify-content: center;
-`;
-
 const Yearbook = () => {
   useLilac();
-
-  useLayoutEffect(() => {
-    window.onload = () => {
-      if (screen.orientation.type === 'landscape-primary') {
-        document.body.style.overflowX = 'hidden';
-        window.jQuery('#flipbook').turn({
-          width: 1190,
-          height: 842,
-        });
-      } else {
-        document.getElementById('#flipbook').remove();
-      }
-    };
-  });
 
   return (
     <Content>
@@ -166,18 +172,27 @@ const Yearbook = () => {
       <p>
         <strong>¡Muchas gracias por acompañar nuestro crecimiento!</strong>
       </p>
-      <Flipbook id="flipbook">
+      <FlipBook
+        width={592}
+        height={842}
+        size="stretch"
+        minWidth={350}
+        maxWidth={592}
+        minHeight={498}
+        maxHeight={842}
+        flippingTime={500}
+        mobileScrollSupport={false}
+        showCover
+      >
         {yearbookPages.map((page) => (
-          <img key={`page_${page}`} src={page} alt="Página del anuario" />
+          <Page key={`page_${page}`} src={page} alt="Página del anuario" />
         ))}
-      </Flipbook>
+      </FlipBook>
       <Download>
         <lilac-button href="/downloads/Anuario_Codear_2020.pdf" target="_blank">
           Descargá el Anuario en PDF
         </lilac-button>
       </Download>
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" />
-      <script src="/vendor/turn.js/turn.min.js" />
     </Content>
   );
 };
