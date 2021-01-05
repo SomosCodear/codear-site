@@ -8,6 +8,7 @@ import { enableScroll, disableScroll } from '../utils/scroll';
 
 const LogoMobile = styled.img`
   display: block;
+  width: 7.5rem;
 
   @media (min-width: ${BREAKPOINTS.hd}) {
     display: none;
@@ -18,6 +19,7 @@ const LogoDesktop = styled.img`
   display: none;
 
   @media (min-width: ${BREAKPOINTS.hd}) {
+    width: 11.5rem;
     display: block;
   }
 `;
