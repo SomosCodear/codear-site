@@ -173,6 +173,13 @@ const Yearbook = () => {
       <p>
         <strong>¡Muchas gracias por acompañar nuestro crecimiento!</strong>
       </p>
+      <p>
+        <span role="img" aria-label="Instrucciones">
+          💡
+        </span>
+        Hacé click en una de las páginas de la esquina o deslizá el dedo lateralmente para
+        pasar de página.
+      </p>
       <FlipBook
         width={592}
         height={842}
