@@ -1,5 +1,5 @@
 import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 class CodearDocument extends Document {
@@ -31,7 +31,7 @@ class CodearDocument extends Document {
 
   render() {
     return (
-      <html lang="es-AR">
+      <Html lang="es-AR">
         <Head>
           <link rel="manifest" href="manifest.json" />
           <link rel="shortcut icon" sizes="16x16" href="/icons/favicon-16x16.png" />
@@ -75,7 +75,7 @@ class CodearDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }

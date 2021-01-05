@@ -266,9 +266,16 @@ const LandingContent = styled.main`
 `;
 
 const JumboBanner = styled.a`
-  display: none;
-  margin: 2rem 0;
+  background-image: url(/images/backgrounds/community-desktop.png);
+  background-size: cover;
+  margin-top: 1px;
+  margin-bottom: 2rem;
   text-decoration: none;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   span {
     display: block;
@@ -277,6 +284,8 @@ const JumboBanner = styled.a`
     font-weight: 400;
     letter-spacing: 5px;
     font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1rem;
   }
 
   img {
@@ -286,9 +295,16 @@ const JumboBanner = styled.a`
   }
 
   @media (min-width: ${BREAKPOINTS.hd}) {
+    background-image: url(/images/backgrounds/community-desktop.png);
+    background-size: unset;
+    flex-direction: row;
+    margin-top: 0;
+
     span {
       font-size: 2rem;
       font-weight: 100;
+      margin-right: 1.5rem;
+      margin-bottom: 0;
     }
   }
 `;
@@ -297,17 +313,11 @@ const Index = () => {
   useLilac();
 
   return [
-    <JumboBanner href="https://hack.codear.org">
-      <span>Sumate al Hacktoberfest con CoDeAr</span>
-      <img
-        srcSet="/images/hacktoberfest/large.png 2048w,
-                /images/hacktoberfest/medium.png 670w,
-                /images/hacktoberfest/small.png 380w"
-        sizes="(max-width: 380px) 380px,
-               (max-width: 670px) 670px,
-               2048px"
-        alt="Sumate a Hacktoberfest entrando a hack.codear.org"
-      />
+    <JumboBanner href="/anuario/2020">
+      <span>¡Te presentamos nuestro Anuario 2020!</span>
+      <lilac-button href="/anuario/2020" color="primary">
+        Leer el Anuario
+      </lilac-button>
     </JumboBanner>,
     <LandingContent>
       <CalendarContainer>
