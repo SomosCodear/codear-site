@@ -316,7 +316,7 @@ const AwardsBanner = styled.a`
   text-decoration: none;
   padding: 2rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
 
@@ -334,6 +334,7 @@ const AwardsBanner = styled.a`
   img {
     height: 6rem;
     display: block;
+    margin-bottom: 1rem;
   }
 
   @media (min-width: ${BREAKPOINTS.hd}) {
@@ -351,6 +352,7 @@ const AwardsBanner = styled.a`
 
     img {
       margin-left: 2.5rem;
+      margin-bottom: 0rem;
     }
   }
 `;
@@ -365,8 +367,8 @@ const Index = () => {
         Leer el Anuario
       </lilac-button>
     </JumboBanner>,
-    <AwardsBanner href="/awards2020">
-      <lilac-button href="/awards2020" color="secondary">
+    <AwardsBanner target="_blank" href="/awards2020">
+      <lilac-button target="_blank" href="/awards2020" color="secondary">
         Votar
       </lilac-button>
       <span>¡Votá en los #CodearAwards2020!</span>
