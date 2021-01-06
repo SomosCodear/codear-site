@@ -90,6 +90,10 @@
     {
       "source": "/edupunto",
       "destination": "https://forms.gle/N8yuHJLTk5iW18B86"
+    },
+    {
+      "source": "/awards2020",
+      "destination": "https://forms.gle/nfb9TC8rjmfTPtjV6"
     }
   ]
 }
