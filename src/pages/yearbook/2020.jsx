@@ -95,68 +95,68 @@ const Download = styled.section`
 `;
 
 const yearbookPages = [
-  '/images/yearbook/2020/01_Tapa.jpg',
-  '/images/yearbook/2020/02_Interior_Tapa.jpg',
-  '/images/yearbook/2020/03_Contenidos.jpg',
-  '/images/yearbook/2020/04_Caratula_QuienesSomos_Izq.jpg',
-  '/images/yearbook/2020/05_Caratula_QuienesSomos_Der.jpg',
-  '/images/yearbook/2020/06_QuienesSomos_01.jpg',
-  '/images/yearbook/2020/07_QuienesSomos_02.jpg',
-  '/images/yearbook/2020/08_QuienesSomos_03.jpg',
-  '/images/yearbook/2020/09_QuienesSomos_04.jpg',
-  '/images/yearbook/2020/10_Caratula_LoQueHacemos_Izq.jpg',
-  '/images/yearbook/2020/11_Caratula_LoQueHacmos_Der.jpg',
-  '/images/yearbook/2020/12_LoQueHacemos_01.jpg',
-  '/images/yearbook/2020/13_LoQueHacemos_02.jpg',
-  '/images/yearbook/2020/14_LoQueHacemos_03.jpg',
-  '/images/yearbook/2020/15_LoQueHacemos_04.jpg',
-  '/images/yearbook/2020/16_LoQueHacemos_05.jpg',
-  '/images/yearbook/2020/17_LoQueHacemos_06.jpg',
-  '/images/yearbook/2020/18_LoQueHacemos_07.jpg',
-  '/images/yearbook/2020/19_LoQueHacemos_07.jpg',
-  '/images/yearbook/2020/20_LoQueHacemos_08.jpg',
-  '/images/yearbook/2020/21_LoQueHacemos_09.jpg',
-  '/images/yearbook/2020/22_LoQueHacemos_10.jpg',
-  '/images/yearbook/2020/23_LoQueHacemos_11.jpg',
-  '/images/yearbook/2020/24_LoQueHacemos_12.jpg',
-  '/images/yearbook/2020/25_LoQueHacemos_13.jpg',
-  '/images/yearbook/2020/26_LoQueHacemos_14.jpg',
-  '/images/yearbook/2020/27_LoQueHacemos_15.jpg',
-  '/images/yearbook/2020/28_LoQueHacemos_16.jpg',
-  '/images/yearbook/2020/29_LoQueHacemos_17.jpg',
-  '/images/yearbook/2020/30_LoQueHacemos_18.jpg',
-  '/images/yearbook/2020/31_LoQueHacemos_19.jpg',
-  '/images/yearbook/2020/32_LoQueHacemos_20.jpg',
-  '/images/yearbook/2020/33_LoQueHacemos_21.jpg',
-  '/images/yearbook/2020/34_LoQueHacemos_22.jpg',
-  '/images/yearbook/2020/35_LoQueHacemos_23.jpg',
-  '/images/yearbook/2020/36_Caratula_Alianzas_Izq.jpg',
-  '/images/yearbook/2020/37_Caratula_Alianzas_Der.jpg',
-  '/images/yearbook/2020/38_Alianzas_01.jpg',
-  '/images/yearbook/2020/39_Alianzas_02.jpg',
-  '/images/yearbook/2020/40_Alianzas_03.jpg',
-  '/images/yearbook/2020/41_Alianzas_04.jpg',
-  '/images/yearbook/2020/42_Alianzas_05.jpg',
-  '/images/yearbook/2020/43_Alianzas_06.jpg',
-  '/images/yearbook/2020/44_Caratula_Redes_Izq.jpg',
-  '/images/yearbook/2020/45_Caratula_Redes_Der.jpg',
-  '/images/yearbook/2020/46_Redes_01.jpg',
-  '/images/yearbook/2020/47_Redes_02.jpg',
-  '/images/yearbook/2020/48_Redes_03.jpg',
-  '/images/yearbook/2020/49_Redes_04.jpg',
-  '/images/yearbook/2020/50_Redes_05.jpg',
-  '/images/yearbook/2020/51_Redes_06.jpg',
-  '/images/yearbook/2020/52_Caratula_Donaciones_Izq.jpg',
-  '/images/yearbook/2020/53_Caratula_Donaciones_Der.jpg',
-  '/images/yearbook/2020/54_Donaciones_01.jpg',
-  '/images/yearbook/2020/55_Donaciones_02.jpg',
-  '/images/yearbook/2020/56_Donaciones_03.jpg',
-  '/images/yearbook/2020/57_Donaciones_04.jpg',
-  '/images/yearbook/2020/58_Caratula_ElFuturo_Izq.jpg',
-  '/images/yearbook/2020/59_Caratula_ElFuturo_Der.jpg',
-  '/images/yearbook/2020/60_ElFuturo_01.jpg',
-  '/images/yearbook/2020/61_ElFuturo_02.jpg',
-  '/images/yearbook/2020/62_Contratapa.jpg',
+  '01_Tapa.jpg',
+  '02_Interior_Tapa.jpg',
+  '03_Contenidos.jpg',
+  '04_Caratula_QuienesSomos_Izq.jpg',
+  '05_Caratula_QuienesSomos_Der.jpg',
+  '06_QuienesSomos_01.jpg',
+  '07_QuienesSomos_02.jpg',
+  '08_QuienesSomos_03.jpg',
+  '09_QuienesSomos_04.jpg',
+  '10_Caratula_LoQueHacemos_Izq.jpg',
+  '11_Caratula_LoQueHacmos_Der.jpg',
+  '12_LoQueHacemos_01.jpg',
+  '13_LoQueHacemos_02.jpg',
+  '14_LoQueHacemos_03.jpg',
+  '15_LoQueHacemos_04.jpg',
+  '16_LoQueHacemos_05.jpg',
+  '17_LoQueHacemos_06.jpg',
+  '18_LoQueHacemos_07.jpg',
+  '19_LoQueHacemos_07.jpg',
+  '20_LoQueHacemos_08.jpg',
+  '21_LoQueHacemos_09.jpg',
+  '22_LoQueHacemos_10.jpg',
+  '23_LoQueHacemos_11.jpg',
+  '24_LoQueHacemos_12.jpg',
+  '25_LoQueHacemos_13.jpg',
+  '26_LoQueHacemos_14.jpg',
+  '27_LoQueHacemos_15.jpg',
+  '28_LoQueHacemos_16.jpg',
+  '29_LoQueHacemos_17.jpg',
+  '30_LoQueHacemos_18.jpg',
+  '31_LoQueHacemos_19.jpg',
+  '32_LoQueHacemos_20.jpg',
+  '33_LoQueHacemos_21.jpg',
+  '34_LoQueHacemos_22.jpg',
+  '35_LoQueHacemos_23.jpg',
+  '36_Caratula_Alianzas_Izq.jpg',
+  '37_Caratula_Alianzas_Der.jpg',
+  '38_Alianzas_01.jpg',
+  '39_Alianzas_02.jpg',
+  '40_Alianzas_03.jpg',
+  '41_Alianzas_04.jpg',
+  '42_Alianzas_05.jpg',
+  '43_Alianzas_06.jpg',
+  '44_Caratula_Redes_Izq.jpg',
+  '45_Caratula_Redes_Der.jpg',
+  '46_Redes_01.jpg',
+  '47_Redes_02.jpg',
+  '48_Redes_03.jpg',
+  '49_Redes_04.jpg',
+  '50_Redes_05.jpg',
+  '51_Redes_06.jpg',
+  '52_Caratula_Donaciones_Izq.jpg',
+  '53_Caratula_Donaciones_Der.jpg',
+  '54_Donaciones_01.jpg',
+  '55_Donaciones_02.jpg',
+  '56_Donaciones_03.jpg',
+  '57_Donaciones_04.jpg',
+  '58_Caratula_ElFuturo_Izq.jpg',
+  '59_Caratula_ElFuturo_Der.jpg',
+  '60_ElFuturo_01.jpg',
+  '61_ElFuturo_02.jpg',
+  '62_Contratapa.jpg',
 ];
 
 const Yearbook = () => {
@@ -194,12 +194,20 @@ const Yearbook = () => {
       >
         {yearbookPages.map((page) => (
           <Page key={`page_${page}`}>
-            <Image src={page} alt="Página del anuario" layout="fill" loading="eager" />
+            <Image
+              src={`https://cdn.codear.org/yearbook-2020/jpg/${page}`}
+              alt="Página del anuario"
+              layout="fill"
+              loading="eager"
+            />
           </Page>
         ))}
       </FlipBook>
       <Download>
-        <lilac-button href="/downloads/Anuario_Codear_2020.pdf" target="_blank">
+        <lilac-button
+          href="https://cdn.codear.org/yearbook-2020/pdf/Anuario_Codear_2020.pdf"
+          target="_blank"
+        >
           Descargá el Anuario en PDF
         </lilac-button>
       </Download>
