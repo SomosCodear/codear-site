@@ -185,12 +185,12 @@ const Yearbook = () => {
       </p>
       <FlipBook
         width={592}
-        height={842}
+        height={834}
         size="stretch"
         minWidth={350}
         maxWidth={592}
         minHeight={498}
-        maxHeight={842}
+        maxHeight={834}
         flippingTime={500}
         mobileScrollSupport={false}
         showCover
