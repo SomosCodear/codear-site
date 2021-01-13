@@ -304,6 +304,7 @@ const JumboBanner = styled.a`
       font-weight: 100;
       margin-right: 1.5rem;
       margin-bottom: 0;
+      text-shadow: 0px 0px 5px rgb(0, 0, 0);
     }
   }
 `;
@@ -344,10 +345,11 @@ const AwardsBanner = styled.a`
 
     span {
       font-size: 2rem;
-      font-weight: 100;
+      font-weight: 400;
       margin-right: 1.5rem;
       margin-bottom: 0;
       margin-left: 2.5rem;
+      text-shadow: 0px 0px 5px rgb(0, 0, 0);
     }
 
     img {
