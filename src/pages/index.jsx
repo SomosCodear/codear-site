@@ -326,7 +326,6 @@ const AwardsBanner = styled.a`
     text-align: center;
     text-transform: uppercase;
     font-weight: 400;
-    letter-spacing: 5px;
     font-size: 1.5rem;
     color: white;
     margin-bottom: 1rem;
@@ -350,6 +349,7 @@ const AwardsBanner = styled.a`
       margin-bottom: 0;
       margin-left: 2.5rem;
       text-shadow: 0px 0px 5px rgb(0, 0, 0);
+      letter-spacing: 5px;
     }
 
     img {
