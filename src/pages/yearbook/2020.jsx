@@ -76,6 +76,10 @@ const Page = styled.div`
   &.--hard {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
+
+  img {
+    width: 100%;
+  }
 `;
 
 const FlipBook = styled(HTMLFlipBook)`
