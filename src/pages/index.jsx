@@ -367,11 +367,11 @@ const Index = () => {
         Leer el Anuario
       </lilac-button>
     </JumboBanner>,
-    <AwardsBanner target="_blank" href="/awards2020">
-      <lilac-button target="_blank" href="/awards2020" color="secondary">
-        Votar
+    <AwardsBanner target="_blank" href="https://youtube.com/codear">
+      <lilac-button target="_blank" href="https://youtube.com/codear" color="secondary">
+        Ver en YouTube
       </lilac-button>
-      <span>¡Votá en los #CodearAwards2020!</span>
+      <span>En Vivo: 17/01, 19.30 hs. ARG</span>
       <img src="/images/brand/codear-logo-awards2020.svg" alt="CodearAwards2020" />
     </AwardsBanner>,
     <LandingContent>
