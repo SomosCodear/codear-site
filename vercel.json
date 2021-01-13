@@ -1,8 +1,14 @@
 {
   "version": 2,
   "name": "codear-site",
-  "alias": ["codear.org"],
+  "alias": [
+    "codear.org"
+  ],
   "redirects": [
+    {
+      "source": "/downloads/Anuario_Codear_2020.pdf",
+      "destination": "https://cdn.codear.org/yearbook-2020/pdf/Anuario_Codear_2020.pdf"
+    },
     {
       "source": "/honduras",
       "destination": "https://donaronline.org/codear-comunidad-de-desarrolladores-de-argentina/ayudemos-a-honduras"
