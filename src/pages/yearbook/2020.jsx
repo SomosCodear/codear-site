@@ -2,7 +2,6 @@
 /* eslint-disable no-restricted-globals */
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
 import HTMLFlipBook from 'react-pageflip';
 import { BREAKPOINTS } from '../../style/constants';
 import { useLilac } from '../../hooks';
@@ -194,11 +193,9 @@ const Yearbook = () => {
       >
         {yearbookPages.map((page) => (
           <Page key={`page_${page}`}>
-            <Image
+            <img
               src={`https://cdn.codear.org/yearbook-2020/jpg/${page}`}
               alt="Página del anuario"
-              layout="fill"
-              loading="eager"
             />
           </Page>
         ))}
