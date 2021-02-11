@@ -685,5 +685,37 @@
       }
     ],
     "iconFormat": "jpg"
+  },
+  {
+    "id": "women-in-games-ar",
+    "name": "Women In Games Argentina",
+    "description": "Women in Games Argentina es una comunidad de networking de profesionales y aficionadxs de la industria de videojuegos, que nuclea a mujeres y disidencias de Argentina. Nuestra misión principal es trabajar por una industria de videojuegos más inclusiva, a partir de varias acciones concretas: visibilizar, educar y crear oportunidades de acceso y trabajo para grupos y minorías tradicionalmente en desventaja.",
+    "links": [
+      {
+        "type": "instagram",
+        "handler": "womeningamesargentina"
+      },
+      {
+        "type": "facebook",
+        "handler": "womeningamesAR"
+      },
+      {
+        "type": "twitch",
+        "handler": "womeningamesar"
+      },
+      {
+        "type": "twitter",
+        "handler": "womeningamesar"
+      },
+      {
+        "type": "linkedin",
+        "handler": "women-in-games-arg"
+      },
+      {
+        "type": "youtube",
+        "handler": "c/WomenInGamesArgentina"
+      }
+    ],
+    "iconFormat": "jpg"
   }
 ]
