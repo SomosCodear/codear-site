@@ -86,7 +86,7 @@ const SocialMediaContainer = styled.div`
   [href*='pscp.tv'] img,
   [href*='t.me'] img,
   [href*='github.com'] img {
-    filter: invert(1);
+    filter: invert(1) brightness(3);
   }
 
   [href*='cafecito'] img {
