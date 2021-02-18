@@ -83,7 +83,6 @@ const SocialMediaContainer = styled.div`
     height: 1.5rem;
   }
 
-  [href*='pscp.tv'] img,
   [href*='t.me'] img,
   [href*='github.com'] img {
     filter: invert(1) brightness(3);
@@ -145,17 +144,6 @@ export const Footer = () => (
           title="Seguinos en Twitter"
         >
           <img src="/images/social-media-logos/logo-twitter.svg" alt="Logo de Twitter" />
-        </a>
-        <a
-          href="https://pscp.tv/SomosCodear"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Seguinos en Periscope"
-        >
-          <img
-            src="/images/social-media-logos/logo-periscope.svg"
-            alt="Logo de Periscope"
-          />
         </a>
         <a
           href="https://linkedin.com/company/codear"
