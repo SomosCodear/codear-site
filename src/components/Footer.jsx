@@ -168,15 +168,12 @@ export const Footer = () => (
           />
         </a>
         <a
-          href="https://codear.eventbrite.com/"
+          href="https://github.com/somoscodear"
           target="_blank"
           rel="noopener noreferrer"
-          title="Seguinos en Eventbrite"
+          title="Explorá nuestro código en GitHub"
         >
-          <img
-            src="/images/social-media-logos/logo-eventbrite.svg"
-            alt="Logo de Eventbrite"
-          />
+          <img src="/images/social-media-logos/logo-github.svg" alt="Logo de GitHub" />
         </a>
         <a
           href="https://youtube.com/c/codear"
