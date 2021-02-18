@@ -83,9 +83,9 @@ const SocialMediaContainer = styled.div`
     height: 1.5rem;
   }
 
-  [href*='pscp.tv'] img,
-  [href*='t.me'] img {
-    filter: invert(1);
+  [href*='t.me'] img,
+  [href*='github.com'] img {
+    filter: invert(1) brightness(3);
   }
 
   [href*='cafecito'] img {
@@ -146,17 +146,6 @@ export const Footer = () => (
           <img src="/images/social-media-logos/logo-twitter.svg" alt="Logo de Twitter" />
         </a>
         <a
-          href="https://pscp.tv/SomosCodear"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Seguinos en Periscope"
-        >
-          <img
-            src="/images/social-media-logos/logo-periscope.svg"
-            alt="Logo de Periscope"
-          />
-        </a>
-        <a
           href="https://linkedin.com/company/codear"
           target="_blank"
           rel="noopener noreferrer"
@@ -168,15 +157,12 @@ export const Footer = () => (
           />
         </a>
         <a
-          href="https://codear.eventbrite.com/"
+          href="https://github.com/somoscodear"
           target="_blank"
           rel="noopener noreferrer"
-          title="Seguinos en Eventbrite"
+          title="Explorá nuestro código en GitHub"
         >
-          <img
-            src="/images/social-media-logos/logo-eventbrite.svg"
-            alt="Logo de Eventbrite"
-          />
+          <img src="/images/social-media-logos/logo-github.svg" alt="Logo de GitHub" />
         </a>
         <a
           href="https://youtube.com/c/codear"
@@ -199,8 +185,8 @@ export const Footer = () => (
         </a>
         <a href="https://cafecito.app/codear" rel="noopener noreferrer" target="_blank">
           <img
-            srcSet="https://cdn.cafecito.app/imgs/buttons/button_2.png 1x, https://cdn.cafecito.app/imgs/buttons/button_2_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_2_3.75x.png 3.75x"
-            src="https://cdn.cafecito.app/imgs/buttons/button_2.png"
+            srcSet="https://cdn.cafecito.app/imgs/buttons/button_3.png 1x, https://cdn.cafecito.app/imgs/buttons/button_3_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_3_3.75x.png 3.75x"
+            src="https://cdn.cafecito.app/imgs/buttons/button_3.png"
             alt="Invitame un café en cafecito.app"
           />
         </a>

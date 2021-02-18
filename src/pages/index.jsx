@@ -309,55 +309,55 @@ const JumboBanner = styled.a`
   }
 `;
 
-const AwardsBanner = styled.a`
-  background-image: url(/images/backgrounds/footer-desktop-2x.png);
-  background-size: cover;
-  margin-top: 1px;
-  margin-bottom: 2rem;
-  text-decoration: none;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-  align-items: center;
+// const AwardsBanner = styled.a`
+//   background-image: url(/images/backgrounds/footer-desktop-2x.png);
+//   background-size: cover;
+//   margin-top: 1px;
+//   margin-bottom: 2rem;
+//   text-decoration: none;
+//   padding: 2rem;
+//   display: flex;
+//   flex-direction: column-reverse;
+//   justify-content: center;
+//   align-items: center;
 
-  span {
-    display: block;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 1.5rem;
-    color: white;
-    margin-bottom: 1rem;
-  }
+//   span {
+//     display: block;
+//     text-align: center;
+//     text-transform: uppercase;
+//     font-weight: 400;
+//     font-size: 1.5rem;
+//     color: white;
+//     margin-bottom: 1rem;
+//   }
 
-  img {
-    height: 6rem;
-    display: block;
-    margin-bottom: 1rem;
-  }
+//   img {
+//     height: 6rem;
+//     display: block;
+//     margin-bottom: 1rem;
+//   }
 
-  @media (min-width: ${BREAKPOINTS.hd}) {
-    background-size: unset;
-    flex-direction: row;
-    margin-top: 0;
+//   @media (min-width: ${BREAKPOINTS.hd}) {
+//     background-size: unset;
+//     flex-direction: row;
+//     margin-top: 0;
 
-    span {
-      font-size: 2rem;
-      font-weight: 400;
-      margin-right: 1.5rem;
-      margin-bottom: 0;
-      margin-left: 2.5rem;
-      text-shadow: 0px 0px 5px rgb(0, 0, 0);
-      letter-spacing: 5px;
-    }
+//     span {
+//       font-size: 2rem;
+//       font-weight: 400;
+//       margin-right: 1.5rem;
+//       margin-bottom: 0;
+//       margin-left: 2.5rem;
+//       text-shadow: 0px 0px 5px rgb(0, 0, 0);
+//       letter-spacing: 5px;
+//     }
 
-    img {
-      margin-left: 2.5rem;
-      margin-bottom: 0rem;
-    }
-  }
-`;
+//     img {
+//       margin-left: 2.5rem;
+//       margin-bottom: 0rem;
+//     }
+//   }
+// `;
 
 const Index = () => {
   useLilac();
@@ -369,13 +369,13 @@ const Index = () => {
         Leer el Anuario
       </lilac-button>
     </JumboBanner>,
-    <AwardsBanner target="_blank" href="https://youtube.com/codear">
-      <lilac-button target="_blank" href="https://youtube.com/codear" color="secondary">
-        Ver en YouTube
-      </lilac-button>
-      <span>En Vivo: 17/01, 19.30 hs. ARG</span>
-      <img src="/images/brand/codear-logo-awards2020.svg" alt="CodearAwards2020" />
-    </AwardsBanner>,
+    // <AwardsBanner target="_blank" href="https://youtube.com/codear">
+    //   <lilac-button target="_blank" href="https://youtube.com/codear" color="secondary">
+    //     Ver en YouTube
+    //   </lilac-button>
+    //   <span>En Vivo: 17/01, 19.30 hs. ARG</span>
+    //   <img src="/images/brand/codear-logo-awards2020.svg" alt="CodearAwards2020" />
+    // </AwardsBanner>,
     <LandingContent>
       <CalendarContainer>
         <Calendar name="próximos eventos" />
