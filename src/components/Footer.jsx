@@ -185,8 +185,8 @@ export const Footer = () => (
         </a>
         <a href="https://cafecito.app/codear" rel="noopener noreferrer" target="_blank">
           <img
-            srcSet="https://cdn.cafecito.app/imgs/buttons/button_2.png 1x, https://cdn.cafecito.app/imgs/buttons/button_2_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_2_3.75x.png 3.75x"
-            src="https://cdn.cafecito.app/imgs/buttons/button_2.png"
+            srcSet="https://cdn.cafecito.app/imgs/buttons/button_3.png 1x, https://cdn.cafecito.app/imgs/buttons/button_3_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_3_3.75x.png 3.75x"
+            src="https://cdn.cafecito.app/imgs/buttons/button_3.png"
             alt="Invitame un café en cafecito.app"
           />
         </a>
