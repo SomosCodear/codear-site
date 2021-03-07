@@ -745,5 +745,21 @@
       }
     ],
     "iconFormat": "jpg"
+  },
+  {
+    "id": "women-in-bioinformatics",
+    "name": "Women in Bioinformatics & Data Science LA",
+    "description": "Somos mujeres de toda Latinoamérica trabajando en Bioinformática y Ciencia de Datos.",
+    "links": [
+      {
+        "type": "twitter",
+        "handler": "BioinfoLa"
+      },
+      {
+        "type": "telegram",
+        "handler": "WomenBioinfoDataScLA"
+      }
+    ],
+    "iconFormat": "jpg"
   }
 ]
