@@ -173,38 +173,6 @@
     ]
   },
   {
-    "id": "vue-cordoba",
-    "name": "Vue Córdoba",
-    "description": "Espacio de encuentros, charlas y networking entorno a #vuejs en #Córdoba.",
-    "links": [
-      {
-        "type": "twitter",
-        "handler": "vuecba"
-      },
-      {
-        "type": "instagram",
-        "handler": "vuecba"
-      },
-      {
-        "type": "twitch",
-        "handler": "vuecba"
-      },
-      {
-        "type": "discord",
-        "handler": "GsmgPP6"
-      },
-      {
-        "type": "youtube",
-        "handler": "channel/UClIPJ3CDURsyRZDMrNsny_Q"
-      },
-      {
-        "type": "web",
-        "handler": "https://vuecba.com"
-      }
-    ],
-    "iconFormat": "jpg"
-  },
-  {
     "id": "cba-hackerspace",
     "name": "Córdoba Hacker Space",
     "description": "Primer HackerSpace en Córdoba, Argentina. Talleres, charlas, proyectos abiertos, CTFs, hacks y mucho más.",
@@ -742,6 +710,22 @@
       {
         "type": "youtube",
         "handler": "c/lasdesistemas"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "women-in-bioinformatics",
+    "name": "Women in Bioinformatics & Data Science LA",
+    "description": "Somos mujeres de toda Latinoamérica trabajando en Bioinformática y Ciencia de Datos.",
+    "links": [
+      {
+        "type": "twitter",
+        "handler": "BioinfoLa"
+      },
+      {
+        "type": "telegram",
+        "handler": "WomenBioinfoDataScLA"
       }
     ],
     "iconFormat": "jpg"
