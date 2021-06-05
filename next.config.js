@@ -22,8 +22,8 @@ module.exports = {
         permanent: false,
       },
       {
-        source: '/figma/:id',
-        destination: 'https://www.figma.com/file/:id',
+        source: '/figma/proyectos-codear-website',
+        destination: 'https://www.figma.com/file/uwlIFkmub9G8P82ZPCWlMG',
         permanent: false,
       },
     ];
