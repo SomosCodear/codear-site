@@ -14,5 +14,19 @@ module.exports = {
       { source: '/anuario/2020', destination: '/yearbook/2020' },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: '/gh/:id',
+        destination: 'https://github.com/somoscodear/:id',
+        permanent: false,
+      },
+      {
+        source: '/figma/:id',
+        destination: 'https://www.figma.com/file/:id',
+        permanent: false,
+      },
+    ];
+  },
   catchAllRouting: true,
 };
