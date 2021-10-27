@@ -23,13 +23,9 @@
   {
     "id": "calls",
     "title": "Videollamadas",
-    "description": "Con Google Meet, podrás dar webinars y organizar videollamadas on-line con hasta 250 personas en simultáneo, con soporte de grabación para videollamadas y transmisión en vivo hasta el 30 de Septiembre de 2020.",
+    "description": "Con Google Meet, podrás dar webinars y organizar videollamadas on-line con hasta 250 personas en simultáneo, con soporte para encuestas, sesiones de Q&A y pizarras interactivas.",
     "icon": "film",
-    "alt": "cámara de video",
-    "moreInfo": {
-      "label": "Leé el comunicado de Google acerca de Videollamadas",
-      "href": "https://cloud.google.com/blog/products/g-suite/helping-businesses-and-schools-stay-connected-in-response-to-coronavirus"
-    }
+    "alt": "cámara de video"
   },
   {
     "id": "cloud",
