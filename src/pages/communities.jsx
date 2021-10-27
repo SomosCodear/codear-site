@@ -268,7 +268,7 @@ const Communities = () => {
       <Content>
         <h2>Programa de Apoyo a Comunidades de Tecnología</h2>
         <p>
-          Abrimos nuestra plataforma digital basada en G Suite para Organizaciones sin
+          Abrimos nuestra plataforma digital basada en Google Workspace para Organizaciones sin
           Fines de Lucro para que tu comunidad pueda disponer de una infraestructura
           tecnológica adecuada para la realización de sus actividades, ya sean on-line u
           off-line.
@@ -299,10 +299,10 @@ const Communities = () => {
         <h2>TÉRMINOS Y CONDICIONES DE USO</h2>
         <p>
           El uso de estos servicios implica la aceptación de los términos y condiciones de
-          G Suite para Organizaciones sin Fines de Lucro. Una vez aprobada la solicitud de
+          Google Workspace para Organizaciones sin Fines de Lucro. Una vez aprobada la solicitud de
           adhesión al Programa de Apoyo a Comunidades de Tecnología, la persona que actúe
           en representación de la comunidad beneficiaria recibirá las credenciales de
-          acceso correspondientes, con una cuenta de G Suite bajo el dominio
+          acceso correspondientes, con una cuenta de Google Workspace bajo el dominio
           @comunidades.codear.org.
           <strong> RESTRICCIONES: </strong>
           El uso de esta cuenta queda exclusivamente restringido para las actividades y
