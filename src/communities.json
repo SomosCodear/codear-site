@@ -729,5 +729,49 @@
       }
     ],
     "iconFormat": "jpg"
+  },
+  {
+    "id": "gdsc-patagonia",
+    "name": "GDSC Universidad Nacional de la Patagonia",
+    "description": "Promovemos conocimiento y ayudamos a la comunidad en general en temas tecnológicos.",
+    "links": [
+      {
+        "type": "twitter",
+        "handler": "GDSCPatagonia"
+      },
+      {
+        "type": "instagram",
+        "handler": "GDSCPatagonia"
+      },
+      {
+        "type": "web",
+        "handler": "https://gdsc.community.dev/universidad-nacional-de-la-patagonia-san-juan-bosco-unpsjb/"
+      },
+      {
+        "type": "discord",
+        "handler": "qjxwAUCFdj"
+      }
+    ],
+    "iconFormat": "jpg"
+  },
+  {
+    "id": "ingles-para-programadores",
+    "name": "Inglés para Programadores",
+    "description": "Brindamos actividades para poner al alcance de todos el aprendizaje y práctica de inglés. Se realizan clases para principiantes e intermedios. Workshops para intermedios y avanzados. Mentorías gratuitas para orientar a los programadores con lenguaje técnico, redaccion de CV, Carta de Presentación. Simulacro de entrevistas en inglés.",
+    "links": [
+      {
+        "type": "discord",
+        "handler": "S6YRQzEYN3"
+      },
+      {
+        "type": "instagram",
+        "handler": "englishfordevsclub"
+      },
+      {
+        "type": "youtube",
+        "handler": "channel/UCY1doKgK3LQVYKdqEUq4xkg"
+      }
+    ],
+    "iconFormat": "jpg"
   }
 ]
