@@ -773,5 +773,25 @@
       }
     ],
     "iconFormat": "jpg"
+  },
+  {
+    "id": "aws-girls-argentina",
+    "name": "AWS Girls Argentina",
+    "description": "Queremos brindar un espacio de aprendizaje e inclusión a diferentes chicas de distintos ámbitos, sobre los servicios cloud de #AWS.",
+    "links": [
+      {
+        "type": "twitter",
+        "handler": "GirlsAws"
+      },
+      {
+        "type": "linkedin",
+        "handler": "aws-girls-argentina"
+      },
+      {
+        "type": "facebook",
+        "handler": "AWSGirlsArgentina"
+      }
+    ],
+    "iconFormat": "jpg"
   }
 ]
