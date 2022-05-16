@@ -116,17 +116,6 @@ export const Footer = () => (
       </DonationContainer>
       <SocialMediaContainer>
         <a
-          href="https://fb.me/somoscodear/"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Seguinos en Facebook"
-        >
-          <img
-            src="/images/social-media-logos/logo-facebook.svg"
-            alt="Logo de Facebook"
-          />
-        </a>
-        <a
           href="https://instagram.com/somoscodear/"
           target="_blank"
           rel="noopener noreferrer"
