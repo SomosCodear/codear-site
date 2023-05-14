@@ -27,50 +27,6 @@
     ]
   },
   {
-    "id": "refactor-devs",
-    "name": "Refactor Devs",
-    "description": "Somos una comunidad hispanohablante enfocada al ambiente IT, ¡pero más nos gusta hablar sarasa, tomar birra y comer chambuchitos!",
-    "links": [
-      {
-        "type": "twitter",
-        "handler": "refactordevs"
-      },
-      {
-        "type": "instagram",
-        "handler": "refactordevs"
-      },
-      {
-        "type": "twitch",
-        "handler": "refactordevs"
-      },
-      {
-        "type": "youtube",
-        "handler": "channel/UCp75IH4i6xRpgVI5iAUxoOQ"
-      },
-      {
-        "type": "discord",
-        "handler": "invite/RTHktQ8"
-      }
-    ],
-    "iconFormat": "jpg"
-  },
-  {
-    "id": "react-ladies-cba",
-    "name": "React Ladies",
-    "description": "Por ELLAS, para ELLAS. Juntas por más mujeres en la comunidad.",
-    "links": [
-      {
-        "type": "twitter",
-        "handler": "reactladiescba"
-      },
-      {
-        "type": "instagram",
-        "handler": "reactladies.cba"
-      }
-    ],
-    "iconFormat": "jpg"
-  },
-  {
     "id": "met",
     "name": "Mujeres en Tecnología",
     "description": "Somos una comunidad que trabajamos con el propósito de impulsar la participación de las mujeres y personas de género no binario en diversas áreas de tecnología, promoviendo un ecosistema diverso e inclusivo.",
@@ -119,25 +75,6 @@
     "iconFormat": "jpg"
   },
   {
-    "id": "indie-game-garage",
-    "name": "Indie Game Garage",
-    "description": "👾 Comunidad Game Jamera Independiente!! 🎮 Lugar de encuentro para #gamedev y aficionados a las #gamejam",
-    "links": [
-      {
-        "type": "twitter",
-        "handler": "indiegamegarage"
-      },
-      {
-        "type": "instagram",
-        "handler": "indiegamegarage"
-      },
-      {
-        "type": "discord",
-        "handler": "qbWpDEF"
-      }
-    ]
-  },
-  {
     "id": "frontend-cafe",
     "name": "FrontEndCafé",
     "description": "📚 Proyectos, mentorías, consultas, charlas, workshops online y offline. Comunidad de desarrolladorxs web. ✨",
@@ -162,17 +99,6 @@
     "iconFormat": "jpg"
   },
   {
-    "id": "burgerjs-cba",
-    "name": "BurgerJS Córdoba",
-    "description": "Nos juntamos una vez al mes a comer hamburguesas y hablar de JavaScript 🍻 🍻🍔🍔",
-    "links": [
-      {
-        "type": "twitter",
-        "handler": "burgerjscba"
-      }
-    ]
-  },
-  {
     "id": "cba-hackerspace",
     "name": "Córdoba Hacker Space",
     "description": "Primer HackerSpace en Córdoba, Argentina. Talleres, charlas, proyectos abiertos, CTFs, hacks y mucho más.",
@@ -191,29 +117,6 @@
       }
     ],
     "iconFormat": "jpg"
-  },
-  {
-    "id": "gdg-cordoba",
-    "name": "GDG Córdoba",
-    "description": "Google Developers Group Córdoba.",
-    "links": [
-      {
-        "type": "twitter",
-        "handler": "gdgcordobaarg"
-      },
-      {
-        "type": "instagram",
-        "handler": "gdgcordobaargentina"
-      },
-      {
-        "type": "youtube",
-        "handler": "channel/UCQjlRmNbq23GIb4uGo6IpcQ"
-      },
-      {
-        "type": "meetup",
-        "handler": "GDG-CORDOBA-AR"
-      }
-    ]
   },
   {
     "id": "dotnet-cba",
@@ -286,17 +189,6 @@
       }
     ],
     "iconFormat": "jpg"
-  },
-  {
-    "id": "devc-lapaz",
-    "name": "DevC La Paz",
-    "description": "Grupo de Facebook Developer Circles, con sede en La Paz.",
-    "links": [
-      {
-        "type": "facebook",
-        "handler": "groups/DevCLaPaz"
-      }
-    ]
   },
   {
     "id": "kotlin-lapaz",
@@ -391,30 +283,6 @@
     "iconFormat": "jpg"
   },
   {
-    "id": "nolomedia",
-    "name": "NoLo",
-    "description": "Hacemos #podcasts semanales sobre #Tech y #DevLife y todo #SinTests.",
-    "links": [
-      {
-        "type": "web",
-        "handler": "https://redcircle.com/shows/el-podcast5407"
-      },
-      {
-        "type": "twitter",
-        "handler": "nolomedia"
-      },
-      {
-        "type": "instagram",
-        "handler": "nolomedia"
-      },
-      {
-        "type": "facebook",
-        "handler": "nolomedia"
-      }
-    ],
-    "iconFormat": "jpg"
-  },
-  {
     "id": "doctarmy",
     "name": "DoctArmy",
     "description": "Proveemos un ambiente de networking descontracturado para gente de tecnología en general. Nuestro grupo es una rama de SysArmy y realizamos mensualmente un evento denominado AdminBirras y promovemos Nerdearla entre otras cosas.",
@@ -483,26 +351,6 @@
     "iconFormat": "jpg"
   },
   {
-    "id": "clean-code-ba",
-    "name": "Clean Code BA",
-    "description": "Somos un Meetup basado en los fundamentos de la serie de libros \"Clean Code\" de Robert C. Martin. Armamos eventos informales de programación en el que realizamos charlas especificas o katas aplicando TDD. No estamos atados a ningún lenguaje de programación, la intención es poder generar un espacio para compartir conocimientos.",
-    "links": [
-      {
-        "type": "meetup",
-        "handler": "Clean-Code-Buenos-Aires"
-      },
-      {
-        "type": "twitter",
-        "handler": "cleancodeba"
-      },
-      {
-        "type": "slack",
-        "handler": "http://bit.ly/ccbaslack"
-      }
-    ],
-    "iconFormat": "jpg"
-  },
-  {
     "id": "horchatajs",
     "name": "HorchataJS",
     "description": "Somos una comunidad que comenzó con un enfoque en JavaScript y poco a poco se fue abriendo a compartir sobre todo lo relacionado a desarrollo web. Nuestro objetivo es ser un espacio colaborativo para aprender de tecnología y aportar al crecimiento profesional de la comunidad de desarrollo en El Salvador y la región.",
@@ -530,34 +378,6 @@
       {
         "type": "web",
         "handler": "https://www.horchatajs.com"
-      }
-    ],
-    "iconFormat": "jpg"
-  },
-  {
-    "id": "vuenos-aires",
-    "name": "Vuenos Aires",
-    "description": "Vuenos Aires es un meetup donde nos enfocamos en aprender, enseñar y difundir todo lo que tenga que ver con el ecosistema de Vue.js.",
-    "links": [
-      {
-        "type": "twitter",
-        "handler": "vuenos_aires"
-      },
-      {
-        "type": "meetup",
-        "handler": "vuenos-aires"
-      },
-      {
-        "type": "github",
-        "handler": "vuenos-aires"
-      },
-      {
-        "type": "slack",
-        "handler": "http://slack.meetupjs.com.ar"
-      },
-      {
-        "type": "web",
-        "handler": "http://vuenosair.es"
       }
     ],
     "iconFormat": "jpg"
@@ -710,46 +530,6 @@
       {
         "type": "youtube",
         "handler": "c/lasdesistemas"
-      }
-    ],
-    "iconFormat": "jpg"
-  },
-  {
-    "id": "women-in-bioinformatics",
-    "name": "Women in Bioinformatics & Data Science LA",
-    "description": "Somos mujeres de toda Latinoamérica trabajando en Bioinformática y Ciencia de Datos.",
-    "links": [
-      {
-        "type": "twitter",
-        "handler": "BioinfoLa"
-      },
-      {
-        "type": "telegram",
-        "handler": "WomenBioinfoDataScLA"
-      }
-    ],
-    "iconFormat": "jpg"
-  },
-  {
-    "id": "gdsc-patagonia",
-    "name": "GDSC Universidad Nacional de la Patagonia",
-    "description": "Promovemos conocimiento y ayudamos a la comunidad en general en temas tecnológicos.",
-    "links": [
-      {
-        "type": "twitter",
-        "handler": "GDSCPatagonia"
-      },
-      {
-        "type": "instagram",
-        "handler": "GDSCPatagonia"
-      },
-      {
-        "type": "web",
-        "handler": "https://gdsc.community.dev/universidad-nacional-de-la-patagonia-san-juan-bosco-unpsjb/"
-      },
-      {
-        "type": "discord",
-        "handler": "qjxwAUCFdj"
       }
     ],
     "iconFormat": "jpg"
